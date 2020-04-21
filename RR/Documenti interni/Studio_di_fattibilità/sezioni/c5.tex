@@ -1,0 +1,34 @@
+\section{Capitolato C5 - Stalker}
+
+\subsection{Descrizione generale}
+La normativa vigente in materia di sicurezza regolamenta la gestione delle presenze nei locali pubblici ed aperti al pubblico prevedendo una serie di precauzioni ed adempimenti volti a garantire uno sfollamento sicuro in caso di emergenze e bisogno. \\ 
+In questo senso diventa necessario tracciare il numero di persone presenti all’interno dei locali.
+
+\subsection{Obiettivi}
+L’obiettivo del progetto è quello di sviluppare un’applicazione mobile\glo OpenSource\glo (Android\glo o IOS\glo) in grado di segnalare ad un server dedicato sia l’ingresso che l’uscita dell’utilizzatore dalle aree di interesse. \\
+È prevista la presenza di due tipologie di attori: amministratore e utente, il quale può essere un utilizzatore anonimo (tramite un'apposita funzionalità) o un dipendente autenticato. \\
+Nel server deve essere possibile gestire più organizzazioni, ed ognuna di esse deve poter gestire molteplici luoghi e definire se prevedere una tracciatura autenticata (LDAP) e l’eventuale procedura di autenticazione.
+L’applicazione deve permettere: \begin{itemize}
+\item il recupero della lista delle organizzazioni;
+\item il login con eventuale autenticazione;
+\item lo storico degli accessi;
+\item la visualizzazione in real-time\glo della propria presenza o meno.
+\end{itemize}
+Il progetto inoltre necessita di test di carico e di sovraccarico, di copertura, report e documentazione sulle scelte implementative e progettuali e/o eventuali problemi e soluzioni proposte.
+
+\subsection{Tecnologie utilizzate}
+\begin{itemize}
+\item Docker: container\glo per l’istanziazione di tutti i componenti;;
+\item Github: sistema di versionamento\glo;
+\item NodeJS/Python/Java: per lo sviluppo del server back-end\glo;
+\item RESTful API/gRPC: frameworks per fornire le funzionalità di autenticazione e per utilizzare l’applicativo.
+\end{itemize}
+
+\subsection{Valutazione generale}
+Il progetto risulta molto interessante in riferimento alle tecnologie da utilizzare, ritenute attuali e d’impatto sulla vita di tutti i giorni, toccando problematiche sensibili alla quotidianità. Rispetto ai capitolati analizzati precedentemente, è il primo servizio che richiede la realizzazione di un’applicazione mobile, il che garantisce un punto a favore nel considerare tale progetto come un possibile candidato. 
+Nonostante l’interesse mostrato, il gruppo ha dovuto scartarlo in quanto la disponibilità offerta dall’azienda proponente è esaurita.
+
+
+
+
+

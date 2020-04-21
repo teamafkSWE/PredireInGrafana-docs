@@ -1,0 +1,37 @@
+\section{Capitolato C4 - Predire in Grafana}
+
+\subsection{Descrizione generale}
+La fabbrica del software e gli operatori che erogano il servizio sono a stretto contatto tra loro e la costante collaborazione tra i due attori porta ad un notevole miglioramento della qualità. Perché la collaborazione sia efficace è necessario un pieno monitoraggio dei sistemi, in modo che gli erogatori del servizio possano segnalare alla fabbrica i punti in cui è possibile migliorare la procedura. \\
+Per eseguire il monitoraggio dei propri sistemi la \textit{Zucchetti SPA} ha scelto Grafana\glo, un prodotto OpenSource, estendibile con plug-in\glo in linguaggio JavaScript.
+
+
+
+\subsection{Obiettivi}
+Il sistema che il progetto richiede sono due plug-in di Grafana, scritti in linguaggio JavaScript, che leggeranno da un file Json\glo la definizione dei calcoli da applicare (SVM\glo o RL\glo) e quindi permetteranno di associarli ad alcuni nodi della rete del flusso del monitoraggio. I plug-in quindi eseguiranno i calcoli previsti, producendo dei valori che potranno essere aggiunti al flusso del monitoraggio come se fossero stati rilevati dal campo.\\
+Il software richiesto dovrà svolgere i seguenti compiti: \begin{enumerate}
+\item produrre un file json dai dati di addestramento con i parametri per le previsioni con Support Vector Machine (SVM) per le classificazioni o la Regressione Lineare;
+\item leggere la definizione del predittore dal file in formato json;
+\item associare i predittori letti dal file json al flusso di dati presente in Grafana;
+\item applicare la previsione e fornire i nuovi dati ottenuti dalla previsione al sistema di Grafana;
+\item rendere disponibili i dati al sistema di creazione di grafici e dashboard per la loro visualizzazione.
+\end{enumerate}
+
+
+\subsection{Tecnologie utilizzate}
+\begin{itemize}
+\item Grafana: interfaccia per il monitoraggio delle applicazioni;
+\item JavaScript / Json;
+\item svmjs: libreria js per classificare i valori di addestramento;
+\item Regression-js: libreria js per attribuire un valore numerico come stima di un osservazione partendo da dei valori di riferimento;
+\item Orange Canvas: strumento per l’analisi dei dati.
+\end{itemize}
+
+\subsection{Valutazione generale}
+Sin da subito il capitolato ha suscitato il nostro interesse, data la presenza di elementi statistici e matematici di previsione sui dati.
+Un punto a favore dell’offerta proposta sta nell’uso di metodologie come la regressione lineare, in quanto quest’ultima ha dimostrato di essere uno degli strumenti più affidabili e collaudati per l’analisi statistica. 
+L’approfondimento di tali tecnologie e la curiosità nata per la gestione del flusso di dati si sono rivelati di interesse comune tra i membri del gruppo. \\
+E’ stato quindi deciso di scegliere la proposta di progetto del capitolato proposto da Gregorio Piccoli - \textit{Zucchetti SPA}.
+
+
+
+

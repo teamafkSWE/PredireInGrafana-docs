@@ -1,0 +1,29 @@
+\section{Capitolato C1 - Autonomous Highlights Platform}
+
+\subsection{Descrizione generale}
+La Autonomous Highlights Platform è una piattaforma web con la capacità di creare autonomamente video dei momenti salienti di eventi sportivi, come calcio, F1 o altro.
+
+\subsection{Obiettivi}
+Lo scopo di questo capitolato è la realizzazione di una piattaforma web dotata di un modello di machine learning\glo in grado di identificare autonomamente ogni momento importante di un dato evento. Il processo di creazione del video si suddivide in 4 step: \begin{enumerate}
+\item caricamento del video;
+\item identificazione dei momenti salienti;
+\item estrazione delle corrispondenti parti di video;
+\item generazione del video di sintesi.
+\end{enumerate}
+I dati vengono caricati nell’ECS\glo, il quale orchestra la collaborazione dei servizi Transcoder\glo ed S3\glo; successivamente l’ECS si interfaccia con le seguenti tecnologie: Sage Maker\glo, DynamoDB\glo e Rekognition\glo.
+
+\subsection{Tecnologie utilizzate}
+\begin{itemize}
+\item Elastic Container Service: servizio di gestione di contenitori\glo;
+\item DynamoDB: database\glo per immagazzinare i dati;
+\item AWS Transcode: per convertire ed elaborare i video;
+\item Sage Maker: servizio di gestione dell’apprendimento automatico\glo;
+\item AWS Rekognition video: servizio cloud\glo di Deep Learning\glo;
+\item NodeJS\glo: per lo sviluppo di API\glo a supporto dell’applicativo;
+\item Python\glo: per lo sviluppo delle componenti di Machine Learning;
+\item HTML5\glo, CSS3\glo e Javascript\glo: la piattaforma deve essere realizzata come sito web.
+\end{itemize}
+
+\subsection{Valutazione generale}
+Il progetto è stato valutato positivamente per le tecnologie impiegate nella sua realizzazione, come ad esempio NodeJS, e la piattaforma Amazon Web Services\glo, entrambe utili in molti ambiti lavorativi. 
+Tuttavia si è scelto di scartare il capitolato in quanto la sua realizzazione richiede una conoscenza di uno spettro troppo ampio di tecnologie e servizi, che il team ha valutato come eccessivamente oneroso in termini di formazione. 

@@ -1,0 +1,31 @@
+\section{Capitolato C2 - Etherless}
+
+\subsection{Descrizione generale}
+Ethereum è una piattaforma che permette agli utenti di implementare in modo semplificato applicazioni decentralizzate, “Dapps”, che utilizzano la tecnologia blockchain\glo.
+
+\subsection{Obiettivi}
+Il capitolato prevede di sviluppare una piattaforma per applicazioni cloud\glo Etherless che permette agli sviluppatori di fornire funzioni JS nel cloud e permette ai clienti di pagare solamente per la loro esecuzione, sfruttando la smart contract technology\glo di Ethereum\glo.
+L’esecuzione delle funzioni avviene tramite un’interfaccia a linea di comando\glo (Etherless-cli). \\
+La piattaforma è gestita e manutenuta dagli amministratori; gli utenti, infine, possono eseguire le funzioni fornite pagando una quota decisa dagli sviluppatori. \\
+Le commissioni sono parzialmente trattenute dalla piattaforma come compensazione per il costo dell’esecuzione delle funzioni. 
+A livello industriale una best practice è la suddivisione dello sviluppo software in ambienti differenti: locale, test, staging\glo e production (opzionale per il progetto in questione). \\
+Ogni singolo ambiente è capace di sostenere l’intero sistema indipendentemente dagli altri. Lo sviluppatore implementa le funzionalità e le esegue in locale. \\
+Successivamente, verrà implementata una suite di test per verificarne l’efficacia\glo. Questi test potranno essere eseguiti localmente oppure potranno far parte di un processo di integrazione continua. Le funzionalità verranno poi distribuite in un ambiente di staging in modo tale che altre persone possano utilizzarle. \\
+Infine, il ciclo di rilascio determinerà quando verrà distribuito il prodotto finale richiesto.
+
+
+\subsection{Tecnologie utilizzate}
+Etherless è costruita integrando le seguenti tecnologie:
+\begin{itemize}
+\item Ethereum: si occupa dei pagamenti e dell’invocazione delle funzioni;
+\item Serverless: si occupa dell’esecuzione delle funzioni;
+\item Etherless-cli (command line interface): tramite tra sviluppatori e utenti;
+\item Node Package Manager (NPM\glo);
+\item Typescript\glo.
+\end{itemize}
+
+\subsection{Valutazione generale}
+Nonostante la mole di lavoro proposta fosse stata considerata ragionevole, il gruppo ha dimostrato meno interesse verso le specifiche tecnologie da impiegare nella realizzazione di questo progetto rispetto ad altri capitolati. \\
+Per tale motivo il capitolato non è stato preso in considerazione come prima scelta.
+
+

@@ -1,0 +1,41 @@
+\section{Capitolato C3 - Natural API}
+
+\subsection{Descrizione generale}
+\textit{"What if I try to withdraw 20 Euros from the ATM could semi-automatically be converted to a function with a signature like withdraw (user, amount, source)?"} \\
+Data l’ambiguità del linguaggio naturale che spesso comporta fraintendimenti tra stakeholders\glo, "Natural API" propone un collegamento univoco tra il linguaggio umano\glo e linguaggio di programmazione\glo, permettendo in futuro lo sviluppo di librerie\glo più consistenti, prevedibili e manutenibili\glo.
+
+
+\subsection{Obiettivi}
+L’obiettivo di questo progetto è fornire uno strumento Proof-of-Concept\glo che riduca il divario (gap) tra specifiche di progetto e API\glo, generando librerie complete e facilmente manutenibili e i relativi test di unità e di integrazione, ricoprendo i linguaggi di programmazione e i frameworks\glo più popolari.
+NaturalAPI dovrebbe inoltre permettere agli sviluppatori di concentrarsi sull’implementazione dei metodi piuttosto che sulla modellazione dell’intero sistema, attraverso: \begin{enumerate}
+\item ricerca di combinazioni tra nomi e verbi (Gherkin);
+\item normalizzazione e conversione di predicati in funzioni e metodi;
+\item ricerca di argomenti di funzioni ricorrenti al fine di generare oggetti e proprietà.
+\end{enumerate}
+Ogni Natural API deve essere accessibile in almeno due tra le seguenti modalità: \begin{itemize}
+\item interfaccia web REST\glo;
+\item un’interfaccia grafica minimale;
+\item una command line interface\glo.
+\end{itemize}
+
+\subsection{Tecnologie utilizzate}
+\begin{itemize}
+\item Per la generazione di API e DLS: \begin{itemize}
+\item Swagger: strumento per la generazione di codice basato in OpenAPI;
+\item OWL v2: formato per la rappresentazione ontologica;
+\item OpenAPI.
+\end{itemize}
+\item Behaviour Driven Development (BDD\glo): \begin{itemize}
+\item Hiptest: è una piattaforma cloud di gestione dei test che supporta la continuous delivery\glo;
+\item Gherkin: parser\glo di linguaggio di Cucumber;
+\item Cucumber: è uno strumento software che supporta il BDD.
+\end{itemize}
+\end{itemize}
+
+\subsection{Valutazione generale}
+L’idea è sembrata molto interessante e all’avanguardia, utile ai team di sviluppo per essere più efficienti, riducendo comunicazioni superflue o possibili fraintendimenti.  \\
+Nonostante ciò, il progetto è stato valutato come troppo ambizioso in quanto potrebbe comportare un probabile sforamento delle scadenze.  \\
+È stato perciò deciso di non considerarlo come prima scelta.
+
+
+

@@ -1,0 +1,58 @@
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 71, 87}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{lastrowcolor}{RGB}{156, 198, 214}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\rowcolors{2}{grey2}{greyRowafk}
+\renewcommand{\arraystretch}{1.5}
+
+%tabella ore fase di Prog Dettaglio e Codifica
+\begin{comment}
+BASE PER TUTTI: 48 ORE
+Canesso: -2 ore perchè deve studiare per gli arretrati (4)
+Utshudi: +1 ore perchè meno arretrati (-1 ora rispetto a Meneghin perchè il proj di TecWeb porta via tempo)
+Meneghin: +2 ore (solo analisi)
+\end{comment}
+
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Fase di Analisi}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c | c | c | c | c | c }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & 
+\textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} &
+\textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} &
+\textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Totale}} \\
+Simone Federico Bergamin & - & 6 & - & 12 & 18 & 12 & 48 \\
+Alessandro Canesso & 4 & 3 & - & 10 & 18 & 11 & 46 \\
+Victor Dutca & - & 8 & - & 10 & 20 & 10 & 48 \\
+Fouad Farid	& 4 & - & - & 12 & 20 & 12 & 48 \\
+Simone Meneghin & 2 & - & - & 12 & 22 & 14 & 50 \\
+Olivier Utshudi & 8 & - & - & 8 & 21 & 12 & 49 \\
+Davide Zilio & - & 6 & - & 10 & 20 & 12 & 48 \\
+\rowcolor{lastrowcolor}
+\textbf{Ore totali ruolo} & \textbf{18} & \textbf{23} & \textbf{0} & \textbf{74} & \textbf{139} & \textbf{83} & \textbf{337} \\
+\end{tabular}
+\end{table}
+
+
+%tabella costi
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Fase di Analisi}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c  }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & 
+\textcolor{white}{\textbf{Costo}}  \\
+Responsabile & 18 & 540€ \\
+Amministratore & 23 & 460€ \\
+Analista & 0 & 0€ \\
+Progettista	& 74 & 1628€ \\
+Programmatore & 139 & 2085€  \\
+Verificatore & 83 & 1245€  \\
+\rowcolor{lastrowcolor}
+\textbf{Totale} & \textbf{337} & \textbf{5958€}  \\
+\end{tabular}
+\end{table}
