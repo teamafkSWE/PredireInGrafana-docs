@@ -1,6 +1,6 @@
 \section{Specifica dei test}
-Per verificare la qualità del prodotto software, il gruppo fornitore ha deciso di adottare il \textbf{Modello di Sviluppo a V}\glo, sviluppando così una serie di test. Questi hanno lo scopo di controllare che tutte le unità di cui è composto il sistema, siano state implementate correttamente, rispettando tutti gli aspetti del progetto.
-Per semplificare la loro consultazione, i test saranno suddivisi in categorie, per mezzo di tabelle, mostrando l'output prodotto, e sottolineando se è un risultato atteso o non atteso.
+Per verificare la qualità del prodotto software, il gruppo fornitore ha deciso di adottare il \textbf{Modello di Sviluppo a V}\glo, sviluppando così una serie di test. Questi hanno lo scopo di controllare che tutte le unità di cui è composto il sistema siano state implementate correttamente, rispettando tutti gli aspetti del progetto.
+Per semplificare la loro consultazione i test saranno suddivisi in categorie, per mezzo di tabelle, mostrando l'output prodotto e sottolineando se è un risultato atteso o non atteso.
 \subsection{Stato dei test}
 Per definire lo stato dei test, si usano le seguenti sigle:
 \begin{itemize}
@@ -265,8 +265,10 @@ TSOF4.1 &
 UC20 &
 L'utente monitoratore deve poter visualizzare il messaggio di alert in caso di scollegamento. All'utente viene chiesto di:
 \begin{itemize}
-	\item poter visualizzare e cliccare il pulsante "Scollega Predittore";
-	\item verificare l'effettiva e corretta esecuzione dello scollegamento.
+	\item poter visualizzare il messaggio di alert "Procedere con lo scollegamento?";
+	\item cliccare su "Conferma" se vuole procedere con lo scollegamento;
+	\item cliccare su "Annulla" se non vuole scollegare il/i predittore/i;
+	\item verificare che l’opzione scelta sia stata applicata.
 \end{itemize}&
 NI \\
 
@@ -274,7 +276,8 @@ NI \\
 
 %-------------------------------------------- Davide		
 TSOF5 & UC5 & L'utente monitoratore deve poter modificare un collegamento. \newline All'utente viene chiesto di: \begin{itemize}
-\item cliccare il pulsante "Modifica collegamento".
+\item cliccare il pulsante "Modifica collegamento";
+\item verificare che la modifica sul collegamento, precedentemente effettuato, venga abilitata.
 \end{itemize} & NI \\
 TSOF6 & UC6 & L'utente monitoratore deve poter effettuare le operazioni di calcolo delle previsioni. \newline
 All'utente viene chiesto di: \begin{itemize}
@@ -286,24 +289,44 @@ TSOF6.1 & UC6.1 & L'utente monitoratore deve poter inserire la politica temporal
 \item il campo "Minuti";
 \item il campo "Ore".
 \end{itemize} & NI \\
-TSOF6.1.1 & UC14 & L'utente monitoratore deve poter visualizzare il messaggio d’errore nel caso in cui la politica temporale non sia stata definita. & NI \\
+TSOF6.1.1 & UC14 & L'utente monitoratore deve poter visualizzare il messaggio d’errore nel caso in cui la politica temporale non sia stata definita. \newline All’utente viene chiesto di:
+\begin{itemize}
+	\item poter visualizzare il messaggio d’errore "Errore Politica Temporale Non Definita";
+	\item cliccare il pulsante "Conferma";
+	\item verificare di essere ritornato all’inserimento della politica temporale.
+\end{itemize}& NI \\
 TSOF6.2 & UC6.2 & L'utente monitoratore deve poter avviare il monitoraggio sul flusso di dati. \newline All'utente viene chiesto di: \begin{itemize}
 \item cliccare il pulsante "Avvia Monitoraggio".
 \end{itemize} & NI \\
-TSOF6.2.1 & UC15 & L'utente monitoratore deve poter visualizzare il messaggio d’errore nel caso in cui nessun predittore sia stato collegato. & NI \\
-TSOF6.2.2 & UC21 & L'utente monitoratore deve poter visualizzare il messaggio di notifica del corretto avvio del monitoraggio. & NI \\
+TSOF6.2.1 & UC15 & L'utente monitoratore deve poter visualizzare il messaggio d’errore nel caso in cui nessun predittore sia stato collegato. \newline All’utente viene chiesto di:
+\begin{itemize}
+	\item poter visualizzare il messaggio d’errore "Nessun Predittore Collegato";
+	\item cliccare il pulsante "Conferma";
+	\item verificare di essere ritornato all’impostazione di collegamento del predittore al flusso dati.
+\end{itemize}& NI \\
+TSOF6.2.2 & UC21 & L'utente monitoratore deve poter visualizzare il messaggio di notifica del corretto avvio del monitoraggio. \newline All'utente viene chiesto di: 
+\begin{itemize}
+	\item poter visualizzare il messaggio di notifica "Monitoraggio Avviato con Successo";
+	\item cliccare il pulsante "Conferma".
+\end{itemize} & NI \\
 TSOF6.3 & UC6.3 & L'utente monitoratore deve poter salvare la previsione. \newline All'utente viene chiesto di: \begin{itemize}
 \item cliccare il pulsante "Invia previsioni".
 \end{itemize} & NI \\
-TSOF6.3.1 & UC23 & L'utente monitoratore deve poter visualizzare il messaggio di notifica del corretto invio, e salvataggio, della previsione. & NI \\
+TSOF6.3.1 & UC23 & L'utente monitoratore deve poter visualizzare il messaggio di notifica del corretto invio, e salvataggio, della previsione. \newline All'utente viene chiesto di: 
+\begin{itemize}
+	\item poter visualizzare il messaggio di notifica "Salvataggio Dati di Previsione Avvenuto con Successo";
+	\item cliccare il pulsante "Conferma".
+\end{itemize} & NI \\
 TSOF7 & UC7 & L'utente monitoratore deve poter interrompere il monitoraggio. \newline All'utente viene chiesto di: \begin{itemize}
 \item cliccare il pulsante "Interrompi Monitoraggio".
 \end{itemize} & NI \\
 TSOF7.1 & UC22 & L'utente monitoratore deve poter visualizzare il messaggio di notifica dell'interruzione del monitoraggio. \newline All'utente viene chiesto di: \begin{itemize}
-\item cliccare il pulsante "Conferma", per confermare l'avvenuta interruzione.
+\item poter visualizzare il messaggio di notifica "Monitoraggio Interrotto";
+\item cliccare il pulsante "Conferma".
 \end{itemize} & NI \\
-TSOF8 & UC8 & L'utente monitoratore visualizza le previsioni nella dashboard\glo. & NI \\
+TSOF8 & UC8 & L'utente monitoratore deve poter visualizzare le previsioni nella dashboard\glo. & NI \\
 TSFF8.1 & UC24 & L'utente monitoratore deve poter visualizzare il messaggio di alert di avvenuto raggiungimento della soglia critica. \newline Per poter proseguire, all'utente viene chiesto di: \begin{itemize}
+\item poter visualizzare il messaggio di alert "Soglia Critica Raggiunta";
 \item cliccare il pulsante "Conferma".
 \end{itemize}& NI \\
 
