@@ -1,0 +1,85 @@
+\documentclass[a4paper, oneside, openany, dvipsnames, table, 12pt]{article}
+\usepackage{../Template/AFKstyle}
+\usepackage{hyperref}
+\usepackage{verbatim} %per commenti di più righe \begin{comment} \end{comment}
+\usepackage{amsmath}
+\input{sezioni/copertina.tex}
+\makeindex
+
+\begin{document}
+\copertina{}
+
+%------------------ COLORI TABELLE 
+\definecolor{pari}{RGB}{255, 207, 158} %{HTML}{E1F5FE} %azzurrino
+\definecolor{dispari}{HTML}{FAFAFA} %bianco/grigetto 
+
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 133, 51}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\definecolor{lastrowcolor}{RGB}{176, 196, 222} %steel blue %{255,165,0} orange %{RGB}{255, 207, 158}
+\rowcolors{2}{pari}{dispari}
+\renewcommand{\arraystretch}{1.5}
+
+%------------------
+
+\newpage
+\input{sezioni/registroModifiche.tex}
+
+%Didascalia tabelle/immagini (prendono come riferimento la subsection)
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+\newpage
+
+%indice, indice figure e indice tabelle
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\begin{comment}
+
+ATTENZIONE
+1) all'inizio e fino a metà maggio tutti hanno più tempo = TUTTI fanno le ore necessarie (base)	
+2) le nuove distribuzioni verranno attuate dal 18/05 per le fasi più concitanti del progetto, ossia quelle di:	
+- progettazione dettaglio e codifica		
+- valutazione e collaudo	
+contando che ci saranno da dare tutti, o quasi, gli arretrati da giugno in poi.
+
+NUOVE DISTRIBUZIONI
+x = esami arretrati
+
+1) x > 3: -2 ore
+2) 2 <= x <= 3: ore base definite per ogni fase
+2a) caso Olivier: +1 ora (perchè hai da dare 2(+1) esami (calcolo + RO(+ TW proj)) ma essi sono comunque "meno complicati" di p2 proj e uno tra P3 e algo quindi il tempo da dedicarci è "minore")
+3) x < 2: +2 ore
+
+\end{comment}
+
+
+\input{sezioni/introduzione.tex}
+\pagebreak
+
+\input{sezioni/analisi_dei_rischi.tex}
+\pagebreak
+
+\input{sezioni/modello_di_sviluppo.tex}
+\pagebreak
+
+\input{sezioni/pianificazione.tex}
+\pagebreak
+
+\input{sezioni/preventivo.tex}
+\pagebreak
+
+\input{sezioni/consuntivo.tex}
+\pagebreak
+
+\appendix
+\input{sezioni/organigramma.tex}
+\pagebreak
+
+
+\end{document}

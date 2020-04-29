@@ -1,0 +1,776 @@
+\section{Casi d'uso}
+
+	\subsection{Introduzione}
+Il numero limitato dei casi d'uso\glo identificati è dovuto alla natura del prodotto, in quanto si tratta di un plug-in e quindi di un’estensione di una piattaforma già esistente che viene integrato da un tool di addestramento esterno.
+Per la piattaforma in questione non è fornita alcuna documentazione in quanto essa è già disponibile al sito web del distributore della piattaforma: \emph{Grafana Labs} (\href{https://grafana.com/docs/grafana/latest/}{Grafana Documentation}). 
+
+	\subsection{Struttura dei casi d'uso}
+Viene riportata di seguito la classificazione dei casi d’uso. Verranno descritti nel documento rispettando la struttura esposta di seguito.
+	
+		\subsubsection{Struttura dei casi d'uso}
+		\begin{itemize}
+			\item codice identificativo;
+			\item titolo; 
+			\item diagramma UML (se presente);
+ 			\item attore primario; 
+			\item precondizioni; 
+ 			\item postcondizioni; 
+ 			\item scenario principale; 
+ 			\item estensioni (se presenti);
+			\item inclusioni (se presenti).
+ 		\end{itemize}
+Verrà utilizzato il linguaggio di modellazione UML 2.0\glo. 
+Ogni requisito può essere inserito in vari UC\glo, che si differenziano ciascuno per una diversa profondità dei dettagli da cui possono distinguersi ulteriori requisiti. 
+
+\subsubsection{Classificazione dei casi d'uso}
+Identificare i casi d’uso in modo univoco aiuta la tracciabilità. I casi d’uso sono classificati nel seguente modo:  \\
+\centerline{\textbf{UC[codice\_padre].[codice\_figlio]}} \\ 
+Il \textit{codice\_padre} è il codice univoco che rappresenta il requisito del caso d’uso. Se lo UC è collegato per profondità di dettaglio ad un altro UC, il \textit{codice\_figlio} verrà rappresentato in maniera gerarchica (esempio: se uno UC rappresenta un livello di dettaglio maggiore con \textit{codice\_padre} x, il suo codice sarà x.y, dove y indica l’annidamento raggiunto). \\ Verranno presentati prima i casi d'uso principali (da \hyperref[par:UC1]{UC1} a \hyperref[par:UC8]{UC8}), seguiti da quelli relativi ad estensioni (da \hyperref[par:UC9]{UC9} a \hyperref[par:UC15]{UC15}) e infine verranno presentati i casi d'uso relativi alle inclusioni (da \hyperref[par:UC16]{UC16} a \hyperref[par:UC24]{UC24}).
+
+	\subsection{Attori}
+Il sistema di autenticazione e registrazione dell’utente viene gestito per intero dal sistema Grafana, in quanto il prodotto finale non disporrà di una funzionalità di autenticazione/registrazione interna.
+Il numero limitato di differenti attori che si approcciano al prodotto in analisi è dovuto principalmente al fatto che, essendo il prodotto \emph{Predire in Grafana} un plug-in del sistema indipendente di Grafana, un esiguo numero di utenti hanno effettivamente la possibilità di approcciarsi al prodotto finale.
+
+	\subsubsection{Attori primari}
+Essendo l’attore primario un ruolo specifico assunto da un utente che interagisce col sistema nell’ambito di un’unità di funzionamento (caso d’uso), la tipologia di tale posizione può essere suddivisa in due categorie:
+	\begin{itemize}
+		\item\textbf{Utente addestratore}: è l’utente ideale per l’uso del tool di addestramento in quanto dispone di nozioni di Machine Learning;
+		\item\textbf{Utente monitoratore}: è un utente che ha un’ampia conoscenza sul monitoraggio dei dati ed è in grado di interpretare la previsione visualizzata sulla dashboard.
+		
+ 	\end{itemize}
+
+	\subsubsection{Attori secondari}
+	\begin{itemize}
+		\item\textbf{Piattaforma Grafana}: è un sistema di monitoraggio di stream\glo di dati, che ospiterà il plug-in prodotto. Consente agli utenti registrati di lanciare alert e realizzare grafici modellati sui dati forniti in ingresso al plug-in.
+ 	\end{itemize}
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/tool_e_plug-in.png}
+		\caption{Tool di addestramento e plug-in in generale}
+	\end{figure}
+
+% - Casi d'uso: Principali - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\label{par:UC1}
+	\subsection{UC1 - Creazione file JSON dai Dati di Addestramento}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC1_tool_di_addestramento.png}
+		\caption{Creazione file JSON dai Dati di Addestramento}
+	\end{figure}	
+
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l’utente deve possedere dei dati di addestramento\glo in un file formato CSV\glo;
+					\item l’utente si trova sul tool di addestramento.
+				\end{enumerate}
+			\item\textbf{Postcondizioni}:
+				\begin{enumerate}
+					\item l’utente ha prodotto il file JSON contenente i predittori;
+					\item l’utente ha salvato il file JSON in locale.
+				\end{enumerate}
+			\item\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item (\hyperref[par:UC1.1]{UC1.1}) l’utente seleziona il pulsante “Carica Dati di Addestramento”;
+					\item (\hyperref[par:UC1.2]{UC1.2}) l’utente seleziona i dati di addestramento da caricare;
+					\item (\hyperref[par:UC1.3]{UC1.3}) l’utente seleziona l’algoritmo di previsione scelto attraverso la Combo Box\glo “Scegli Algoritmo”; 
+					\item (\hyperref[par:UC1.4]{UC1.4}) conferma delle operazioni; 
+					\item (\hyperref[par:UC1.5]{UC1.5}) l’utente riceve in output il file JSON contenente i predittori per SVM/RL e decide dove salvarlo (localmente).  
+				\end{enumerate}
+			\item\textbf{Estensione}: \hyperref[par:UC9]{UC9} estende \hyperref[par:UC1.4]{UC1.4}: viene visualizzato un messaggio d’errore se il file di addestramento è incompatibile con l’algoritmo scelto;
+			\item\textbf{Inclusione}: \hyperref[par:UC16]{UC16} include \hyperref[par:UC1.5]{UC1.5}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura.
+		\end{itemize}
+		
+		\label{par:UC1.1}
+		\subsubsection{UC1.1 - Selezione Pulsante di Caricamento Dati di Addestramento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l’utente si trova sul tool di addestramento;
+					\item l’utente deve possedere il file CSV.
+				\end{enumerate}
+			\item\textbf{Postcondizioni}:
+				\begin{enumerate}
+					\item l’utente ha cliccato il pulsante di caricamento dati;
+					\item viene aperta la finestra che visualizza il file system\glo; 
+					\item saranno visibili solo i file CSV.
+				\end{enumerate}
+			\item\textbf{Scenario principale}: l’utente clicca il pulsante con etichetta “Carica Dati Addestramento”.
+		\end{itemize}
+		
+		\label{par:UC1.2}
+		\subsubsection{UC1.2 - Selezione Dati di Addestramento }
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: l’utente deve aver cliccato il pulsante di caricamento dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
+			\item\textbf{Postcondizioni}: l’utente ha selezionato il file dei dati di addestramento;
+			\item\textbf{Scenario principale}: l’utente seleziona il file CSV contenente i dati di addestramento dal file system ed è visibile solo il formato CSV.
+		\end{itemize}
+		
+		\label{par:UC1.3}
+		\subsubsection{UC1.3 - Selezione dell’Algoritmo di Previsione}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: l’utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.2]{UC1.2}); 
+			\item\textbf{Postcondizioni}: l’utente ha scelto l’algoritmo di previsione selezionando il pulsante corrispondente;
+			\item\textbf{Scenario principale}: l’utente clicca la Combo Box con etichetta "Seleziona Algoritmo" e sceglie l’algoritmo (SVM o RL).
+		\end{itemize}
+	
+	\label{par:UC1.4}
+	\subsubsection{UC1.4 - Conferma Procedura Addestramento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}:
+				\begin{enumerate}
+					\item l’utente deve aver caricato i dati di addestramento (\hyperref[par:UC1.2]{UC1.2});
+					\item  l’utente deve aver selezionato l’algoritmo di previsione (\hyperref[par:UC1.3]{UC1.3}).
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: l’utente ha confermato la scelta dell’algoritmo e l’inserimento dei dati di addestramento;
+					
+			\item\textbf{Scenario principale}: l’utente clicca il pulsante con etichetta “Conferma”;
+			\item\textbf{Estensione}: \hyperref[par:UC9]{UC9}: viene visualizzato un messaggio d’errore se il file di addestramento è incompatibile con l’algoritmo scelto. 	
+		\end{itemize}
+
+	\label{par:UC1.5}
+	\subsubsection{UC1.5 - Salvataggio File JSON}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.4]{UC1.4});
+			\item\textbf{Postcondizioni}: l’utente ha salvato il file JSON in locale;
+			\item\textbf{Scenario principale}: l’utente decide come denominare il file JSON e in che cartella del file system salvarlo;  
+			\item\textbf{Inclusione}: \hyperref[par:UC16]{UC16}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di salvataggio del file JSON.			
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC2}
+	\subsection{UC2 - Caricamento del file JSON nel plug-in}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC2_Caricamento_file_JSON_nel_plug-in.png}
+		\caption{Caricamento del file JSON}
+	\end{figure}	
+		
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha effettuato l’accesso alla piattaforma Grafana;
+					\item l’utente ha selezionato una dashboard e ha aggiunto il plug-in “Predire in Grafana”,  che verrà visualizzato sul rispettivo pannello;
+					\item l’utente dispone del file JSON contenente i predittori (\hyperref[par:UC1]{UC1}). 
+				\end{enumerate}
+			\item\textbf{Postcondizioni}:
+				\begin{enumerate}
+					\item l’utente ha caricato il file JSON con predittori associati nel plug-in;
+					\item viene letta la definizione del predittore dal file in formato JSON. 
+				\end{enumerate}
+			\item\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item (\hyperref[par:UC2.1]{UC2.1}) l'utente seleziona sul pannello l’opzione di caricamento del file JSON; 
+					\item (\hyperref[par:UC2.2]{UC2.2}) l’utente seleziona il file JSON contenente i predittori da locale;
+					\item (\hyperref[par:UC2.3]{UC2.3}) l'utente conferma il caricamento.
+				\end{enumerate}
+			\item\textbf{Estensione}:
+				\begin{enumerate} 
+					\item\hyperref[par:UC10]{UC10} estende \hyperref[par:UC2.1]{UC2.1}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana";
+					\item\hyperref[par:UC11]{UC11} estende \hyperref[par:UC2.3]{UC2.3}: viene visualizzato un messaggio d’errore nel caso in cui l’operazione di caricamento del file non sia andata a buon fine.
+				\end{enumerate}	
+			\item\textbf{Inclusione}: \hyperref[par:UC17]{UC17} include \hyperref[par:UC2.3]{UC2.3}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di caricamenteo JSON.
+		\end{itemize}
+		
+		\label{par:UC2.1}
+		\subsubsection{UC2.1 - Selezione Opzione di Caricamento file JSON}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente visualizza il pannello “Predire in Grafana” nella dashboard;
+			\item\textbf{Postcondizioni}: l’utente ha cliccato il pulsante di caricamento del file JSON e visualizza la finestra per la selezione del file;
+			\item\textbf{Scenario principale}: l’utente clicca il pulsante con etichetta  “Carica JSON”;
+			\item\textbf{Estensioni}: \hyperref[par:UC10]{UC10}: viene visualizzato un messaggio di allert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana".
+		\end{itemize}		
+		
+		\label{par:UC2.2}
+		\subsubsection{UC2.2 - Selezione del file JSON}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1}) e visualizza il pannello di selezione del file;
+			\item\textbf{Postcondizioni}: l’utente ha selezionato il file JSON;
+			\item\textbf{Scenario principale}: l’utente seleziona dalla finestra di selezione il file JSON da importare tra quelli disponibili e sono visibili solo i file con formato .json.
+		\end{itemize}
+		
+		\label{par:UC2.3}
+		\subsubsection{UC2.3 - Conferma di Caricamento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare;
+			\item\textbf{Postcondizioni}: l’utente ha caricato il file nel plug-in; 
+			\item\textbf{Scenario principale}: l’utente clicca il pulsante etichettato con “Conferma” e il file viene caricato.
+			\item\textbf{Estensione}: \hyperref[par:UC11]{UC11}: viene visualizzato un messaggio d’errore nel caso in cui l’operazione di caricamento del file non sia andata a buon fine;				
+			\item\textbf{Inclusione}: \hyperref[par:UC17]{UC17}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di caricamenteo JSON.	
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC3}
+	\subsection{UC3 - Collegamento del Predittore al Flusso Dati}
+
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC3_collegamento_flusso_dati.png}
+		\caption{Collegamento del Predittore al Flusso Dati}
+		\end{figure}	
+
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha caricato e letto con successo i predittori contenuti nel file JSON (\hyperref[par:UC2]{UC2});
+					\item l’utente dispone di una serie di predittori da poter collegare al flusso di dati voluto;
+					\item l’utente deve aver configurato la connessione al server tramite Grafana.	
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: l’utente ha collegato correttamente i predittori ad un flusso dati, definendone le soglie per i rispettivi stati di ogni nodo e visualizza i collegamenti in un pannello dedicato;
+			\item\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item (\hyperref[par:UC3.1]{UC3.1}) l’utente seleziona il database\glo che verrà scelto tra quelli disponibili memorizzati in Grafana;
+					\item (\hyperref[par:UC3.2]{UC3.2}) l’utente seleziona il flusso dati contenuto in una tabella del DB;
+					\item (\hyperref[par:UC3.3]{UC3.3}) l'utente selezione uno o più predittori scegliendoli tra quelli disponibili in una lista che verrà visualizzata una volta caricato il file JSON; 
+					\item (\hyperref[par:UC3.4]{UC3.4}) l'utente seleziona il nodo del flusso dati da associare al predittore;
+					\item (\hyperref[par:UC3.5]{UC3.5}) impostazione delle soglie;
+					\item (\hyperref[par:UC3.6]{UC3.6}) l'utente conferma le impostazioni di collegamento selezionate.	
+				\end{enumerate}
+			\item\textbf{Estensione}: 
+				\begin{enumerate}
+					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.5]{UC3.5}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
+					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile.
+				\end{enumerate}
+			\item\textbf{Inclusione}:
+				\begin{enumerate}
+					\item\hyperref[par:UC18]{UC18} include \hyperref[par:UC3.6]{UC3.6}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine.
+					\item\hyperref[par:UC19]{UC19} include \hyperref[par:UC3.6]{UC3.6}:  l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
+				\end{enumerate}
+		\end{itemize}
+		
+		\label{par:UC3.1}
+		\subsubsection{UC3.1 - Selezione Database}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha configurato correttamente la connessione al server tramite Grafana e visualizza la lista di Database disponibili;
+			\item\textbf{Postcondizioni}: è stato selezionato il database contenente il flusso dati desiderato;
+			\item\textbf{Scenario principale}: l’utente seleziona il database da usare come sorgente dati tra quelli disponibili;
+		\end{itemize}
+		
+		\label{par:UC3.2}
+		\subsubsection{UC3.2 - Selezione del Flusso Dati}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha selezionato il DB\glo presente in Grafana (\hyperref[par:UC3.1]{UC3.1}) da cui selezionare il flusso dati di interesse e visualizza la lista delle tabelle disponibili;
+			\item\textbf{Postcondizioni}: l’utente ha selezionato la tabella e dispone di un flusso dati su cui fare il collegamento;
+			\item\textbf{Scenario principale}: l’utente seleziona la tabella che vuole utilizzare per effettuare il collegamento ai predittori scelti.
+		\end{itemize}
+		
+		\label{par:UC3.3}
+		\subsubsection{UC3.3 - Selezione del Predittore}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item è disponibile un flusso di dati da monitorare (\hyperref[par:UC3.2]{UC3.2}); 
+					\item è stato letto il file JSON con i predittori e l'utente visualizza una lista con i predittori disponibili.
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: uno o più predittori sono stati selezionati dalla lista disponibile;
+			\item\textbf{Scenario principale}: l’utente seleziona il predittore che intende associare ad un aspetto del flusso.
+		\end{itemize}
+	
+	\label{par:UC3.4}
+	\subsubsection{UC3.4 - Selezione Nodo del Flusso Dati}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}:
+				\begin{enumerate}
+					\item il predittore da collegare è stato selezionato dalla lista dei predittori (\hyperref[par:UC3.3]{UC3.3});
+					\item l’utente visualizza la lista di nodi del flusso di dati a cui poter associare il/i predittore/i selezionato/i.
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: l'utente ha selezionato il nodo dal flusso dati;
+			\item\textbf{Scenario principale}: l’utente seleziona l’aspetto interessato dal flusso di dati al quale può essere agganciato il predittore selezionato (o i predittori).
+		\end{itemize}
+
+	\label{par:UC3.5}
+	\subsubsection{UC3.5 - Impostazione delle Soglie}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l'utente ha selezionato almeno un predittore che vuole collegare al flusso dati (\hyperref[par:UC3.3]{UC3.3});
+			\item\textbf{Postcondizioni}: l’utente ha impostato la soglia di monitoraggio sul preditore selezionato;
+			\item\textbf{Scenario principale}: l’utente dispone di almeno un predittore e aggiunge una soglia da associare ed è possibile impostare più di una soglia; 
+			\item\textbf{Estensioni}: \hyperref[par:UC12]{UC12}: viene visualizzato un messaggio di errore "Soglia Non Valida" nel caso venga inserito un valore non consentito.
+		\end{itemize}
+
+	\label{par:UC3.6}
+	\subsubsection{UC3.6 - Conferma Collegamento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha creato le basi per l'associazione del predittore al nodo del flusso dati scelto, in particolare è stato selezionato il predittore (\hyperref[par:UC3.3]{UC3.3}), il nodo del flusso dati da associare (\hyperref[par:UC3.4]{UC3.4}) ed è stata impostata una soglia (\hyperref[par:UC3.5]{UC3.5});
+			\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha confermato il collegamento e visualizza la lista dei collegamenti;
+					\item l'utente ha la possibilità di effettuare un altro collegamento tornando a \hyperref[par:UC3.1]{UC3.1}.
+				\end{enumerate}
+			\item\textbf{Scenario principale}: l’utente clicca il pulsante eticchettato con "Conferma Collegamento";
+			\item\textbf{Estensioni}: \hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
+			\item\textbf{Inclusione}: 
+				\begin{enumerate}
+					\item\hyperref[par:UC18]{UC18}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
+					\item\hyperref[par:UC19]{UC19}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
+				\end{enumerate}
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+%Possibilità di inserire Scollegamento e modifica dentro a unico UC - "Operazioni sui collegamenti"
+
+	\label{par:UC4}
+	\subsection{UC4 - Scollegamento Predittore}
+
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC4_Scollegamento_predittore.png}
+		\caption{Scollegamento del Predittore}
+		\end{figure}	
+
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l'utente si trova sul pannello dedicato alla lista dei collegamenti tra predittore e flusso dati (\hyperref[par:UC19]{UC19});
+					\item la lista dei collegamenti presenta almeno un collegamento eseguito con successo  (\hyperref[par:UC3]{UC3}).
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha scollegato il predittore dal flusso dati precedentemente associato; 
+					\item dalla lista dei collegamenti non viene più visualizzato il collegamento che è stato scollegato.
+				\end{enumerate}
+			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta "Scollega Predittore".
+			\item\textbf{Inclusioni}: \hyperref[par:UC20]{UC20}: viene visualizzato un messaggio di alert "Procedere con lo  Scollegamento?" che interroga l'utente sull'effettiva conferma della procedura attuata. 
+		\end{itemize}	
+
+
+	\label{par:UC5}
+	\subsection{UC5 - Modifica Collegamento}
+
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l'utente si trova sul pannello dedicato alla lista dei collegamenti tra predittore e flusso dati (\hyperref[par:UC20]{UC20});
+					\item la lista dei collegamenti presenta almeno un collegamento eseguito con successo (\hyperref[par:UC3]{UC3}).
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha cliccato il tasto di modifica e viene indirizzato al pannello di collegamento del predittore al flusso dati a partire dalla sezione dedicata alla "Selezione del Predittore" (\hyperref[par:UC3.3]{UC3.3}) dove può apportare le modifiche al collegamento scelto; 
+					\item la precedente selezione verrà evidenziata con un marcatore e sarà possibile la modifica.
+				\end{enumerate}
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l'utente clicca il pulsante "Modifica collegamento" e viene indirizzato alla sezione di "Selezione del Predittore" (\hyperref[par:UC3.3]{UC3.3});  
+					\item vengono abilitate le modifiche e marcate le selezioni precedentemente effettuate. L'utente decide come modificare il collegamento reiterando le procedure di selezione del predittore (\hyperref[par:UC3.3]{UC3.3}), nodo del flusso dati (\hyperref[par:UC3.4]{UC3.4}), impostazione soglie (\hyperref[par:UC3.5]{UC3.5}) e conferma (\hyperref[par:UC3.6]{UC3.6}). 
+				\end{enumerate}		
+		\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC6}
+	\subsection{UC6 - Operazioni Calcolo di Previsione}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC6_Operazioni_Calcolo_di_Previsione.png}
+		\caption{Operazioni Calcolo di Previsione}
+	\end{figure}	
+
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l'utente si trova nel pannello "Calcolo di Previsione" relativo alle operazioni sulla previsione del flusso dati;
+					\item è stato effettuato almeno un collegamento tra predittore e flusso dati da monitorare (\hyperref[par:UC3]{UC3});
+				\end{enumerate}		
+	\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item è stata applicata la previsione al flusso di dati preso in esame ed è stato avviato il monitoraggio; 
+					\item è stato deciso se inviare o meno i nuovi dati a Grafana ottenuti dalla previsione
+				\end{enumerate}
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item (\hyperref[par:UC6.1]{UC6.1}) l'utente inserisce la politica temporale\glo da applicare;
+					\item (\hyperref[par:UC6.2]{UC6.2}) l'utente clicca il pulsante di avvio monitoraggio; 
+					\item (\hyperref[par:UC6.3]{UC6.3}) l'utente decide se salvare i dati di previsione cliccando il pulsante di salvataggio.
+				\end{enumerate}
+			\item\textbf{Estensioni}: 
+				\begin{enumerate} 
+					\item \hyperref[par:UC14]{UC14} estende \hyperref[par:UC6.2]{UC6.2}: visualizzazione messaggio d’errore "Politica Temporale Non Definita";
+					\item \hyperref[par:UC15]{UC15} estende \hyperref[par:UC6.2]{UC6.2}: visualizzazione messaggio d’errore "Nessun Predittore Collegato".
+				\end{enumerate}
+			\item\textbf{Inclusioni}: 
+				\begin{enumerate} 
+					\item \hyperref[par:UC21]{UC21} include \hyperref[par:UC6.2]{UC6.2}: viene visualizzato un messaggio di notifica di "Monitoraggio Avviato con Sucesso";
+					\item \hyperref[par:UC7]{UC7}  include \hyperref[par:UC6.2]{UC6.2}: una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione;
+					\item \hyperref[par:UC23]{UC23} include \hyperref[par:UC6.3]{UC6.3}: viene visualizzata un messaggio di notifica di "Invio Dati Avvenuto con Sucesso".
+				\end{enumerate}				
+		\end{itemize}
+
+	
+	\label{par:UC6.1}
+	\subsubsection{UC6.1 - Inserimento Politica Temporale}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l'utente si trova nella sezione "Calcolo di Previsione" del pannello del plug-in;
+			\item\textbf{Postcondizioni}: l’utente avrà selezionato una politica temporale applicabile ad un successivo calcolo di previsione;
+			\item\textbf{Scenario principale}: l’utente inserisce il tempo di previsione sul flusso dati attraverso l'inserimento dei campi "Secondi", "Minuti", "Ore" nell’apposito spazio di editing.
+		\end{itemize}	
+
+	\label{par:UC6.2}
+	\subsubsection{UC6.2 - Avvio Monitoraggio}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha impostato la Politica Temporale (\hyperref[par:UC6.1]{UC6.1});
+			\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha avviato il monitoraggio sul flusso dati cliccando sul pulsante di avvio;
+					\item il bottone “Avvio Monitoraggio” viene rimpiazzato da “Interruzione Monitoraggio”;
+					\item fino all’interruzione del monitoraggio l’utente non ha la possibilità di modificare i vari collegamenti.
+				\end{enumerate}
+			\item\textbf{Scenario principale}: l’utente avvia il calcolo di previsione selezionando il pulsante “Avvia Monitoraggio”; 
+			\item\textbf{Estensioni}: 
+				\begin{enumerate} 
+					\item \hyperref[par:UC14]{UC14}: visualizzazione messaggio d’errore "Politica Temporale Non Definita";
+					\item \hyperref[par:UC15]{UC15}: visualizzazione messaggio d’errore "Nessun Predittore Collegato".
+				\end{enumerate}
+			\item\textbf{Inclusioni}: 
+				\begin{enumerate} 
+					\item \hyperref[par:UC21]{UC21}: viene visualizzata un messaggio di notifica di "Monitoraggio Avviato con Sucesso";
+					\item \hyperref[par:UC7]{UC7}: una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione.
+				\end{enumerate}	
+		\end{itemize}	
+
+	\label{par:UC6.3}
+	\subsubsection{UC6.3 - Salvataggio Previsione}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item è stata configurata correttamente la connessione al server tramite Grafana;
+					\item l’utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2}) e dispone delle previsioni sul flusso di dati in quanto il calcolo di previsione è stato completato correttamente  (\hyperref[par:UC21]{UC21}).
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: la previsione calcolata sui dati ricevuti è stata immagazzinata nel DB se lo desidera;
+			\item\textbf{Scenario principale}: l’utente clicca il pulsante “Invia previsioni” tramite il quale i dati di previsione vengono inviati al DB, altrimenti decide di non salvarli e prosegue con il monitoraggio;
+			\item\textbf{Inclusioni} \hyperref[par:UC23]{UC23} : viene visualizzato un messaggio di notifica di "Invio Previsione Avvenuto con Sucesso".
+		\end{itemize}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC7}
+	\subsection{UC7 - Interruzione Monitoraggio}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC7_Interruzione_monitoraggio.png}
+		\caption{Interruzione del monitoraggio}
+	\end{figure}
+
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2});
+			\item\textbf{Postcondizioni}:
+				\begin{enumerate}
+					\item l’utente ha deciso di interrompere il monitoraggio avviato precedentemente; 
+					\item il bottone “Interruzione Monitoraggio” viene rimpiazzato da “Avvio Monitoraggio”;
+					\item l’utente ha nuovamente la possibilità di modificare i vari collegamenti. 
+				\end{enumerate}	
+			\item\textbf{Scenario principale}: l’utente clicca il pulsante con etichetta “Interrompi Monitoraggio” presente sul pannello di visualizzazione dei collegamenti;
+			\item\textbf{Inclusioni }: \hyperref[par:UC22]{UC22}: viene visualizzata una notifica di "Monitoraggio interrotto".		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC8}
+	\subsection{UC8 - Visualizzazione Previsioni}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC8_Visualizzazione_previsioni.png}
+		\caption{Visualizzazione delle previsioni}
+	\end{figure}
+
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha avviato correttamente il monitoraggio del flusso dati (\hyperref[par:UC6.2]{UC6.2}) con relativi predittori collegati;
+			\item\textbf{Postcondizioni}: il sistema mantiene aggiornate e visualizzabili attraverso l’uso delle dashboard le misurazioni e le previsioni dei predittori associati da parte dell’utente; 
+			\item\textbf{Scenario principale}: l’utente visualizza l’andamento dei dati misurati rispetto a quelli previsti. Il sistema si aggiorna costantemente grazie ai dati provenienti dal database, effettuando l’operazione di calcolo delle previsioni sul flusso dati associato ai predittori (\hyperref[par:UC6]{UC6}). Tale operazione di calcolo di previsione viene eseguito in base alla politica temporale stabilita in \hyperref[par:UC6.1]{UC6.1};		
+			\item\textbf{Inclusioni}: \hyperref[par:UC24]{UC24}: ogni volta che una soglia critica viene attivata dai dati di previsioni viene visualizzato un messaggio di alert. 
+		\end{itemize}
+
+% - Casi d'uso: Estensioni - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\label{par:UC9}
+	\subsection{UC9 - Visualizzazione Messaggio d'Errore file CSV Incompatbile}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: l’utente ha selezionato il file CSV che intende utilizzare per l'addestramento e ha cliccato il pulsante di conferma. Il file selezionato è strutturalmente errato e non c'è compatibilità con l'algoritmo selezionato;
+			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.2]{UC1.2});
+			\item\textbf{Scenario principale}: l’utente visualizza il messaggio d'errore "File Incompatibile" in cui viene segnalato il fatto che il file CSV da lui selezionato (\hyperref[par:UC1.2]{UC1.2}) non è adatto per l'addetramento;  		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC10}
+	\subsection{UC10 - Visualizzazione Messaggio di Alert file JSON già Caricato}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha selezionato l'opzione di caricamento del file JSON tramite click del pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1});
+			\item\textbf{Postcondizioni}: l’utente ha visualizzato un messaggio di alert in cui viene segnalato che è già presente un file JSON caricato nel plug-in; 
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di allert "File JSON già Caricato" in cui viene segnalato che è già stato caricato un file JSON in precedenza e la conferma procederà alla sua sovrascrizione;
+					\item l'utente clicca il pulsante "Conferma" per proseguire e caricare il nuovo file JSON oppure clicca il pulsante "Annulla" per ritornare alla sezione di caricamento.
+				\end{enumerate}
+		\end{itemize}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+
+	\label{par:UC11}
+	\subsection{UC11 - Visualizzazione Messaggio d'Errore Caricamento file JSON }
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.2]{UC2.2}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.3]{UC2.3});
+			\item\textbf{Postcondizioni}: l’utente ha visualizzato un messaggio d'errore in cui viene segnalato che la struttura del file selezionato non supporta una SVM o RL, di conseguenza viene riportato alla selezione del file JSON; 
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio d'errore "Struttura del file JSON non Supportata" in cui viene segnalato che la definizione dei predittori del file JSON selezionato (\hyperref[par:UC2.2]{UC2.2}) non è sintatticamente corretta;
+					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato alla sezione di selezione.
+				\end{enumerate}
+		\end{itemize}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		\label{par:UC12}
+	\subsection{UC12 - Visualizzazione Messaggio d'Errore Soglia Non Valida}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.5]{UC3.5}) non valida per contenuto o formato;
+			\item\textbf{Postcondizioni}: l’utente visualizza il messaggio d'errore sulla soglia appena impostata;		
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio d'errore "Errore Impostazione Soglia Non Valida" in cui viene segnalato che la soglia appena inserita (\hyperref[par:UC3.5]{UC3.5}) non può essere accettata e viene invitato ad inserirla nuovamente;
+					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'inserimento della soglia.		
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC13}
+	\subsection{UC13 - Visualizzazione Messaggio d'Errore impostazioni di Collegamento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha confermato le selezioni per il collegamento di un predittore ad un nodo del flusso (\hyperref[par:UC3.6]{UC3.6}) ed ha commesso alcuni errori;
+			\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item l’utente visualizza il messaggio di errore di collegamento;
+					\item le scelte dell'utente precedenti non vengono finalizzate e non viene creato il collegamento. 
+				\end{enumerate}		
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio d'errore "Errore Impostazioni di Collegamento" in cui viene segnalato che sono presenti errori o mancate selezioni nella procedura di collegamento (\hyperref[par:UC3]{UC3});
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		\label{par:UC14}
+	\subsection{UC14 - Visualizzazione Messaggio d'Errore Politica Temporale Non Definita}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di "Avvio Monitoraggio" (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione  (\hyperref[par:UC6.1]{UC6.1});
+			\item\textbf{Postcondizioni}:
+				\begin{enumerate} 
+					\item l’utente ha visualizzato il messaggio d'errore sulla politica temporale non definita;		
+					\item	il monitoraggio non viene avviato.
+				\end{enumerate}
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio d'errore "Errore Politica Temporale Non Definita" in cui viene segnalato che non è stata inserita nessuna politica temporale prima dell'avvio del monitoraggio; 
+					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'inserimento della politica temporale (\hyperref[par:UC6.1]{UC6.1}).		
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+		\label{par:UC15}
+	\subsection{UC15 - Visualizzazione Messaggio d'Errore Nessun Predittore Collegato}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
+			\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha visualizzato il messaggio d'errore sulla mancata presenza di collegamenti;	
+					\item	il monitoraggio non viene avviato.
+				\end{enumerate}
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio d'errore "Nessun Predittore Collegato" in cui viene segnalato che non è stata inserito alcun collegamento tra predittore e flusso dati; 
+					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'impostazione di collegamento predittori (\hyperref[par:UC3]{UC3}).		
+				\end{enumerate}		
+		\end{itemize}
+
+% - Casi d'uso: Inclusioni - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC16}
+	\subsection{UC16 - Visualizzazione Messaggio di Notifica Avvenuto Successo Salvataggio file JSON}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: l'utente ha salvato il file JSON generato a partire dai dati di addestramento (\hyperref[par:UC1.5]{UC1.5}); 
+			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di avvenuto salvataggio del file JSON;					\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di notifica "Avvenuto Successo Salvataggio File JSON" in cui viene notificato che il salvataggio (\hyperref[par:UC1.5]{UC1.5}) è avvenuto correttamente;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\label{par:UC17}
+	\subsection{UC17 - Visualizzazione Messaggio di Notifica Avvenuto Successo Caricamento JSON}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha confermato il caricamento del file JSON selezionato  (\hyperref[par:UC2.3]{UC2.3});
+			\item\textbf{Postcondizioni}: l’utente visualizza la notifica di avvenuto caricamento del file JSON nel plug-in; 
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di notifica "Avvenuto Successo Caricamento File JSON" in cui viene notificato che il caricamento (\hyperref[par:UC2]{UC2}) è avvenuto correttamente;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\label{par:UC18}
+	\subsection{UC18 - Visualizzazione Messaggio di Notifica Collegamento Avvenuto con Successo}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento (\hyperref[par:UC3.6]{UC3.6});
+			\item\textbf{Postcondizioni}: l’utente visualizza la notifica di avvenuto successo del collegamento; 
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di notifica "Collegamento Avvenuto con Successo" in cui viene notificato che il collegamento tra predittore e flusso dati (\hyperref[par:UC3]{UC3}) è avvenuto correttamente;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC19}
+	\subsection{UC19 - Visualizzazione Pannello Lista Collegamenti}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento tra predittore e nodo del flusso selezionato cliccando il pulsante di "Conferma Collegamento" (\hyperref[par:UC3.6]{UC3.6});
+			\item\textbf{Postcondizioni}: l’utente visualizza un pannello contenente la lista di tutti i collegamenti effettuati, ogni nuovo collegamento confermato viene aggiunto alla lista; 
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l'utente visualizza la lista di collegamenti effettuati correttamente fino a quel momento; ogni riga è così suddivisa:
+					\begin{itemize}
+						\item nominativo del predittore (o predittori) selezionato;
+						\item nominativo del nodo del flusso dati selezionato;
+						\item impostazioni delle soglie inserite.
+					\end{itemize}
+					\item accanto ad ogni riga della lista dei collegamenti sono presenti i pulsanti "Scollega Predittore" e "Modifica Collegamento" .	
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC20}
+	\subsection{UC20 - Visualizzazione Messaggio di Alert Procedere con lo Scollegamento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha selezionato il pulsante di scollegamento "Scollega Predittore" (\hyperref[par:UC4]{UC4});
+			\item\textbf{Postcondizioni}:
+				\begin{enumerate}
+					\item l'utente ha visualizzato il messaggio di alert sul tentativo di scollegamento predittore;
+					\item l'utente ha confermato o annullato la procedura di scollegamento. 
+				\end{enumerate}
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza un messaggio di alert "Procedere con lo Scollegamento?" in cui viene segnalato che è stata selezionata una procedura di scollegamento del predittore;
+					\item l'utente clicca il pulsante "Conferma" per proseguire e scollegare il predittore oppure clicca il pulsante "Annulla" per ritornare alla lista dei collegamenti.
+				\end{enumerate}
+		\end{itemize}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC21}
+	\subsection{UC21 - Visualizzazione Messaggio di Notifica Monitoraggio Avviato con Successo}	
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha avviato un monitoraggio (\hyperref[par:UC6.2]{UC6.2});
+			\item\textbf{Postcondizioni}: l’utente ha visualizzato la notifica di monitoraggio avviato con successo; 
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di notifica "Monitoraggio Avviato con Successo" in cui viene notificato che il monitoraggio è stato avviato correttamente;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\label{par:UC22}
+	\subsection{UC22 - Visualizzazione Messaggio di Notifica Monitoraggio Interrotto}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: l’utente ha interrotto il monitoraggio (\hyperref[par:UC7]{UC7});
+			\item\textbf{Postcondizioni}: l’utente ha visualizzato la notifica di monitoraggio interrotto;
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di notifica "Monitoraggio Interrotto" in cui viene notificato che il monitoraggio sul flusso dati è stato interrrotto;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		
+	\label{par:UC23}
+	\subsection{UC23 - Visualizzazione Messaggio di Notifica Salvataggio Previsione Avvenuta con Successo}	\begin{itemize}
+			\item\textbf{Attore primario}: utente;
+			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di invio previsioni (\hyperref[par:UC6.3]{UC6.3});
+			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di "Salvataggio Dati di Previsione Avvenuto con Successo"; 
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di notifica "Salvataggio Previsione Avvenuta con Successo" in cui viene notificato che i dati di previsione sono stati inviati al Database (\hyperref[par:UC6.3]{UC6.3});
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\label{par:UC24}
+	\subsection{UC24 - Visualizzazione Messaggio di Alert Soglia Critica Raggiunta}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.5]{UC3.5}) è stata reggiunta o superata;
+			\item\textbf{Postcondizioni}: l’utente ha visualizzato il messaggio di alert riguardante la soglia interessata;
+			\item\textbf{Scenario principale}: 
+				\begin{enumerate} 
+					\item l’utente visualizza il messaggio di alert "Soglia Critica Raggiunta" in cui viene segnalato che una soglia impostata nel processo di collegamento dei predittori al flusso dati (\hyperref[par:UC3]{UC3}) è stata raggiunta o superata;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+	
+
+
+
+

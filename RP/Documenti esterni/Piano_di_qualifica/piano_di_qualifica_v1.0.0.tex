@@ -1,0 +1,64 @@
+\documentclass[a4paper, oneside, openany, dvipsnames, table, 12pt]{article}
+\usepackage{../../../Template/AFKstyle}
+\usepackage{hyperref}
+\usepackage{verbatim} %per commenti di più righe \begin{comment} \end{comment}
+\usepackage{amsmath}
+\input{sezioni/copertina.tex}
+\makeindex
+
+\begin{document}
+\copertina{}
+
+%------------------ COLORI TABELLE 
+\definecolor{pari}{RGB}{255, 207, 158} %{HTML}{E1F5FE} %azzurrino
+\definecolor{dispari}{HTML}{FAFAFA} %bianco/grigetto 
+
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 133, 51}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\definecolor{lastrowcolor}{RGB}{176, 196, 222} %steel blue %{255,165,0} orange %{RGB}{255, 207, 158}
+\rowcolors{2}{pari}{dispari}
+\renewcommand{\arraystretch}{1.5}
+
+%------------------
+
+\newpage
+\input{sezioni/registroModifiche.tex}
+
+%Didascalia tabelle/immagini (prendono come riferimento la subsection)
+\counterwithin{table}{subsection}
+\newpage
+
+%indice, indice figure e indice tabelle
+\tableofcontents
+\newpage
+
+\listoftables
+\newpage
+
+\input{sezioni/introduzione.tex}
+\pagebreak
+
+\input{sezioni/qualita_di_processo.tex}
+\pagebreak
+
+\input{sezioni/qualita_di_prodotto.tex}
+\pagebreak
+
+\input{sezioni/specifica_dei_test.tex}
+\pagebreak
+
+\appendix %tutte le \section da questo documento in poi saranno numerate con lettere
+
+\input{sezioni/standard_di_qualita.tex}
+\pagebreak
+
+\input{sezioni/resoconto_verifica.tex}
+\pagebreak
+
+\input{sezioni/autovalutazione.tex}
+\pagebreak
+
+
+\end{document}

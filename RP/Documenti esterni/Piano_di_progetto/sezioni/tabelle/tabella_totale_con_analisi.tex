@@ -1,0 +1,52 @@
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 71, 87}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{lastrowcolor}{RGB}{156, 198, 214}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\rowcolors{2}{grey2}{greyRowafk}
+\renewcommand{\arraystretch}{1.5}
+
+
+%tabella ore
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Validazione e Collaudo}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c | c | c | c | c | c }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & 
+\textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} &
+\textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} &
+\textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Totale}} \\
+Simone Federico Bergamin 	& 11 	& 13 	& 30 	& 19 	& 31 	& 41 	& 145 \\
+Alessandro Canesso 			& 16 	& 18 	& 16 	& 20 	& 27 	& 46 	& 143 \\
+Victor Dutca 				& 17	& 14 	& 19 	& 20 	& 32 	& 41 	& 143 \\
+Fouad Farid					& 11	& 18 	& 12 	& 32 	& 27 	& 43 	& 143 \\
+Simone Meneghin 			& 8 	& 17 	& 23 	& 32 	& 29 	& 40 	& 149 \\
+Olivier Utshudi 			& 8 	& 16 	& 13 	& 30 	& 32 	& 49 	& 148 \\
+Davide Zilio 				& 13 	& 11 	& 30 	& 18 	& 20 	& 51 	& 143 \\
+\rowcolor{lastrowcolor}
+\textbf{Ore totali ruolo} & \textbf{84} & \textbf{107} & \textbf{143} & \textbf{171} & \textbf{198} & \textbf{311} & \textbf{1014} \\
+\end{tabular}
+\end{table}
+
+
+%tabella costi
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Fase di Analisi}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c  }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & 
+\textcolor{white}{\textbf{Costo}}  \\
+Responsabile & 84 & 2520€ \\
+Amministratore & 107 & 2140€ \\
+Analista & 143 & 3575€ \\
+Progettista	& 171 & 3762€ \\
+Programmatore & 198 & 2970€  \\
+Verificatore & 311 & 4665€  \\
+\rowcolor{lastrowcolor}
+\textbf{Totale} & \textbf{1014} & \textbf{19632€}  \\
+\end{tabular}
+\end{table}

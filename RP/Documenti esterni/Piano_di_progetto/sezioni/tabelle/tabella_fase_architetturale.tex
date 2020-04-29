@@ -1,0 +1,58 @@
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 71, 87}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{lastrowcolor}{RGB}{156, 198, 214}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\rowcolors{2}{grey2}{greyRowafk}
+\renewcommand{\arraystretch}{1.5}
+
+
+%tabella ore fase di Prog Architetturale
+\begin{comment}
+BASE PER TUTTI: 30 ORE
+Canesso: +2 ore perchè sa che dopo dovrà farne di meno (tanti arretrati)
+Utshudi & Meneghin: +2 ore perchè meno arretrati
+\end{comment}
+
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Fase di Analisi}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c | c | c | c | c | c }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & 
+\textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} &
+\textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} &
+\textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Totale}} \\
+Simone Federico Bergamin & - & - & 10 & 7 & 5 & 8 & 30 \\
+Alessandro Canesso & - & 5 & - & 10 & 9 & 8 & 32 \\
+Victor Dutca & 3 & 6 & 4 & 10 & 7 & - & 30 \\
+Fouad Farid	& - & 5 & - & 14 & - & 11 & 30 \\
+Simone Meneghin & 6 & - & 9 & 10 & 7 & - & 32 \\
+Olivier Utshudi & - & 4 & - & 10 & 6 & 12 & 32 \\
+Davide Zilio & 3 & - & 13 & - & - & 14 & 30 \\
+\rowcolor{lastrowcolor}
+\textbf{Ore totali ruolo} & \textbf{12} & \textbf{20} & \textbf{36} & \textbf{61} & \textbf{34} & \textbf{53} & \textbf{216} \\
+\end{tabular}
+\end{table}
+
+
+%tabella costi
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Fase di Analisi}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c  }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & 
+\textcolor{white}{\textbf{Costo}}  \\
+Responsabile & 12 & 360€ \\
+Amministratore & 20 & 400€ \\
+Analista & 36 & 900€ \\
+Progettista	& 61 & 1342€ \\
+Programmatore & 34 & 510€  \\
+Verificatore & 53 & 795€  \\
+\rowcolor{lastrowcolor}
+\textbf{Totale} & \textbf{216} & \textbf{4307€}  \\
+\end{tabular}
+\end{table}
