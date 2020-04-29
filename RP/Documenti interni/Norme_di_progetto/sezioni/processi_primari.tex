@@ -271,11 +271,17 @@ di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento 
 			\end{itemize}
 			\pagebreak
 	\subsection{Strumenti}
+	\subsubsection{Coveralls}
+	Servizio web utilizzato per tenere traccia della copertura del codice.\\
+	\centerline{\url{https://coveralls.io/}}
 	\subsubsection{ESLint}
 	È un plugin\glo utilizzato per effettuare analisi statica del codice e rilevare problematiche nei pattern codificati in linguaggio JavaScript\glo. \\
 	\centerline{\url{https://eslint.org/}}
 	\subsubsection{Draw.io}
 	Programma utilizzato per la creazione di diagrammi UML.
+	\subsubsection{InfluxDB}
+	Database\glo di serie temporali open source utilizzato per la gestione e l'aggiornamento dei dati.\\
+	\centerline{\url{https://www.influxdata.com/}}
 	\subsubsection{IntelliJ IDEA}
 	IDE\glo utilizzato per la codifica in JavaScript, garantendo la piena compatibilità con i sistemi operativi Linux, Windows e MacOS.\\
 	\centerline{\url{https://www.jetbrains.com/idea/}}
@@ -290,11 +296,14 @@ di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento 
 	Utilizzato per poter installare i pacchetti necessari allo sviluppo dell’applicativo (React\glo).
 	\\
 	\centerline{\url{https://www.npmjs.com/}}
+	\subsubsection{Grafana}	
+	Software di analisi open source utilizzato per visualizzare e monitorare i dati attraverso grafici e avvisi.\\
+	\centerline{\url{https://grafana.com/}}
+	Grafana viene fornito con un plug-in per InfluxDB. Quest'ultimo include un editor di query personalizzato e supporta annotazioni e modelli di query.
 	\subsubsection{TravisCI}
 	Impiegato per garantire la continuous integration.
 	\\
 	\centerline{\url{https://travis-ci.org/}}
-	\pagebreak
 	\subsection{Procedure}
 	\subsubsection{Draw.io}
 	\paragraph*{Creazione dei diagrammi UML} \mbox{} \\ \mbox{} \\
@@ -307,7 +316,19 @@ di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento 
 \end{itemize}
 
 	\subsubsection{NPM}
+	\paragraph*{Installazione di un pacchetto} \mbox{} \\ \mbox{} \\
 	Per poter installare un pacchetto Node all'interno dell'ambiente di sviluppo IntelliJ, bisogna utilizzare il seguente comando:\\
 	\centerline{\texttt{npm install <nome\_pacchetto>}}
 	Successivamente, provvederà direttamente IntelliJ a scaricare ed importare nel progetto il pacchetto desiderato.
+	
+	\paragraph*{Avvio del server} \mbox{} \\ \mbox{} \\
+	Per avviare il \texttt{server node.js}, bisogna utilizzare il comando \texttt{npm start}.\\
+	Viceversa, per bloccare la sua esecuzione, utilizzare il comando \texttt{npm stop}.
 
+	\subsubsection{InfluxDB}
+	Innanzittutto è necessario scaricare l'eseguibile per poter avviare il server.
+    Quest'ultimo lo si può scaricare dal seguente link:\\
+	\centerline{\url{https://portal.influxdata.com/downloads/}.} 
+    
+	\paragraph*{Avvio del server} \mbox{} \\ \mbox{} \\
+	Per avviare il server di InfluxDB, eseguire \texttt{influxd.exe}.
