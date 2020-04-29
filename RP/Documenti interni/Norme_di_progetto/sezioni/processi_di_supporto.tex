@@ -42,7 +42,7 @@ Il frontespizio è la prima pagina del documento ed è così strutturato:\begin{
 \item \textbf{Descrizione}: descrizione sintetica del documento, posizionata centralmente in fondo alla pagina.
 \end{itemize}
 
-\subsubsection{Registro delle modifiche}
+\subsubsection{Registro delle Modifiche}
 Ogni documento dispone di un \textit{Registro delle Modifiche}: una tabella posta a seguito della prima pagina, contenente le modifiche apportate al documento. In essa sono indicati: \begin{itemize}
 \item versione del documento dopo la modifica;
 \item data della modifica;
@@ -226,7 +226,7 @@ Draw.io viene utilizzato per la produzione degli UML.\\
 \subsection{Gestione della configurazione}
 L'obiettivo della configurazione è di creare ordine tra i documenti e il software. Tutto ciò che è configurato ha uno stato identificativo, è modificato secondo regole ben definite ed è posto sotto versionamento\glo.
 
-\subsubsection{Versionamento}
+\subsubsection{Gestione dei cambiamenti}
 \paragraph{Versionamento dei documenti} \mbox{} \\ \mbox{} \\
 Ogni versione di qualsiasi documento deve corrispondere ad una riga della tabella delle modifiche. Il numero di versione è composto da tre cifre: \\ \\
 \centerline{X.Y.Z} \\
@@ -247,7 +247,7 @@ Ogni versione di qualsiasi documento deve corrispondere ad una riga della tabell
 \end{itemize}
 \end{itemize}
 
-\paragraph{GitHub} \mbox{} \\ \mbox{} \\
+\subsubsection{GitHub} 
 Per le parti del progetto da versionare si è scelto di usare GitHub\glo, un servizio del sistema di versionamento distribuito Git per contenere la repository remota. \\
 I membri del team possono interagire con il VCS\glo sia da linea di comando, sia attraverso software che ne migliorano l'usabilità, come GitKraken e GitHub Desktop. La versione ufficiale del progetto è ospitata in una repository remota su GitHub, all'indirizzo \\
 \centerline{\url{https://github.com/teamafkSWE}}
@@ -256,7 +256,9 @@ I membri del team possono interagire con il VCS\glo sia da linea di comando, sia
 All'interno della repository principale sopra descritta troviamo due differenti repository: \begin{itemize}
 \item \textbf{PredireInGrafana-docs}: contiene tutti i documenti ufficiali del progetto, suddivisi in specifiche cartelle: \\
 \centerline{\url{https://github.com/teamafkSWE/PredireInGrafana-docs}}  \begin{itemize}
-\item \textbf{Cartella principale - RR}: raccoglie i file sorgenti per la compilazione dei documenti, suddivisi tra esterni ed interni, realizzati per la \textit{Revisione dei Requisiti}. In futuro saranno aggiunte cartelle distinte nominate \textbf{RP, RQ} e \textbf{RA}, contenenti i file delle rispettive consegne.
+\item \textbf{Cartella principale - Presentazioni}: raccoglie le presentazioni relative ad ogni consegna;
+\item \textbf{Cartella principale - RR}: raccoglie i file sorgenti per la compilazione dei documenti, suddivisi tra esterni ed interni, realizzati per la \textit{Revisione dei Requisiti};
+\item \textbf{Cartella principale - RP}: raccoglie i file sorgenti per la compilazione dei documenti, suddivisi tra esterni ed interni, realizzati per la \textit{Revisione di Progettazione}. In futuro saranno aggiunte cartelle distinte nominate \textbf{RQ} e \textbf{RA}, contenenti i file delle rispettive consegne.
 \begin{itemize}
 \item[$\bullet$] \textbf{Tipologia\_di\_documento}: ogni documento avrà la rispettiva cartella (e.i. Norme\_di\_progetto), contenente tutti i file (sezioni ed immagini) necessari per la sua compilazione;
 \item[$\bullet$] \textbf{copertina.tex}: file che permetterà una facile e rapida modifica dell'impostazione testuale del frontespizio.
@@ -289,8 +291,14 @@ Il repository di Git è composto da vari branch\glo, per favorire la collaborazi
 \item eseguire il push\glo del commit sul repository remoto.
 \end{enumerate}
 \pagebreak
-\paragraph{Gestione delle modifiche}\mbox{} \\ \mbox{} \\
-Tutti i membri del team possono modificare i file in ogni branch, ad eccezione del branch master, per il quale occorre richiedere una pull e ottenere l'approvazione di un altro membro.
+\subsubsection{Gestione delle modifiche}
+Tutti i membri del team possono modificare i file in ogni branch, ad eccezione del branch master, per il quale occorre richiedere una pull e ottenere l'approvazione di un altro membro. \\
+Per effettuare modifiche maggiori sui contenuti o sulla struttura dei file è previsto: \begin{itemize}
+\item contattare il \textit{Responsabile} del file da modificare;
+\item suggerire la modifica da effettuare;
+\item se il responsabile valuta positivamente la modifica, allora la applica.
+\end{itemize}
+Per modifiche minori, come correzioni grammaticali o miglioramenti sintattici, si consiglia di modificare indipendentemente. In entrambi i casi è opportuno commentare i propri commit con chiarezza per risalire facilmente alle modifiche effettuate.
 
 \subsection{Gestione della qualità}
 Lo scopo è di garantire che il prodotto e i servizi offerti rispettino gli obiettivi di qualità e che i bisogni del proponente siano soddisfatti. 
@@ -316,7 +324,8 @@ Gli strumenti utilizzati per la qualità sono:
 \end{itemize}
 \pagebreak
 \paragraph{Metriche} \mbox{} \\ \mbox{} \\
-Le metriche sono distinte in tre categorie: processi, documentazione e codifica. Per ciascuna di esse si indica il motivo per cui è stata scelta e la procedura di calcolo.
+Le metriche sono distinte in tre categorie: processi, documentazione e codifica. Per ciascuna di esse si indica il motivo per cui è stata scelta e la procedura di calcolo. \\
+Le metriche per la verifica vengono descritte nell'apposita sezione \S 3.10.3.2 .
 
 \subparagraph{Classificazione}\mbox{} \\ \mbox{} \\
 Le metriche rispetteranno la seguente notazione: \\
@@ -354,7 +363,7 @@ dove: \begin{itemize}
 \item \textbf{CE}: costo effettivo.
 \end{itemize}
 Se $BV[\%] \geq 0$ indica che il budget sta venendo speso più lentamente di quanto pianificato, se negativo invece indica che il budget sta venendo speso più velocemente di quanto pianificato. \\
-Produttività (P) & MP03 & Rappresenta la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del progetto. E’ misurata in termini di numero di linee di codice (\hyperref[par:MS01]{LOC}) sviluppate da una persona nell’unità di tempo stabilita (settimana). E’ utilizzata per valutare lo sforzo richiesto per lo sviluppo  del progetto a fronte delle sue dimensioni. 
+Produttività (P) & MP03 & Rappresenta la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del progetto. È misurata in termini di numero di linee di codice (\hyperref[par:MS01]{LOC}) sviluppate da una persona nell’unità di tempo stabilita (settimana). È utilizzata per valutare lo sforzo richiesto per lo sviluppo  del progetto a fronte delle sue dimensioni. 
 \[ Pmedia = \frac{LOC}{settimana}\]
 	\end{tabular}
 	\end{center}
@@ -377,12 +386,15 @@ Il risultato è un valore compreso nell'intervallo tra 0 e 100, dove il valore 1
 \pagebreak
 \subparagraph{Metriche per la codifica} \mbox{} \\ \mbox{} \\
 Questa sezione ha lo scopo di fornire delle metriche per garantire un buon livello di qualità del software.
-\begin{table}[H]
-	\caption{Metriche del software}
-	\begin{center}
-	\begin{tabular}{ C{4.5cm} c L{9.5cm} }
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche del software}\\
 		\rowcolor{redafk}
 		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
 		\label{par:MS01}Linee di Codice (LOC) & MS01 & Rappresenta  le  dimensioni  del  codice di un metodo. È espresso in termini di numero di linee di codice, ed è utilizzato per dimensionare la produttività delle persone e da questa lo sforzo richiesto per sviluppare tale funzione. \\
 		Numero dei Metodi (NM)  & MS02 & Numero medio di metodi contenuti nelle classi di un oggetto. Un numero troppo alto di metodi può indicare la necessità di scomporre la classe. Un numero troppo basso deve far riflettere sull'effettiva utilità della classe in esame. 
 		\[ NM =\frac{\sum\#metodi}{\#classi}  \] \\
@@ -390,11 +402,7 @@ Questa sezione ha lo scopo di fornire delle metriche per garantire un buon livel
 indicare un'eccessiva complessità dello stesso. \\
 		Commenti per Linee di \newline Codice (CLC) & MS04 & Rapporto fra numero di righe di commento e numero totale di righe (vuote escluse). Un codice ben commentato può essere compreso più facilmente e velocemente, facilitando le operazioni di manutenzione. 
 		\[ CLC = \frac{\#righe\_commento}{\#tot\_righe}\] \\
-		Code Coverage (CC) & MS05 & Percentuale delle linee di codice coperte dai test. Avere codice coperto da test riduce la possibilità di introdurre errori nel prodotto. 
-		\[ CC[\%] = \frac{\#righe\_codice\_testate}{\#tot\_righe\_codice}\] \\
-	\end{tabular}
-	\end{center}
-	\end{table}
+	\end{longtable}
 \pagebreak
 \subsubsection{Verifica}
 Il processo di verifica ha come scopo la realizzazione di prodotti corretti, coesi e completi. Sono soggetti a verifica i documenti e il software.
@@ -407,12 +415,9 @@ Il processo di verifica deve rispettare i seguenti punti: \begin{itemize}
 \end{itemize}
 Il processo di verifica prende in input ciò che è già stato prodotto e lo restituisce in uno stato
 conforme alle aspettative (stabile). Per ottenere tale risultato ci si affida a processi di analisi e test.
-\paragraph{Strumenti di verifica}
+\paragraph{Attività}
 
-\paragraph*{Correzione ortografica} \mbox{} \\ \mbox{} \\
-Il controllo ortografico viene eseguito principalmente basandosi sugli strumenti integrati in \TeX{}maker, il quale fornisce un dizionario italiano e sottolinea in rosso le parole che non vi appartengono. 
-
-\paragraph{Analisi} \mbox{} \\ \mbox{} \\
+\subparagraph{Analisi} \mbox{} \\ \mbox{} \\
 Il processo di analisi si suddivide in statica e dinamica.
 
 \paragraph*{Analisi statica} \mbox{} \\ \mbox{} \\
@@ -433,7 +438,9 @@ Sintassi & La frase è troppo complessa e deve essere semplificata \\
 Punteggiatura degli elenchi & Ogni voce termina in ";" eccetto l'ultima che termina in "."\\
 Errori di battitura & Tipici errori di battitura dovuti alla vicinanza delle
 lettere sulla tastiera, ad esempio la lettera "a" al posto della "s", "i" al posto di "o", "m" al posto di "n" \\
-Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei documenti in maniera adeguata, ovvero: section, subsection, subsubsection, paragraph, subparagraph
+Uso degli accenti & Utilizzare le lettere accentate presenti nella tastiera o utilizzare il codice ALT \\
+Inconsistenze nell’uso delle iniziali maiuscole nei titoli delle parti di documento & Ogni titolo deve avere la prima lettera della prima parola maiuscola e il resto minuscolo, tranne quando ci si riferisci ad attività o documenti specifici \\
+Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei documenti in maniera adeguata, ovvero: section, subsection, subsubsection, paragraph, subparagraph \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -441,7 +448,7 @@ Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei docum
 \paragraph*{Analisi dinamica} \mbox{} \\ \mbox{} \\
 L'analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione. Produce una misura della qualità del prodotto, mediante l'esecuzione di test specifici che verificano se il prodotto funziona e se ci sono anomalie.
 \pagebreak
-\paragraph{Test} \mbox{} \\ \mbox{} \\
+\subparagraph{Test} \mbox{} \\ \mbox{} \\
 I test sono l'attività fondamentale dell'analisi dinamica: il loro scopo è verificare che il codice
 scritto funzioni correttamente. I test devono:
 \begin{itemize}
@@ -467,7 +474,7 @@ Il test di regressione va eseguito ogni volta che viene modificata un'implementa
 Verificano il comportamento dell'intero sistema.\\
 Lo scopo principale di questi test è la verifica del sistema rispetto alle specifiche tecniche definite nell'\textit{Analisi dei Requisiti}.
 \pagebreak
-\subparagraph{Codifica dei test} \mbox{} \\ \mbox{} \\
+\subparagraph*{Codifica dei test} \mbox{} \\ \mbox{} \\
 La codifica dei test è la seguente: \\
 \centerline{\textbf{TX[Tipo\_Requisito][Importanza][CodiceUC]}}
 dove: \begin{itemize}
@@ -492,7 +499,32 @@ dove: \begin{itemize}
 \item \textbf{CodiceUC}: rappresenta il codice identificativo crescente del componente da verificare.
 \end{itemize}
 
+\paragraph{Metriche per la verifica} \mbox{} \\ \mbox{} \\
+Le metriche utilizzate per la verifica sono le seguenti:
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche per la verifica}\\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
+		Code Coverage (CC) & MS05 & Percentuale delle linee di codice coperte dai test. Avere codice coperto da test riduce la possibilità di introdurre errori nel prodotto. 
+		\[ CC[\%] = \frac{\#righe\_codice\_testate}{\#tot\_righe\_codice}\] \\
+		Passed Test Cases Percentage (PTCP) & MS06 & Percentuale di test superati sul totale dei test eseguiti. Un'alta percentuale di superamento indica la tendenza del codice ad essere già corretto prima dei test. Si calcola con la seguente
+formula:
+		\[ PTCP = \frac{\#test\_superati}{\#test\_eseguiti}\cdot 100 \] \\
+		Failed Test Cases Percentage (FTCP) & MS07 & Percentuale di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento indica la tendenza
+alla scorrettezza del codice. Si calcola con la seguente formula:
+\[ FTCP = \frac{\#test\_falliti}{\#test\_eseguiti}\cdot 100 \] \\
+\end{longtable}
 
+\paragraph{Strumenti}
+
+\paragraph*{Correzione ortografica} \mbox{} \\ \mbox{} \\
+Il controllo ortografico viene eseguito principalmente basandosi sugli strumenti integrati in \TeX{}maker, il quale fornisce un dizionario italiano e sottolinea in rosso le parole che non vi appartengono. 
+\
 \subsubsection{Validazione}
 Questo processo avviene tramite test pianificati dal \textit{Progettista} ed in seguito eseguiti dal \textit{Verificatore}.
 Lo scopo di quest'ultimi è appunto accertare che il prodotto finale corrisponda alle attese, soddisfando tutti i requisiti concordati e i bisogni del committente. \\

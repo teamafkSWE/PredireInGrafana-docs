@@ -96,8 +96,21 @@
 
 \usepackage[bottom]{footmisc}
 \usepackage{fancyhdr}
+
 \usepackage{titlesec}
-\setcounter{secnumdepth}{4}
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{%
+  \thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{%
+  \@startsection{subsubparagraph}    % counter
+    {6}                              % level
+    {\parindent}                     % indent
+    {3.25ex \@plus 1ex \@minus .2ex} % beforeskip
+    {-1em}                           % afterskip
+    {\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5em}}
+\newcommand{\subsubparagraphmark}[1]{}
+
 \usepackage{amsmath, amssymb}
 \usepackage{array}
 \usepackage{graphicx}
@@ -162,8 +175,8 @@
 %http://ctan.mirror.garr.it/mirrors/CTAN/macros/latex/contrib/appendix/appendix.pdf
 \usepackage{appendix} %aggiunge dei comandi per l'appendice
 \usepackage{parskip} %aiuta LaTeX a trovare il miglior stile per i page break
-\setcounter{secnumdepth}{5} % numera i sottoparagrafi
-\setcounter{tocdepth}{5} %aggiunge all'indice i sottoparagrafi
+\setcounter{secnumdepth}{6} % numera i sottografi
+\setcounter{tocdepth}{6} %aggiunge all'indice i sottoparagrafi
 %\usepackage{titlesec} %\begin{paragraph} si può usare come subsubsubsection!
 
 
