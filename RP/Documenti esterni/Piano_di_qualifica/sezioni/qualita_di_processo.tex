@@ -6,7 +6,7 @@ Eliminato la subsection PDCA
 \end{comment}
 \subsection{Obiettivi}
 Sono fissati inoltre i seguenti obiettivi: \begin{itemize}
-\item rispetto di tempi e costi descritti nel \textit{Piano\_di\_Progetto\_v1.0.0};
+\item rispetto di tempi e costi descritti nel \textit{Piano\_di\_Progetto\_v2.0.0};
 \item continuo miglioramento dei processi;
 \item misurabilità dello stato dei processi.
 \end{itemize}
@@ -29,7 +29,7 @@ Essi possono essere: \begin{itemize}
 \end{itemize}
 \textbf{Attenzione}: in questo documento \textbf{non} saranno trattati la descrizione e gli strumenti per il calcolo delle metriche, reperibili invece nelle \textit{Norme\_di\_Progetto\_v1.0.0}.
 
-\subsection{MP01 - Schedule Variance} \mbox{} \\ \mbox{} \\
+\subsubsection{MP01 - Schedule Variance} 
 La Schedule Variance indica se una certa attività o processo è in anticipo, in pari, o in ritardo rispetto alla data di scadenza prevista. \\ \\ 
 \textbf{Parametri adottati:} 
 \begin{itemize}
@@ -37,7 +37,7 @@ La Schedule Variance indica se una certa attività o processo è in anticipo, in
 \item range ottimale: ($ -\infty $, 0].
 \end{itemize}
 
-\subsection{MP02 - Budget Variance} \mbox{} \\ \mbox{} \\
+\subsubsection{MP02 - Budget Variance} 
 Permette di controllare i costi sostenuti alla data corrente rispetto al budget preventivato in termini percentuali. \\ \\ 
 \textbf{Parametri adottati:}  
 \begin{itemize}
@@ -45,7 +45,7 @@ Permette di controllare i costi sostenuti alla data corrente rispetto al budget 
 \item range ottimale: $ \geq 0\%$.
 \end{itemize}
 
-\subsection{MP03 - Produttività} \mbox{} \\ \mbox{} \\
+\subsubsection{MP03 - Produttività} 
 Rappresenta la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del progetto. \\ \\ 
 \textbf{Parametri adottati:} 
 \begin{itemize}
@@ -53,34 +53,31 @@ Rappresenta la produttività media delle risorse impiegate, cioè delle persone 
 	\item range ottimale: $ > 100$.
 \end{itemize}
 
-\begin{comment}
-Cambiate in subsection i paragraph MP01/2/3
-\end{comment}
-\newpage
-\subsection*{Riepilogo metriche di processo}
-\begin{longtable}{C{3cm} C{4cm} L{4cm} C{3cm}}
+\subsection{Riepilogo metriche}
+\begin{longtable}{C{2cm} C{4cm} C{5cm}}
 \rowcolor{white}
-\caption{Tabella delle metriche di processo}\\
+\caption{Tabella riepilogativa delle metriche per la qualità dei processi}\\
 \rowcolor{redafk}
 	\textcolor{white}{\textbf{Codice}} &
 	\textcolor{white}{\textbf{Nome}} &
-	\textcolor{white}{\textbf{Descrizione}} &
 	\textcolor{white}{\textbf{Range}} \\
-MP01 &
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Nome}} &
+\textcolor{white}{\textbf{Range}} \\
+		\endhead
+			MP01 &
 Schedule Variance &
-La Schedule Variance indica se una certa attività o processo è in anticipo, in pari, o in ritardo
-rispetto alla data di scadenza prevista. &
-\textbf{Accettabile}: ($ -\infty $, 2]
+\textbf{Accettabile}: (0, 5]
 \textbf{Ottimale}: ($ -\infty $, 0] \\
 MP02 &
 Budget Variance &
-Permette di controllare i costi sostenuti alla data corrente rispetto al budget preventivato in termini percentuali. &
-\textbf{Accettabile}: [$-15\%$, $0\%$); 
-\textbf{Ottimale}: ($ \geq $ 0] \\
+\textbf{Accettabile}: [$-15\%$, $0\%$)
+\textbf{Ottimale}: $ \geq $ 0 \\
 MP03 &
 Produttività &
-Rappresenta la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del progetto. &
 \textbf{Accettabile}: [50, 100]
-\textbf{Ottimale}: $ > 100$
-
+\textbf{Ottimale}: $ > 100$ \\	
 \end{longtable}
