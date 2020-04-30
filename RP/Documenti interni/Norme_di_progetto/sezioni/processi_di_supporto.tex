@@ -353,6 +353,7 @@ Gli strumenti utilizzati per la qualità sono:
 \item le metriche.
 \end{itemize}
 \paragraph{Metriche} \mbox{} \\ \mbox{} \\
+\label{sez:metriche}
 Le metriche sono distinte in tre categorie: processi, documentazione e codifica. Per ciascuna di esse si indica il motivo per cui è stata scelta e la procedura di calcolo. \\
 Le metriche per la verifica vengono descritte nell'apposita sezione \S 3.10.3.2 .
 
@@ -411,8 +412,10 @@ Produttività (P) & MP03 & Rappresenta la produttività media delle risorse impi
 \[ IG = 89 + \frac{300 \cdot (\#frasi) - 10 \cdot (\#lettere)}{\#parole} \] \newline
 Il risultato è un valore compreso nell'intervallo tra 0 e 100, dove il valore 100 indica la più alta leggibilità. Un indice inferiore a 80 indica documenti di difficile leggibilità per chi ha la licenza elementare, inferiore a 60 per chi ha la licenza media, inferiore a 40 per chi ha un diploma superiore.
 	\\	
+	Indice Fog (IF) & MD02 & Misura la lunghezza media delle parole e delle frasi nei documenti. Quanto più è alto il valore dell'indice Fog, tanto più è difficile capire il documento. La formula per il suo calcolo è: \newline
+	\[ IF = 0.4 \cdot [ (\frac{\#parole}{\#frasi}) + 100 \cdot (\frac{\#parole\_complesse}{\#parole})] \]
+	Il numero risultante è un indicatore del numero di anni di educazione formale della quale una persona necessita al fine di leggere il testo con facilità. 
 	\end{longtable}
-	\pagebreak
 \subparagraph{Metriche per la codifica} \mbox{} \\ \mbox{} \\
 Questa sezione ha lo scopo di fornire delle metriche per garantire un buon livello di qualità del software.
 \begin{longtable}{ C{4.5cm} c L{9.5cm} }
@@ -431,6 +434,8 @@ Questa sezione ha lo scopo di fornire delle metriche per garantire un buon livel
 indicare un'eccessiva complessità dello stesso. \\
 		Commenti per Linee di \newline Codice (CLC) & MS04 & Rapporto fra numero di righe di commento e numero totale di righe (vuote escluse). Un codice ben commentato può essere compreso più facilmente e velocemente, facilitando le operazioni di manutenzione. 
 		\[ CLC = \frac{\#righe\_commento}{\#tot\_righe}\] \\
+		Fan-In & MS05 & Misura il numero di funzioni o di metodi che chiamano una funzione o un metodo X. Un alto valore implica che X è strettamente collegata al resto del progetto e che eventuali modifiche di X produrranno ampi effetti a catena.\\
+		Fan-Out & MS06 & Misura il numero di funzioni che sono chiamate dalla funzione X. Un alto valore indica che la complessità generale di X può essere alta a causa della complessità della logica di controllo necessaria per coordinare i componenti chiamati.\\
 	\end{longtable}
 \pagebreak
 \subsubsection{Verifica}
@@ -529,7 +534,7 @@ dove: \begin{itemize}
 \end{itemize}
 
 \paragraph{Metriche per la verifica} \mbox{} \\ \mbox{} \\
-Le metriche utilizzate per la verifica sono le seguenti:
+Le metriche descritte in questa sezione sono metriche software utilizzate per verificare la qualità dei test effettuati. Più in dettaglio:
 \begin{longtable}{ C{4.5cm} c L{9.5cm} }
 	\rowcolor{white}\caption{Metriche per la verifica}\\
 		\rowcolor{redafk}
@@ -539,12 +544,12 @@ Le metriche utilizzate per la verifica sono le seguenti:
 		\rowcolor{redafk}
 		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
 		\endhead
-		Code Coverage (CC) & MS05 & Percentuale delle linee di codice coperte dai test. Avere codice coperto da test riduce la possibilità di introdurre errori nel prodotto. 
+		Code Coverage (CC) & MS07 & Percentuale delle linee di codice coperte dai test. Avere codice coperto da test riduce la possibilità di introdurre errori nel prodotto. 
 		\[ CC[\%] = \frac{\#righe\_codice\_testate}{\#tot\_righe\_codice}\] \\
-		Passed Test Cases Percentage (PTCP) & MS06 & Percentuale di test superati sul totale dei test eseguiti. Un'alta percentuale di superamento indica la tendenza del codice ad essere già corretto prima dei test. Si calcola con la seguente
+		Passed Test Cases Percentage (PTCP) & MS08 & Percentuale di test superati sul totale dei test eseguiti. Un'alta percentuale di superamento indica la tendenza del codice ad essere già corretto prima dei test. Si calcola con la seguente
 formula:
 		\[ PTCP[\%] = \frac{\#test\_superati}{\#test\_eseguiti}\cdot 100 \] \\
-		Failed Test Cases Percentage (FTCP) & MS07 & Percentuale di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento indica la tendenza
+		Failed Test Cases Percentage (FTCP) & MS09 & Percentuale di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento indica la tendenza
 alla scorrettezza del codice. Si calcola con la seguente formula:
 \[ FTCP[\%] = \frac{\#test\_falliti}{\#test\_eseguiti}\cdot 100 \] \\
 \end{longtable}
