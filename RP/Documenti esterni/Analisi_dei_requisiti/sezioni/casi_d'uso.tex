@@ -29,7 +29,7 @@ Il \textit{codice\_padre} è il codice univoco che rappresenta il requisito del 
 
 	\subsection{Attori}
 Il sistema di autenticazione e registrazione dell’utente viene gestito per intero dal sistema Grafana, in quanto il prodotto finale non disporrà di una funzionalità di autenticazione/registrazione interna.
-Il numero limitato di differenti attori che si approcciano al prodotto in analisi è dovuto principalmente al fatto che, essendo il prodotto \emph{Predire in Grafana} un plug-in del sistema indipendente di Grafana, un esiguo numero di utenti hanno effettivamente la possibilità di approcciarsi al prodotto finale. Inoltre non è necessaria la  registrazione degli utenti poiché l'addestramento avviene in un \emph{tool} esterno.
+Il numero limitato di differenti attori che si approcciano a parte del prodotto in analisi è dovuto principalmente al fatto che, essendo il prodotto \emph{Predire in Grafana} costituito da un plug-in del sistema indipendente di Grafana ed un tool di addestramento, un esiguo numero di utenti hanno effettivamente la possibilità di approcciarsi al monitoraggio dei dati. Inoltre non è necessaria la  registrazione degli utenti poiché l'addestramento avviene in un \emph{tool} esterno.
 
 	\subsubsection{Attori primari}
 Essendo l’attore primario un ruolo specifico assunto da un utente che interagisce col sistema nell’ambito di un’unità di funzionamento (caso d’uso), la tipologia di tale posizione può essere suddivisa in due categorie:
@@ -311,9 +311,9 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 			\item\textbf{Scenario principale}: l’utente clicca il pulsante etichettato con "Conferma Collegamento";
 			\item\textbf{Estensioni}: 
 				\begin{enumerate}
-					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
+					\item\hyperref[par:UC13]{UC13}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
 					\item\hyperref[par:UC18]{UC18}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
-					\item\item\hyperref[par:UC19]{UC19}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.		
+					\item\hyperref[par:UC19]{UC19}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.		
 				\end{enumerate}
 		\end{itemize}
 
