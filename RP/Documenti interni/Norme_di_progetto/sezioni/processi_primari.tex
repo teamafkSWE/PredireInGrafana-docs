@@ -62,10 +62,10 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 			\end{itemize}
 			
 			\paragraph*{Standard di Qualità} \mbox{} \\ \mbox{} \\
-			La sezione \S A descrive gli standard di qualità seguiti per lo sviluppo della qualità del progetto.
+			La sezione \S \hyperref[sez:standardQualita]{A} descrive gli standard di qualità seguiti per lo sviluppo della qualità del progetto.
 			
 			\paragraph{Revisione e valutazione} \mbox{} \\ \mbox{} \\
-			Il fornitore deve eseguire la verifica e validazione al fine di dimostrare che il prodotto software soddisfi i requisiti descritti nell' \textbf{Analisi dei Requisiti}.
+			Il fornitore deve eseguire la verifica e validazione al fine di dimostrare che il prodotto software soddisfi i requisiti descritti nell'\textit{Analisi dei Requisiti}.
 			\paragraph{Consegna e completamento} \mbox{} \\ \mbox{} \\		
 			Il fornitore consegna il prodotto software come specificato dal contratto.
 		\subsubsection{Strumenti}
@@ -102,9 +102,9 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 					\item fornire ai verificatori riferimenti affidabili per la loro attività di controllo;
 					\item valutare rischi, costi e benefici in relazione al carico di lavoro.
 				\end{itemize} 
-			\subparagraph*{Aspettative} \mbox{} \\ \mbox{} \\
-			L'obiettivo di questa attività è quello di redigere un documento formale contenente tutti i requisiti richiesti dal progetto.
-			\subparagraph*{Descrizione} \mbox{} \\ \mbox{} \\
+			\subparagraph{Aspettative} \mbox{} \\ \mbox{} \\
+			L'obiettivo di questa attività è redigere un documento formale contenente tutti i requisiti richiesti dal progetto.
+			\subparagraph{Descrizione} \mbox{} \\ \mbox{} \\
 			I requisiti saranno raccolti nel seguente modo:
 				\begin{itemize} 
 					\item lettura del capitolato d'appalto;
@@ -112,7 +112,7 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 					\item discussione tra i componenti del gruppo;
 					\item studio dei casi d'uso.
 				\end{itemize}
-				\subparagraph*{Casi d'uso} \mbox{} \\ \mbox{} \\
+				\subparagraph{Casi d'uso} \mbox{} \\ \mbox{} \\
 				I casi d'uso sono scenari che descrivono una possibile sequenza di iterazioni dell'utente, visto come attore\glo attivo e/o passivo, e il sistema. La struttura di un caso d'uso è la seguente:
 				\begin{itemize}
 					\item codice identificativo;
@@ -165,7 +165,7 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 				I diagrammi UML servono per descrivere un caso d'uso. Gli analisti dovranno utilizzare la versione v.2.0.
 				\pagebreak
 	\paragraph{Progettazione}
-			\subparagraph*{Scopo} \mbox{} \\ \mbox{} \\
+			\subparagraph{Scopo} \mbox{} \\ \mbox{} \\
 		Il processo di progettazione ha il compito di stabilire le migliori operazioni da effettuare per fornire una soluzione soddisfacente per tutti gli stakeholders\glo. Per fare ciò è necessario identificare la struttura complessiva del sistema, per poi suddividerla nei moduli e unità architetturali che la compongono. In questo modo è più semplice per i programmatori che implementeranno il sistema, comprendere e rispettare i requisiti funzionali.
 			A questo scopo si deve:
 			\begin{itemize}
@@ -180,11 +180,12 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 			\item implementazione dei moduli.
 			\end{itemize}
 
-		\subparagraph*{Descrizione} \mbox{} \\ \mbox{} \\
-		Il processo di \textbf{progettazione} si divide in:
+		\subparagraph{Descrizione} \mbox{} \\ \mbox{} \\
+		Il \textit{TeamAFK} adotta un approccio \textbf{agile} allo sviluppo del prodotto software, lasciando immutate le esigenze di documentazione correlata con la gestione dell'avanzamento di progetto e le verifiche di qualità. \\
+		Lo svilppo dell'architettura software si suddivide in due momenti specifici:
 			\begin{itemize}
-				\item \textbf{Technology baseline}: mostra ad alto livello le specifiche di progettazione del prodotto e le sue componenti, elencando i diagrammi UML utilizzati per descrivere l'architettura del prodotto;
-				\item \textbf{Product baseline}: parte incrementale del prodotto finale da cui continuare a lavorare, integrando le specifiche riportate nella Tecnology Baseline e  definendo anche i test necessari alla verifica.
+				\item \textbf{Technology baseline}: mostra ad alto livello le specifiche di progettazione del prodotto e le sue componenti, elencando i diagrammi UML utilizzati per descrivere l'architettura del prodotto. Viene realizzata una Proof of Concept\glo del prodotto;
+				\item \textbf{Product baseline}: parte incrementale del prodotto finale da cui continuare a lavorare, integrando le specifiche riportate nella Tecnology Baseline e definendo anche i test necessari alla verifica. Viene presentata tramite diagrammi delle classi e di sequenza. L'analisi è comprensiva di design pattern contestualizzati all'architettura.
 			\end{itemize} 
 			\mbox{} \\
 			\textbf{Technology Baseline} \mbox{} \\ \mbox{} \\
@@ -210,13 +211,34 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 					\item \textbf{Tracciamento delle classi}: ovvero identificare il requisito a cui si lega una classe;
 					\item \textbf{Test di unità}: ovvero verificare le funzionalità della sola classe, senza metterla in relazione con altre componenti del sistema.
 				\end{itemize}
+				\subparagraph{Qualità dell'architettura} \mbox{} \\ \mbox{} \\
+				In seguito alla specifica dei requisiti che consolida le funzionalità richieste, viene realizzata l'architettura del sistema. Tale architettura deve perseguire le seguenti caratteristiche: \begin{itemize}
+				\item appropriatezza: l'architettura soddisfa tutti i requisiti;
+				\item modularità: l'architettura è suddivisa in parti ben distinte;
+				\item robustezza: l'architettura può sopportare diversi ingressi dall'utente e dall'ambiente;
+				\item affidabilità: l'architettura garantisce una buona usabilità del prodotto quando viene implementata;
+				\item manutenibilità: l'architettura può subire modifiche a costi contenuti.
+				\end{itemize}
+				In particolare, riguardo alla modularità, il progettista deve scomporre il sistema in moduli, fornendo una descrizione precisa della struttura modulare e delle relazioni che esistono tra essi.
+Questo porta ai seguenti vantaggi: \begin{itemize}
+\item maggiore leggibilità e riusabilità del codice;
+\item semplificazione dell'individuazione e della correzione degli errori;
+\item realizzazione di prototipi (in relazione al modello di sviluppo adottato).
+\end{itemize}
+Per perseguire le qualità sopra elencate, è richiesta l'implementazione di design pattern ove necessario.\\
+Al fine di implementare le qualità dell'architettura appena descritte, ai progettisti viene richiesto di seguire le seguenti regole: \begin{itemize}
+\item evitare package vuoti, classi e parametri non utilizzati e parametri senza tipo;
+\item evitare la presenza di dipendenze circolari;
+\item evitare modifiche ad eventuali librerie esterne utilizzate;
+\item utilizzare nomi significativi per le classi e i metodi in esse contenuti, in modo da facilitare la comprensione immediata di ogni componente.
+\end{itemize}
 	\paragraph{Codifica}
 		\subparagraph*{Scopo}\mbox{} \\ \mbox{} \\
-		Lo scopo del processo di \textit{Codifica} è quello di implementare il prodotto software richiesto. Il programmatore è colui che ha il compito di attuare i design pattern e non può agire diversamente.
+		Lo scopo del processo di codifica è implementare il prodotto software richiesto. Il programmatore è colui che ha il compito di attuare i design pattern e non può agire diversamente.
 		\subparagraph*{Aspettative}\mbox{} \\ \mbox{} \\
 		L'obiettivo di questo processo è la costruzione del prodotto richiesto secondo le specifiche richieste dal proponente. Perciò il programmatore deve attenersi alle norme qui stabilite, al fine di produrre un codice solido e uniforme, facilitando l'attivita di manutenzione, verifica, validazione e miglioramento della qualità del prodotto.
 		\subparagraph*{Descrizione}\mbox{} \\ \mbox{} \\
-		Il codice deve attenersi alle norme e rispettare i requisiti di qualità, espressi nel documento \textit{Piano di Qualifica}, garantendo così la qualità del codice.
+		Il codice deve attenersi alle norme e rispettare i requisiti di qualità, espressi nel documento \textit{Piano di Qualifica}, garantendo così la qualità del codice. Il codice deve inoltre seguire il più possibile gli standard di qualità descritti nella \S \hyperref[sez:9126]{A.1}.
 		\subsubparagraph*{Stile di codifica} \mbox{} \\ \mbox{} \\
 		Lo stile di codifica stabilisce le norme che il programmatore deve rispettare, focalizzandosi nei seguenti ambiti:
 		\begin{itemize}

@@ -1,9 +1,21 @@
-\section{Processi di Supporto}
+\section{Processi di supporto}
 \subsection{Documentazione}
 Ogni processo\glo e attività\glo significativi volti allo sviluppo del progetto sono documentati. Lo scopo di questa sezione è definire gli standard che riguardano i documenti prodotti durante l'intero ciclo di vita del software. I documenti sono consultabili nelle relative sezioni della repository\glo: \url{https://github.com/teamafkSWE/PredireInGrafana-docs}. 		
 
 \subsection{Descrizione}
 Questo capitolo contiene le decisioni e le norme che sono state scelte per la scrittura, verifica e approvazione della documentazione ufficiale. L'insieme di tali norme garantisce consistenza ed omogeneità nella stesura dei testi.
+
+\subsection{Aspettative}
+Ciò che ci aspettiamo dal processo di documentazione è costruire una Body of KnowledgeG che raccoglie la conoscenza in modo sistematico, disciplinato, quantificabile. Quest'ultima deve essere: \begin{itemize}
+\item completo;
+\item non ambiguo;
+\item modulare;
+\item coeso;
+\item trasparente;
+\item semplice;
+\item disponibile.
+\end{itemize}
+In poche parole, deve permettere la trasmissione delle informazioni nel miglior modo possibile.
 
 \subsection{Ciclo di vita di un documento}
 Ogni documento segue le seguenti fasi di ciclo di vita:
@@ -15,7 +27,7 @@ Ogni documento segue le seguenti fasi di ciclo di vita:
 \end{itemize}
 
 \subsection{Template}
-È stato creato un template \LaTeX{} per uniformare la struttura grafica e lo stile di formattazione dei documenti. Lo scopo dei template è quello di permettere, a colui che redige il documento, di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto}. Nel caso quest'ultime cambiassero, essi permettono di agevolare la procedura di adeguamento alle nuove norme.
+È stato creato un template \LaTeX{} per uniformare la struttura grafica e lo stile di formattazione dei documenti. Lo scopo dei template è permettere, a colui che redige il documento, di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto}. Nel caso quest'ultime cambiassero, essi permettono di agevolare la procedura di adeguamento alle nuove norme.
 
 \subsection{Struttura dei documenti}
 Un file "nome\_file.tex" (in cui "nome\_file" verrà sostituito dal nome del documento) raccoglie, tramite comandi di input, le sezioni di cui è composto il documento. Tra i file in input ci sono:
@@ -206,7 +218,8 @@ I diagrammi UML\glo vengono inseriti nei documenti sotto forma di immagine.
 \TeX{}maker è l'editor utilizzato per la stesura del codice \LaTeX{}. Questo strumento, oltre ad integrare un compilatore e un visualizzatore PDF, fornisce suggerimenti di completamento per comandi \LaTeX{}. \\
 \centerline{\url{https://www.xm1math.net/texmaker/}}
 \begin{figure}[H]
-	\includegraphics[width=0.99\linewidth]{../Norme_di_progetto/img/texMaker.png}
+\centering
+	\includegraphics[width=0.70\linewidth]{../Norme_di_progetto/img/texMaker.png}
 	\caption{\TeX{}maker - per la stesura dei documenti}
 \end{figure}
 
@@ -215,7 +228,8 @@ GanttProject è un programma gratuito dedicato alla produzione dei diagrammi di 
 i vincoli di dipendenza tra di esse e molte altre utilità, generando automaticamente il relativo diagramma. \\
 \centerline{\url{https://www.ganttproject.biz/}}
 \begin{figure}[H]
-	\includegraphics[width=0.99\linewidth]{../Norme_di_progetto/img/gantt.png}\\
+	\centering
+	\includegraphics[width=0.70\linewidth]{../Norme_di_progetto/img/gantt.png}\\
 			\caption{GanttProject - per la relizzazione di diagrammi di Gantt}
 \end{figure}
 
@@ -226,8 +240,7 @@ Draw.io viene utilizzato per la produzione degli UML.\\
 \subsection{Gestione della configurazione}
 L'obiettivo della configurazione è di creare ordine tra i documenti e il software. Tutto ciò che è configurato ha uno stato identificativo, è modificato secondo regole ben definite ed è posto sotto versionamento\glo.
 
-\subsubsection{Gestione dei cambiamenti}
-\paragraph{Versionamento dei documenti} \mbox{} \\ \mbox{} \\
+\subsubsection{Versionamento dei documenti}
 Ogni versione di qualsiasi documento deve corrispondere ad una riga della tabella delle modifiche. Il numero di versione è composto da tre cifre: \\ \\
 \centerline{X.Y.Z} \\
 \begin{itemize}
@@ -291,6 +304,7 @@ Il repository di Git è composto da vari branch\glo, per favorire la collaborazi
 \item eseguire il push\glo del commit sul repository remoto.
 \end{enumerate}
 \pagebreak
+
 \subsubsection{Gestione delle modifiche}
 Tutti i membri del team possono modificare i file in ogni branch, ad eccezione del branch master, per il quale occorre richiedere una pull e ottenere l'approvazione di un altro membro. \\
 Per effettuare modifiche maggiori sui contenuti o sulla struttura dei file è previsto: \begin{itemize}
@@ -299,6 +313,22 @@ Per effettuare modifiche maggiori sui contenuti o sulla struttura dei file è pr
 \item se il responsabile valuta positivamente la modifica, allora la applica.
 \end{itemize}
 Per modifiche minori, come correzioni grammaticali o miglioramenti sintattici, si consiglia di modificare indipendentemente. In entrambi i casi è opportuno commentare i propri commit con chiarezza per risalire facilmente alle modifiche effettuate.
+
+\subsection{Gestione dei cambiamenti}
+Il Change Management è un approccio strutturato al cambiamento negli individui, nei gruppi e nelle organizzazioni che rende possibile la transizione da un assetto corrente a un futuro assetto desiderato.
+Un programma strutturato di sviluppo e crescita delle risorse umane è un elemento fondamentale di accompagnamento al cambiamento.\\ Pertanto, il \textit{TeamAFK} ha scelto di seguire l'approccio \textbf{agile} per la gestione del progetto, in cui i requisiti e le soluzioni maturano in corso d’opera attraverso la collaborazione fra stakeholders. Si tratta quindi di produrre il più rapidamente possibile i prototipi e poi rifinirli attraverso cicli successivi di miglioramento.\\
+Per avvalorare quanto detto prima, il \textit{TeamAFK} ha deciso di adottare il modello 4P: \begin{itemize}
+\item \textbf{People}: il Change Management efficace mette l'utente al centro. Il \textit{Responsabile del Progetto} gestisce le comunicazioni interne tra i membri del gruppo e quelle esterne con il proponente e/o committente;
+\item \textbf{Process}: i processi vengono rivisti in chiave moderna ed efficace;
+\item \textbf{Platform}: il \textit{TeamAFK} utilizza tecnologie avanzate a supporto dello sviluppo del progetto (ESLint, Coveralls, TravisCI);
+\item \textbf{Place}: si intendono i luoghi di lavoro dove viene svolto il progetto. Il \textit{TeamAFK} si vede obbligato in questo senso ad attuare lo Smart Working, a causa delle limitazioni dovute da Covid19.
+\end{itemize}
+Questo approccio porta inoltre i seguenti vantaggi, fondamentali per rispettare il \textit{Piano di Progetto}: 
+\begin{itemize}
+\item rispetto degli obiettivi prefissati;
+\item rispetto dei tempi previsti;
+\item rispetto del budget preventivato.
+\end{itemize}
 
 \subsection{Gestione della qualità}
 Lo scopo è di garantire che il prodotto e i servizi offerti rispettino gli obiettivi di qualità e che i bisogni del proponente siano soddisfatti. 
@@ -314,7 +344,7 @@ Per ogni processo vengono descritti: \begin{itemize}
 \item le strategie da applicare;
 \item le metriche da utilizzare.
 \end{itemize}
-L'obiettivo è quello di ottenere software e documentazione di qualità soddisfacente.
+L'obiettivo è ottenere software e documentazione di qualità soddisfacente.
 
 \subsubsection{Strumenti}
 Gli strumenti utilizzati per la qualità sono:
@@ -322,7 +352,6 @@ Gli strumenti utilizzati per la qualità sono:
 \item forniti dallo standard ISO-12207\footnote{ISO-12207: standard ISO per la gestione del ciclo di vita del software.};
 \item le metriche.
 \end{itemize}
-\pagebreak
 \paragraph{Metriche} \mbox{} \\ \mbox{} \\
 Le metriche sono distinte in tre categorie: processi, documentazione e codifica. Per ciascuna di esse si indica il motivo per cui è stata scelta e la procedura di calcolo. \\
 Le metriche per la verifica vengono descritte nell'apposita sezione \S 3.10.3.2 .
@@ -335,20 +364,22 @@ dove: \begin{itemize}
 \begin{itemize}
 \item \textbf{P} per indicare le metriche dei processi;
 \item \textbf{D} per indicare le metriche dei documenti;
-\item \textbf{S} per indicare le metriche della codifica del software.
+\item \textbf{S} per indicare le metriche della codifica del software e dei relativi test.
 \end{itemize}
-\item Numero: identifica in maniera univoca la metrica in ogni categoria, assume un valore intero a due cifre incrementale a partire da 1.
+\item Numero: identifica in maniera univoca la metrica in ogni categoria, assume un valore intero a due cifre incrementale, a partire da 01.
 \end{itemize}
 Se nelle formule di calcolo delle metriche è presente il simbolo "\#", va inteso come la parola "numero". Un esempio può essere il seguente:
 \[ \#parole\_doc = numero\ di\ parole\ presenti\ nel\ documento \]
-\pagebreak
 \subparagraph{Metriche per i processi}  \mbox{} \\ 
-\begin{table}[H]
-\caption{Metriche dei processi}
-	\begin{center}
-	\begin{tabular}{ c c L{9.5cm} }
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche dei processi}\\
 		\rowcolor{redafk}
-		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}}& \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
 		Schedule Variance (SV)  & MP01 & La Schedule Variance indica se una certa attività o processo è in anticipo, in pari, o in ritardo rispetto alla data di scadenza prevista. È calcolata utilizzando la seguente formula: \newline
 \[ SV = DCE-DCP\]
 dove: \begin{itemize}
@@ -365,25 +396,23 @@ dove: \begin{itemize}
 Se $BV[\%] \geq 0$ indica che il budget sta venendo speso più lentamente di quanto pianificato, se negativo invece indica che il budget sta venendo speso più velocemente di quanto pianificato. \\
 Produttività (P) & MP03 & Rappresenta la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del progetto. È misurata in termini di numero di linee di codice (\hyperref[par:MS01]{LOC}) sviluppate da una persona nell’unità di tempo stabilita (settimana). È utilizzata per valutare lo sforzo richiesto per lo sviluppo  del progetto a fronte delle sue dimensioni. 
 \[ Pmedia = \frac{LOC}{settimana}\]
-	\end{tabular}
-	\end{center}
-	\end{table}
-\pagebreak
+	\end{longtable}
 \subparagraph{Metriche per i documenti}\mbox{} \\ 
-\begin{table}[H]
-\caption{Metriche dei documenti}
-	\begin{center}
-	\begin{tabular}{ c c L{10cm} }
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche dei documenti}\\
 		\rowcolor{redafk}
 		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
 		Indice Gulpease (IG)  & MD01 & È un indice di leggibilità di un testo tarato sulla lingua italiana e basato su due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere. La formula per il suo calcolo è: \newline
 \[ IG = 89 + \frac{300 \cdot (\#frasi) - 10 \cdot (\#lettere)}{\#parole} \] \newline
 Il risultato è un valore compreso nell'intervallo tra 0 e 100, dove il valore 100 indica la più alta leggibilità. Un indice inferiore a 80 indica documenti di difficile leggibilità per chi ha la licenza elementare, inferiore a 60 per chi ha la licenza media, inferiore a 40 per chi ha un diploma superiore.
-	\\
-	\end{tabular}
-	\end{center}	
-	\end{table}
-\pagebreak
+	\\	
+	\end{longtable}
+	\pagebreak
 \subparagraph{Metriche per la codifica} \mbox{} \\ \mbox{} \\
 Questa sezione ha lo scopo di fornire delle metriche per garantire un buon livello di qualità del software.
 \begin{longtable}{ C{4.5cm} c L{9.5cm} }
@@ -430,17 +459,17 @@ A seguire sono descritte le liste di controllo utilizzabili per le ispezioni:
 \begin{table}[H]
 \caption{Errori frequenti nei documenti}
 \begin{center}
-\begin{tabular}{C{4cm} C{12cm}}
+\begin{tabular}{C{4.5cm} C{11cm}}
 \rowcolor{redafk}
 \textcolor{white}{\textbf{Oggetto}} & \centerline{\textcolor{white}{\textbf{Controllo}}} \\
-Formato data & Deve seguire il formato gregoriano YYYY-MM-DD \\
-Sintassi & La frase è troppo complessa e deve essere semplificata \\
-Punteggiatura degli elenchi & Ogni voce termina in ";" eccetto l'ultima che termina in "."\\
+Formato data & Deve seguire il formato gregoriano YYYY-MM-DD. \\
+Sintassi & La frase è troppo complessa e deve essere semplificata. \\
+Punteggiatura degli elenchi & Ogni voce termina in ";" eccetto l'ultima che termina in ".".\\
 Errori di battitura & Tipici errori di battitura dovuti alla vicinanza delle
-lettere sulla tastiera, ad esempio la lettera "a" al posto della "s", "i" al posto di "o", "m" al posto di "n" \\
-Uso degli accenti & Utilizzare le lettere accentate presenti nella tastiera o utilizzare il codice ALT \\
-Inconsistenze nell’uso delle iniziali maiuscole nei titoli delle parti di documento & Ogni titolo deve avere la prima lettera della prima parola maiuscola e il resto minuscolo, tranne quando ci si riferisci ad attività o documenti specifici \\
-Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei documenti in maniera adeguata, ovvero: section, subsection, subsubsection, paragraph, subparagraph \\
+lettere sulla tastiera, ad esempio la lettera "a" al posto della "s", "i" al posto di "o", "m" al posto di "n". \\
+Uso degli accenti & Utilizzare le lettere accentate presenti nella tastiera o utilizzare il codice ALT. \\
+Inconsistenze nell’uso delle iniziali maiuscole nei titoli delle parti di documento & Ogni titolo deve avere la prima lettera della prima parola maiuscola e il resto minuscolo, tranne quando ci si riferisci ad attività o documenti specifici. \\
+Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei documenti in maniera adeguata, ovvero: section, subsection, subsubsection, paragraph, subparagraph, subsubparagraph. \\
 \end{tabular}
 \end{center}
 \end{table}
@@ -514,10 +543,10 @@ Le metriche utilizzate per la verifica sono le seguenti:
 		\[ CC[\%] = \frac{\#righe\_codice\_testate}{\#tot\_righe\_codice}\] \\
 		Passed Test Cases Percentage (PTCP) & MS06 & Percentuale di test superati sul totale dei test eseguiti. Un'alta percentuale di superamento indica la tendenza del codice ad essere già corretto prima dei test. Si calcola con la seguente
 formula:
-		\[ PTCP = \frac{\#test\_superati}{\#test\_eseguiti}\cdot 100 \] \\
+		\[ PTCP[\%] = \frac{\#test\_superati}{\#test\_eseguiti}\cdot 100 \] \\
 		Failed Test Cases Percentage (FTCP) & MS07 & Percentuale di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento indica la tendenza
 alla scorrettezza del codice. Si calcola con la seguente formula:
-\[ FTCP = \frac{\#test\_falliti}{\#test\_eseguiti}\cdot 100 \] \\
+\[ FTCP[\%] = \frac{\#test\_falliti}{\#test\_eseguiti}\cdot 100 \] \\
 \end{longtable}
 
 \paragraph{Strumenti}
