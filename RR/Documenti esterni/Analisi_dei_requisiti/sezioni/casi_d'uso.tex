@@ -84,8 +84,8 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l’utente si trova sul tool di addestramento;
-					\item l’utente deve possedere il file CSV.
-					\item  l’utente deve aver cliccato il pulsante di caricamento dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
+					\item l’utente deve possedere il file CSV;
+					\item  l’utente deve aver cliccato il pulsante di caricamento dati di addestramento.
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: l’utente ha selezionato il file dei dati di addestramento;
 			\item\textbf{Scenario principale}: l’utente seleziona il file CSV contenente i dati di addestramento dal file system ed è visibile solo il formato CSV.
@@ -109,8 +109,11 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 					\item l’utente deve aver caricato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
 					\item  l’utente deve aver selezionato l’algoritmo di previsione (\hyperref[par:UC1.2]{UC1.2}).
 				\end{enumerate}
-			\item\textbf{Postcondizioni}: l’utente ha confermato la scelta dell’algoritmo e l’inserimento dei dati di addestramento;
-					
+			\item\textbf{Postcondizioni}: 
+				\begin{enumerate}
+					\item l’utente ha confermato la scelta dell’algoritmo e l’inserimento dei dati di addestramento;
+					\item l'utente ha addestrato l'algoritmo e può scaricare il file JSON.
+				\end{enumerate}
 			\item\textbf{Scenario principale}: l’utente clicca il pulsante con etichetta “Conferma”;
 			\item\textbf{Estensione}: \hyperref[par:UC9]{UC9}: viene visualizzato un messaggio d’errore se il file di addestramento è incompatibile con l’algoritmo scelto. 	
 		\end{itemize}
