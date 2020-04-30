@@ -44,12 +44,6 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\item\textbf{Piattaforma Grafana}: è un sistema di monitoraggio di stream\glo di dati, che ospiterà il plug-in prodotto. Consente agli utenti registrati di lanciare alert e realizzare grafici modellati sui dati forniti in ingresso al plug-in.
  	\end{itemize}
 
-\begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/tool_e_plug-in.png}
-		\caption{Tool di addestramento e plug-in in generale}
-	\end{figure}
-
 % - Casi d'uso: Principali - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\label{par:UC1}
 	\subsection{UC1 - Creazione file JSON dai Dati di Addestramento}
@@ -74,60 +68,46 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item (\hyperref[par:UC1.1]{UC1.1}) l’utente seleziona il pulsante “Carica Dati di Addestramento”;
-					\item (\hyperref[par:UC1.2]{UC1.2}) l’utente seleziona i dati di addestramento da caricare;
-					\item (\hyperref[par:UC1.3]{UC1.3}) l’utente seleziona l’algoritmo di previsione scelto attraverso la Combo Box\glo “Scegli Algoritmo”; 
-					\item (\hyperref[par:UC1.4]{UC1.4}) conferma delle operazioni; 
-					\item (\hyperref[par:UC1.5]{UC1.5}) l’utente riceve in output il file JSON contenente i predittori per SVM/RL e decide dove salvarlo (localmente).  
+					\item (\hyperref[par:UC1.1]{UC1.1}) l’utente seleziona i dati di addestramento da caricare;
+					\item (\hyperref[par:UC1.2]{UC1.2}) l’utente seleziona l’algoritmo di previsione scelto attraverso la Combo Box\glo “Scegli Algoritmo”; 
+					\item (\hyperref[par:UC1.3]{UC1.3}) conferma delle operazioni; 
+					\item (\hyperref[par:UC1.4]{UC1.4}) l’utente riceve in output il file JSON contenente i predittori per SVM/RL e decide dove salvarlo (localmente).  
 				\end{enumerate}
-			\item\textbf{Estensione}: \hyperref[par:UC9]{UC9} estende \hyperref[par:UC1.4]{UC1.4}: viene visualizzato un messaggio d’errore se il file di addestramento è incompatibile con l’algoritmo scelto;
-			\item\textbf{Inclusione}: \hyperref[par:UC16]{UC16} include \hyperref[par:UC1.5]{UC1.5}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura.
+			\item\textbf{Estensione}: \hyperref[par:UC9]{UC9} estende \hyperref[par:UC1.3]{UC1.3}: viene visualizzato un messaggio d’errore se il file di addestramento è incompatibile con l’algoritmo scelto;
+			\item\textbf{Inclusione}: \hyperref[par:UC16]{UC16} include \hyperref[par:UC1.4]{UC1.4}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura.
 		\end{itemize}
 		
 		\label{par:UC1.1}
-		\subsubsection{UC1.1 - Selezione Pulsante di Caricamento Dati di Addestramento}
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
-			\item\textbf{Precondizioni}: 
-				\begin{enumerate}
-					\item l’utente si trova sul tool di addestramento;
-					\item l’utente deve possedere il file CSV.
-				\end{enumerate}
-			\item\textbf{Postcondizioni}:
-				\begin{enumerate}
-					\item l’utente ha cliccato il pulsante di caricamento dati;
-					\item viene aperta la finestra che visualizza il file system\glo; 
-					\item saranno visibili solo i file CSV.
-				\end{enumerate}
-			\item\textbf{Scenario principale}: l’utente clicca il pulsante con etichetta “Carica Dati Addestramento”.
-		\end{itemize}
-		
-		\label{par:UC1.2}
-		\subsubsection{UC1.2 - Selezione Dati di Addestramento }
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
-			\item\textbf{Precondizioni}: l’utente deve aver cliccato il pulsante di caricamento dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
-			\item\textbf{Postcondizioni}: l’utente ha selezionato il file dei dati di addestramento;
-			\item\textbf{Scenario principale}: l’utente seleziona il file CSV contenente i dati di addestramento dal file system ed è visibile solo il formato CSV.
-		\end{itemize}
-		
-		\label{par:UC1.3}
-		\subsubsection{UC1.3 - Selezione dell’Algoritmo di Previsione}
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
-			\item\textbf{Precondizioni}: l’utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.2]{UC1.2}); 
-			\item\textbf{Postcondizioni}: l’utente ha scelto l’algoritmo di previsione selezionando il pulsante corrispondente;
-			\item\textbf{Scenario principale}: l’utente clicca la Combo Box con etichetta "Seleziona Algoritmo" e sceglie l’algoritmo (SVM o RL).
-		\end{itemize}
-	
-	\label{par:UC1.4}
-	\subsubsection{UC1.4 - Conferma Procedura Addestramento}
+		\subsubsection{UC1.1 - Selezione Dati di Addestramento }
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente addestratore;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
-					\item l’utente deve aver caricato i dati di addestramento (\hyperref[par:UC1.2]{UC1.2});
-					\item  l’utente deve aver selezionato l’algoritmo di previsione (\hyperref[par:UC1.3]{UC1.3}).
+					\item l’utente si trova sul tool di addestramento;
+					\item l’utente deve possedere il file CSV.
+					\item  l’utente deve aver cliccato il pulsante di caricamento dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: l’utente ha selezionato il file dei dati di addestramento;
+			\item\textbf{Scenario principale}: l’utente seleziona il file CSV contenente i dati di addestramento dal file system ed è visibile solo il formato CSV.
+		\end{itemize}
+		
+		\label{par:UC1.2}
+		\subsubsection{UC1.2 - Selezione dell’Algoritmo di Previsione}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}: l’utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1}); 
+			\item\textbf{Postcondizioni}: l’utente ha scelto l’algoritmo di previsione selezionando il pulsante corrispondente;
+			\item\textbf{Scenario principale}: l’utente clicca la Combo Box con etichetta "Seleziona Algoritmo" e sceglie l’algoritmo (SVM o RL).
+		\end{itemize}
+	
+	\label{par:UC1.3}
+	\subsubsection{UC1.3 - Conferma Procedura Addestramento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Precondizioni}:
+				\begin{enumerate}
+					\item l’utente deve aver caricato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
+					\item  l’utente deve aver selezionato l’algoritmo di previsione (\hyperref[par:UC1.2]{UC1.2}).
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: l’utente ha confermato la scelta dell’algoritmo e l’inserimento dei dati di addestramento;
 					
@@ -135,11 +115,11 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 			\item\textbf{Estensione}: \hyperref[par:UC9]{UC9}: viene visualizzato un messaggio d’errore se il file di addestramento è incompatibile con l’algoritmo scelto. 	
 		\end{itemize}
 
-	\label{par:UC1.5}
-	\subsubsection{UC1.5 - Salvataggio File JSON}
+	\label{par:UC1.4}
+	\subsubsection{UC1.4 - Salvataggio File JSON}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente addestratore;
-			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.4]{UC1.4});
+			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3});
 			\item\textbf{Postcondizioni}: l’utente ha salvato il file JSON in locale;
 			\item\textbf{Scenario principale}: l’utente decide come denominare il file JSON e in che cartella del file system salvarlo;  
 			\item\textbf{Inclusione}: \hyperref[par:UC16]{UC16}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di salvataggio del file JSON.			
@@ -171,39 +151,34 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item (\hyperref[par:UC2.1]{UC2.1}) l'utente seleziona sul pannello l’opzione di caricamento del file JSON; 
-					\item (\hyperref[par:UC2.2]{UC2.2}) l’utente seleziona il file JSON contenente i predittori da locale;
-					\item (\hyperref[par:UC2.3]{UC2.3}) l'utente conferma il caricamento.
+					\item (\hyperref[par:UC2.1]{UC2.1}) l’utente seleziona il file JSON contenente i predittori da locale;
+					\item (\hyperref[par:UC2.2]{UC2.2}) l'utente conferma il caricamento.
 				\end{enumerate}
 			\item\textbf{Estensione}:
 				\begin{enumerate} 
 					\item\hyperref[par:UC10]{UC10} estende \hyperref[par:UC2.1]{UC2.1}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana";
-					\item\hyperref[par:UC11]{UC11} estende \hyperref[par:UC2.3]{UC2.3}: viene visualizzato un messaggio d’errore nel caso in cui l’operazione di caricamento del file non sia andata a buon fine.
+					\item\hyperref[par:UC11]{UC11} estende \hyperref[par:UC2.2]{UC2.2}: viene visualizzato un messaggio d’errore nel caso in cui l’operazione di caricamento del file non sia andata a buon fine.
 				\end{enumerate}	
-			\item\textbf{Inclusione}: \hyperref[par:UC17]{UC17} include \hyperref[par:UC2.3]{UC2.3}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di caricamenteo JSON.
+			\item\textbf{Inclusione}: \hyperref[par:UC17]{UC17} include \hyperref[par:UC2.2]{UC2.2}: viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di caricamenteo JSON.
 		\end{itemize}
+		
 		
 		\label{par:UC2.1}
-		\subsubsection{UC2.1 - Selezione Opzione di Caricamento file JSON}
+		\subsubsection{UC2.1 - Selezione del file JSON}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente monitoratore;
-			\item\textbf{Precondizioni}: l’utente visualizza il pannello “Predire in Grafana” nella dashboard;
-			\item\textbf{Postcondizioni}: l’utente ha cliccato il pulsante di caricamento del file JSON e visualizza la finestra per la selezione del file;
-			\item\textbf{Scenario principale}: l’utente clicca il pulsante con etichetta  “Carica JSON”;
-			\item\textbf{Estensioni}: \hyperref[par:UC10]{UC10}: viene visualizzato un messaggio di allert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana".
-		\end{itemize}		
-		
-		\label{par:UC2.2}
-		\subsubsection{UC2.2 - Selezione del file JSON}
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
-			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1}) e visualizza il pannello di selezione del file;
+			\item\textbf{Precondizioni}:
+				\begin{enumerate}
+					\item l’utente visualizza il pannello “Predire in Grafana” nella dashboard;
+					\item l’utente ha cliccato il pulsante "Carica JSON" e visualizza il pannello di selezione del file.
 			\item\textbf{Postcondizioni}: l’utente ha selezionato il file JSON;
 			\item\textbf{Scenario principale}: l’utente seleziona dalla finestra di selezione il file JSON da importare tra quelli disponibili e sono visibili solo i file con formato .json.
-		\end{itemize}
+			\item\textbf{Estensioni}: \hyperref[par:UC10]{UC10}: viene visualizzato un messaggio di allert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana".
+				\end{enumerate}
+			\end{itemize}
 		
-		\label{par:UC2.3}
-		\subsubsection{UC2.3 - Conferma di Caricamento}
+		\label{par:UC2.2}
+		\subsubsection{UC2.2 - Conferma di Caricamento}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente monitoratore;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare;
@@ -353,7 +328,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 					\item dalla lista dei collegamenti non viene più visualizzato il collegamento che è stato scollegato.
 				\end{enumerate}
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta "Scollega Predittore".
-			\item\textbf{Inclusioni}: \hyperref[par:UC20]{UC20}: viene visualizzato un messaggio di alert "Procedere con lo  Scollegamento?" che interroga l'utente sull'effettiva conferma della procedura attuata. 
+			\item\textbf{Estensioni}: \hyperref[par:UC20]{UC20}: viene visualizzato un messaggio di alert "Procedere con lo  Scollegamento?" che interroga l'utente sull'effettiva conferma della procedura attuata. 
 		\end{itemize}	
 
 
