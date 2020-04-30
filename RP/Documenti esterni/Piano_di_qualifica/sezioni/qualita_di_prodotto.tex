@@ -16,6 +16,31 @@ L'Indice di Gulpease registra la leggibilità di un documento. \\ \\
 \item range accettabile: [40, 60);
 \item range ottimale: [60, 100].
 \end{itemize}
+
+\subsubsection{MD02 - Indice Fog}
+Misura la lungezza media delle parole e delle frasi presenti in un documento, così da comprendere la loro complessità.
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [5, 12);
+\item range ottimale: [13-20].
+\end{itemize}
+
+\paragraph*{Riepilogo delle metriche della documentazione} \mbox{} \\ 
+\begin{longtable}{C{3cm} C{4cm} L{4cm} C{3cm}}
+\rowcolor{white}
+\caption{Tabella delle metriche della documentazione}\\
+\rowcolor{redafk}
+	\textcolor{white}{\textbf{Codice}} &
+	\textcolor{white}{\textbf{Nome}} &
+	\textcolor{white}{\textbf{Descrizione}} &
+	\textcolor{white}{\textbf{Range}} \\
+MD01 &
+Indice di Gulpease &
+L'Indice di Gulpease registra la leggibilità di un documento. &
+\textbf{Accettabile}: [40, 60)
+\textbf{Ottimale}: [60, 100] \\
+\end{longtable}
+
 \subsection{Metriche del codice sorgente}
 \subsubsection{MS01 - Linee di Codice}
 È la metrica che registra la dimensione di tutto il codice sorgente di un metodo.\\ \\
@@ -53,3 +78,75 @@ Questo strumento tiene conto del numero di parametri formali di un metodo.\\ \\
 \item range ottimale: [80, 100]\%.
 \end{itemize}
 Seppur l'obiettivo del team di sviluppo sia quello di avere una Code Coverage del 100\%, tale traguardo potrebbe non essere raggiunto in quanto comporterebbe un aumento dei costi di progetto che risulterebbero troppo elevati.
+
+\paragraph*{Riepilogo metriche del codice sorgente}
+\begin{longtable}{C{3cm} C{4cm} L{4cm} C{3cm}}
+\rowcolor{white}
+\caption{Tabella delle metriche del codice sorgente}\\
+\rowcolor{redafk}
+	\textcolor{white}{\textbf{Codice}} &
+	\textcolor{white}{\textbf{Nome}} &
+	\textcolor{white}{\textbf{Descrizione}} &
+	\textcolor{white}{\textbf{Range}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Nome}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Range}} \\
+		\endhead
+MS01 &
+Linee di Codice &
+È la metrica che registra la dimensione di tutto il codice sorgente di un metodo. &
+\textbf{Accettabile}: (10, 20]
+\textbf{Ottimale}: [1, 10] \\
+MS02 &
+Numero dei Metodi &
+Questa metrica conteggia il numero di metodi presenti nella classe di un oggetto. & 
+\textbf{Accettabile}: (8, 15]
+\textbf{Ottimale}: [0, 8] \\
+
+MS03 &
+Numero di Parametri &
+Questo strumento tiene conto del numero di parametri formali di un metodo. &
+\textbf{Accettabile}: (3, 6]
+\textbf{Ottimale}: [0, 3] \\
+
+MS04 &
+Commenti per Linee di Codice &
+È il rapporto tra le righe di commento e il codice effettivo. &
+\textbf{Accettabile}: [0.05, 0.10)
+\textbf{Ottimale}: [0.10, 0.20] \\
+
+
+MS05 & 
+Fan-In & 
+Misura il numero di funzioni che o metodi che invocano altre funzioni o metodi. &
+ \\
+
+MS06 & 
+Fan-Out & 
+Misura il numero di funzioni che o metodi che vengono invocate da altre funzioni o metodi. &
+ \\
+
+MS07 & 
+Code Coverage &
+È la metrica con il compito di misurare l'indice di copertura del codice da parte dei test in termini percentuali. &
+\textbf{Accettabile}: [70, 80)\%
+\textbf{Ottimale}: [80, 100]\% \\
+
+
+MS08 &
+Passed Test Cases  Percentuage &
+Percentuale dei test superati sul totale dei test eseguiti &
+\textbf{Accetttabile}:
+\textbf{Ottimale}: \\
+
+MS09 &
+Failed Test Cases  Percentuage &
+Percentuale dei test falliti sul totale dei test eseguiti &
+\textbf{Accetttabile}:
+\textbf{Ottimale}: \\
+\end{longtable}
+
