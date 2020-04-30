@@ -25,20 +25,17 @@ Ogni requisito può essere inserito in vari UC\glo, che si differenziano ciascun
 \subsubsection{Classificazione dei casi d'uso}
 Identificare i casi d’uso in modo univoco aiuta la tracciabilità. I casi d’uso sono classificati nel seguente modo: \\
 \centerline{\textbf{UC[codice\_padre].[codice\_figlio]}} \\
-Il \textit{codice\_padre} è il codice univoco che rappresenta il requisito del caso d’uso. Se lo UC è collegato per profondità di dettaglio ad un altro UC, il \textit{codice\_figlio} verrà rappresentato in maniera gerarchica (esempio: se uno UC rappresenta un livello di dettaglio maggiore con \textit{codice\_padre} x, il suo codice sarà x.y, dove y indica l’annidamento raggiunto). \\ Verranno presentati prima i casi d'uso principali (da \hyperref[par:UC1]{UC1} a \hyperref[par:UC8]{UC8}), seguiti da quelli relativi ad estensioni (da \hyperref[par:UC9]{UC9} a \hyperref[par:UC15]{UC15}) e infine verranno presentati i casi d'uso relativi alle inclusioni (da \hyperref[par:UC16]{UC16} a \hyperref[par:UC24]{UC24}).
+Il \textit{codice\_padre} è il codice univoco che rappresenta il requisito del caso d’uso. Se lo UC è collegato per profondità di dettaglio ad un altro UC, il \textit{codice\_figlio} verrà rappresentato in maniera gerarchica (esempio: se uno UC rappresenta un livello di dettaglio maggiore con \textit{codice\_padre} x, il suo codice sarà x.y, dove y indica l’annidamento raggiunto). \\ Verranno presentati prima i casi d'uso principali (da \hyperref[par:UC1]{UC1} a \hyperref[par:UC8]{UC8}), seguiti da quelli relativi ad estensioni (da \hyperref[par:UC9]{UC9} a \hyperref[par:UC24]{UC24}).
 
 	\subsection{Attori}
-Il sistema di autenticazione e registrazione dell’utente viene gestito per intero dal sistema Grafana, in quanto il prodotto finale non disporrà di una funzionalità di autenticazione/registrazione interna.
-Il numero limitato di differenti attori che si approcciano al prodotto in analisi è dovuto principalmente al fatto che, essendo il prodotto \emph{Predire in Grafana} un plug-in del sistema indipendente di Grafana, un esiguo numero di utenti hanno effettivamente la possibilità di approcciarsi al prodotto finale. Inoltre non è necessaria la  registrazione degli utenti poiché l'addestramento avviene in un \emph{tool} esterno.
+Il sistema di autenticazione e registrazione dell’utente viene gestito per intero dal sistema Grafana, in quanto il prodotto finale non disporrà di una funzionalità di autenticazione/registrazione interna.									
+Il numero limitato di differenti attori che si approcciano a parte del prodotto in analisi è dovuto principalmente al fatto che, essendo il prodotto \emph{Predire in Grafana} costituito da un plug-in del sistema indipendente di Grafana ed un tool di addestramento, un esiguo numero di utenti hanno effettivamente la possibilità di approcciarsi al monitoraggio dei dati.
+L'utente per poter usare al meglio il tool di addestramento è consigliabile disponga di nozioni di Machine Learning. Per sfruttare al meglio il plug-in si raccomanda conoscenza riguardo il monitoraggio dei dati e di saper interpretare le previsioni visualizzate sulla dashboard.
+ Inoltre non è necessaria la  registrazione degli utenti poiché l'addestramento avviene in un tool esterno.
+
 
 	\subsubsection{Attori primari}
-Essendo l’attore primario un ruolo specifico assunto da un utente che interagisce col sistema nell’ambito di un’unità di funzionamento (caso d’uso), la tipologia di tale posizione può essere suddivisa in due categorie:
-	\begin{itemize}
-		\item\textbf{Utente addestratore}: è l’utente ideale per l’uso del tool di addestramento in quanto dispone di nozioni di Machine Learning;
-		\item\textbf{Utente monitoratore}: è un utente che ha un’ampia conoscenza sul monitoraggio dei dati ed è in grado di interpretare la previsione visualizzata sulla dashboard.
-		
-	\end{itemize}
-
+Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tipo di utente. L'attore primario individuato è l'utente generico.
 	\subsubsection{Attori secondari}
 	\begin{itemize}
 		\item\textbf{Piattaforma Grafana}: è un sistema di monitoraggio di stream\glo di dati, che ospiterà il plug-in prodotto. Consente agli utenti registrati di lanciare alert e realizzare grafici modellati sui dati forniti in ingresso al plug-in.
@@ -60,7 +57,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\end{figure}	
 
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l’utente deve possedere dei dati di addestramento\glo in un file formato CSV\glo;
@@ -88,7 +85,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC1.1}
 		\subsubsection{UC1.1 - Selezione Dati di Addestramento }
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l’utente si trova sul tool di addestramento;
@@ -102,7 +99,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC1.2}
 		\subsubsection{UC1.2 - Selezione dell’Algoritmo di Previsione}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
 			\item\textbf{Postcondizioni}: l’utente ha scelto l’algoritmo di previsione selezionando il pulsante corrispondente;
 			\item\textbf{Scenario principale}: l’utente clicca la Combo Box con etichetta "Seleziona Algoritmo" e sceglie l’algoritmo (SVM o RL).
@@ -111,7 +108,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC1.3}
 	\subsubsection{UC1.3 - Conferma Procedura Addestramento}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l’utente deve aver caricato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
@@ -133,7 +130,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC1.4}
 	\subsubsection{UC1.4 - Salvataggio File JSON}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3});
 			\item\textbf{Postcondizioni}: l’utente ha salvato il file JSON in locale;
 			\item\textbf{Scenario principale}: l’utente decide come denominare il file JSON e in che cartella del file system salvarlo; 		
@@ -151,7 +148,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\end{figure}	
 		
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l’utente ha effettuato l’accesso alla piattaforma Grafana;
@@ -181,7 +178,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC2.1}
 		\subsubsection{UC2.1 - Selezione del file JSON}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l’utente visualizza il pannello “Predire in Grafana” nella dashboard;
@@ -195,7 +192,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC2.2}
 		\subsubsection{UC2.2 - Conferma di Caricamento}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare;
 			\item\textbf{Postcondizioni}: l’utente ha caricato il file nel plug-in;
 			\item\textbf{Scenario principale}: l’utente clicca il pulsante etichettato con “Conferma” e il file viene caricato;
@@ -218,7 +215,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\end{figure}	
 
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l’utente ha caricato e letto con successo i predittori contenuti nel file JSON (\hyperref[par:UC2]{UC2});
@@ -247,7 +244,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC3.1}
 		\subsubsection{UC3.1 - Selezione Database}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha configurato correttamente la connessione al server tramite Grafana e visualizza la lista di Database disponibili;
 			\item\textbf{Postcondizioni}: è stato selezionato il database contenente il flusso dati desiderato;
 			\item\textbf{Scenario principale}: l’utente seleziona il database da usare come sorgente dati tra quelli disponibili;
@@ -256,7 +253,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC3.2}
 		\subsubsection{UC3.2 - Selezione del Flusso Dati}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il DB\glo presente in Grafana (\hyperref[par:UC3.1]{UC3.1}) da cui selezionare il flusso dati di interesse e visualizza la lista delle tabelle disponibili;
 			\item\textbf{Postcondizioni}: l’utente ha selezionato la tabella e dispone di un flusso dati su cui fare il collegamento;
 			\item\textbf{Scenario principale}: l’utente seleziona la tabella che vuole utilizzare per effettuare il collegamento ai predittori scelti.
@@ -265,7 +262,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC3.3}
 		\subsubsection{UC3.3 - Selezione del Predittore}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item è disponibile un flusso di dati da monitorare (\hyperref[par:UC3.2]{UC3.2});
@@ -278,7 +275,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC3.4}
 	\subsubsection{UC3.4 - Selezione Nodo del Flusso Dati}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item il predittore da collegare è stato selezionato dalla lista dei predittori (\hyperref[par:UC3.3]{UC3.3});
@@ -291,7 +288,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC3.5}
 	\subsubsection{UC3.5 - Impostazione delle Soglie}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato almeno un predittore che vuole collegare al flusso dati (\hyperref[par:UC3.3]{UC3.3});
 			\item\textbf{Postcondizioni}: l’utente ha impostato la soglia di monitoraggio sul predittore selezionato;
 			\item\textbf{Scenario principale}: l’utente dispone di almeno un predittore e aggiunge una soglia da associare ed è possibile impostare più di una soglia;
@@ -301,7 +298,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC3.6}
 	\subsubsection{UC3.6 - Conferma Collegamento}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha creato le basi per l'associazione del predittore al nodo del flusso dati scelto, in particolare è stato selezionato il predittore (\hyperref[par:UC3.3]{UC3.3}), il nodo del flusso dati da associare (\hyperref[par:UC3.4]{UC3.4}) ed è stata impostata una soglia (\hyperref[par:UC3.5]{UC3.5});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -311,9 +308,9 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 			\item\textbf{Scenario principale}: l’utente clicca il pulsante etichettato con "Conferma Collegamento";
 			\item\textbf{Estensioni}: 
 				\begin{enumerate}
-					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
+					\item\hyperref[par:UC13]{UC13}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
 					\item\hyperref[par:UC18]{UC18}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
-					\item\item\hyperref[par:UC19]{UC19}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.		
+					\item\hyperref[par:UC19]{UC19}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.		
 				\end{enumerate}
 		\end{itemize}
 
@@ -331,7 +328,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\end{figure}	
 
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l'utente si trova sul pannello dedicato alla lista dei collegamenti tra predittore e flusso dati (\hyperref[par:UC19]{UC19});
@@ -351,7 +348,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\subsection{UC5 - Modifica Collegamento}
 
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l'utente si trova sul pannello dedicato alla lista dei collegamenti tra predittore e flusso dati (\hyperref[par:UC20]{UC20});
@@ -382,7 +379,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\end{figure}	
 
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l'utente si trova nel pannello "Calcolo di Previsione" relativo alle operazioni sulla previsione del flusso dati;
@@ -413,7 +410,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC6.1}
 	\subsubsection{UC6.1 - Inserimento Politica Temporale}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente si trova nella sezione "Calcolo di Previsione" del pannello del plug-in;
 			\item\textbf{Postcondizioni}: l’utente avrà selezionato una politica temporale applicabile ad un successivo calcolo di previsione;
 			\item\textbf{Scenario principale}: l’utente inserisce il tempo di previsione sul flusso dati attraverso l'inserimento dei campi "Secondi", "Minuti", "Ore" nell’apposito spazio di editing.
@@ -422,7 +419,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC6.2}
 	\subsubsection{UC6.2 - Avvio Monitoraggio}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha impostato la Politica Temporale (\hyperref[par:UC6.1]{UC6.1});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -445,7 +442,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC6.3}
 	\subsubsection{UC6.3 - Salvataggio Previsione}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item è stata configurata correttamente la connessione al server tramite Grafana;
@@ -468,7 +465,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\end{figure}
 
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -492,7 +489,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\end{figure}
 
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha avviato correttamente il monitoraggio del flusso dati (\hyperref[par:UC6.2]{UC6.2}) con relativi predittori collegati;
 			\item\textbf{Postcondizioni}: il sistema mantiene aggiornate e visualizzabili attraverso l’uso delle dashboard le misurazioni e le previsioni dei predittori associati da parte dell’utente;
 			\item\textbf{Scenario principale}: l’utente visualizza l’andamento dei dati misurati rispetto a quelli previsti. Il sistema si aggiorna costantemente grazie ai dati provenienti dal database, effettuando l’operazione di calcolo delle previsioni sul flusso dati associato ai predittori (\hyperref[par:UC6]{UC6}). Tale operazione di calcolo di previsione viene eseguito in base alla politica temporale stabilita in \hyperref[par:UC6.1]{UC6.1};		
@@ -504,7 +501,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC9}
 	\subsection{UC9 - Visualizzazione Messaggio d'Errore file CSV Incompatibile}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file CSV che intende utilizzare per l'addestramento e ha cliccato il pulsante di conferma. Il file selezionato è strutturalmente errato e non c'è compatibilità con l'algoritmo selezionato;
 			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.2]{UC1.2});
 			\item\textbf{Scenario principale}: l’utente visualizza il messaggio d'errore "File Incompatibile" in cui viene segnalato il fatto che il file CSV da lui selezionato (\hyperref[par:UC1.2]{UC1.2}) non è adatto per l'addestramento; 		
@@ -515,7 +512,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC10}
 	\subsection{UC10 - Visualizzazione Messaggio di Alert file JSON già Caricato}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato l'opzione di caricamento del file JSON tramite click del pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1});
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato un messaggio di alert in cui viene segnalato che è già presente un file JSON caricato nel plug-in;
 			\item\textbf{Scenario principale}:
@@ -530,7 +527,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC11}
 	\subsection{UC11 - Visualizzazione Messaggio d'Errore Caricamento file JSON }
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.2]{UC2.2}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.3]{UC2.3});
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato un messaggio d'errore in cui viene segnalato che la struttura del file selezionato non supporta una SVM o RL, di conseguenza viene riportato alla selezione del file JSON;
 			\item\textbf{Scenario principale}:
@@ -545,7 +542,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC12}
 	\subsection{UC12 - Visualizzazione Messaggio d'Errore Soglia Non Valida}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.5]{UC3.5}) non valida per contenuto o formato;
 			\item\textbf{Postcondizioni}: l’utente visualizza il messaggio d'errore sulla soglia appena impostata;		
 			\item\textbf{Scenario principale}:
@@ -560,7 +557,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC13}
 	\subsection{UC13 - Visualizzazione Messaggio d'Errore impostazioni di Collegamento}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato le selezioni per il collegamento di un predittore ad un nodo del flusso (\hyperref[par:UC3.6]{UC3.6}) ed ha commesso alcuni errori;
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -579,7 +576,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC14}
 	\subsection{UC14 - Visualizzazione Messaggio d'Errore Politica Temporale Non Definita}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di "Avvio Monitoraggio" (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC6.1]{UC6.1});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -598,7 +595,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		\label{par:UC15}
 	\subsection{UC15 - Visualizzazione Messaggio d'Errore Nessun Predittore Collegato}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -617,7 +614,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC16}
 	\subsection{UC16 - Visualizzazione Messaggio di Notifica Avvenuto Successo Salvataggio file JSON}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente addestratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha salvato il file JSON generato a partire dai dati di addestramento (\hyperref[par:UC1.5]{UC1.5});
 			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di avvenuto salvataggio del file JSON;					\item\textbf{Scenario principale}:
 				\begin{enumerate}
@@ -631,7 +628,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC17}
 	\subsection{UC17 - Visualizzazione Messaggio di Notifica Avvenuto Successo Caricamento JSON}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato il caricamento del file JSON selezionato (\hyperref[par:UC2.3]{UC2.3});
 			\item\textbf{Postcondizioni}: l’utente visualizza la notifica di avvenuto caricamento del file JSON nel plug-in;
 			\item\textbf{Scenario principale}:
@@ -646,7 +643,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC18}
 	\subsection{UC18 - Visualizzazione Messaggio di Notifica Collegamento Avvenuto con Successo}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento (\hyperref[par:UC3.6]{UC3.6});
 			\item\textbf{Postcondizioni}: l’utente visualizza la notifica di avvenuto successo del collegamento;
 			\item\textbf{Scenario principale}:
@@ -662,7 +659,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC19}
 	\subsection{UC19 - Visualizzazione Pannello Lista Collegamenti}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento tra predittore e nodo del flusso selezionato cliccando il pulsante di "Conferma Collegamento" (\hyperref[par:UC3.6]{UC3.6});
 			\item\textbf{Postcondizioni}: l’utente visualizza un pannello contenente la lista di tutti i collegamenti effettuati, ogni nuovo collegamento confermato viene aggiunto alla lista;
 			\item\textbf{Scenario principale}:
@@ -682,7 +679,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC20}
 	\subsection{UC20 - Visualizzazione Messaggio di Alert Procedere con lo Scollegamento}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il pulsante di scollegamento "Scollega Predittore" (\hyperref[par:UC4]{UC4});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -701,7 +698,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC21}
 	\subsection{UC21 - Visualizzazione Messaggio di Notifica Monitoraggio Avviato con Successo}	
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha avviato un monitoraggio (\hyperref[par:UC6.2]{UC6.2});
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato la notifica di monitoraggio avviato con successo;
 			\item\textbf{Scenario principale}:
@@ -716,7 +713,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 	\label{par:UC22}
 	\subsection{UC22 - Visualizzazione Messaggio di Notifica Monitoraggio Interrotto}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha interrotto il monitoraggio (\hyperref[par:UC7]{UC7});
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato la notifica di monitoraggio interrotto;
 			\item\textbf{Scenario principale}:
@@ -731,7 +728,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 		
 	\label{par:UC23}
 	\subsection{UC23 - Visualizzazione Messaggio di Notifica Salvataggio Previsione Avvenuta con Successo}	\begin{itemize}
-			\item\textbf{Attore primario}: utente;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di invio previsioni (\hyperref[par:UC6.3]{UC6.3});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di "Salvataggio Dati di Previsione Avvenuto con Successo";
 			\item\textbf{Scenario principale}:
@@ -746,7 +743,7 @@ Essendo l’attore primario un ruolo specifico assunto da un utente che interagi
 \label{par:UC24}
 	\subsection{UC24 - Visualizzazione Messaggio di Alert Soglia Critica Raggiunta}
 		\begin{itemize}
-			\item\textbf{Attore primario}: utente monitoratore;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.5]{UC3.5}) è stata raggiunta o superata;
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato il messaggio di alert riguardante la soglia interessata;
 			\item\textbf{Scenario principale}:
