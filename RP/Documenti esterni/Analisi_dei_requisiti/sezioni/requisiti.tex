@@ -50,30 +50,30 @@ I requisiti sono definiti nelle seguenti tabelle, divise per tipologie.
 \textcolor{white}{\textbf{Fonti}}  \\
 		\endhead
 Re1F1 & Obbligatorio & L’utente deve disporre dei dati di addestramento in formato CSV che potrà utilizzare  per creare il file JSON usando l’apposito tool & Capitolato UC1\\
-Re1F1.1 & Obbligatorio & All’utente sarà possibile selezionare i dati di addestramento da un file CSV &  Interno UC1.1\\
-Re1F1.2 & Obbligatorio & All’utente sarà possibile selezionare l’algoritmo con il quale potrà successivamente effettuare i calcoli di previsione &  Interno UC1.2\\
-Re1F1.3 & Obbligatorio & L’utente potrà confermare le procedure di addestramento impostate &  Interno UC1.3\\
-Re1F1.4 & Obbligatorio & L’utente potrà salvare in locale il file JSON prodotto & Interno UC1.4\\
+Re1F1.1 & Obbligatorio & L’utente potrà selezionare il pulsante di caricamento dati d'addestramento &  Interno UC1.1\\
+Re1F1.2 & Obbligatorio & All’utente sarà possibile selezionare i dati di addestramento &  Interno UC1.2\\
+Re1F1.3 & Obbligatorio & All’utente sarà possibile selezionare l’algoritmo con il quale potrà successivamente effettuare i calcoli di previsione &  Interno UC1.3\\
+Re1F1.4 & Obbligatorio & L’utente potrà confermare le procedure di addestramento impostate &  Interno UC1.4\\
+Re1F1.5 & Obbligatorio & L’utente potrà salvare in locale il file JSON prodotto & Interno UC1.5\\
 Re1F2 & Obbligatorio & L’utente potrà caricare il file JSON nel plugin & Capitolato UC2\\
-Re1F2.1 & Obbligatorio & L’utente potrà selezionare il file JSON &  Interno UC2.1\\
-Re1F2.2 & Obbligatorio & L’utente potrà confermare il caricamente del file JSON &  Interno UC2.2\\
-Re1F3 & Obbligatorio & L’utente avrà la possibilità di collegare il predittore al flusso dati, definendone le soglie per i rispettivi stati di ogni nodo e visualizzerà i collegamenti in un
-pannello dedicato
- &  Capitolato UC3\\
-Re1F3.1 & Obbligatorio & L’utente potrà selezionare il database da usare come sorgente dalla lista di Database, disponibile su Grafana &  Interno UC3.1\\
-Re1F3.2 & Obbligatorio & All’utente sarà possibile selezionare il flusso dati da cui ricevere uno stream di informazioni su cui effettuare successivamente delle previsioni &  Interno UC3.1\\
+Re1F2.1 & Obbligatorio & All’utente sarà possibile selezionare l’opzione di caricamente del file JSON &  Interno UC2.1\\
+Re1F2.2 & Obbligatorio & L’utente potrà selezionare il file JSON &  Interno UC2.2\\
+Re1F2.3 & Obbligatorio & L’utente potrà confermare il caricamente del file JSON &  Interno UC2.3\\
+Re1F3 & Obbligatorio & L’utente avrà la possibilità di collegare il predittore al flusso dati &  Capitolato UC3\\
+Re1F3.1 & Obbligatorio & L’utente potrà selezionare il database &  Interno UC3.1\\
+Re1F3.2 & Obbligatorio & All’utente sarà possibile selezionare il flusso dati &  Interno UC3.1\\
 Re1F3.3 & Obbligatorio & L’utente avrà la possibilità di selezionare il predittore  &  Interno UC3.3\\
-Re1F3.4 & Obbligatorio & L’utente potrà selezionare un nodo dal flusso dati su cui potrà successivamente applicare gli strumenti predittivi &  Interno UC3.4\\
-Re1F3.5 & Obbligatorio & L’utente potrà impostare le soglie che causeranno il lancio del messaggio di alert in caso vengano superate &  Capitolato UC3.3\\
+Re1F3.4 & Obbligatorio & L’utente potrà selezionare un nodo dal flusso dati &  Interno UC3.4\\
+Re1F3.5 & Obbligatorio & L’utente potrà impostare le soglie &  Capitolato UC3.3\\
 Re1F3.6 & Obbligatorio & All’utente sarà possibile confermare il collegamento &  Interno UC3.6\\
-Re1F4 & Obbligatorio & L’utente potrà effettuare lo scollegamento di un predittore interrompendo il monitoraggio di un particolare aspetto del flusso &  Interno UC4\\
+Re1F4 & Obbligatorio & L’utente potrà effettuare lo scollegamento di un predittore &  Interno UC4\\
 Re1F5 & Obbligatorio & All’utente sarà possibile apportare delle modifiche ad un collegamento & Capitolato UC5\\
-Re1F6 & Obbligatorio & L’utente potrà effettuare operazioni di calcolo di previsione su un flusso dati da lui scelto &  Capitolato UC6\\
-Re1F6.1 & Obbligatorio & L’utente potrà inserire la politica temporale che influenzerà la granularità della previsione &  Interno UC6.1\\
-Re1F6.2 & Obbligatorio & L’utente avrà la possibilità di avviare il monitoraggio sul flusso dati a cui verranno associati dei predittori nella procedura di collegamento &  Interno UC6.2\\
+Re1F6 & Obbligatorio & L’utente potrà effettuare operazioni di calcolo di previsione &  Capitolato UC6\\
+Re1F6.1 & Obbligatorio & L’utente potrà inserire la politica temporale &  Interno UC6.1\\
+Re1F6.2 & Obbligatorio & L’utente avrà la possibilità di avviare il monitoraggio &  Interno UC6.2\\
 Re1F6.3 & Obbligatorio & All’utente sarà offerta la possibilità di effettuare il salvataggio delle previsione &  Verbale VI\_2020-03-31\\
-Re1F7 & Obbligatorio & L’utente potrà interrompere il monitoraggio dei dati in ingresso e potrà quindi modificare i collegamenti dei predittori precedentemente effettuati & Interno UC7\\
-Re1F8 & Obbligatorio & L’utente potrà visualizzare le previsioni in un pannello dove potrà monitorare l'andamento del flusso e confrontarlo con i dati predittivi&  Capitolato UC8\\
+Re1F7 & Obbligatorio & L’utente potrà interrompere il monitoraggio & Interno UC7\\
+Re1F8 & Obbligatorio & L’utente potrà visualizzare le previsioni &  Capitolato UC8\\
 Re1F9 & Obbligatorio & All’utente sarà mostrato il messaggio di errore file CSV incompatibile &  Interno UC1.2\\
 Re1F10 & Obbligatorio & All’utente sarà mostrato un messaggio di avviso il quale segnalerà che il caricamento del file JSON è già avvenuto &  Interno UC2.1\\
 Re1F11 & Obbligatorio & L’utente vedrà un messaggio che segnalerà l’errato caricamento del file JSON &  Interno UC2.3\\
@@ -88,7 +88,7 @@ Re1F16 & Obbligatorio & L’utente verrà notificato attraverso un messaggio di 
 Re1F17 & Obbligatorio & L’utente riceverà un messaggio che confermerà che il caricamento del file JSON è avvenuto con successo &  Interno UC2.3\\
 Re1F18 & Obbligatorio & L’utente verrà notificato attraverso un messaggio del collegamento avvenuto con successo &  Interno
 UC3.6\\
-Re1F19 & Obbligatorio & L’utente visualizzerà il pannello con la lista dei collegamenti precedentemente effettuati e che potranno essere modificati se il monitoraggio non è attivo& Interno UC3.6\\
+Re1F19 & Obbligatorio & L’utente visualizzerà il pannello con la lista dei collegamenti & Interno UC3.6\\
 Re1F20 & Obbligatorio & L’utente verrà notificato con un messaggio che è possibile procedere con lo scollegamento &  Interno UC4\\
 Re1F21 & Obbligatorio & L’utente riceverà un messaggio che lo notificherà di aver avviato il monitoraggio con successo  & Interno UC6.2\\
 Re1F22 & Obbligatorio & L’utente verrà notificato attraverso un messaggio di aver interrotto il monitoraggio &  Interno UC7\\
@@ -124,7 +124,6 @@ Re1Q3 & Obbligatorio & E’ necessario rendere disponibile un manuale per la man
 Re1Q4 & Obbligatorio & Il prodotto deve essere sviluppato in modo concorde a quanto stabilito nelle \emph{Norme\_di\_Progetto\_v1.0.0} & Capitolato\\
 Re2Q5 & Desiderabile & Il codice sorgente deve essere disponibile in una repository pubblica su GitHub\glo o su altre piattaforme & Capitolato\\
 Re2Q6 & Desiderabile & Il plug-in deve essere caricato nella sezione \href{https:// grafana.com/plugins}{Grafana Labs Plugins} & Interno\\
-Re1Q7 & Obbligatorio & Il codice sorgente del plug-in deve essere open source\glo & Capitolato\\
 \end{longtable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,7 +153,8 @@ Re1V1.4 & Obbligatorio & Il Sistema deve essere supportato sul browser Safari da
 Re1V2 & Obbligatorio & Il file contenente i dati di addestramento deve essere in formato CSV &  Verbale VI\_2020-03-31\\
 Re1V3 & Obbligatorio & L’applicazione deve essere sviluppata utilizzando JavaScript 6 (ES6) & Capitolato\\
 Re1V4 & Desiderabile & Il tool di addestramento deve essere sviluppato utilizzando il framework React\glo & Interno\\
-Re1V5 & Obbligatorio & Lo sviluppo dell’interfaccia del plug-in è realizzato attraverso l’uso di tecnologie web\glo & Interno\\
+Re1V5 & Obbligatorio & Il codice sorgente del plug-in deve essere open source\glo & Capitolato\\
+Re1V6 & Obbligatorio & Lo sviluppo dell’interfaccia del plug-in è realizzato attraverso l’uso di tecnologie web\glo & Interno\\
 \end{longtable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -180,10 +180,10 @@ Non sono stati individuati requisiti prestazionali in quanto il progetto sarà c
 \textcolor{white}{\textbf{Fonte}} &
 \textcolor{white}{\textbf{Requisiti}} \\
 		\endhead
-Capitolato & Re1F1\newline Re1F2 \newline Re1F3 \newline Re1F3.5 \newline Re1F5 \newline Re1F6 \newline Re1F8 \newline Re3F24\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1Q7\newline Re1V3\\ 
+Capitolato & Re1F1\newline Re1F2 \newline Re1F3 \newline Re1F3.5 \newline Re1F5 \newline Re1F6 \newline Re1F8 \newline Re3F24\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1V3\\
 Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re1F1.5\newline Re1F2.1\newline Re1F2.2\newline Re1F2.3\newline Re1F3.1\newline Re1F3.2\newline Re1F3.3\newline Re1F3.4\newline Re1F3.6\newline Re1F4\newline Re1F6.1\newline  Re1F6.2\newline Re1F7\newline Re1F9\newline Re1F10\newline Re1F11\newline Re1F12\newline  Re1F13\newline  Re1F14\newline  Re1F15\\
 Interno & Re1F16 \newline Re1F17\newline  Re1F18\newline Re1F19\newline  Re1F20\newline  Re1F21\newline  Re1F22\newline  Re1F23\newline  Re1Q1\newline  Re1Q2.1\newline  Re2Q2.2\newline  Re2Q6\newline  Re1V4
-\newline  Re1V5\\
+\newline  Re1V6\\
 UC1 & Re1F1\\
 UC1.1 & Re1F1.1\\
 UC1.2 & Re1F1.2\newline Re1F9\\
@@ -274,7 +274,6 @@ Re1Q3 & Capitolato\\
 Re1Q4 & Capitolato\\
 Re2Q5 & Capitolato\\
 Re2Q6 & Interno\\
-Re1Q7 & Capitolato\\
 Re1V1 & Supporto al linguaggio ECMAScript6\\
 Re1V1.1 & Supporto al linguaggio ECMAScript6\\
 Re1V1.2 & Supporto al linguaggio ECMAScript6\\
@@ -283,7 +282,8 @@ Re1V1.4 & Supporto al linguaggio ECMAScript6\\
 Re1V2 & Verbale VI\_2020-03-31\\
 Re1V3 & Capitolato\\
 Re1V4 & Interno\\
-Re1V5 & Interno\\
+Re1V5 & Capitolato\\
+Re1V6 & Interno\\
 \end{longtable}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
