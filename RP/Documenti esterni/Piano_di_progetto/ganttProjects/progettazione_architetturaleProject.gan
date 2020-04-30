@@ -6,7 +6,7 @@
         <field id="tpd5" name="End date" width="117" order="2"/>
         <option id="taskLabelLeft" value="name"/>
         <option id="taskLabelRight" value=""/>
-        <option id="color.recent"><![CDATA[#999999 #00ff00 #000000 #ff3333]]></option>
+        <option id="color.recent"><![CDATA[#ff3300 #999999 #00ff00 #000000 #ff3333]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Name" width="210" order="0"/>
@@ -67,6 +67,7 @@
             </task>
             <task id="12" name="Verifica" color="#00ff00" meeting="false" start="2020-05-02" duration="2" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
         </task>
+        <task id="109" name="Incontro con il proponente" color="#ff3300" meeting="true" start="2020-04-29" duration="0" complete="0" thirdDate="2020-04-16" thirdDate-constraint="0" expand="true"/>
         <task id="13" name="Technology Baseline" meeting="false" start="2020-04-21" duration="20" complete="0" expand="true">
             <depend id="22" type="2" difference="0" hardness="Strong"/>
             <task id="14" name="Proof of Concept - Codifica" color="#999999" meeting="false" start="2020-04-21" duration="15" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
