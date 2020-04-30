@@ -99,7 +99,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC1.2}
 		\subsubsection{UC1.2 - Selezione dell’Algoritmo di Previsione}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
 			\item\textbf{Postcondizioni}: l’utente ha scelto l’algoritmo di previsione selezionando il pulsante corrispondente;
 			\item\textbf{Scenario principale}: l’utente clicca la Combo Box con etichetta "Seleziona Algoritmo" e sceglie l’algoritmo (SVM o RL).
@@ -192,7 +192,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC2.2}
 		\subsubsection{UC2.2 - Conferma di Caricamento}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare;
 			\item\textbf{Postcondizioni}: l’utente ha caricato il file nel plug-in;
 			\item\textbf{Scenario principale}: l’utente clicca il pulsante etichettato con “Conferma” e il file viene caricato;
@@ -501,7 +501,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC9}
 	\subsection{UC9 - Visualizzazione Messaggio d'Errore file CSV Incompatibile}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file CSV che intende utilizzare per l'addestramento e ha cliccato il pulsante di conferma. Il file selezionato è strutturalmente errato e non c'è compatibilità con l'algoritmo selezionato;
 			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.2]{UC1.2});
 			\item\textbf{Scenario principale}: l’utente visualizza il messaggio d'errore "File Incompatibile" in cui viene segnalato il fatto che il file CSV da lui selezionato (\hyperref[par:UC1.2]{UC1.2}) non è adatto per l'addestramento; 		
@@ -542,7 +542,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC12}
 	\subsection{UC12 - Visualizzazione Messaggio d'Errore Soglia Non Valida}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.5]{UC3.5}) non valida per contenuto o formato;
 			\item\textbf{Postcondizioni}: l’utente visualizza il messaggio d'errore sulla soglia appena impostata;		
 			\item\textbf{Scenario principale}:
@@ -557,7 +557,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC13}
 	\subsection{UC13 - Visualizzazione Messaggio d'Errore impostazioni di Collegamento}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato le selezioni per il collegamento di un predittore ad un nodo del flusso (\hyperref[par:UC3.6]{UC3.6}) ed ha commesso alcuni errori;
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -576,7 +576,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC14}
 	\subsection{UC14 - Visualizzazione Messaggio d'Errore Politica Temporale Non Definita}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di "Avvio Monitoraggio" (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC6.1]{UC6.1});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -595,7 +595,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC15}
 	\subsection{UC15 - Visualizzazione Messaggio d'Errore Nessun Predittore Collegato}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
@@ -614,7 +614,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC16}
 	\subsection{UC16 - Visualizzazione Messaggio di Notifica Avvenuto Successo Salvataggio file JSON}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha salvato il file JSON generato a partire dai dati di addestramento (\hyperref[par:UC1.5]{UC1.5});
 			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di avvenuto salvataggio del file JSON;					\item\textbf{Scenario principale}:
 				\begin{enumerate}
@@ -743,7 +743,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 \label{par:UC24}
 	\subsection{UC24 - Visualizzazione Messaggio di Alert Soglia Critica Raggiunta}
 		\begin{itemize}
-			\item\textbf{Attore primario}:utente generico;
+			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.5]{UC3.5}) è stata raggiunta o superata;
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato il messaggio di alert riguardante la soglia interessata;
 			\item\textbf{Scenario principale}:
