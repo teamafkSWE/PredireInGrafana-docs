@@ -44,7 +44,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 % - Casi d'uso: Principali - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC1}
-	\subsection{UC1 - Creazione file JSON dai Dati di Addestramento}
+	\subsection{UC1 - Creazione file JSON dai dati di addestramento}
 
 	\begin{figure}[H]
 		\centering
@@ -79,7 +79,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 		
 		\label{par:UC1.1}
-		\subsubsection{UC1.1 - Selezione Dati di Addestramento }
+		\subsubsection{UC1.1 - Selezione dati di addestramento }
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
@@ -93,7 +93,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 		
 		\label{par:UC1.2}
-		\subsubsection{UC1.2 - Selezione dell’Algoritmo di Previsione}
+		\subsubsection{UC1.2 - Selezione dell’algoritmo di previsione}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
@@ -102,7 +102,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 	
 	\label{par:UC1.3}
-	\subsubsection{UC1.3 - Conferma Procedura Addestramento}
+	\subsubsection{UC1.3 - Conferma procedura addestramento}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
@@ -124,7 +124,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 
 	\label{par:UC1.4}
-	\subsubsection{UC1.4 - Salvataggio File JSON}
+	\subsubsection{UC1.4 - Salvataggio file JSON}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3});
@@ -186,7 +186,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\end{itemize}
 		
 		\label{par:UC2.2}
-		\subsubsection{UC2.2 - Conferma di Caricamento}
+		\subsubsection{UC2.2 - Conferma di caricamento}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare;
@@ -202,7 +202,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC3}
-	\subsection{UC3 - Collegamento del Predittore al Flusso Dati}
+	\subsection{UC3 - Collegamento del predittore al flusso dati}
 
 		\begin{figure}[H]
 		\centering
@@ -232,13 +232,13 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\begin{enumerate}
 					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.5]{UC3.5}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
 					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
-					\item\hyperref[par:UC18]{UC18} include \hyperref[par:UC3.6]{UC3.6}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
-					\item\hyperref[par:UC19]{UC19} include \hyperref[par:UC3.6]{UC3.6}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
+					\item\hyperref[par:UC18]{UC18} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
+					\item\hyperref[par:UC19]{UC19} estende \hyperref[par:UC3.6]{UC3.6}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
 				\end{enumerate}
 		\end{itemize}
 		
 		\label{par:UC3.1}
-		\subsubsection{UC3.1 - Selezione Database}
+		\subsubsection{UC3.1 - Selezione database}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha configurato correttamente la connessione al server tramite Grafana e visualizza la lista di Database disponibili;
@@ -247,7 +247,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 		
 		\label{par:UC3.2}
-		\subsubsection{UC3.2 - Selezione del Flusso Dati}
+		\subsubsection{UC3.2 - Selezione del flusso dati}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il DB\glo presente in Grafana (\hyperref[par:UC3.1]{UC3.1}) da cui selezionare il flusso dati di interesse e visualizza la lista delle tabelle disponibili;
@@ -256,7 +256,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 		
 		\label{par:UC3.3}
-		\subsubsection{UC3.3 - Selezione del Predittore}
+		\subsubsection{UC3.3 - Selezione del predittore}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
@@ -269,7 +269,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 	
 	\label{par:UC3.4}
-	\subsubsection{UC3.4 - Selezione Nodo del Flusso Dati}
+	\subsubsection{UC3.4 - Selezione nodo del flusso dati}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
@@ -282,7 +282,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 
 	\label{par:UC3.5}
-	\subsubsection{UC3.5 - Impostazione delle Soglie}
+	\subsubsection{UC3.5 - Impostazione delle soglie}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato almeno un predittore che vuole collegare al flusso dati (\hyperref[par:UC3.3]{UC3.3});
@@ -292,7 +292,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 
 	\label{par:UC3.6}
-	\subsubsection{UC3.6 - Conferma Collegamento}
+	\subsubsection{UC3.6 - Conferma collegamento}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha creato le basi per l'associazione del predittore al nodo del flusso dati scelto, in particolare è stato selezionato il predittore (\hyperref[par:UC3.3]{UC3.3}), il nodo del flusso dati da associare (\hyperref[par:UC3.4]{UC3.4}) ed è stata impostata una soglia (\hyperref[par:UC3.5]{UC3.5});
@@ -315,7 +315,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %Possibilità di inserire Scollegamento e modifica dentro a unico UC - "Operazioni sui collegamenti"
 
 	\label{par:UC4}
-	\subsection{UC4 - Scollegamento Predittore}
+	\subsection{UC4 - Scollegamento del predittore}
 
 		\begin{figure}[H]
 		\centering
@@ -341,7 +341,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 
 	\label{par:UC5}
-	\subsection{UC5 - Modifica Collegamento}
+	\subsection{UC5 - Modifica collegamento}
 
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
@@ -366,7 +366,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC6}
-	\subsection{UC6 - Operazioni Calcolo di Previsione}
+	\subsection{UC6 - Operazioni calcolo di previsione}
 
 	\begin{figure}[H]
 		\centering
@@ -398,13 +398,13 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item \hyperref[par:UC15]{UC15} estende \hyperref[par:UC6.2]{UC6.2}: visualizzazione messaggio d’errore "Nessun Predittore Collegato";
 					\item \hyperref[par:UC21]{UC21} estende \hyperref[par:UC6.2]{UC6.2}: viene visualizzato un messaggio di notifica di "Monitoraggio Avviato con Successo";
 					\item \hyperref[par:UC23]{UC23} estende \hyperref[par:UC6.3]{UC6.3}: viene visualizzata un messaggio di notifica di "Invio Dati Avvenuto con Successo";
-					\item \hyperref[par:UC7]{UC7} include \hyperref[par:UC6.2]{UC6.2}: una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione.
+					\item \hyperref[par:UC7]{UC7} estende \hyperref[par:UC6.2]{UC6.2}: una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione.
 				\end{enumerate}
 		\end{itemize}
 
 	
 	\label{par:UC6.1}
-	\subsubsection{UC6.1 - Inserimento Politica Temporale}
+	\subsubsection{UC6.1 - Inserimento politica temporale}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente si trova nella sezione "Calcolo di Previsione" del pannello del plug-in;
@@ -413,7 +413,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}	
 
 	\label{par:UC6.2}
-	\subsubsection{UC6.2 - Avvio Monitoraggio}
+	\subsubsection{UC6.2 - Avvio monitoraggio}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha impostato la Politica Temporale (\hyperref[par:UC6.1]{UC6.1});
@@ -436,7 +436,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}	
 
 	\label{par:UC6.3}
-	\subsubsection{UC6.3 - Salvataggio Previsione}
+	\subsubsection{UC6.3 - Salvataggio previsione}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
@@ -452,7 +452,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC7}
-	\subsection{UC7 - Interruzione Monitoraggio}
+	\subsection{UC7 - Interruzione monitoraggio}
 
 	\begin{figure}[H]
 		\centering
@@ -476,7 +476,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC8}
-	\subsection{UC8 - Visualizzazione Previsioni}
+	\subsection{UC8 - Visualizzazione previsioni}
 
 	\begin{figure}[H]
 		\centering
@@ -495,7 +495,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 % - Casi d'uso: Estensioni - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\label{par:UC9}
-	\subsection{UC9 - Visualizzazione Messaggio d'Errore file CSV Incompatibile}
+	\subsection{UC9 - Visualizzazione messaggio d'errore "File CSV incompatibile"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file CSV che intende utilizzare per l'addestramento e ha cliccato il pulsante di conferma. Il file selezionato è strutturalmente errato e non c'è compatibilità con l'algoritmo selezionato;
@@ -506,7 +506,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC10}
-	\subsection{UC10 - Visualizzazione Messaggio di Alert file JSON già Caricato}
+	\subsection{UC10 - Visualizzazione messaggio di alert "File JSON già caricato"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato l'opzione di caricamento del file JSON tramite click del pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1});
@@ -521,7 +521,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 
 	\label{par:UC11}
-	\subsection{UC11 - Visualizzazione Messaggio d'Errore Caricamento file JSON }
+	\subsection{UC11 - Visualizzazione messaggio d'errore "Caricamento file JSON" }
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.2]{UC2.2}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.3]{UC2.3});
@@ -536,7 +536,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 		\label{par:UC12}
-	\subsection{UC12 - Visualizzazione Messaggio d'Errore Soglia Non Valida}
+	\subsection{UC12 - Visualizzazione messaggio d'errore "Soglia non valida"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.5]{UC3.5}) non valida per contenuto o formato;
@@ -551,7 +551,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC13}
-	\subsection{UC13 - Visualizzazione Messaggio d'Errore impostazioni di Collegamento}
+	\subsection{UC13 - Visualizzazione messaggio d'errore "Impostazioni di collegamento"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato le selezioni per il collegamento di un predittore ad un nodo del flusso (\hyperref[par:UC3.6]{UC3.6}) ed ha commesso alcuni errori;
@@ -570,7 +570,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 		\label{par:UC14}
-	\subsection{UC14 - Visualizzazione Messaggio d'Errore Politica Temporale Non Definita}
+	\subsection{UC14 - Visualizzazione messaggio d'errore "Politica temporale non definita"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di "Avvio Monitoraggio" (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC6.1]{UC6.1});
@@ -589,7 +589,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 		\label{par:UC15}
-	\subsection{UC15 - Visualizzazione Messaggio d'Errore Nessun Predittore Collegato}
+	\subsection{UC15 - Visualizzazione messaggio d'errore "Nessun predittore collegato"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
@@ -608,7 +608,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 % - Casi d'uso: Inclusioni - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC16}
-	\subsection{UC16 - Visualizzazione Messaggio di Notifica Avvenuto Successo Salvataggio file JSON}
+	\subsection{UC16 - Visualizzazione messaggio di notifica "Avvenuto successo salvataggio file JSON"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha salvato il file JSON generato a partire dai dati di addestramento (\hyperref[par:UC1.5]{UC1.5});
@@ -622,7 +622,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\label{par:UC17}
-	\subsection{UC17 - Visualizzazione Messaggio di Notifica Avvenuto Successo Caricamento JSON}
+	\subsection{UC17 - Visualizzazione messaggio di notifica "Avvenuto successo caricamento JSON"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato il caricamento del file JSON selezionato (\hyperref[par:UC2.3]{UC2.3});
@@ -637,7 +637,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\label{par:UC18}
-	\subsection{UC18 - Visualizzazione Messaggio di Notifica Collegamento Avvenuto con Successo}
+	\subsection{UC18 - Visualizzazione messaggio di notifica "Collegamento avvenuto con successo"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento (\hyperref[par:UC3.6]{UC3.6});
@@ -653,7 +653,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC19}
-	\subsection{UC19 - Visualizzazione Pannello Lista Collegamenti}
+	\subsection{UC19 - Visualizzazione pannello lista collegamenti}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento tra predittore e nodo del flusso selezionato cliccando il pulsante di "Conferma Collegamento" (\hyperref[par:UC3.6]{UC3.6});
@@ -673,7 +673,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC20}
-	\subsection{UC20 - Visualizzazione Messaggio di Alert Procedere con lo Scollegamento}
+	\subsection{UC20 - Visualizzazione messaggio di alert "Procedere con lo scollegamento"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il pulsante di scollegamento "Scollega Predittore" (\hyperref[par:UC4]{UC4});
@@ -692,7 +692,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC21}
-	\subsection{UC21 - Visualizzazione Messaggio di Notifica Monitoraggio Avviato con Successo}	
+	\subsection{UC21 - Visualizzazione messaggio di notifica "Monitoraggio avviato con successo"}	
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha avviato un monitoraggio (\hyperref[par:UC6.2]{UC6.2});
@@ -707,7 +707,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC22}
-	\subsection{UC22 - Visualizzazione Messaggio di Notifica Monitoraggio Interrotto}
+	\subsection{UC22 - Visualizzazione messaggio di notifica "Monitoraggio interrotto"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha interrotto il monitoraggio (\hyperref[par:UC7]{UC7});
@@ -723,7 +723,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 		
 	\label{par:UC23}
-	\subsection{UC23 - Visualizzazione Messaggio di Notifica Salvataggio Previsione Avvenuta con Successo}	\begin{itemize}
+	\subsection{UC23 - Visualizzazione messaggio di notifica "Salvataggio previsione avvenuta con successo"}	\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di invio previsioni (\hyperref[par:UC6.3]{UC6.3});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di "Salvataggio Dati di Previsione Avvenuto con Successo";
@@ -737,7 +737,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \label{par:UC24}
-	\subsection{UC24 - Visualizzazione Messaggio di Alert Soglia Critica Raggiunta}
+	\subsection{UC24 - Visualizzazione messaggio di alert "Soglia critica raggiunta"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.5]{UC3.5}) è stata raggiunta o superata;
