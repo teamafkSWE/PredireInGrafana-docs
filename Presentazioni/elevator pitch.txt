@@ -1,0 +1,49 @@
+“Prendere decisioni senza sapere come evolverà il sistema in futuro è MOLTO RISCHIOSO ED ESTREMAMENTE INEFFICIENTE” 
+
+Questo perché un qualsiasi soggetto che intenda impiegare le proprie risorse in una determinata attività, deve analizzare un’ampia mole di dati (come ad esempio i Big Data),  senza aver a disposizione gli opportuni mezzi per farlo.
+Sarà molto probabile quindi che questo soggetto si trovi difficoltà nel distinguere i dati di primaria importanza da quelli secondari, e allo stesso tempo si trovi in difficoltà anche nell’ottenere le informazioni necessarie a stabilire un piano d’azione efficace ed efficiente.  
+Per questo motivo oggigiorno far previsione diventa fondamentale, per non incorrere in gravi problemi e/o perdite economiche e non.
+
+(DEFINIZIONE) 	Attività: Lavoro, esplicazione di lavoro, di energia (anche non materiale) da parte di singoli o di gruppi.
+
+Il target a cui è rivolto il nostro applicativo è molto ampio: può spaziare da un ambito più scientifico (calcolo di espansione delle epidemie, previsione di catastrofi naturali in base alla rilevazione di dati da strumenti fisici/geologici), ad un ambito più tecnologico (come il consumo di risorse di una server farm (cpu, ram, watt ecc), il numero di utenti per pagina ecc.) ad un ambito più industriale, quale il settore secondario (industria) e terziario (turismo).
+Stiamo quindi parlando di PMI (piccole medie imprese) e/o di aziende più sviluppate ma anche di organizzazioni mondiali di qualsiasi tipo:
+l'OMS ad esempio ha messo a disposizione sul suo sito ufficiale una pagina dedicata ai datasets disponibili offrendo anche strumenti e tecniche avanzate (e.g. API e Query) per la loro interrogazione;
+Google, Instagram, Amazon che utilizzano il ML a proprio scopo e vantaggio. (previsione delle prossime tendenze o prodotti più ricercati/acquistati).
+L’applicativo in sostanza è rivolto a coloro che hanno a disposizione una certa mole di dati, considerevole o meno, e che hanno intenzione di effettuarci una previsione, per calcolarne un possibile andamento.
+(SE RICHIESTO) 	Coloro che andranno effettivamente ad applicare/eseguire tali algoritmi di previsione saranno utenti qualificati, definiti utenti addestratori e monitoratori.
+
+(DEFINIZIONE) 	L’apprendimento automatico è lo studio di algoritmi che si migliorano automaticamente attraverso l’esperienza. 
+		Gli algoritmi di apprendimento automatico costruiscono modelli matematici basati su dati campione noti come “dati di addestramento”.
+
+Quali sono quindi le nostre soluzioni a questi problemi?
+Realizzare un applicativo che, se addestrato correttamente, ha la capacità di valutare lo stato di salute del sistema, identificare ed evidenziare i suoi punti deboli, e per l’appunto fare monitoraggio e previsione sui dati.
+
+Come verranno visualizzati tali dati?
+Il nostro prodotto si appoggia su Grafana, ovvero un software di analisi open source in grado di fornire numerose funzionalità di analisi e monitoraggio sui dati, e fornire in real time grafici e avvisi. 
+Grafana ha due proprietà molti importanti nel mondo attuale:
+Adattabilità: questo sistema è molto malleabile, si adatta molto bene sia a sistemi di piccole dimensioni con una quantità di dati limitata sia a sistemi maggiormente sviluppati e con una mole di dati molto grande;
+Estensibilità: può essere esteso con plug-in, realizzati in qualsiasi linguaggio di programmazione.
+Infatti noi andremo appunto a sviluppare un plug-in che permetterà di effettuare la previsione voluta.
+
+(SE RICHIESTO) 	Bussola: rappresenta il cambiamento di direzione rispetto a cosa dicono le previsioni
+Il nostro prodotto nel concreto è un applicativo basato su Grafana e codificato in JS che permetterà di effettuare le previsioni* su dati correttamente addestrati. 
+(SE RICHIESTO) 	I dati vengono addestrati da un utente addestratore. 
+L’addestramento di tali dati genererà un file (JSON) contenente la nostra SVM/RL correttamente addestrata.
+Tali previsioni vengono effettuate tramite due modelli/algoritmi molto affidabili e ampiamente testati di Machine Learning: la Regressione Lineare e le Support Vector Machine. 
+(SE RICHIESTO)	- Perchè regressione? Cos’è? È una tecnica usata per analizzare una serie di dati che consistono in una variabile dipendente e una o più variabile indipendente. y = ax + b (con ax infinito)
+Il primo modello, la RL, ha la possibilità di effettuare solo regressione sui dati, mentre la SVM è in grado di effettuare sia la regressione che la classificazione (divisione dati buoni e cattivi) sui dati.
+(ESEMPIO CLASSIFICAZIONE SE RICHIESTO) 	divisione dati buoni e cattivi: es. soglie di temperatura della cpu: oltre i 80 gradi dato scartato
+Starà all’utente monitorante decidere quale dei due modelli utilizzare.
+(SE RICHIESTO)	* Come funziona il plug-in di previsione? Viene scelto il file addestrato; si scelgono i predittori e il flusso dati per fare le previsioni; si calcola la previsione; si monitorano i dati con le previsioni.
+
+Perchè “Predire in Grafana”?
+Durante l’attività di Studio di Fattibilità sono stati analizzati tutti i capitolati e sono stati valutati i seguenti aspetti:
+L’interesse che le tecnologie richieste ci suscitano: machine learning, analisi dei dati, molto attuali e sempre più integrate ai sistemi informatici;
+Fattibilità, ossia la difficoltà di apprendimento e realizzazione di queste: JS (il team aveva già delle conoscenze pregresse -> plus ultra per la scelta del progetto) e NodeJS
+e il prestigio che può portare ad avere queste tecnologie e conoscenze nel proprio curriculum (js, nodejs, Grafana e l’impiego di algoritmi di machine learning).
+È stato scelto Predire in Grafana perchè tocca in modo equilibrato tutti questi punti.
+
+Abbiamo quindi intenzione di fornire l'applicativo entro la scadenza della Revisone di Accettazione, prevista per il 13/07/2020.
+
+Come sviluppiamo tutto questo? Lascio la parola ai miei colleghi.
