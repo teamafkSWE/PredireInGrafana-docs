@@ -37,19 +37,19 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Norme di Progetto" color="#000000" meeting="false" start="2020-04-21" duration="4" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
+        <task id="0" name="Norme di Progetto" color="#000000" meeting="false" start="2020-04-21" duration="18" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
             <depend id="22" type="2" difference="0" hardness="Strong"/>
-            <task id="2" name="Incremento" color="#8cb6ce" meeting="false" start="2020-04-21" duration="3" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
-                <depend id="3" type="2" difference="0" hardness="Strong"/>
+            <task id="2" name="Incremento" color="#8cb6ce" meeting="false" start="2020-04-21" duration="10" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
+                <depend id="3" type="2" difference="5" hardness="Strong"/>
             </task>
-            <task id="3" name="Verifica" color="#00ff00" meeting="false" start="2020-04-24" duration="1" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
+            <task id="3" name="Verifica" color="#00ff00" meeting="false" start="2020-05-06" duration="3" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="4" name="Analisi dei Requisiti" meeting="false" start="2020-04-21" duration="6" complete="0" expand="true">
+        <task id="4" name="Analisi dei Requisiti" meeting="false" start="2020-04-21" duration="18" complete="0" expand="true">
             <depend id="22" type="2" difference="0" hardness="Strong"/>
-            <task id="5" name="Incremento" color="#8cb6ce" meeting="false" start="2020-04-21" duration="4" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
-                <depend id="6" type="2" difference="0" hardness="Strong"/>
+            <task id="5" name="Incremento" color="#8cb6ce" meeting="false" start="2020-04-21" duration="9" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
+                <depend id="6" type="2" difference="6" hardness="Strong"/>
             </task>
-            <task id="6" name="Verifica" color="#00ff00" meeting="false" start="2020-04-25" duration="2" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
+            <task id="6" name="Verifica" color="#00ff00" meeting="false" start="2020-05-06" duration="3" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="7" name="Piano di Progetto" meeting="false" start="2020-04-21" duration="20" complete="0" expand="true">
             <depend id="22" type="2" difference="0" hardness="Strong"/>
@@ -61,12 +61,12 @@
             </task>
             <task id="9" name="Verifica" color="#00ff00" meeting="false" start="2020-05-09" duration="2" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
         </task>
-        <task id="10" name="Piano di Qualifica" meeting="false" start="2020-04-27" duration="7" complete="0" expand="true">
+        <task id="10" name="Piano di Qualifica" meeting="false" start="2020-04-30" duration="8" complete="0" expand="true">
             <depend id="22" type="2" difference="0" hardness="Strong"/>
-            <task id="11" name="Incremento" color="#8cb6ce" meeting="false" start="2020-04-27" duration="5" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
-                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            <task id="11" name="Incremento" color="#8cb6ce" meeting="false" start="2020-04-30" duration="3" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true">
+                <depend id="12" type="2" difference="3" hardness="Strong"/>
             </task>
-            <task id="12" name="Verifica" color="#00ff00" meeting="false" start="2020-05-02" duration="2" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
+            <task id="12" name="Verifica" color="#00ff00" meeting="false" start="2020-05-06" duration="2" complete="0" thirdDate="2020-04-06" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="109" name="Incontro con il proponente" color="#ff3300" meeting="true" start="2020-04-29" duration="0" complete="0" thirdDate="2020-04-16" thirdDate-constraint="0" expand="true"/>
         <task id="13" name="Technology Baseline" meeting="false" start="2020-04-21" duration="14" complete="0" expand="true">
