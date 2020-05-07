@@ -69,7 +69,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item (\hyperref[par:UC1.1]{UC1.1}) l’utente seleziona i dati di addestramento da caricare;
 					\item (\hyperref[par:UC1.2]{UC1.2}) l’utente seleziona l’algoritmo di previsione scelto attraverso la Combo Box\glo “Scegli Algoritmo”;
 					\item (\hyperref[par:UC1.3]{UC1.3}) conferma delle operazioni;
-					\item (\hyperref[par:UC1.4]{UC1.4}) l’utente riceve in output il file JSON contenente i predittori per SVM/RL e decide dove salvarlo (localmente).
+					\item (\hyperref[par:UC1.4]{UC1.4}) l’utente riceve in output il file JSON contenente i predittori per SVM/RL che viene salvato localmente.
 				\end{enumerate}
 			\item\textbf{Estensione}: 
 \begin{enumerate}
@@ -129,7 +129,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3});
 			\item\textbf{Postcondizioni}: l’utente ha salvato il file JSON in locale;
-			\item\textbf{Scenario principale}: l’utente decide come denominare il file JSON e in che cartella del file system salvarlo; 		
+			\item\textbf{Scenario principale}: l’utente scarica il file JSON che è stato prodotto cliccando il pulsante di donwload; 		
 		\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -216,24 +216,23 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\begin{enumerate}
 					\item l’utente ha caricato e letto con successo i predittori contenuti nel file JSON (\hyperref[par:UC2]{UC2});
 					\item l’utente dispone di una serie di predittori da poter collegare al flusso di dati voluto;
-					\item l’utente deve aver configurato la connessione al server tramite Grafana.	
+					\item l’utente deve aver configurato la connessione al server tramite Grafana;
+					\item l'utente deve disporre di almeno un database caricato in Grafana.	
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: l’utente ha collegato correttamente i predittori ad un flusso dati, definendone le soglie per i rispettivi stati di ogni nodo e visualizza i collegamenti in un pannello dedicato;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item (\hyperref[par:UC3.1]{UC3.1}) l’utente seleziona il database\glo che verrà scelto tra quelli disponibili memorizzati in Grafana;
-					\item (\hyperref[par:UC3.2]{UC3.2}) l’utente seleziona il flusso dati contenuto in una tabella del DB;
-					\item (\hyperref[par:UC3.3]{UC3.3}) l'utente selezione uno o più predittori scegliendoli tra quelli disponibili in una lista che verrà visualizzata una volta caricato il file JSON;
-					\item (\hyperref[par:UC3.4]{UC3.4}) l'utente seleziona il nodo del flusso dati da associare al predittore;
-					\item (\hyperref[par:UC3.5]{UC3.5}) impostazione delle soglie;
-					\item (\hyperref[par:UC3.6]{UC3.6}) l'utente conferma le impostazioni di collegamento selezionate.	
+					\item (\hyperref[par:UC3.1]{UC3.1}) l'utente selezione uno o più predittori scegliendoli tra quelli disponibili in una lista che verrà visualizzata una volta caricato il file JSON;
+					\item (\hyperref[par:UC3.2]{UC3.2}) l'utente seleziona il nodo del flusso dati da associare al predittore attraverso una query/glo;
+					\item (\hyperref[par:UC3.3]{UC3.3}) impostazione delle soglie;
+					\item (\hyperref[par:UC3.4]{UC3.4}) l'utente conferma le impostazioni di collegamento selezionate.	
 				\end{enumerate}
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.5]{UC3.5}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
+					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.3]{UC3.3}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
 					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
-					\item\hyperref[par:UC18]{UC18} include \hyperref[par:UC3.6]{UC3.6}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
-					\item\hyperref[par:UC19]{UC19} include \hyperref[par:UC3.6]{UC3.6}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
+					\item\hyperref[par:UC18]{UC18} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
+					\item\hyperref[par:UC19]{UC19} estende \hyperref[par:UC3.6]{UC3.6}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
 				\end{enumerate}
 		\end{itemize}
 		
