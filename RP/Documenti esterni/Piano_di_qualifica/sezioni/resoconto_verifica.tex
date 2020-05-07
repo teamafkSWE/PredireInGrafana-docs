@@ -196,16 +196,95 @@ Victor Dutca & 0 & 108 & - & - & Ottimale \\
 Fouad Farid & 0 & 109 & - & - & Ottimale \\
 Simone Meneghin & 0 & 93 & - & - & Accettabile\\
 Olivier Utshudi & 0 & 93 & - & - & Accettabile\\
-Davide Zillio & 0 & 93 & - & - & Accettabile
-
-\begin{comment}
-Metterei una nota a pié di pagina per spiegare che i valori sono a consuntivo e per questo, non sono alcuni componenti hanno scritto codice che in realtà non dovevano
-\end{comment}
+Davide Zilio & 0 & 93 & - & - & Accettabile
 \end{longtable}
-
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{./img/MP03_produttività.png}
 \caption{Grafico relativo ai dati di MP03 - Produttività}
 \end{figure}
+
+\subsection{Verifica dei test}
+\subsubsection{Esiti test implementati}
+\begin{longtable}{c c}
+\rowcolor{white}\caption{Esiti dei test implementati} \\
+	\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice test}} &
+\textcolor{white}{\textbf{Esito}} \\
+	\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice test}} &
+\textcolor{white}{\textbf{Esito}} \\
+	\endhead
+	TSOF1 & Passato \\
+	TSOF1.1 & Passato \\ 
+	TSOF1.2 & Passato \\
+	TSOF1.3 & Passato \\
+	TSOF1.4 & Passato \\
+	TSOF1.4.1 & Passato \\
+	TSOF2 & Passato \\
+	TSOF2.1 & Passato \\
+	TSOF2.2 & Passato \\
+	TSOF2.3 & Passato
+\end{longtable}
+
+\subsubsection{Esiti MS08/MS09 - Passed/Failed Test Case Percentage}
+\begin{longtable}{c c c}
+\rowcolor{white}\caption{Esiti PTCP-FTCP} \\
+	\rowcolor{redafk}
+\textcolor{white}{\textbf{Metrica}} &
+\textcolor{white}{\textbf{Percentuale}} & 
+\textcolor{white}{\textbf{Riscontro}} \\
+	\endfirsthead
+\textcolor{white}{\textbf{Metrica}} &
+\textcolor{white}{\textbf{Percentuale}} & 
+\textcolor{white}{\textbf{Riscontro}} \\
+	\endhead
+	PTCP & 100\% & Ottimale\\
+	FTCP & 0\% & Ottimale\\
+\end{longtable}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{./img/MS08-MS09.png}
+\caption{Grafico relativo ai dati di MS08-MS09 PTCP-FTCP}
+\end{figure}
+
+\begin{comment}
+\subsection{Esiti metriche codice}
+\begin{longtable}{C{2cm} C{1.2cm} C{3cm} C{1.5cm} C{1.5cm} C{1.5cm} C{1.5cm} C{1.5cm}}
+\rowcolor{white}\caption{Esiti PTCP-FTCP} \\
+	\rowcolor{redafk}
+\textcolor{white}{\textbf{Classe}} &
+\textcolor{white}{\textbf{MS02}} &
+\textcolor{white}{\textbf{Metodo}} &
+\textcolor{white}{\textbf{MS01}} &
+\textcolor{white}{\textbf{MS03}} & 
+\textcolor{white}{\textbf{MS04}} & 
+\textcolor{white}{\textbf{MS05}} & 
+\textcolor{white}{\textbf{MS06}} \\
+	\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Classe}} &
+\textcolor{white}{\textbf{MS02}} &
+\textcolor{white}{\textbf{Metodo}} &
+\textcolor{white}{\textbf{MS01}} &
+\textcolor{white}{\textbf{MS03}} & 
+\textcolor{white}{\textbf{MS04}} & 
+\textcolor{white}{\textbf{MS05}} & 
+\textcolor{white}{\textbf{MS06}} \\
+	\endhead
+	header.jsx & 1 & render() & 6 & 0 & 0 & 0 & 1 \\
+	state\_controller.jsx & 4 & changeValue() \newline 
+								errorAlg() \newline
+								handleForce() \newline
+								render() &	1 \newline 1 \newline 1 \newline 12 &
+								1 \newline 1 \newline 2 \newline 0 &
+								0 \newline 0 \newline 0 \newline 0 &
+								1 \newline 1 \newline 1 \newline 3 &
+								0 \newline 0 \newline 0 \newline 0 \\
+\end{longtable}
+\end{comment}
