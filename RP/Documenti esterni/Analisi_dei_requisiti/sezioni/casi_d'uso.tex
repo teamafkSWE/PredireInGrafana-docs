@@ -67,7 +67,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item (\hyperref[par:UC1.1]{UC1.1}) l’utente seleziona i dati di addestramento da caricare;
 					\item (\hyperref[par:UC1.2]{UC1.2}) l’utente seleziona l’algoritmo di previsione scelto attraverso la Combo Box\glo “Scegli Algoritmo”;
 					\item (\hyperref[par:UC1.3]{UC1.3}) conferma delle operazioni;
-					\item (\hyperref[par:UC1.4]{UC1.4}) l’utente riceve in output il file JSON contenente i predittori per SVM/RL e decide dove salvarlo (localmente).
+					\item (\hyperref[par:UC1.4]{UC1.4}) l’utente riceve in output il file JSON contenente i predittori per SVM/RL che viene salvato localmente.
 				\end{enumerate}
 			\item\textbf{Estensione}: 
 \begin{enumerate}
@@ -127,7 +127,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3});
 			\item\textbf{Postcondizioni}: l’utente ha salvato il file JSON in locale;
-			\item\textbf{Scenario principale}: l’utente decide come denominare il file JSON e in che cartella del file system salvarlo; 		
+			\item\textbf{Scenario principale}: l’utente scarica il file JSON che è stato prodotto cliccando il pulsante di donwload; 		
 		\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -214,47 +214,29 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\begin{enumerate}
 					\item l’utente ha caricato e letto con successo i predittori contenuti nel file JSON (\hyperref[par:UC2]{UC2});
 					\item l’utente dispone di una serie di predittori da poter collegare al flusso di dati voluto;
-					\item l’utente deve aver configurato la connessione al server tramite Grafana.	
+					\item l’utente deve aver configurato la connessione al server tramite Grafana;
+					\item l'utente deve disporre di almeno un database caricato in Grafana.	
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: l’utente ha collegato correttamente i predittori ad un flusso dati, definendone le soglie per i rispettivi stati di ogni nodo e visualizza i collegamenti in un pannello dedicato;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item (\hyperref[par:UC3.1]{UC3.1}) l’utente seleziona il database\glo che verrà scelto tra quelli disponibili memorizzati in Grafana;
-					\item (\hyperref[par:UC3.2]{UC3.2}) l’utente seleziona il flusso dati contenuto in una tabella del DB;
-					\item (\hyperref[par:UC3.3]{UC3.3}) l'utente selezione uno o più predittori scegliendoli tra quelli disponibili in una lista che verrà visualizzata una volta caricato il file JSON;
-					\item (\hyperref[par:UC3.4]{UC3.4}) l'utente seleziona il nodo del flusso dati da associare al predittore;
-					\item (\hyperref[par:UC3.5]{UC3.5}) impostazione delle soglie;
-					\item (\hyperref[par:UC3.6]{UC3.6}) l'utente conferma le impostazioni di collegamento selezionate.	
+					\item (\hyperref[par:UC3.1]{UC3.1}) l'utente selezione uno o più predittori scegliendoli tra quelli disponibili in una lista che verrà visualizzata una volta caricato il file JSON;
+					\item (\hyperref[par:UC3.2]{UC3.2}) l'utente seleziona il nodo del flusso dati da associare al predittore attraverso una query\glo;
+					\item (\hyperref[par:UC3.3]{UC3.3}) impostazione delle soglie;
+					\item (\hyperref[par:UC3.4]{UC3.4}) l'utente conferma le impostazioni di collegamento selezionate.	
 				\end{enumerate}
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.5]{UC3.5}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
-					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
-					\item\hyperref[par:UC18]{UC18} estende \hyperref[par:UC3.6]{UC3.6}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
-					\item\hyperref[par:UC19]{UC19} estende \hyperref[par:UC3.6]{UC3.6}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
+					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.3]{UC3.3}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
+					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.4]{UC3.4}: viene visualizzato un messaggio d’errore nel caso il collegamento non sia stato possibile;
+					\item\hyperref[par:UC18]{UC18} estende \hyperref[par:UC3.4]{UC3.4}: viene visualizzata una notifica avvenuto collegamento al nodo del flusso dati se la procedura è andata a buon fine;
+					\item\hyperref[par:UC19]{UC19} estende \hyperref[par:UC3.4]{UC3.4}: l'utente visualizza una lista dei collegamenti con le rispettive impostazioni di collegamento selezionate.
 				\end{enumerate}
 		\end{itemize}
 		
+
 		\label{par:UC3.1}
-		\subsubsection{UC3.1 - Selezione database}
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha configurato correttamente la connessione al server tramite Grafana e visualizza la lista di Database disponibili;
-			\item\textbf{Postcondizioni}: è stato selezionato il database contenente il flusso dati desiderato;
-			\item\textbf{Scenario principale}: l’utente seleziona il database da usare come sorgente dati tra quelli disponibili;
-		\end{itemize}
-		
-		\label{par:UC3.2}
-		\subsubsection{UC3.2 - Selezione del flusso dati}
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha selezionato il DB\glo presente in Grafana (\hyperref[par:UC3.1]{UC3.1}) da cui selezionare il flusso dati di interesse e visualizza la lista delle tabelle disponibili;
-			\item\textbf{Postcondizioni}: l’utente ha selezionato la tabella e dispone di un flusso dati su cui fare il collegamento;
-			\item\textbf{Scenario principale}: l’utente seleziona la tabella che vuole utilizzare per effettuare il collegamento ai predittori scelti.
-		\end{itemize}
-		
-		\label{par:UC3.3}
-		\subsubsection{UC3.3 - Selezione del predittore}
+		\subsubsection{UC3.1 - Selezione del predittore}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
@@ -265,35 +247,37 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: uno o più predittori sono stati selezionati dalla lista disponibile;
 			\item\textbf{Scenario principale}: l’utente seleziona il predittore che intende associare ad un aspetto del flusso.
 		\end{itemize}
+		
 	
-	\label{par:UC3.4}
-	\subsubsection{UC3.4 - Selezione nodo del flusso dati}
+	\label{par:UC3.2}
+	\subsubsection{UC3.2 - Selezione nodo del flusso dati}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
-					\item il predittore da collegare è stato selezionato dalla lista dei predittori (\hyperref[par:UC3.3]{UC3.3});
+					\item il predittore da collegare è stato selezionato dalla lista dei predittori (\hyperref[par:UC3.1]{UC3.1});
+					\item sono state aggiunte delle query al sistema di Grafana;
 					\item l’utente visualizza la lista di nodi del flusso di dati a cui poter associare il/i predittore/i selezionato/i.
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: l'utente ha selezionato il nodo dal flusso dati;
 			\item\textbf{Scenario principale}: l’utente seleziona l’aspetto interessato dal flusso di dati al quale può essere agganciato il predittore selezionato (o i predittori).
 		\end{itemize}
 
-	\label{par:UC3.5}
-	\subsubsection{UC3.5 - Impostazione delle soglie}
+	\label{par:UC3.3}
+	\subsubsection{UC3.3 - Impostazione delle soglie}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha selezionato almeno un predittore che vuole collegare al flusso dati (\hyperref[par:UC3.3]{UC3.3});
+			\item\textbf{Precondizioni}: l'utente ha selezionato almeno un predittore che vuole collegare al flusso dati (\hyperref[par:UC3.1]{UC3.1});
 			\item\textbf{Postcondizioni}: l’utente ha impostato la soglia di monitoraggio sul predittore selezionato;
 			\item\textbf{Scenario principale}: l’utente dispone di almeno un predittore e aggiunge una soglia da associare ed è possibile impostare più di una soglia;
 			\item\textbf{Estensioni}: \hyperref[par:UC12]{UC12}: viene visualizzato un messaggio di errore "Soglia Non Valida" nel caso venga inserito un valore non consentito.
 		\end{itemize}
 
-	\label{par:UC3.6}
-	\subsubsection{UC3.6 - Conferma collegamento}
+	\label{par:UC3.4}
+	\subsubsection{UC3.4 - Conferma collegamento}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha creato le basi per l'associazione del predittore al nodo del flusso dati scelto, in particolare è stato selezionato il predittore (\hyperref[par:UC3.3]{UC3.3}), il nodo del flusso dati da associare (\hyperref[par:UC3.4]{UC3.4}) ed è stata impostata una soglia (\hyperref[par:UC3.5]{UC3.5});
+			\item\textbf{Precondizioni}: l’utente ha creato le basi per l'associazione del predittore al nodo del flusso dati scelto, in particolare è stato selezionato il predittore (\hyperref[par:UC3.1]{UC3.1}), il nodo del flusso dati da associare (\hyperref[par:UC3.2]{UC3.2}) ed è stata impostata una soglia (\hyperref[par:UC3.3]{UC3.3});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l’utente ha confermato il collegamento e visualizza la lista dei collegamenti;
@@ -330,7 +314,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
-					\item l’utente ha scollegato il predittore dal flusso dati precedentemente associato;
+					\item l’utente ha scollegato il predittore dal nodo del flusso dati precedentemente associato;
 					\item dalla lista dei collegamenti non viene più visualizzato il collegamento che è stato scollegato.
 				\end{enumerate}
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta "Scollega Predittore".
@@ -355,8 +339,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l'utente clicca il pulsante "Modifica collegamento" e viene indirizzato alla sezione di "Selezione del Predittore" (\hyperref[par:UC3.3]{UC3.3});
-					\item vengono abilitate le modifiche e marcate le selezioni precedentemente effettuate. L'utente decide come modificare il collegamento reiterando le procedure di selezione del predittore (\hyperref[par:UC3.3]{UC3.3}), nodo del flusso dati (\hyperref[par:UC3.4]{UC3.4}), impostazione soglie (\hyperref[par:UC3.5]{UC3.5}) e conferma (\hyperref[par:UC3.6]{UC3.6}).
+					\item l'utente clicca il pulsante "Modifica collegamento" e viene indirizzato alla sezione di "Selezione del Predittore" (\hyperref[par:UC3.1]{UC3.1});
+					\item vengono abilitate le modifiche e marcate le selezioni precedentemente effettuate. L'utente decide come modificare il collegamento reiterando le procedure di selezione del predittore (\hyperref[par:UC3.1]{UC3.1}), nodo del flusso dati (\hyperref[par:UC3.2]{UC3.2}), impostazione soglie (\hyperref[par:UC3.3]{UC3.3}) e conferma (\hyperref[par:UC3.4]{UC3.4}).
 				\end{enumerate}		
 		\end{itemize}
 
@@ -497,8 +481,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l’utente ha selezionato il file CSV che intende utilizzare per l'addestramento e ha cliccato il pulsante di conferma. Il file selezionato è strutturalmente errato e non c'è compatibilità con l'algoritmo selezionato;
-			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.2]{UC1.2});
-			\item\textbf{Scenario principale}: l’utente visualizza il messaggio d'errore "File Incompatibile" in cui viene segnalato il fatto che il file CSV da lui selezionato (\hyperref[par:UC1.2]{UC1.2}) non è adatto per l'addestramento; 		
+			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.1]{UC1.1});
+			\item\textbf{Scenario principale}: l’utente visualizza il messaggio d'errore "File Incompatibile" in cui viene segnalato il fatto che il file CSV da lui selezionato (\hyperref[par:UC1.1]{UC1.1}) non è adatto per l'addestramento; 		
 		\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -522,11 +506,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC11 - Visualizzazione messaggio d'errore "Caricamento file JSON" }
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.2]{UC2.2}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.3]{UC2.3});
+			\item\textbf{Precondizioni}: l’utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.1]{UC2.1}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.2]{UC2.2});
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato un messaggio d'errore in cui viene segnalato che la struttura del file selezionato non supporta una SVM o RL, di conseguenza viene riportato alla selezione del file JSON;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio d'errore "Struttura del file JSON non Supportata" in cui viene segnalato che la definizione dei predittori del file JSON selezionato (\hyperref[par:UC2.2]{UC2.2}) non è sintatticamente corretta;
+					\item l’utente visualizza il messaggio d'errore "Struttura del file JSON non Supportata" in cui viene segnalato che la definizione dei predittori del file JSON selezionato (\hyperref[par:UC2.1]{UC2.1}) non è sintatticamente corretta;
 					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato alla sezione di selezione.
 				\end{enumerate}
 		\end{itemize}	
@@ -537,11 +521,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC12 - Visualizzazione messaggio d'errore "Soglia non valida"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.5]{UC3.5}) non valida per contenuto o formato;
+			\item\textbf{Precondizioni}: l’utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.3]{UC3.3}) non valida per contenuto o formato;
 			\item\textbf{Postcondizioni}: l’utente visualizza il messaggio d'errore sulla soglia appena impostata;		
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio d'errore "Errore Impostazione Soglia Non Valida" in cui viene segnalato che la soglia appena inserita (\hyperref[par:UC3.5]{UC3.5}) non può essere accettata e viene invitato ad inserirla nuovamente;
+					\item l’utente visualizza il messaggio d'errore "Errore Impostazione Soglia Non Valida" in cui viene segnalato che la soglia appena inserita (\hyperref[par:UC3.3]{UC3.3}) non può essere accettata e viene invitato ad inserirla nuovamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'inserimento della soglia.		
 				\end{enumerate}		
 		\end{itemize}
@@ -552,7 +536,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC13 - Visualizzazione messaggio d'errore "Impostazioni di collegamento"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha confermato le selezioni per il collegamento di un predittore ad un nodo del flusso (\hyperref[par:UC3.6]{UC3.6}) ed ha commesso alcuni errori;
+			\item\textbf{Precondizioni}: l’utente ha confermato le selezioni per il collegamento di un predittore ad un nodo del flusso (\hyperref[par:UC3.4]{UC3.4}) ed ha commesso alcuni errori;
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l’utente visualizza il messaggio di errore di collegamento;
@@ -598,7 +582,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio d'errore "Nessun Predittore Collegato" in cui viene segnalato che non è stata inserito alcun collegamento tra predittore e flusso dati;
+					\item l’utente visualizza il messaggio d'errore "Nessun predittore collegato" in cui viene segnalato che non è stata inserito alcun collegamento tra predittore e flusso dati;
 					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'impostazione di collegamento predittori (\hyperref[par:UC3]{UC3}).		
 				\end{enumerate}		
 		\end{itemize}
@@ -606,13 +590,17 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 % - Casi d'uso: Inclusioni - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC16}
-	\subsection{UC16 - Visualizzazione messaggio di notifica "Avvenuto successo salvataggio file JSON"}
+	\subsection{UC16 - Visualizzazione messaggio di notifica "Addestraemento avvenuto con successo"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha salvato il file JSON generato a partire dai dati di addestramento (\hyperref[par:UC1.5]{UC1.5});
-			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di avvenuto salvataggio del file JSON;					\item\textbf{Scenario principale}:
+			\item\textbf{Precondizioni}: 
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio di notifica "Avvenuto Successo Salvataggio File JSON" in cui viene notificato che il salvataggio (\hyperref[par:UC1.5]{UC1.5}) è avvenuto correttamente;
+					\item l'utente ha inserito un file CSV compatibile (\hyperref[par:UC1.1]{UC1.1});
+					\item l'utente ha selezionato un algoritmo compatibile con il CSV  (\hyperref[par:UC1.2]{UC1.2}).
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di addestramento avvenuto con successo;					\item\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item l’utente visualizza il messaggio di notifica "Addestramento avvenuto successo" in cui viene notificato che l'addestramento (\hyperref[par:UC1.3]{UC1.3}) dell'algoritmo selezionato, a partire dai dati di addestramento, è avvenuto correttamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -623,11 +611,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC17 - Visualizzazione messaggio di notifica "Avvenuto successo caricamento JSON"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha confermato il caricamento del file JSON selezionato (\hyperref[par:UC2.3]{UC2.3});
+			\item\textbf{Precondizioni}: l’utente ha confermato il caricamento del file JSON selezionato (\hyperref[par:UC2.2]{UC2.2});
 			\item\textbf{Postcondizioni}: l’utente visualizza la notifica di avvenuto caricamento del file JSON nel plug-in;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio di notifica "Avvenuto Successo Caricamento File JSON" in cui viene notificato che il caricamento (\hyperref[par:UC2]{UC2}) è avvenuto correttamente;
+					\item l’utente visualizza il messaggio di notifica "Avvenuto successo caricamento file JSON" in cui viene notificato che il caricamento (\hyperref[par:UC2]{UC2}) è avvenuto correttamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -638,11 +626,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC18 - Visualizzazione messaggio di notifica "Collegamento avvenuto con successo"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento (\hyperref[par:UC3.6]{UC3.6});
+			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento (\hyperref[par:UC3.4]{UC3.4});
 			\item\textbf{Postcondizioni}: l’utente visualizza la notifica di avvenuto successo del collegamento;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio di notifica "Collegamento Avvenuto con Successo" in cui viene notificato che il collegamento tra predittore e flusso dati (\hyperref[par:UC3]{UC3}) è avvenuto correttamente;
+					\item l’utente visualizza il messaggio di notifica "Collegamento avvenuto con successo" in cui viene notificato che il collegamento tra predittore e flusso dati (\hyperref[par:UC3]{UC3}) è avvenuto correttamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -654,7 +642,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC19 - Visualizzazione pannello lista collegamenti}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento tra predittore e nodo del flusso selezionato cliccando il pulsante di "Conferma Collegamento" (\hyperref[par:UC3.6]{UC3.6});
+			\item\textbf{Precondizioni}: l’utente ha confermato il collegamento tra predittore e nodo del flusso selezionato cliccando il pulsante di "Conferma collegamento" (\hyperref[par:UC3.4]{UC3.4});
 			\item\textbf{Postcondizioni}: l’utente visualizza un pannello contenente la lista di tutti i collegamenti effettuati, ogni nuovo collegamento confermato viene aggiunto alla lista;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
@@ -664,7 +652,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 						\item nominativo del nodo del flusso dati selezionato;
 						\item impostazioni delle soglie inserite.
 					\end{itemize}
-					\item accanto ad ogni riga della lista dei collegamenti sono presenti i pulsanti "Scollega Predittore" e "Modifica Collegamento" .	
+					\item accanto ad ogni riga della lista dei collegamenti sono presenti i pulsanti "Scollega predittore" e "Modifica collegamento" .	
 				\end{enumerate}		
 		\end{itemize}
 
@@ -674,7 +662,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC20 - Visualizzazione messaggio di alert "Procedere con lo scollegamento"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l’utente ha selezionato il pulsante di scollegamento "Scollega Predittore" (\hyperref[par:UC4]{UC4});
+			\item\textbf{Precondizioni}: l’utente ha selezionato il pulsante di scollegamento "Scollega predittore" (\hyperref[par:UC4]{UC4});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l'utente ha visualizzato il messaggio di alert sul tentativo di scollegamento predittore;
@@ -682,7 +670,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza un messaggio di alert "Procedere con lo Scollegamento?" in cui viene segnalato che è stata selezionata una procedura di scollegamento del predittore;
+					\item l’utente visualizza un messaggio di alert "Procedere con lo scollegamento?" in cui viene segnalato che è stata selezionata una procedura di scollegamento del predittore;
 					\item l'utente clicca il pulsante "Conferma" per proseguire e scollegare il predittore oppure clicca il pulsante "Annulla" per ritornare alla lista dei collegamenti.
 				\end{enumerate}
 		\end{itemize}	
@@ -697,7 +685,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato la notifica di monitoraggio avviato con successo;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio di notifica "Monitoraggio Avviato con Successo" in cui viene notificato che il monitoraggio è stato avviato correttamente;
+					\item l’utente visualizza il messaggio di notifica "Monitoraggio avviato con successo" in cui viene notificato che il monitoraggio è stato avviato correttamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -712,7 +700,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato la notifica di monitoraggio interrotto;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio di notifica "Monitoraggio Interrotto" in cui viene notificato che il monitoraggio sul flusso dati è stato interrotto;
+					\item l’utente visualizza il messaggio di notifica "Monitoraggio interrotto" in cui viene notificato che il monitoraggio sul flusso dati è stato interrotto;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -727,7 +715,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di "Salvataggio Dati di Previsione Avvenuto con Successo";
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio di notifica "Salvataggio Previsione Avvenuta con Successo" in cui viene notificato che i dati di previsione sono stati inviati al Database (\hyperref[par:UC6.3]{UC6.3});
+					\item l’utente visualizza il messaggio di notifica "Salvataggio previsione avvenuto con successo" in cui viene notificato che i dati di previsione sono stati inviati al Database (\hyperref[par:UC6.3]{UC6.3});
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -738,11 +726,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC24 - Visualizzazione messaggio di alert "Soglia critica raggiunta"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.5]{UC3.5}) è stata raggiunta o superata;
+			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.3]{UC3.3}) è stata raggiunta o superata;
 			\item\textbf{Postcondizioni}: l’utente ha visualizzato il messaggio di alert riguardante la soglia interessata;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l’utente visualizza il messaggio di alert "Soglia Critica Raggiunta" in cui viene segnalato che una soglia impostata nel processo di collegamento dei predittori al flusso dati (\hyperref[par:UC3]{UC3}) è stata raggiunta o superata;
+					\item l’utente visualizza il messaggio di alert "Soglia critica raggiunta" in cui viene segnalato che una soglia impostata nel processo di collegamento dei predittori al flusso dati (\hyperref[par:UC3]{UC3}) è stata raggiunta o superata;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
