@@ -50,50 +50,46 @@ I requisiti sono definiti nelle seguenti tabelle, divise per tipologie.
 \textcolor{white}{\textbf{Fonti}}  \\
 		\endhead
 Re1F1 & Obbligatorio & L’utente deve disporre dei dati di addestramento in formato CSV che potrà utilizzare  per creare il file JSON usando l’apposito tool & Capitolato UC1\\
-Re1F1.1 & Obbligatorio & L’utente potrà selezionare il pulsante di caricamento dati d'addestramento &  Interno UC1.1\\
-Re1F1.2 & Obbligatorio & All’utente sarà possibile selezionare i dati di addestramento &  Interno UC1.2\\
-Re1F1.3 & Obbligatorio & All’utente sarà possibile selezionare l’algoritmo con il quale potrà successivamente effettuare i calcoli di previsione &  Interno UC1.3\\
-Re1F1.4 & Obbligatorio & L’utente potrà confermare le procedure di addestramento impostate &  Interno UC1.4\\
-Re1F1.5 & Obbligatorio & L’utente potrà salvare in locale il file JSON prodotto & Interno UC1.5\\
+Re1F1.1 & Obbligatorio & All’utente sarà possibile inserire i dati di addestramento cliccando il relativo pulsante &  Interno UC1.1\\
+Re1F1.2 & Obbligatorio & All’utente sarà possibile selezionare l’algoritmo con il quale potrà successivamente effettuare i calcoli di previsione dalla relativa ComboBox &  Interno UC1.2\\
+Re1F1.3 & Obbligatorio & L’utente potrà confermare le procedure di addestramento impostate cliccando il pulsante di conferma &  Interno UC1.3\\
+Re1F1.4 & Obbligatorio & L’utente potrà salvare in locale il file JSON prodotto attraverso il download una volta confermate le procedure di addestramento & Interno UC1.4\\
 Re1F2 & Obbligatorio & L’utente potrà caricare il file JSON nel plugin & Capitolato UC2\\
-Re1F2.1 & Obbligatorio & All’utente sarà possibile selezionare l’opzione di caricamente del file JSON &  Interno UC2.1\\
-Re1F2.2 & Obbligatorio & L’utente potrà selezionare il file JSON &  Interno UC2.2\\
-Re1F2.3 & Obbligatorio & L’utente potrà confermare il caricamente del file JSON &  Interno UC2.3\\
-Re1F3 & Obbligatorio & L’utente avrà la possibilità di collegare il predittore al flusso dati &  Capitolato UC3\\
-Re1F3.1 & Obbligatorio & L’utente potrà selezionare il database &  Interno UC3.1\\
-Re1F3.2 & Obbligatorio & All’utente sarà possibile selezionare il flusso dati &  Interno UC3.1\\
-Re1F3.3 & Obbligatorio & L’utente avrà la possibilità di selezionare il predittore  &  Interno UC3.3\\
-Re1F3.4 & Obbligatorio & L’utente potrà selezionare un nodo dal flusso dati &  Interno UC3.4\\
-Re1F3.5 & Obbligatorio & L’utente potrà impostare le soglie &  Capitolato UC3.3\\
-Re1F3.6 & Obbligatorio & All’utente sarà possibile confermare il collegamento &  Interno UC3.6\\
-Re1F4 & Obbligatorio & L’utente potrà effettuare lo scollegamento di un predittore &  Interno UC4\\
-Re1F5 & Obbligatorio & All’utente sarà possibile apportare delle modifiche ad un collegamento & Capitolato UC5\\
-Re1F6 & Obbligatorio & L’utente potrà effettuare operazioni di calcolo di previsione &  Capitolato UC6\\
-Re1F6.1 & Obbligatorio & L’utente potrà inserire la politica temporale &  Interno UC6.1\\
-Re1F6.2 & Obbligatorio & L’utente avrà la possibilità di avviare il monitoraggio &  Interno UC6.2\\
-Re1F6.3 & Obbligatorio & All’utente sarà offerta la possibilità di effettuare il salvataggio delle previsione &  Verbale VI\_2020-03-31\\
-Re1F7 & Obbligatorio & L’utente potrà interrompere il monitoraggio & Interno UC7\\
-Re1F8 & Obbligatorio & L’utente potrà visualizzare le previsioni &  Capitolato UC8\\
-Re1F9 & Obbligatorio & All’utente sarà mostrato il messaggio di errore file CSV incompatibile &  Interno UC1.2\\
+Re1F2.1 & Obbligatorio & L’utente potrà inserire il file JSON cliccando il pulsante di caricamento &  Interno UC2.1\\
+Re1F2.2 & Obbligatorio & L’utente potrà confermare il caricamente del file JSON &  Interno UC2.2\\
+Re1F3 & Obbligatorio & L’utente avrà la possibilità di collegare il predittore al nodo del flusso dati su cui avverranno i calcoli di previsione &  Capitolato UC3\\
+Re1F3.1 & Obbligatorio & L’utente avrà la possibilità di selezionare il predittore dalla lista di predittori contenuti nel file JSON&  Interno UC3.1\\
+Re1F3.2 & Obbligatorio & L’utente potrà selezionare una query associata ad un nodo del flusso dati a cui verranno collegati i predittori &  Interno UC3.2\\
+Re1F3.3 & Obbligatorio & L’utente potrà impostare delle soglie sui predittori per permettere al sistema di lanciare degli alert &  Capitolato UC3.3\\
+Re1F3.4 & Obbligatorio & All’utente sarà possibile confermare il collegamento che verrà aggiunto alla lista dei collegamenti effettuati &  Interno UC3.4\\
+Re1F4 & Obbligatorio & L’utente potrà effettuare lo scollegamento di un predittore precedentemente associato &  Interno UC4\\
+Re1F5 & Obbligatorio & All’utente sarà possibile apportare delle modifiche ad un collegamento precedentemente effettuato & Capitolato UC5\\
+Re1F6 & Obbligatorio & L’utente potrà effettuare operazioni di calcolo di previsione tramite l'avvio del monitoraggio sui collegamenti tra predittori e nodo del flusso dati &  Capitolato UC6\\
+Re1F6.1 & Obbligatorio & L’utente potrà inserire la politica temporale per il ricalcolo di previsione &  Interno UC6.1\\
+Re1F6.2 & Obbligatorio & L’utente avrà la possibilità di avviare il monitoraggio cliccando il relativo pulsante &  Interno UC6.2\\
+Re1F6.3 & Obbligatorio & All’utente sarà offerta la possibilità di effettuare il salvataggio delle previsioni all'interno del DB &  Verbale VI\_2020-03-31\\
+Re1F7 & Obbligatorio & L’utente potrà interrompere il monitoraggio cliccando il relativo pulsante& Interno UC7\\
+Re1F8 & Obbligatorio & L’utente potrà visualizzare le previsioni attraverso grafici all'interno della dashboard &  Capitolato UC8\\
+Re1F9 & Obbligatorio & All’utente sarà mostrato il messaggio di errore file CSV incompatibile con l'algoritmo selezionato &  Interno UC1.1\\
 Re1F10 & Obbligatorio & All’utente sarà mostrato un messaggio di avviso il quale segnalerà che il caricamento del file JSON è già avvenuto &  Interno UC2.1\\
-Re1F11 & Obbligatorio & L’utente vedrà un messaggio che segnalerà l’errato caricamento del file JSON &  Interno UC2.3\\
+Re1F11 & Obbligatorio & L’utente vedrà un messaggio che segnalerà l’errato caricamento del file JSON dovuto a una struttura incompatibile &  Interno UC2.2\\
 Re1F12 & Obbligatorio & All’utente verrà segnalato di aver selezionato una soglia non valida attraverso un messaggio di errore &  Interno
-UC3.5\\
+UC3.3\\
 Re1F13 & Obbligatorio & 
-L’utente riceverà un messaggio d’errore segnalante l’errata impostazione di un collegamento & Interno UC3.6\\
+L’utente riceverà un messaggio d’errore segnalante l’errata impostazione di un collegamento & Interno UC3.4\\
 Re1F14 & Obbligatorio & L’utente vedrà una notifica di errore avvisandolo di non aver definito una politica temporale &  Interno UC6.2\\
-Re1F15 & Obbligatorio & L’utente verrà notificato attraverso un messaggio di errore di non aver collegato alcun predittore  &  Interno
+Re1F15 & Obbligatorio & L’utente verrà notificato attraverso un messaggio di errore che lo avviserà di non aver collegato alcun predittore  &  Interno
 UC6.2\\
-Re1F16 & Obbligatorio & L’utente verrà notificato attraverso un messaggio di aver salvato il file JSON con successo  & Interno UC1.5\\
+Re1F16 & Obbligatorio & L’utente verrà notificato attraverso un messaggio di addestramento riuscito con successo  & Interno UC1.3\\
 Re1F17 & Obbligatorio & L’utente riceverà un messaggio che confermerà che il caricamento del file JSON è avvenuto con successo &  Interno UC2.3\\
 Re1F18 & Obbligatorio & L’utente verrà notificato attraverso un messaggio del collegamento avvenuto con successo &  Interno
-UC3.6\\
-Re1F19 & Obbligatorio & L’utente visualizzerà il pannello con la lista dei collegamenti & Interno UC3.6\\
+UC3.4\\
+Re1F19 & Obbligatorio & L’utente visualizzerà il pannello con la lista dei collegamenti & Interno UC3.4\\
 Re1F20 & Obbligatorio & L’utente verrà notificato con un messaggio che è possibile procedere con lo scollegamento &  Interno UC4\\
 Re1F21 & Obbligatorio & L’utente riceverà un messaggio che lo notificherà di aver avviato il monitoraggio con successo  & Interno UC6.2\\
 Re1F22 & Obbligatorio & L’utente verrà notificato attraverso un messaggio di aver interrotto il monitoraggio &  Interno UC7\\
 Re1F23 & Obbligatorio & L’utente visualizzerà un messaggio che i dati di previsione verranno salvati all’interno del database & Interno UC6.3\\
-Re3F24 & Opzionale & L’utente riceverà un messaggio di alert che segnalerà il raggiungimento di soglia critica & Capitolato UC3.5\\
+Re3F24 & Opzionale & L’utente riceverà un messaggio di alert che segnalerà il raggiungimento di soglia critica & Capitolato UC3.3\\
 \end{longtable}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,15 +177,14 @@ Non sono stati individuati requisiti prestazionali in quanto il progetto sarà c
 \textcolor{white}{\textbf{Requisiti}} \\
 		\endhead
 Capitolato & Re1F1\newline Re1F2 \newline Re1F3 \newline Re1F3.5 \newline Re1F5 \newline Re1F6 \newline Re1F8 \newline Re3F24\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1V3\\
-Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re1F1.5\newline Re1F2.1\newline Re1F2.2\newline Re1F2.3\newline Re1F3.1\newline Re1F3.2\newline Re1F3.3\newline Re1F3.4\newline Re1F3.6\newline Re1F4\newline Re1F6.1\newline  Re1F6.2\newline Re1F7\newline Re1F9\newline Re1F10\newline Re1F11\newline Re1F12\newline  Re1F13\newline  Re1F14\newline  Re1F15\\
+Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re1F2.1\newline Re1F2.2\newline Re1F3.1\newline Re1F3.2\newline Re1F3.3\newline Re1F3.4 \newline Re1F4\newline Re1F6.1\newline  Re1F6.2\newline Re1F7\newline Re1F9\newline Re1F10\newline Re1F11\newline Re1F12\newline  Re1F13\newline  Re1F14\newline  Re1F15\\
 Interno & Re1F16 \newline Re1F17\newline  Re1F18\newline Re1F19\newline  Re1F20\newline  Re1F21\newline  Re1F22\newline  Re1F23\newline  Re1Q1\newline  Re1Q2.1\newline  Re2Q2.2\newline  Re2Q6\newline  Re1V4
 \newline  Re1V6\\
 UC1 & Re1F1\\
-UC1.1 & Re1F1.1\\
-UC1.2 & Re1F1.2\newline Re1F9\\
-UC1.3 & Re1F1.3\\
+UC1.1 & Re1F1.1\newline Re1F9\\
+UC1.2 & Re1F1.2\\
+UC1.3 & Re1F1.3\newline Re1F16\\
 UC1.4 & Re1F1.4\\
-UC1.5 & Re1F1.5\newline Re1F16\\
 UC2 & Re1F2\\
 UC2.1 & Re1F2.1\newline Re1F10\\
 UC2.2 & Re1F2.2\\
