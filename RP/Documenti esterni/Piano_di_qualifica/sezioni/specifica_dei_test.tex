@@ -11,7 +11,7 @@ Per definire lo stato dei test, si usano le seguenti sigle:
 \begin{longtable}{C{2.5cm} C{2.5cm} L{8cm} C{2cm}}
 \rowcolor{white}\caption{Tabella dei test} \\
 		\rowcolor{redafk}
-\textcolor{white}{\textbf{Requisito}} &
+\textcolor{white}{\textbf{Codice}} &
 \textcolor{white}{\textbf{Caso d'uso}} &
 \textcolor{white}{\textbf{Descrizione}} &
 \textcolor{white}{\textbf{Esito}} \\
@@ -25,7 +25,7 @@ Per definire lo stato dei test, si usano le seguenti sigle:
 		\endhead
 %-------------------------------------------- Simo		
 TSOF1 & UC1 &
-L'utente addestratore deve poter creare il file JSON\glo contenente il/i predittore/i\glo. \newline
+L'utente  deve poter creare il file JSON\glo contenente il/i predittore/i\glo. \newline
 All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare il pulsante “Carica Dati di Addestramento”;
@@ -36,7 +36,7 @@ All'utente viene chiesto di:
 \end{itemize} & NI \\
 
 TSOF1.1 & UC1.1 &
-L'utente addestratore deve poter caricare i dati di addestramento. \newline All'utente viene chiesto di:
+L'utente  deve poter caricare i dati di addestramento. \newline All'utente viene chiesto di:
 \begin{itemize}
  	\item cliccare il pulsante "Carica Dati di Addestramento";
  	\item verificare che si apra la finestra che visualizza il file system\glo.
@@ -44,7 +44,7 @@ L'utente addestratore deve poter caricare i dati di addestramento. \newline All'
 
 
 TSOF1.2 & UC1.2 &
-L'utente addestratore deve poter scegliere i dati di addestramento. \newline All'utente viene chiesto di:
+L'utente  deve poter scegliere i dati di addestramento. \newline All'utente viene chiesto di:
 \begin{itemize}
  	\item verificare che dalla finestra di dialogo siano visibili solo file CSV\glo;
 	\item selezionare i dati di addestramento.
@@ -52,41 +52,41 @@ L'utente addestratore deve poter scegliere i dati di addestramento. \newline All
 & I \\
  
 TSOF1.3 & UC1.3 & 
-L'utente addestratore deve poter scegliere l'algoritmo di predizione. \newline All'utente viene chiesto di:
+L'utente deve poter scegliere l'algoritmo di predizione. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sulla Combo Box\glo con etichetta "Seleziona Algoritmo";
-	\item scegliere uno degli algoritmi proposti (RL o SMV).
+	\item scegliere uno degli algoritmi proposti (RL o SVM).
 \end{itemize} & I \\
  
 TSOF1.4 & UC1.4 & 
-L'utente addestratore deve poter confermare la scelta dell'algoritmo. \newline All'utente viene chiesto di:
+L'utente deve poter confermare la scelta dell'algoritmo. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante "Conferma".
 \end{itemize} & NI \\
 
 TSOF1.4.1 & UC9 & 
-L'utente addestratore deve poter visualizzare un messaggio d'errore se la scelta dell'algoritmo non è compatibile con i dati di addestramento. \newline All'utente viene chiesto di:
+L'utente deve poter visualizzare un messaggio d'errore se la scelta dell'algoritmo non è compatibile con i dati di addestramento. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare la visualizzazione dell'errore;
 	\item verificare di essere rimandati al TSOF1.2.
 \end{itemize} & I \\
 
 TSOF1.5 & UC1.5 & 
-L'utente addestratore deve poter denominare il file JSON e scegliere dove salvarlo. \newline All'utente viene chiesto di:
+L'utente deve poter denominare il file JSON e scegliere dove salvarlo. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item scegliere un nome per il file JSON;
 	\item scegliere dove salvare il file JSON.
 \end{itemize} & NI \\
 
 TSOF1.5.1 & UC16 &
-L'utente addestratore deve poter vedere la conferma dell'avvenuto salvataggio. \newline All'utente viene chiesto di:
+L'utente deve poter vedere la conferma dell'avvenuto salvataggio. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio di notifica "Avvenuto Successo Salvataggio File JSON";
 	\item cliccare su "Conferma" per chiudere la notifica.
 \end{itemize} & NI	\\
 
 TSOF2 & UC2 &
-L'utente monitoratore deve poter caricare il file JSON nel plug-in. \newline All'utente viene chiesto di:
+L'utente  deve poter caricare il file JSON nel plug-in. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare il pulsante per caricare il file JSON;
 	\item selezionare il file JSON;
@@ -95,42 +95,42 @@ L'utente monitoratore deve poter caricare il file JSON nel plug-in. \newline All
 
 
 TSOF2.1 & UC2.1 &
-L'utente monitoratore deve poter caricare il file JSON. \newline All'utente viene chiesto di:
+L'utente  deve poter caricare il file JSON. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare su "Carica JSON";
 	\item verificare la visualizzazione della finestra di selezione file.
 \end{itemize} & I	\\
 
 TSOF2.1.1 & UC10 &
-L'utente monitoratore deve poter visualizzare il messaggio di alert\glo del caricamento già avvenuto e caricare nuovamente il file. \newline All'utente viene chiesto di:
+L'utente  deve poter visualizzare il messaggio di alert\glo del caricamento già avvenuto e caricare nuovamente il file. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio di alert "File JSON già caricato";
 	\item cliccare su "Conferma" per sovrascrivere il file.
 \end{itemize} & NI	\\
 
 TSOF2.1.2 & UC10 &
-L'utente monitoratore deve poter visualizzare il messaggio di alert del caricamento già avvenuto e annullare il caricamento. \newline All'utente viene chiesto di:
+L'utente  deve poter visualizzare il messaggio di alert del caricamento già avvenuto e annullare il caricamento. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio di alert "File JSON già caricato";
 	\item cliccare su "Annulla" per tornare alla sezione di caricamento.
 \end{itemize} & NI	\\
 
 TSOF2.2 & UC2.2 &
-L'utente monitoratore deve poter selezionare il file JSON. \newline All'utente viene chiesto di:
+L'utente  deve poter selezionare il file JSON. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare che siano visibili solo file JSON;
 	\item selezionare il file dalla finestra di dialogo.
 \end{itemize} & I	\\
 
 TSOF2.3 & UC2.3 &
-L'utente monitoratore deve poter confermare il caricamento del file. \newline All'utente viene chiesto di:
+L'utente  deve poter confermare il caricamento del file. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante "Conferma".
 \end{itemize} & I	\\
 
 
 TSOF2.3.1 & UC11 &
-L'utente monitoratore deve poter visualizzare un messaggio d'errore in caso di problemi con il caricamento. \newline All'utente viene chiesto di:
+L'utente  deve poter visualizzare un messaggio d'errore in caso di problemi con il caricamento. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio d'errore "Struttura del file JSON non Supportata";
 	\item cliccare il pulsante "Conferma";
@@ -138,7 +138,7 @@ L'utente monitoratore deve poter visualizzare un messaggio d'errore in caso di p
 \end{itemize} & NI	\\
 
 TSOF2.3.2 & UC17 &
-L'utente monitoratore deve poter visualizzare un messaggio di notifica di caricamento avvenuto con successo. \newline All'utente viene chiesto di:
+L'utente  deve poter visualizzare un messaggio di notifica di caricamento avvenuto con successo. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio di notifica "Avvenuto Successo Caricamento File JSON";
 	\item cliccare il pulsante "Continua".
@@ -146,7 +146,7 @@ L'utente monitoratore deve poter visualizzare un messaggio di notifica di carica
 %-------------------------------------------- Olly
 TSOF3 & 
 UC3 &
-L'utente monitoratore deve poter collegare un predittore ad un flusso. In particolare l'utente deve:
+L'utente  deve poter collegare un predittore ad un flusso. In particolare l'utente deve:
 \begin{itemize}
 	\item poter visualizzare la schermata di collegamento;
 	\item poter selezionale il server di Grafana a cui collegarsi.
@@ -155,7 +155,7 @@ NI \\
 
 TSOF3.1 &
 UC3.1 &
-L'utente monitoratore deve poter selezionare il Database\glo. All'utente viene chiesto di:
+L'utente  deve poter selezionare il Database\glo. All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare l'effettiva connessione al server;
 	\item visualizzare la lista di Database disponibili;
@@ -165,7 +165,7 @@ NI \\
 
 TSOF3.2 &
 UC3.2 &
-L'utente monitoratore deve poter selezionare almeno un flusso di dati. All'utente viene chiesto di:
+L'utente  deve poter selezionare almeno un flusso di dati. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare le tabelle del Database;
 	\item verificare di poter selezionare il flusso desiderato;
@@ -175,7 +175,7 @@ NI \\
 
 TSOF3.3 &
 UC3.3 &
-L'utente monitoratore deve poter selezionare il predittore da associare al flusso. All'utente viene chiesto di:
+L'utente  deve poter selezionare il predittore da associare al flusso. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare l'elenco dei predittori;
 	\item verificare di poter selezionare il/i predittore/i desiderato/i;
@@ -185,7 +185,7 @@ NI \\
 
 TSOF3.4 &
 UC3.4 &
-L'utente monitoratore deve poter selezionare un nodo\glo del flusso. All'utente viene chiesto di:
+L'utente  deve poter selezionare un nodo\glo del flusso. All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare di poter selezionare il nodo desiderato;
 	\item verificare di aver a disposizione il nodo desiderato.
@@ -194,7 +194,7 @@ NI \\
 
 TSOF3.5 &
 UC3.5 &
-L'utente monitoratore deve poter stabilire una o più soglie\glo al predittore. All'utente viene chiesto di:
+L'utente  deve poter stabilire una o più soglie\glo al predittore. All'utente viene chiesto di:
 \begin{itemize}
 	\item  verificare se la funzionalità è disponibile;
 	\item verificare se la soglia impostata è effettivamente quella desiderata.
@@ -203,7 +203,7 @@ NI \\
 
 TSOF3.5.1 &
 UC12 &
-L'utente monitoratore deve poter visualizzare il messaggio d'errore sulla soglia stabilita. All'utente viene chiesto di:
+L'utente  deve poter visualizzare il messaggio d'errore sulla soglia stabilita. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare il messaggio "Errore Impostazione Soglia Non Valida";
 	\item poter cliccare il pulsante "Conferma";
@@ -213,7 +213,7 @@ NI \\
 
 TSOF3.6 &
 UC3.6 &
-L'utente monitoratore deve poter confermare il collegamento e vedere la lista dei collegamenti. All'utente viene chiesto di:
+L'utente  deve poter confermare il collegamento e vedere la lista dei collegamenti. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare e cliccare il pulsante etichettato "Conferma Collegamento";
 	\item verificare l'effettiva conferma del collegamento;
@@ -223,7 +223,7 @@ NI \\
 
 TSOF3.6.1 &
 UC13 &
-L'utente monitoratore deve poter visualizzare il messaggio d'errore sulle impostazioni di collegamento. All'utente viene chiesto di:
+L'utente  deve poter visualizzare il messaggio d'errore sulle impostazioni di collegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare il messaggio "Errore Impostazione di collegamento";
 	\item poter cliccare il pulsante "Conferma";
@@ -232,7 +232,7 @@ L'utente monitoratore deve poter visualizzare il messaggio d'errore sulle impost
 NI \\
 TSOF3.6.2 &
 UC18 &
-L'utente monitoratore deve poter visualizzare il messaggio di notifica per la buona riuscita del collegamento. All'utente viene chiesto di:
+L'utente  deve poter visualizzare il messaggio di notifica per la buona riuscita del collegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio "Collegamento Avvenuto con Successo";
 	\item poter visualizzare e cliccare il pulsante "Conferma".
@@ -241,7 +241,7 @@ NI \\
 
 TSOF3.6.3 &
 UC19 &
-L'utente monitoratore deve poter visualizzare l'elenco dei collegamenti. All'utente viene chiesto di:
+L'utente  deve poter visualizzare l'elenco dei collegamenti. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare, per ogni collegamento, il predittore/i, il nodo del flusso dati e la soglia;
 	\item poter visualizzare i pulsanti "Scollega Collegamento" e "Modifica Collegamento".
@@ -253,7 +253,7 @@ NI \\
 
 TSOF4 &
 UC4 &
-L'utente monitoratore deve poter scollegare il predittore. All'utente viene chiesto di:
+L'utente  deve poter scollegare il predittore. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare e cliccare il pulsante "Scollega Predittore";
 	\item verificare l'effettiva e corretta esecuzione dello scollegamento.
@@ -263,7 +263,7 @@ NI \\
 
 TSOF4.1 &
 UC20 &
-L'utente monitoratore deve poter visualizzare il messaggio di alert in caso di scollegamento. All'utente viene chiesto di:
+L'utente  deve poter visualizzare il messaggio di alert in caso di scollegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare il messaggio di alert "Procedere con lo scollegamento?";
 	\item cliccare su "Conferma" se vuole procedere con lo scollegamento;
@@ -275,57 +275,57 @@ NI \\
 % ------------- FINE TEST 4 ------------------
 
 %-------------------------------------------- Davide		
-TSOF5 & UC5 & L'utente monitoratore deve poter modificare un collegamento. \newline All'utente viene chiesto di: \begin{itemize}
+TSOF5 & UC5 & L'utente  deve poter modificare un collegamento. \newline All'utente viene chiesto di: \begin{itemize}
 \item cliccare il pulsante "Modifica collegamento";
 \item verificare che la modifica sul collegamento, precedentemente effettuato, venga abilitata.
 \end{itemize} & NI \\
-TSOF6 & UC6 & L'utente monitoratore deve poter effettuare le operazioni di calcolo delle previsioni. \newline
+TSOF6 & UC6 & L'utente  deve poter effettuare le operazioni di calcolo delle previsioni. \newline
 All'utente viene chiesto di: \begin{itemize}
 \item inserire la politica temporale\glo da applicare;
 \item avviare il monitoraggio sul flusso di dati.
 \end{itemize}& NI \\
-TSOF6.1 & UC6.1 & L'utente monitoratore deve poter inserire la politica temporale.\newline All'utente viene chiesto di inserire: \begin{itemize}
+TSOF6.1 & UC6.1 & L'utente  deve poter inserire la politica temporale.\newline All'utente viene chiesto di inserire: \begin{itemize}
 \item il campo "Secondi";
 \item il campo "Minuti";
 \item il campo "Ore".
 \end{itemize} & NI \\
-TSOF6.1.1 & UC14 & L'utente monitoratore deve poter visualizzare il messaggio d’errore nel caso in cui la politica temporale non sia stata definita. \newline All’utente viene chiesto di:
+TSOF6.1.1 & UC14 & L'utente  deve poter visualizzare il messaggio d’errore nel caso in cui la politica temporale non sia stata definita. \newline All’utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare il messaggio d’errore "Errore Politica Temporale Non Definita";
 	\item cliccare il pulsante "Conferma";
 	\item verificare di essere ritornato all’inserimento della politica temporale.
 \end{itemize}& NI \\
-TSOF6.2 & UC6.2 & L'utente monitoratore deve poter avviare il monitoraggio sul flusso di dati. \newline All'utente viene chiesto di: \begin{itemize}
+TSOF6.2 & UC6.2 & L'utente  deve poter avviare il monitoraggio sul flusso di dati. \newline All'utente viene chiesto di: \begin{itemize}
 \item cliccare il pulsante "Avvia Monitoraggio".
 \end{itemize} & NI \\
-TSOF6.2.1 & UC15 & L'utente monitoratore deve poter visualizzare il messaggio d’errore nel caso in cui nessun predittore sia stato collegato. \newline All’utente viene chiesto di:
+TSOF6.2.1 & UC15 & L'utente  deve poter visualizzare il messaggio d’errore nel caso in cui nessun predittore sia stato collegato. \newline All’utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare il messaggio d’errore "Nessun Predittore Collegato";
 	\item cliccare il pulsante "Conferma";
 	\item verificare di essere ritornato all’impostazione di collegamento del predittore al flusso dati.
 \end{itemize}& NI \\
-TSOF6.2.2 & UC21 & L'utente monitoratore deve poter visualizzare il messaggio di notifica del corretto avvio del monitoraggio. \newline All'utente viene chiesto di: 
+TSOF6.2.2 & UC21 & L'utente  deve poter visualizzare il messaggio di notifica del corretto avvio del monitoraggio. \newline All'utente viene chiesto di: 
 \begin{itemize}
 	\item poter visualizzare il messaggio di notifica "Monitoraggio Avviato con Successo";
 	\item cliccare il pulsante "Conferma".
 \end{itemize} & NI \\
-TSOF6.3 & UC6.3 & L'utente monitoratore deve poter salvare la previsione. \newline All'utente viene chiesto di: \begin{itemize}
+TSOF6.3 & UC6.3 & L'utente  deve poter salvare la previsione. \newline All'utente viene chiesto di: \begin{itemize}
 \item cliccare il pulsante "Invia previsioni".
 \end{itemize} & NI \\
-TSOF6.3.1 & UC23 & L'utente monitoratore deve poter visualizzare il messaggio di notifica del corretto invio, e salvataggio, della previsione. \newline All'utente viene chiesto di: 
+TSOF6.3.1 & UC23 & L'utente  deve poter visualizzare il messaggio di notifica del corretto invio, e salvataggio, della previsione. \newline All'utente viene chiesto di: 
 \begin{itemize}
 	\item poter visualizzare il messaggio di notifica "Salvataggio Dati di Previsione Avvenuto con Successo";
 	\item cliccare il pulsante "Conferma".
 \end{itemize} & NI \\
-TSOF7 & UC7 & L'utente monitoratore deve poter interrompere il monitoraggio. \newline All'utente viene chiesto di: \begin{itemize}
+TSOF7 & UC7 & L'utente  deve poter interrompere il monitoraggio. \newline All'utente viene chiesto di: \begin{itemize}
 \item cliccare il pulsante "Interrompi Monitoraggio".
 \end{itemize} & NI \\
-TSOF7.1 & UC22 & L'utente monitoratore deve poter visualizzare il messaggio di notifica dell'interruzione del monitoraggio. \newline All'utente viene chiesto di: \begin{itemize}
+TSOF7.1 & UC22 & L'utente  deve poter visualizzare il messaggio di notifica dell'interruzione del monitoraggio. \newline All'utente viene chiesto di: \begin{itemize}
 \item poter visualizzare il messaggio di notifica "Monitoraggio Interrotto";
 \item cliccare il pulsante "Conferma".
 \end{itemize} & NI \\
-TSOF8 & UC8 & L'utente monitoratore deve poter visualizzare le previsioni nella dashboard\glo. & NI \\
-TSFF8.1 & UC24 & L'utente monitoratore deve poter visualizzare il messaggio di alert di avvenuto raggiungimento della soglia critica. \newline Per poter proseguire, all'utente viene chiesto di: \begin{itemize}
+TSOF8 & UC8 & L'utente  deve poter visualizzare le previsioni nella dashboard\glo. & NI \\
+TSFF8.1 & UC24 & L'utente  deve poter visualizzare il messaggio di alert di avvenuto raggiungimento della soglia critica. \newline Per poter proseguire, all'utente viene chiesto di: \begin{itemize}
 \item poter visualizzare il messaggio di alert "Soglia Critica Raggiunta";
 \item cliccare il pulsante "Conferma".
 \end{itemize}& NI \\
