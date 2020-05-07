@@ -1,5 +1,5 @@
 \documentclass[a4paper, oneside, openany, dvipsnames, table, 12pt]{article}
-\usepackage{../../../Template/AFKstyle}
+\usepackage{../../../../Template/AFKstyle}
 \usepackage{hyperref}
 \usepackage{verbatim} %per commenti di più righe \begin{comment} \end{comment}
 \usepackage{amsmath}
@@ -26,39 +26,23 @@
 \newpage
 \input{sezioni/registroModifiche.tex}
 
+
 %Didascalia tabelle/immagini (prendono come riferimento la subsection)
 \counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
 \newpage
 
 %indice, indice figure e indice tabelle
 \tableofcontents
 \newpage
-
-\listoftables
-\newpage
-
+\begin{comment}
 \listoffigures
 \newpage
+\listoftables
+\newpage
+\end{comment}
 
-\input{sezioni/introduzione.tex}
+\input{sezioni/informazioni_generali.tex}
 \pagebreak
-
-\input{sezioni/qualita_di_processo.tex}
-\pagebreak
-
-\input{sezioni/qualita_di_prodotto.tex}
-\pagebreak
-
-\input{sezioni/specifica_dei_test.tex}
-\pagebreak
-
-\appendix %tutte le \section da questo documento in poi saranno numerate con lettere
-
-\input{sezioni/resoconto_verifica.tex}
-\pagebreak
-
-\input{sezioni/autovalutazione.tex}
-\pagebreak
-
 
 \end{document}

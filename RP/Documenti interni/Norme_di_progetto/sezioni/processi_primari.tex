@@ -62,14 +62,14 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 			\end{itemize}
 			
 			\paragraph*{Standard di qualità} \mbox{} \\ \mbox{} \\
-			La sezione \S \hyperref[sez:standardQualita]{A} descrive gli standard di qualità seguiti per lo sviluppo della qualità del progetto.
+			La sezione \S \hyperref[sez:standardQualita]{A} descrive gli standard di qualità di riferimento per lo sviluppo della qualità del progetto.
 			
 			\paragraph{Revisione e valutazione} \mbox{} \\ \mbox{} \\
 			Il fornitore deve eseguire la verifica e validazione al fine di dimostrare che il prodotto software soddisfi i requisiti descritti nell'\textit{Analisi dei Requisiti}.
 			\paragraph{Consegna e completamento} \mbox{} \\ \mbox{} \\		
 			Il fornitore consegna il prodotto software come specificato dal contratto.
 		\subsubsection{Strumenti}
-		Di seguito sono illustrati gli strumenti utilizzati per lo svolgimento dell'attività di fornitura.
+		Di seguito sono illustrati gli strumenti utilizzati per l'avvio dell'attività di fornitura.
 		\begin{itemize}
 			\item \textbf{GanttProject}: software per la produzione di diagrammi di Gantt\glo (analizzato nel dettaglio in § 3.8.3);
 			\item \textbf{Google Calendar}: sistema di calendari gestito da Google.
@@ -238,7 +238,7 @@ Al fine di implementare le qualità dell'architettura appena descritte, ai proge
 		\subparagraph*{Aspettative}\mbox{} \\ \mbox{} \\
 		L'obiettivo di questo processo è la costruzione del prodotto richiesto secondo le specifiche richieste dal proponente. Perciò il programmatore deve attenersi alle norme qui stabilite, al fine di produrre un codice solido e uniforme, facilitando l'attivita di manutenzione, verifica, validazione e miglioramento della qualità del prodotto.
 		\subparagraph*{Descrizione}\mbox{} \\ \mbox{} \\
-		Il codice deve attenersi alle norme e rispettare i requisiti di qualità, espressi nel documento \textit{Piano di Qualifica}, garantendo così la qualità del codice. Il codice deve inoltre seguire il più possibile gli standard di qualità descritti nella \S \hyperref[sez:9126]{A.1}.
+		Il codice deve attenersi alle norme e rispettare i requisiti di qualità, espressi nel documento \textit{Piano di Qualifica}, per garantirne la qualità desiderata.
 		\subsubparagraph*{Stile di codifica} \mbox{} \\ \mbox{} \\
 		Lo stile di codifica stabilisce le norme che il programmatore deve rispettare, focalizzandosi nei seguenti ambiti:
 		\begin{itemize}
@@ -311,7 +311,8 @@ di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento 
 	È un plugin\glo utilizzato per effettuare analisi statica del codice e rilevare problematiche nei pattern codificati in linguaggio JavaScript\glo. \\
 	\centerline{\url{https://eslint.org/}}
 	\subsubsection{Draw.io}
-	Programma utilizzato per la creazione di diagrammi UML.
+	Programma utilizzato per la creazione di diagrammi UML.\\
+	\centerline{\url{https://app.diagrams.net/}}
 	\subsubsection{InfluxDB}
 	Database\glo di serie temporali open source utilizzato per la gestione e l'aggiornamento dei dati.\\
 	\centerline{\url{https://www.influxdata.com/}}
@@ -330,9 +331,8 @@ di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento 
 	\\
 	\centerline{\url{https://www.npmjs.com/}}
 	\subsubsection{Grafana}	
-	Software di analisi open source utilizzato per visualizzare e monitorare i dati attraverso grafici e avvisi.\\
+	Software di analisi open source utilizzato per visualizzare e monitorare i dati attraverso grafici e avvisi. Grafana viene fornito con un plug-in per InfluxDB. Quest'ultimo include un editor di query personalizzato e supporta annotazioni e modelli di query.\\
 	\centerline{\url{https://grafana.com/}}
-	Grafana viene fornito con un plug-in per InfluxDB. Quest'ultimo include un editor di query personalizzato e supporta annotazioni e modelli di query.
 	\subsubsection{TravisCI}
 	Impiegato per garantire la continuous integration.
 	\\

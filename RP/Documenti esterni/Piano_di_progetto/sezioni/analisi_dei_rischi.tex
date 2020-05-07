@@ -123,13 +123,33 @@ Alta \\
 Piano di contingenza &
 \multicolumn{3}{L{13cm}}{Il responsabile avrà la funzione di gestire e fare da mediatore in tali divergente.} \\
 
+RiT10 - Errori nelle dipendenze &
+Il progetto richiede parecchie dipendenze esterne, potrebbero essere presenti errori all'interno di esse. & 
+Al momento dell'aggiunta di una nuova dipendenza ci si deve informare su errori già conosciuti. &
+Probabilità:
+Bassa
+Pericolosità:
+Alta \\
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Sarà necessario cercare una versione di tale dipendenza che non contenga l'errore. Valutare anche la possibilità di cambiare dipendenza con una analoga.}\\
+
+RiT11 - Mancanza di documentazione &
+La piattaforma di Grafana non fornisce una vasta documentazione. & 
+Prima dello sviluppo di un nuovo componente si deve verificare che sia presente la relativa documentazione o un esempio del codice. &
+Probabilità:
+Media
+Pericolosità:
+Media \\
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Consultarsi con gli altri membri per suggerimenti sullo sviluppo e cercare un metodo alternativo per l'implementazione} \\
 \end{longtable}
-
+\pagebreak
 \subsection{Attuazione dei rischi}
-
 Nella seguente tabella vengono riportati i rischi in cui il gruppo si è imbattuto:
 
-\begin{longtable}{C{3cm} L{4cm} L{8cm}}
+\begin{longtable}{C{3cm} L{5cm} L{7cm}}
 \rowcolor{white}\caption{Attuazione dei rischi} \\
 		\rowcolor{redafk}
 \textcolor{white}{\textbf{Rischio}} &
@@ -144,7 +164,9 @@ Nella seguente tabella vengono riportati i rischi in cui il gruppo si è imbattu
 		\endhead
 RiO01 - Emergenza sanitaria	& L'epidemia ha costretto gli stakeholders ad attuare lo smart working. & Sono stati usati vari mezzi di comunicazione, in particolare si ha optato per applicazioni che permettessero comunicazioni rapide e già conosciute così da ridurre il disagio al minimo.
 \\
-RiT02 - Inespreienza tecnologica & I programmatori non conoscevano a pieno i linguaggi e le librerie che sono state utilizzate & \'E stato suddiviso il lavoro in modo da rispettare le conoscenze dei membri. In caso di nessuna conoscenza precedente, si è diviso il compito di studiare le documentazioni, per poi spiegarle agli altri membri.
+RiT02 - Inespreienza tecnologica & I programmatori non conoscevano a pieno i linguaggi e le librerie che sono state utilizzate & \'E stato suddiviso il lavoro in modo da rispettare le conoscenze dei membri. In caso di nessuna conoscenza precedente, si è suddiviso il compito di studiare le documentazioni, per poi spiegarle agli altri membri.
 \\
 RiO04 - Impegni accademici & Un membro del gruppo ha dovuto svolgere un esame & Durante la breve mancanza di un membro il resto del gruppo si è dedicato all'approfondimento e allo studio delle tecnologie utilizzate.
+\\
+RiT10 - Errori nelle dipendenze & Un cambiamento all'interno degli strumenti forniti da Grafana per sviluppare il plugin ha causato l'impossibilità di effettuare la build del prodotto. & Si è proceduto al passaggio ad una versione precedente di tali strumenti.
 \end{longtable}
