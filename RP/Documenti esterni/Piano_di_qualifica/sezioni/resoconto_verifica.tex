@@ -205,7 +205,7 @@ Davide Zilio & 0 & 93 & - & - & Accettabile
 \caption{Grafico relativo ai dati di MP03 - Produttività}
 \end{figure}
 
-\subsection{Verifica dei test}
+\subsection{Analisi metriche dei test}
 \subsubsection{Esiti test implementati}
 \begin{longtable}{c c}
 \rowcolor{white}\caption{Esiti dei test implementati} \\
@@ -252,8 +252,58 @@ Davide Zilio & 0 & 93 & - & - & Accettabile
 \caption{Grafico relativo ai dati di MS08-MS09 PTCP-FTCP}
 \end{figure}
 
+\pagebreak
+\subsection{Analisi metriche del software}
+\subsubsection{Esiti MS04 - Commenti per Linee di Codice}
+\begin{longtable}{c c c c}
+\rowcolor{white}\caption{Esiti MS04} \\
+	\rowcolor{redafk}
+	\textcolor{white}{\textbf{Tot\_LOC}} &
+	\textcolor{white}{\textbf{Tot\_commenti}} &
+\textcolor{white}{\textbf{Rapporto}} &
+\textcolor{white}{\textbf{Esito}} \\
+	\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Tot\_LOC}} &
+\textcolor{white}{\textbf{Tot\_commenti}} &
+\textcolor{white}{\textbf{Rapporto}} & 
+\textcolor{white}{\textbf{Esito}} \\
+	\endhead
+	713 & 7 & 0.01 & Non accettabile\\	
+\end{longtable}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.40]{./img/MS04.png}
+\caption{Grafico relativo ai dati di MS04 - Commenti per LOC}
+\end{figure}
+
+\subsubsection{Esiti MS05-MS06 - Fan In/Fan Out}
+\begin{longtable}{c c}
+\rowcolor{white}\caption{Esiti MS05-MS06} \\
+	\rowcolor{redafk}
+	\textcolor{white}{\textbf{Fan In}} &
+	\textcolor{white}{\textbf{Fan Out}}\\
+	\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+	\textcolor{white}{\textbf{Fan In}} &
+	\textcolor{white}{\textbf{Fan Out}}\\
+	\endhead
+	31 & 26\\	
+\end{longtable}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{./img/MS05-MS06.png}
+\caption{Grafico relativo ai dati di MS05-MS06 - Fan In/Fan Out}
+\end{figure}
+
+
+
+
 \begin{comment}
-\subsection{Esiti metriche codice}
 \begin{longtable}{C{2cm} C{1.2cm} C{3cm} C{1.5cm} C{1.5cm} C{1.5cm} C{1.5cm} C{1.5cm}}
 \rowcolor{white}\caption{Esiti PTCP-FTCP} \\
 	\rowcolor{redafk}
