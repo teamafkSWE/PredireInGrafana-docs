@@ -1,0 +1,38 @@
+\section{Informazioni generali}
+\subsection{Informazioni incontro}
+\begin{itemize}
+\item \textbf{Luogo}: Skype;
+\item \textbf{Data}: 2020-04-28;
+\item \textbf{Ora di inizio}: 14:30;
+\item \textbf{Ora di fine}: 14:45;
+\item \textbf{Partecipanti}:
+	\begin{itemize}
+		\item tutti i membri;
+		\item Gregorio Piccoli (proponente).
+	\end{itemize}
+\end{itemize}
+
+\subsection{Topic}
+Esposizione di alcune domande al proponente e conseguente richiesta di chiarimenti, relativi lo sviluppo della Proof of Concept da presentare in Revisione di Progettazione, prevista per il 2020-05-18.\\
+In particolare le domande, e relative risposte ed attuazione, sono le seguenti:
+\begin{itemize}
+	\item Il tool esterno deve essere accessibile da Grafana\glo?\\
+	\textbf{Risposta}: non necessariamente, deve essere sviluppato nel modo più facile per il team;\\
+	\textbf{Attuazione}: il \textit{TeamAFK} ha deciso di rendere il tool esterno accessibile da Grafana;
+	\item Il tool deve essere un eseguibile o va bene come pagina web? \\
+	\textbf{Risposta}: come preferite, non c'è un obbligo particolare; \\
+	\textbf{Attuazione}: il \textit{TeamAFK} svilupperà il tool come pagina web interattiva;
+	\item Che tipologia di plug-in dobbiamo sviluppare? Un plug-in App o Panel? \\
+	\textbf{Risposta}: Panel;\\
+	\textbf{Attuazione}: il plug-in verrà sviluppato come Panel plug-in;
+	\item Dobbiamo usare le dashboard con i pannelli di Grafana o possiamo usare librerie javascript per i grafici? \\
+	\textbf{Risposta}: utilizzare i pannelli di Grafana;\\
+	\textbf{Attuazione}: verrà utilizzata la dashboard di Grafana per mostrare i vari grafici;
+	\item Cosa vuole vedere lei nel PoC? \\
+	\textbf{Risposta}: far vedere qualcosa che abbia una sua logica;\\
+	\textbf{Attuazione}: il \textit{TeamAFK} prevede di sviluppare e quindi mostrare il tool esterno, in cui viene eseguita la predizione (SVM o RL) dato un \texttt{file.csv} in input contenente i dati da addestrare. Sarà dunque possibile scaricare il \texttt{file.json} contenente i risultati della predizione;
+	\item Ha una documentazione più approfondita di Grafana? Quello che troviamo è poco chiaro e confuso.\\
+	\textbf{Risposta}: no, purtroppo essendo un software open source è in continuo mutamento e di conseguenza la documentazione presente è scarna e poco approfondita;\\
+	\textbf{Attuazione}: il \textit{TeamAFK} utilizza più fonti per ottenere le informazioni richieste.
+\end{itemize}
+A seguito delle risposte ricevute, il \textit{TeamAFK} è riuscito a risolvere i dubbi sopra descritti e quindi a continuare la progettazione e sviluppo dell'architettura software evitando errori progettuali.
