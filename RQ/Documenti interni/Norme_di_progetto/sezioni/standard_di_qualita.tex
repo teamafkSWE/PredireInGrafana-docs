@@ -1,0 +1,148 @@
+\section{Standard di qualità} \label{sez:standardQualita}
+\label{sez:9126}
+\subsection{ISO/IEC 9126}
+Con la sigla ISO/IEC 9126 si individua una serie di normative e linee guida preposte a descrivere un modello di qualità del software. \\
+La norma tecnica relativa alla qualità del software si compone in quattro parti:
+\begin{itemize}
+	\item modello della qualità del software;
+	\item metriche per la qualità esterna;
+	\item metriche per la qualità interna;
+	\item metriche per la qualità in uso.
+\end{itemize}
+\subsubsection{Modello della qualità del software}
+Il modello di qualità è classificato da sei caratteristiche generali e da varie sottocaratteristiche misurabili attraverso delle metriche.\\
+Di seguito vengono definite tali caratteristiche.
+
+\paragraph{Funzionalità} \mbox{} \\ \mbox{} \\
+È la capacità del software di soddisfare determinate esigenze, stabilite nell' \textit{Analisi dei Requisiti}, necessarie per operare sotto condizioni specifiche. \\
+In dettaglio il software deve soddisfare le seguenti caratteristiche:
+\begin{itemize}
+	\item \textbf{Appropriatezza}: le funzioni fornite dal software sono appropriate per i compiti ed obiettivi prefissati;
+	\item \textbf{Accuratezza}: il software deve fornire risposte concordanti o i precisi effetti richiesti;
+	\item \textbf{Interoperabilità}: capacità di interagire ed operare con uno o più sistemi specificati;
+	\item \textbf{Conformità}: il prodotto deve essere in grado di aderire a standard, convenzioni e regolamentazioni;
+	\item \textbf{Sicurezza}: è la capacità del software di proteggere informazioni e dati, negandone l'accesso a persone o sistemi non autorizzati e invece fornirlo a chi ne è effettivamente autorizzato.
+\end{itemize}
+\paragraph{Affidabilità}\mbox{} \\ \mbox{} \\
+È la capacità del prodotto software di mantenere uno specificato livello di prestazioni quando usato in date condizioni. \\
+Nello specifico il software deve soddisfare le seguenti caratteristiche:
+\begin{itemize}
+	\item \textbf{Maturità}: capacità di un prodotto software di evitare che si verifichino errori, malfunzionamenti o siano prodotti risultati non corretti;
+	\item \textbf{Tolleranza agli errori}: il software deve mantenere dei predeterminati livelli di prestazioni anche in caso di un uso scorretto o di malfunzionamenti;
+	\item \textbf{Recuperabilità}: capacità di ripristinare il livello appropriato di prestazioni a seguito di un malfunzionamento o di un errore. La caratteristica di recuperabilità è valutata dall'arco di tempo nel quale il software può risultare non accessibile;
+	\item \textbf{Aderenza}: è la capacità di aderire a standard, regole e convenzioni riguardanti l'affidabilità.
+\end{itemize}
+\paragraph{Efficienza}\mbox{} \\ \mbox{} \\
+Capacità del prodotto software di eseguire le proprie funzioni minimizzando il tempo necessario e sfruttando al meglio le risorse di cui necessita. \\
+Nello specifico il software deve soddisfare le seguenti caratteristiche:
+\begin{itemize}
+	\item \textbf{Comportamento rispetto al tempo}: è la capacità di fornire adeguati tempi di risposta, elaborazione e velocità di attraversamento, sotto condizioni determinate;
+	\item \textbf{Utilizzo delle risorse}: è la capacità di utilizzo di quantità e tipo di risorse in maniera adeguata;
+	\item \textbf{Conformità}: è la capacità di aderire a standard e specifiche sull'efficienza\glo.
+\end{itemize}
+\paragraph{Usabilità}\mbox{} \\ \mbox{} \\
+È la capacità del prodotto software di essere capito, appreso, usato e ben accettato dall'utente, anche quando usato sotto condizioni specificate. \\
+Nello specifico il software deve soddisfare le seguenti caratteristiche:
+\begin{itemize}
+	\item \textbf{Comprensibilità}: esprime la facilità di comprensione dei concetti, funzionalità e utilizzo da parte dell'utente;
+	\item \textbf{Apprendibilità}: è la capacità di ridurre l'impegno richiesto agli utenti per imparare ad usare l'applicazione;
+	\item \textbf{Operabilità}: capacità di mettere in condizione gli utenti di farne uso per i propri scopi e controllarne l'uso;
+	\item \textbf{Attrattivà:} è la capacità del software di essere piacevole all'uso per l'utente;
+	\item \textbf{Conformità}: è la capacità del software di aderire a standard o convenzioni relativi all'usabilità.
+
+\end{itemize}
+\paragraph{Manutenibilità}\mbox{} \\ \mbox{} \\
+La manutenibilità è la capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti.
+Nello specifico il software deve soddisfare le seguenti caratteristiche:
+\begin{itemize}
+	\item \textbf{Analizzabilità}: rappresenta la facilità con la quale è possibile analizzare il codice per localizzare un errore nello stesso;
+	\item \textbf{Modificabilità}: è la capacità del prodotto software di permettere l'implementazione di una modifica;
+	\item \textbf{Stabilità}: capacità del software di evitare effetti inaspettati a seguito di modifiche errate;
+	\item \textbf{Testabilità}: è la capacità di essere facilmente testato per validare le modifiche apportate al software.
+\end{itemize}
+\paragraph{Portabilità}\mbox{} \\ \mbox{} \\
+La portabilità è la capacità del software di essere trasportato da un ambiente\glo di lavoro ad un altro. Ambiente che può variare dall'hardware al software.
+Nello specifico il software deve soddisfare le seguenti caratteristiche:
+\begin{itemize}
+	\item \textbf{Adattabilità}: la capacità del software di essere adattato per differenti ambienti senza dover applicare modifiche;
+	\item \textbf{Installabilità}: capacità del software di essere installato in un diverso ambiente;
+	\item \textbf{Conformità}: la capacità del prodotto software di aderire a standard e convenzioni relative alla portabilità;
+	\item \textbf{Sostituibilità}: capacità di essere utilizzato al posto di un altro software per svolgere gli stessi compiti nello stesso ambiente.
+\end{itemize}
+\subsubsection{Metriche per la qualità esterna}
+Servono a misurare i comportamenti del software sulla base dei test, in funzione degli obiettivi stabiliti. Viene rilevata tramite analisi dinamica\glo.
+
+\subsubsection{Metriche per la qualità interna}
+Metriche che si applicano al software non eseguibile durante le fasi di progettazione e codifica. Permettono di individuare eventuali problemi che potrebbero influire sulla qualità finale del prodotto prima che venga realizzato un eseguibile. Grazie alle misure effettuate tramite le metriche interne è possibile prevedere il livello di qualità esterna e di qualità in uso del prodotto finale, poiché entrambe vengono influenzate dalla qualità interna.\\
+Viene rilevata tramite analisi statica\glo.
+
+\subsubsection{Metriche per la qualità in uso}
+La qualità in uso rappresenta il punto di vista dell'utente sul software. Il livello di qualità viene raggiunto dopo che sono stati raggiunti i livelli nella qualità esterna e interna. La qualità in uso, quindi, permette di abilitare specificati utenti ad ottenere specificati obiettivi con efficacia\glo, produttività, sicurezza e soddisfazione.
+
+
+\subsection{ISO/IEC 15504}
+Il modello ISO/IEC 15504, meglio conosciuto come SPICE (\textit{Software Process Improvement and Capability Determination}), è lo standard di riferimento per valutare in modo oggettivo la qualità dei processi nello sviluppo del software. \\
+SPICE mette a disposizione una metrica per valutare diversi attributi per ogni processo ed
+assegna un valore quantificabile ad ognuno di questi in modo tale da rendere esplicito come poter migliorare tale processo.
+
+\subsubsection{Classificazione dei processi}
+SPICE definisce una serie di sei livelli utilizzati per classificare la capacità\glo e la maturità\glo del processo software. Ogni livello è caratterizzato dal soddisfacimento degli attributi associati:
+\begin{enumerate}
+	\item \textbf{Incompleto}: il processo non è stato implementato o non ha raggiunto il successo desiderato;
+	\item \textbf{Eseguito}: il processo è implementato e ha realizzato il suo obiettivo (conformità);\\
+	Attributi:
+	\begin{itemize}
+		\item Process Performance.
+	\end{itemize}
+	\item \textbf{Gestito}: il processo è gestito e il prodotto finale è verificato, controllato e manutenuto (affidabilità);\\
+	Attributi:
+	\begin{itemize}
+		\item  Performance Management;
+		\item  Work Product Management.
+	\end{itemize}
+	\item \textbf{Stabilito}: il processo è basato sullo standard di processo (standardizzazione);\\
+	Attributi:
+	\begin{itemize}
+		\item  Process Definition;
+		\item  Process Deployment.
+	\end{itemize}
+	\item \textbf{Predicibile}: il processo è consistente e rispetta limiti definiti (strategico);\\
+	Attributi:
+	\begin{itemize}
+		\item  Process Measurement;
+		\item  Process Control.
+	\end{itemize}
+	\item \textbf{Ottimizzato}: il processo segue un miglioramento continuo per rispettare tutti gli obiettivi di
+progetto;\\
+Attributi:
+	\begin{itemize}
+		\item  Process Innovation;
+		\item  Process Optimization.
+	\end{itemize}
+\end{enumerate}
+
+Ogni attributo riceve una valutazione nella seguente scala, andando a definire il rispettivo livello di
+capacità del processo:
+\begin{itemize}
+	\item N: non raggiunto (0 - 15\%);
+	\item P: parzialmente raggiunto (>15\% - 50\%);
+	\item L: largamente raggiunto (>50\%- 85\%);
+	\item F: pienamente raggiunto (>85\% - 100\%).
+\end{itemize}
+
+\subsubsection{Linee guida}
+Lo standard definisce delle linee guida per effettuare delle stime, tali linee guida sono:
+\begin{itemize}
+	\item processi di misurazione, descritti nel \textit{Piano di Progetto} ;
+	\item modello di misurazione, descritto in questo documento;
+	\item strumenti di misurazione, descritti nelle \textit{Norme di Progetto}.
+\end{itemize}
+
+\subsubsection{Competenze}
+Per effettuare le misurazioni necessarie per determinare la qualità raggiunta, sono necessarie delle competenze. La mancanza di esperienza degli elementi del \textit{TeamAFK} fa sì che nessun membro possieda queste abilità, rendendo così impossibile la piena adesione allo standard. Tuttavia, ogni componente è chiamato a studiare SPICE e ad applicare al meglio le indicazioni descritte in questo documento e nelle \textit{Norme di Progetto}, al fine di perseguire un livello di qualità accettabile.
+
+
+
+
+
+
