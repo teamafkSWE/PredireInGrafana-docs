@@ -339,40 +339,6 @@ di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento 
 			\end{itemize}
 			\end{comment}
 			\pagebreak
-			
-			
-			\begin{comment}
-			METRICHE PER I PROCESSI SV BV E PROD
-\subparagraph{Metriche per i processi}  \mbox{} \\ 
-\begin{longtable}{ C{4.5cm} c L{9.5cm} }
-	\rowcolor{white}\caption{Metriche dei processi}\\
-		\rowcolor{redafk}
-		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
-		\endfirsthead
-		\rowcolor{white}\caption[]{(continua)} \\
-		\rowcolor{redafk}
-		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
-		\endhead
-		Schedule Variance (SV)  & MP01 & La Schedule Variance indica se una certa attività o processo è in anticipo, in pari, o in ritardo rispetto alla data di scadenza prevista. È calcolata utilizzando la seguente formula: \newline
-\[ SV = DCE-DCP\]
-dove: \begin{itemize}
-\item \textbf{DCE}: data conclusione effettiva;
-\item \textbf{DCP}: data conclusione pianificata.
-\end{itemize}
-Se $SV \leq 0$ significa che l'attività o il processo è in pari o in anticipo, invece, se $SV > 0$ significa che l'attività è in ritardo. \\	
-		Budget Variance (BV) & MP02 & Permette di controllare i costi sostenuti alla data corrente rispetto al budget preventivato. Viene calcolata in fase di consuntivo di periodo utilizzando la seguente formula: \newline
-		\[ BV[\%] = \frac{CP-CE}{CE}\cdot 100 \]		
-dove: \begin{itemize}
-\item \textbf{CP}: costo preventivato;
-\item \textbf{CE}: costo effettivo.
-\end{itemize}
-Se $BV[\%] \geq 0$ indica che il budget sta venendo speso più lentamente di quanto pianificato, se negativo invece indica che il budget sta venendo speso più velocemente di quanto pianificato. \\
-Produttività (P) & MP03 & Rappresenta la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del progetto. È misurata in termini di numero di linee di codice (\hyperref[par:MS01]{LOC}) sviluppate da una persona nell’unità di tempo stabilita (settimana). È utilizzata per valutare lo sforzo richiesto per lo sviluppo  del progetto a fronte delle sue dimensioni. 
-\[ Pmedia = \frac{LOC}{settimana}\]
-	\end{longtable}
-
-	\end{comment}
-
 	\subsection{Strumenti}
 	\subsubsection{Coveralls}
 	Servizio web utilizzato per tenere traccia della copertura del codice.\\
