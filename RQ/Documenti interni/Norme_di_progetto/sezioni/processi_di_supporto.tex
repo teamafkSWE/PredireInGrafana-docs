@@ -211,7 +211,8 @@ Fanno eccezione le tabelle del \textit{Registro delle Modifiche} che non hanno d
 \subparagraph*{Diagrammi UML}\mbox{} \\ \mbox{} \\
 I diagrammi UML\glo vengono inseriti nei documenti sotto forma di immagine.
 
-\subsubsection{Metriche di qualità}
+\subsubsection{Metriche di qualità} 
+\label{par:metricheDoc}
 Le metriche per la qualità dei documenti definiscono l’obiettivo di redarre documenti facilmente leggibili. Esse rispetteranno la seguente notazione: \\
 \centerline{\textbf{M[D][numero]}}
 dove: \begin{itemize}
@@ -220,26 +221,6 @@ dove: \begin{itemize}
 \end{itemize}
 Se nelle formule di calcolo delle metriche è presente il simbolo "\#", va inteso come la parola "numero". Un esempio può essere il seguente:
 \[ \#parole\_doc = numero\ di\ parole\ presenti\ nel\ documento \]
-
-
-\begin{comment}
-Le metriche sono distinte in tre categorie: processi, documentazione e codifica. Per ciascuna di esse si indica il motivo per cui è stata scelta e la procedura di calcolo. \\
-Le metriche per la verifica vengono descritte nell'apposita sezione \S \hyperref[sez:meVe]{3.12.3.2}.
-\paragraph{Classificazione}\mbox{} \\ \mbox{} \\
-Le metriche rispetteranno la seguente notazione: \\
-\centerline{\textbf{M[categoria][numero]}}
-dove: \begin{itemize}
-\item Categoria: indica la categoria della metrica, più precisamente:
-\begin{itemize}
-\item \textbf{P} per indicare le metriche dei processi;
-\item \textbf{D} per indicare le metriche dei documenti;
-\item \textbf{S} per indicare le metriche della codifica del software e dei relativi test.
-\end{itemize}
-\item Numero: identifica in maniera univoca la metrica in ogni categoria, assume un valore intero a due cifre incrementale, a partire da 01.
-\end{itemize}
-Se nelle formule di calcolo delle metriche è presente il simbolo "\#", va inteso come la parola "numero". Un esempio può essere il seguente:
-\[ \#parole\_doc = numero\ di\ parole\ presenti\ nel\ documento \]
-\end{comment}
 
 \begin{longtable}{ C{4.5cm} c L{9.5cm} }
 	\rowcolor{white}\caption{Metriche di qualità dei documenti}\\
@@ -426,6 +407,7 @@ Le metriche rispetteranno la seguente notazione: \\
 dove: \begin{itemize}
 \item Categoria: indica la categoria della metrica, più precisamente:
 \begin{itemize}
+\item \textbf{G} per indicare le metriche riferite al prodotto, quindi a carattere più generale;
 \item \textbf{P} per indicare le metriche dei processi;
 \item \textbf{D} per indicare le metriche dei documenti;
 \item \textbf{S} per indicare le metriche della codifica del software e dei relativi test.
@@ -435,14 +417,26 @@ dove: \begin{itemize}
 Se nelle formule di calcolo delle metriche è presente il simbolo "\#", va inteso come la parola "numero". Un esempio può essere il seguente:
 \[ \#parole\_doc = numero\ di\ parole\ presenti\ nel\ documento \]
 
-\subsubsection{Metriche di qualità}
-\paragraph*{PROC - Percentuale di metriche soddisfatte}\mbox{} \\ \mbox{} \\ 
-Indica la percentuale di metriche soddisfatte rispetto alla totalità di metriche da utilizzare all’interno del progetto. Si calcolo con la seguente formula:
-\[ PROC = \frac{metriche\_soddisfatte}{metriche\_totali} \]
+\subsubsection{Metriche di qualità} \label{par:metricheGen}
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche per la qualità generale del prodotto}\\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
+	 Percentuale di Metriche Soddisfatte (PROC) & MG01 & Indica la percentuale di metriche soddisfatte rispetto alla totalità di metriche da utilizzare all’interno del progetto. Si calcola con la seguente formula:
+		\[ PROC = \frac{metriche\_soddisfatte}{metriche\_totali} \] \\
+	Percentuale di Requisiti Obbligatori Soddisfatti (PROS) & MG02 & Indica la percentuale di requisiti obbligatori soddisfatti rispetto alla totalità di requisiti obbligatori da sviluppare e rispettare. Si calcola con la seguente formula:
+		\[ PROS = \frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali} \] \\
+			Percentuale di Requisiti Desiderabili Soddisfatti (PRDS) & MG03 & Indica la percentuale di requisiti desiderabili soddisfatti rispetto alla totalità di requisiti desiderabili da sviluppare e rispettare. Si calcola con la seguente formula:
+		\[ PROS = \frac{requisiti\_desiderabili\_soddisfatti}{requisiti\_desiderabili\_totali} \] \\
+\end{longtable}
 
 \subsubsection{Strumenti di supporto}
 Gli strumenti di supporto utilizzati per garantire la qualità sono le metriche di qualità.
-
 
 \subsection{Verifica}
 \subsubsection{Scopo}
@@ -476,12 +470,16 @@ Questa attività viene effettuata con l'ausilio di due metodi manuali di lettura
 \item \textbf{Inspection}: i verificatori usano liste di controllo (checklist) per fare ispezione cercando errori specifici in parti specifiche. Questa tecnica permette quindi di aumentare l'efficienza dello sviluppo, diminuendo i tempi dell'analisi statica.
 \end{itemize}
 A seguire sono descritte le liste di controllo utilizzabili per le ispezioni:
-\begin{table}[H]
-\caption{Errori frequenti nei documenti}
-\begin{center}
-\begin{tabular}{C{4.5cm} C{11cm}}
+\begin{longtable}{C{4.5cm} L{11cm}}
+	\rowcolor{white}\caption{Errori frequenti nei documenti.}\\
+		\rowcolor{redafk}
 \rowcolor{redafk}
 \textcolor{white}{\textbf{Oggetto}} & \centerline{\textcolor{white}{\textbf{Controllo}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Oggetto}} & \centerline{\textcolor{white}{\textbf{Controllo}}} \\
+		\endhead
 Formato data & Deve seguire il formato gregoriano YYYY-MM-DD. \\
 Sintassi & La frase è troppo complessa e deve essere semplificata. \\
 Punteggiatura degli elenchi & Ogni voce termina in ";" eccetto l'ultima che termina in ".".\\
@@ -490,9 +488,8 @@ lettere sulla tastiera, ad esempio la lettera "a" al posto della "s", "i" al pos
 Uso degli accenti & Utilizzare le lettere accentate presenti nella tastiera o utilizzare il codice ALT. \\
 Inconsistenze nell’uso delle iniziali maiuscole nei titoli delle parti di documento & Ogni titolo deve avere la prima lettera della prima parola maiuscola e il resto minuscolo, tranne quando ci si riferisci ad attività o documenti specifici. \\
 Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei documenti in maniera adeguata, ovvero: section, subsection, subsubsection, paragraph, subparagraph, subsubparagraph. \\
-\end{tabular}
-\end{center}
-\end{table}
+Uso corretto del comando  \verb|\glo| & Il comando \verb|\glo| è stato creato per le parole da inserire nel glossario; va indicato solamente nella prima occorrenza della parola da inserire nel glossario.
+\end{longtable}
 
 \paragraph{Analisi dinamica} \mbox{} \\ \mbox{} \\
 L'analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione. Produce una misura della qualità del prodotto, mediante l'esecuzione di test specifici che verificano se il prodotto funziona e se ci sono anomalie.

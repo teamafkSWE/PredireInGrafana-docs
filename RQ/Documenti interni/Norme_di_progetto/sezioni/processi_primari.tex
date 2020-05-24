@@ -242,25 +242,102 @@ Al fine di implementare le qualità dell'architettura appena descritte, ai proge
 		\subsubparagraph*{Stile di codifica} \mbox{} \\ \mbox{} \\
 		Lo stile di codifica stabilisce le norme che il programmatore deve rispettare, focalizzandosi nei seguenti ambiti:
 		\begin{itemize}
-			\item \textbf{Indentazione}: blocchi di codice innestato deve avere per ogni livello di indentazione quattro spazi, ad eccezione dei commenti. È consigliato impostare adeguatamente la configurazione dell'IDE\glo usato;
-			\item \textbf{Parentesizzazione}: si richiede di aprire le parentesi in linea e non al di sotto dei costrutti a cui si riferiscono;
+			\item \textbf{Indentazione}: blocchi di codice innestato deve avere per ogni livello di indentazione quattro spazi, ad eccezione dei commenti. È consigliato impostare adeguatamente la configurazione dell'IDE\glo usato:
+\begin{lstlisting}
+function() {
+   let x = 0;
+}
+\end{lstlisting}
+			\item \textbf{Parentesizzazione}: si richiede di aprire le parentesi in linea e non al di sotto dei costrutti a cui si riferiscono:
+			\begin{lstlisting}
+class Example {
+   // TO-DO
+}
+\end{lstlisting}
 			\item \textbf{Scrittura dei metodi}: è desiderabile la poca prolissità del codice di un metodo;
+			\item \textbf{Spaziatura tra operandi}: prima e dopo ciascun operando vanno
+inseriti degli spazi al fine di rendere più ordinato e leggibile il codice.
+Segue un esempio di tale pratica:
+\begin{lstlisting}
+// OK
+let myVar1 = 1;
+let myVar2 = 2;
+let myVar3 = myVar1 + myVar2;
+\end{lstlisting}
+			\item \textbf{Spaziatura del codice}: tra i costrutti di codice è obbligatorio lasciare una riga vuota per rendere più ordinato e leggibile il codice. Segue un esempio di tale pratica:
+			\begin{lstlisting}
+// OK!
+function() {
+//TODO
+}
+
+myMethod() {
+//TODO
+}			\end{lstlisting}
+			\item \textbf{Dichiarazione variabili}: è sconsigliata la dichiarazione di variabili in linea a favore dell’ordine e della leggibilità del codice. Segue un esempio esplicativo: 
+			\begin{lstlisting}
+// NO
+let x = 1, y = 2;
+// OK
+let x = 1;
+let y = 2;
+			\end{lstlisting}
 			\item \textbf{Univocità dei nomi}: per evitare ambiguità e incomprensioni, tutti i nomi di classi, metodi, funzioni ed interfacce, devono essere univoci ed esplicativi;
-			\item \textbf{Classi}: i nomi delle classi devono iniziare con la lettera maiuscola;
-			\item \textbf{Costanti}: i nomi delle costanti devono essere scritte con lettere maiuscola;
-			\item \textbf{Metodi}: i nomi dei metodi devono iniziare con la lettera minuscola, seguita da lettere minuscole. Nel caso di nomi composti da più parole, tutte quelle che seguono la prima iniziano con la prima lettera maiuscola a cui seguono lettere minuscole. Viene così rispettato il modello \textit{CamelCase}\glo;
+			\item \textbf{Classi}: i nomi delle classi devono iniziare con la lettera maiuscola:
+\begin{lstlisting}
+class Example {
+   // TO-DO
+}
+\end{lstlisting}
+			\item \textbf{Costanti}: i nomi delle costanti devono essere scritte con lettere maiuscola:
+\begin{lstlisting}
+const CONSTANT_VALUE = "This is a constant value";
+\end{lstlisting}
+			\item \textbf{Metodi}: i nomi dei metodi devono iniziare con la lettera minuscola, seguita da lettere minuscole. Nel caso di nomi composti da più parole, tutte quelle che seguono la prima iniziano con la prima lettera maiuscola a cui seguono lettere minuscole. Viene così rispettato il modello \textit{CamelCase}\glo:
+\begin{lstlisting}
+class MyClass {
+   exampleMethod() {
+      //...
+   }
+}
+\end{lstlisting}
+			\item \textbf{Variabili}:il nome di ciascuna variabile deve iniziare con una lettera minuscola. Nelle varibili con nome composto, la prima parola
+avrà la prima lettera minuscola, mentre le seguenti avranno la
+prima lettera maiuscola, come indicato dalla pratica del \textit{CamelCase}.
+Segue un esempio della corretta implementazione di suddetta pratica:
+\begin{lstlisting}
+let varExample = 0;
+\end{lstlisting}
+			\item \textbf{Commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l’implementazione di metodi e classi
+descrivendo brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l’utilizzo del doppio slash (\texttt{//}) o a blocco tramite la costruzione \texttt{//**...*/}.
+\begin{lstlisting}
+//** This is a comment class example.
+* OK!
+*/
+class myClass {
+   // This is a test method.
+   myMethod() {
+      let myVar = 0; 
+      if (condition) {
+         //TO-DO
+      } else {
+         //TO-DO
+      }
+   }
+}
+\end{lstlisting}
 			\item \textbf{Lingua}: codice e commenti devono essere espressi in lingua inglese.
 		\end{itemize}
 		\subsubparagraph*{Ricorsione} \mbox{} \\ \mbox{} \\
 		La ricorsione deve essere il più possibile evitata, perché è causa di un aumento di complessità della soluzione ad un problema. Per questo è preferibile adottare soluzioni iterative.
-	\subsubsection{Metriche}
+	\subsubsection{Metriche di qualità}
 			\paragraph{Documenti}\mbox{} \\ \mbox{} \\
 			Le metriche utilizzate per determinare la qualità e leggibilità dei documenti sono descritte di seguito:
 			 \begin{itemize}
 			\item \textbf{Indice di Gulpease}: indice di leggibilità di un testo tarato sulla lingua italiana e basato su due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere;
 			\item \textbf{Indice Fog}: misura la lunghezza media delle parole e delle frasi nei documenti. Quanto più è alto il valore dell'indice Fog, tanto più è difficile capire il documento.
 			\end{itemize}
-			Una loro descrizione più accurata la si trova nella sezione \S 3.1.4.
+			Una loro descrizione più accurata la si trova nella sezione \S \hyperref[par:metricheDoc]{3.1.5}.
 			\subparagraph*{Analisi dei Requisiti} \mbox{} \\ \mbox{} \\
 			Durante il periodo di analisi vengono identificati i requisiti del progetto e definiti i relativi casi d'uso. 
 			Gli obiettivi sono:
@@ -275,11 +352,12 @@ Al fine di implementare le qualità dell'architettura appena descritte, ai proge
 			\item esprimere ciò in forma di requisiti, classificati in obbligatori, desiderabili e opzionali;
 			\item valutare il corpo dei requisiti e negoziare cambiamenti se necessario;
 			\item ottenere la loro approvazione da parte del proponente.
-			La metrica usata è la percentuale di requisiti obbligatori soddisfatti (PROS) e viene
-calcolata con la seguente formula: 
-
-		\[ PROS = \frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali} \]
 			\end{itemize}
+			Le metrice utilizzate per la verifica della qualità dei requisiti sono: \begin{itemize}
+			\item \textbf{MG02 - PROS};
+			\item \textbf{MG03 - PRDS}.
+\end{itemize}			 
+Quest'ultime sono descritte nella sezione \S \hyperref[par:metricheGen]{3.3.5}.
 			\paragraph{Progettazione}\mbox{} \\ \mbox{} \\
 			Questo paragrafo elenca le metriche a cui l'architettura software viene sottoposta per valutarne la qualità.
    \begin{longtable}{ C{4.5cm} c L{9.5cm} }
@@ -313,14 +391,12 @@ calcolata con la seguente formula:
 		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
 		\endhead
 		\label{par:MS01}Linee di Codice (LOC) & MS01 & Rappresenta  le  dimensioni  del  codice di un metodo. È espresso in termini di numero di linee di codice, ed è utilizzato per dimensionare la produttività delle persone e da questa lo sforzo richiesto per sviluppare tale funzione. \\
-		Numero dei Metodi (NM)  & MS02 & Numero medio di metodi contenuti nelle classi di un oggetto. Un numero troppo alto di metodi può indicare la necessità di scomporre la classe. Un numero troppo basso deve far riflettere sull'effettiva utilità della classe in esame. 
+		Numero di Metodi (NM)  & MS02 & Numero medio di metodi contenuti nelle classi di un oggetto. Un numero troppo alto di metodi può indicare la necessità di scomporre la classe. Un numero troppo basso deve far riflettere sull'effettiva utilità della classe in esame. 
 		\[ NM =\frac{\sum\#metodi}{\#classi}  \] \\
 		Numero di Parametri (NP) & MS03 & Numero di parametri passati ad un metodo. Un eccessivo numero di parametri passati ad un metodo può
 indicare un'eccessiva complessità dello stesso. \\
 		Commenti per Linee di \newline Codice (CLC) & MS04 & Rapporto fra numero di righe di commento e numero totale di righe (vuote escluse). Un codice ben commentato può essere compreso più facilmente e velocemente, facilitando le operazioni di manutenzione. 
 		\[ CLC = \frac{\#righe\_commento}{\#tot\_righe}\] \\
-		Fan-In & MS05 & Misura il numero di funzioni o di metodi che chiamano una funzione o un metodo X. Un alto valore implica che X è strettamente collegata al resto del progetto e che eventuali modifiche di X produrranno ampi effetti a catena.\\
-		Fan-Out & MS06 & Misura il numero di funzioni che sono chiamate dalla funzione X. Un alto valore indica che la complessità generale di X può essere alta a causa della complessità della logica di controllo necessaria per coordinare i componenti chiamati.\\
 	\end{longtable}
 	\begin{comment}
 			\begin{itemize}
@@ -339,7 +415,15 @@ di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento 
 			\end{itemize}
 			\end{comment}
 			\pagebreak
-	\subsection{Strumenti}
+	\subsection{Strumenti di supporto}
+	\subsubsection{Browser}
+	Per provare e verificare il funzionamento del nostro tool e plug-in usiamo i seguenti broswer: \begin{itemize}
+	\item \textbf{Google Chrome}: versione 58 o successiva;
+	\item \textbf{Internet Explorer}: versione 11;
+	\item \textbf{Microsoft Edge}: versione 14 o successiva;
+	\item \textbf{Mozilla Firefox}: versione 54 o successiva;
+	\item \textbf{Safari}: versione 10 o successiva..
+	\end{itemize}
 	\subsubsection{Coveralls}
 	Servizio web utilizzato per tenere traccia della copertura del codice.\\
 	\centerline{\url{https://coveralls.io/}}
