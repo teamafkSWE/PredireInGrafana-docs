@@ -189,28 +189,44 @@ Il fornitore deve attuare ed eseguire i piani sviluppati nella fase di pianifica
 				\item \textbf{Technology baseline}: mostra ad alto livello le specifiche di progettazione del prodotto e le sue componenti, elencando i diagrammi UML utilizzati per descrivere l'architettura del prodotto. Viene realizzata una Proof of Concept\glo del prodotto;
 				\item \textbf{Product baseline}: parte incrementale del prodotto finale da cui continuare a lavorare, integrando le specifiche riportate nella Tecnology Baseline e definendo anche i test necessari alla verifica. Viene presentata tramite diagrammi delle classi e di sequenza. L'analisi è comprensiva di design pattern contestualizzati all'architettura.
 			\end{itemize} 
-			\mbox{} \\
-			\textbf{Technology Baseline} \mbox{} \\ \mbox{} \\
+			\subparagraph*{Technology Baseline} \mbox{} \\ \mbox{} \\
 			Il progettista incaricato, si occuperà di includere:
 			\begin{itemize}
-				\item \textbf{Diagrammi UML}:
-				\begin{itemize}
-					\item diagrammi delle classi;
-					\item diagrammi dei package;
-					\item diagrammi di attività;
-					\item diagrammi di sequenza.
-				\end{itemize}
+				\item \textbf{Diagrammi UML}: utilizzati per rappresentare i casi d'uso descritti nell'\textit{Analisi dei Requisiti};
 				\item \textbf{Tecnologie utilizzate}: vengono mostrate le tecnologie impiegate, mostrando le loro funzionalità, pregi e difetti;
-				\item \textbf{Design pattern}\glo : sono esposti i design pattern adottati per rappresentare l'architettura del prodotto. Tutti i design pattern devono essere accompagnati da un diagramma e una descrizione delle sue caratteristiche;
+				\item \textbf{Proof of Concept (POC)}: implementazione di un PoC che utilizzi e dimostri la fattibilità delle tecnologie che utilizziamo per implementare il prodotto software;
 				\item \textbf{Tracciamento delle componenti}: viene mostrata la relazione tra il componente e il requisito che intende rispettare; 
 				\item \textbf{Test di integrazione}: sono operazioni che si occupano di verificare l'unione tra le parti, in base alle rispettive interfacce.
 			\end{itemize}
-			\mbox{} \\
-			\textbf{Product Baseline} \mbox{} \\ \mbox{} \\
+			\subparagraph*{Proof of Concept} \mbox{} \\ \mbox{} \\
+			Il \textit{TeamAFK} ha deciso di implementare un PoC in modo incrementale. Perciò, in accordo con il proponente, vengono selezionati degli incrementi da sviluppare con l’intenzione di esplorare tutte le tecnologie che devono essere utilizzate nel prodotto finale. Queste tecnologie sono: \begin{itemize}
+			\item Node.js;
+			\item React;
+			\item SVM;
+			\item JavaScript;
+			\item TypeScript;
+			\item JSON;
+			\item HTML5;
+			\item CSS3;
+			\item Grafana;
+			\item Chart.js.
+\end{itemize}
+			\subparagraph*{Product Baseline} \mbox{} \\ \mbox{} \\
 			Gli aspetti su cui la  Product baseline si sofferma sono:
 				\begin{itemize}
 					\item \textbf{Definizione delle classi}: ogni classe deve essere descritta, specificando scopo e funzionalità;
 					\item \textbf{Tracciamento delle classi}: ovvero identificare il requisito a cui si lega una classe;
+					\item \textbf{Diagrammi UML}: per rendere più chiare e complete le scelte progettuali adottate, vengono utilizzati dei diagrammi UML usando la
+versione 2.0 del linguaggio. Ogni diagramma deve essere seguito dalla
+descrizione di ciò che rappresenta. I diagrammi UML utilizzati per presentare l'architettura sono i seguenti:
+					\begin{itemize}
+					\item \textbf{Diagramma delle classi}: i diagrammi delle classi descrivono in modo dettagliato gli oggetti che utilizziamo e le dipendenze che sussistono tra di loro;
+					\item \textbf{Diagramma dei package}: con i diagrammi dei package raggruppiamo ad alto livello i macro insiemi delle nostre componenti, suddividendole in package. Questi ultimi infatti individuano uno spazio dei nomi che tra loro non presentano alcuna ambiguità. Inoltre, grazie ai diagrammi dei package, definiamo le dipendenze ad alto livello tra le componenti; ciò è molto utile per comprendere la complessità strutturale ed il flusso delle dipendenze stesse. Permettono infatti di individuare circolarità ed elevata complessità delle dipendenze in modo immediato;
+					\item \textbf{Diagramma di attività}: i diagrammi di attività permettono di descrivere un processo attraverso dei grafi, in cui i nodi rappresentano le attività e gli archi l'ordine con cui vengono eseguite;
+					\item \textbf{Diagramma di sequenza}: i diagrammi di sequenza descrivono la collaborazione di un gruppo di oggetti che devono implementare collettivamente un comportamento, nello scorrere del tempo.
+				\end{itemize}
+					\item \textbf{Design pattern}\glo : sono esposti i design pattern adottati per rappresentare l'architettura del prodotto. Tutti i design pattern devono essere accompagnati da un diagramma e una descrizione delle sue caratteristiche;
+					\item \textbf{Test di integrazione}: test necessari per verificare che l’unione delle parti funzioni correttamente;
 					\item \textbf{Test di unità}: ovvero verificare le funzionalità della sola classe, senza metterla in relazione con altre componenti del sistema.
 				\end{itemize}
 				\subparagraph{Qualità dell'architettura} \mbox{} \\ \mbox{} \\
@@ -311,7 +327,7 @@ Segue un esempio della corretta implementazione di suddetta pratica:
 let varExample = 0;
 \end{lstlisting}
 			\item \textbf{Commenti}: i commenti nel codice devono essere concisi ma sufficientemente descrittivi. Essi precedono l’implementazione di metodi e classi
-descrivendo brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l’utilizzo del doppio slash (\texttt{//}) o a blocco tramite la costruzione \texttt{//**...*/}.
+descrivendo brevemente la loro funzione. Sono possibili due tipi di commenti: in linea tramite l’utilizzo del doppio slash (\texttt{//}) o a blocco tramite la costruzione \texttt{//**...*/}. Un esempio è il seguente:
 \begin{lstlisting}
 //** This is a comment class example.
 * OK!
