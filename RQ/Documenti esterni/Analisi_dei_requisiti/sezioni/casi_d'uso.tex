@@ -325,7 +325,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 
 	\label{par:UC3.6}
-	\subsection{UC19 - Visualizzazione pannello lista collegamenti}
+	\subsection{UC3.6 - Visualizzazione pannello lista collegamenti}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha confermato il collegamento tra predittore e nodo del flusso selezionato cliccando il pulsante di "Conferma collegamento" (\hyperref[par:UC3.4]{UC3.4});
@@ -344,11 +344,9 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-%Possibilità di inserire Scollegamento e modifica dentro a unico UC - "Operazioni sui collegamenti"
 
 	\label{par:UC4}
-	\subsection{UC4 - Scollegamento del predittore}
+	\subsection{UC4 - Operazioni sui collegamenti}
 
 		\begin{figure}[H]
 		\centering
@@ -360,33 +358,79 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
-					\item l'utente si trova sul pannello dedicato alla lista dei collegamenti tra predittore e flusso dati (\hyperref[par:UC19]{UC19});
+					\item l'utente si trova sul pannello dedicato alla lista dei collegamenti tra predittore e flusso dati (\hyperref[par:UC3.6]{UC3.6});
 					\item la lista dei collegamenti presenta almeno un collegamento eseguito con successo (\hyperref[par:UC3]{UC3}).
 				\end{enumerate}
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
-					\item l'utente ha scollegato il predittore dal nodo del flusso dati precedentemente associato;
-					\item dalla lista dei collegamenti non viene più visualizzato il collegamento che è stato scollegato.
+					\item l'utente ha scollegato il predittore dal nodo del flusso dati precedentemente associato oppure ha modificato il collegamento desiderato;
+					\item se è avvenuto uno scollegamento dalla lista dei collegamenti non viene più visualizzato il collegamento che è stato scollegato.
 				\end{enumerate}
-			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta "Scollega predittore".
-			\item\textbf{Estensioni}: \hyperref[par:UC20]{UC20}: viene visualizzato un messaggio di alert "Procedere con lo scollegamento?" che interroga l'utente sull'effettiva conferma della procedura attuata.
-		\end{itemize}	
-
-
-	\label{par:UC5}
-	\subsection{UC5 - Modifica collegamento}
+			\item\textbf{Scenario principale}: 
+			\begin{enumerate} 
+				\item (\hyperref[par:UC4.1]{UC4.1}) l'utente clicca il pulsante con etichetta "Scollega predittore";
+				\item (\hyperref[par:UC4.2]{UC4.2}) viene visualizzato un messaggio di alert "Procedere con lo scollegamento?" che interroga l'utente sull'effettiva conferma della procedura attuata;
+				\item (\hyperref[par:UC4.3]{UC4.3}) l'utente clicca il pulsante "Conferma" per proseguire e scollegare il predittore oppure clicca il pulsante "Annulla" per ritornare alla lista dei collegamenti;	
+				\item (\hyperref[par:UC4.4]{UC4.4}) viene visualizzato un messaggio di notifica "Scollegamento avvenuto con successo";
+				\item (\hyperref[par:UC4.5]{UC4.5}) l'utente clicca il pulsante con etichetta "Modifica predittore";
+			\end{enumerate}
+	\end{itemize}
+		
+	\label{par:UC4.1}
+	\subsubsection{UC4.1 - Scollegamento predittore}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Precondizioni}: l'utente deve aver selezionato il collegamento che desidera scollegare;
+			\item\textbf{Postcondizioni}: l'utente ha cliccato il pulsante di scollegamento;
+			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta “Scollega predittore”;
+			\end{itemize}
+		
+	\label{par:UC4.2}
+	\subsection{UC4.2 - Visualizzazione messaggio di alert "Procedere con lo scollegamento"}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Precondizioni}: l'utente ha selezionato il pulsante di scollegamento "Scollega predittore" (\hyperref[par:UC4.2]{UC4.2});
+			\item\textbf{Postcondizioni}: l'utente ha visualizzato il messaggio di alert sul tentativo di scollegamento predittore;
+					
+			\item\textbf{Scenario principale}: l'utente visualizza un messaggio di alert "Procedere con lo scollegamento?" in cui viene segnalato che è stata selezionata una procedura di scollegamento del predittore.
+	
+		\end{itemize}		
+		
+	\label{par:UC4.3}
+	\subsubsection{UC4.3 - Conferma scollegamento}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Precondizioni}: l'utente ha visualizzato il messaggio di alert sul tentativo di scollegamento predittore;
+			\item\textbf{Postcondizioni}: l'utente ha confermato o annullato la procedura di scollegamento;	
+			\item\textbf{Scenario principale}:l'utente clicca il pulsante "Conferma" per proseguire e scollegare il predittore oppure clicca il pulsante "Annulla" per ritornare alla lista dei collegamenti.
+			\end{itemize}
+			
+	\label{par:UC4.4}
+	\subsection{UC4.4 - Visualizzazione messaggio di notifica "Scollegamento avvenuto con successo"}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Precondizioni}: 
+				\begin{enumerate}
+					\item l'utente ha confermato lo scollegamento del predittore (\hyperref[par:UC4.4]{UC4.4})
+				\end{enumerate}
+			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di scollegamento avvenuto con successo;					
+			\item\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item l'utente visualizza il messaggio di notifica "Scollegamento avvenuto successo" in cui viene notificato che lo scollegamento confermato(\hyperref[par:UC4.4]{UC4.4}) del predittore selezionato è avvenuto correttamente;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+			
+	\label{par:UC4.5}
+	\subsection{UC4.5 - Modifica collegamento}
 
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}:
-				\begin{enumerate}
-					\item l'utente si trova sul pannello dedicato alla lista dei collegamenti tra predittore e flusso dati (\hyperref[par:UC20]{UC20});
-					\item la lista dei collegamenti presenta almeno un collegamento eseguito con successo (\hyperref[par:UC3]{UC3}).
-				\end{enumerate}
+			\item\textbf{Precondizioni}: l'utente deve aver selezionato il collegamento che desidera modificare;
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
-					\item l'utente ha cliccato il tasto di modifica e viene indirizzato al pannello di collegamento del predittore al flusso dati a partire dalla sezione dedicata alla "Selezione del predittore" (\hyperref[par:UC3.3]{UC3.3}) dove può apportare le modifiche al collegamento scelto;
-					\item la precedente selezione verrà evidenziata con un marcatore e sarà possibile la modifica.
+					\item l'utente ha cliccato il tasto di modifica e viene indirizzato al pannello di collegamento del predittore al flusso dati a partire dalla sezione dedicata alla "Selezione del predittore" (\hyperref[par:UC3.1]{UC3.1}) dove può apportare le modifiche al collegamento scelto;
+					\item la precedente selezione verrà evidenziata con un marcatore e verranno visualizzati i precedenti inserimenti; sarà possibile la modifica.
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
@@ -395,15 +439,14 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}		
 		\end{itemize}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\label{par:UC6}
-	\subsection{UC6 - Operazioni calcolo di previsione}
+	\label{par:UC5}
+	\subsection{UC5 - Operazioni calcolo di previsione}
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC6_Operazioni_Calcolo_di_Previsione.png}
+		%\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC5_Operazioni_Calcolo_di_Previsione.png}
 		\caption{Operazioni Calcolo di Previsione}
 	\end{figure}	
 
@@ -421,25 +464,25 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item (\hyperref[par:UC6.1]{UC6.1}) l'utente inserisce la politica temporale\glo da applicare;
-					\item (\hyperref[par:UC6.2]{UC6.2}) l'utente clicca il pulsante di avvio monitoraggio;
-					\item (\hyperref[par:UC6.3]{UC6.3}) viene visualizzato un messaggio di notifica di "Monitoraggio avviato con successo";
-					\item (\hyperref[par:UC6.4]{UC6.4}) una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione.
-					\item (\hyperref[par:UC6.5]{UC6.5}) viene visualizzata una notifica di "Monitoraggio interrotto";		
-					\item (\hyperref[par:UC6.6]{UC6.6}) l'utente decide se salvare i dati di previsione cliccando il pulsante di salvataggio.
-					\item (\hyperref[par:UC6.7]{UC6.7}) viene visualizzata un messaggio di notifica di "Invio dati avvenuto con successo";
+					\item (\hyperref[par:UC5.1]{UC5.1}) l'utente inserisce la politica temporale\glo da applicare;
+					\item (\hyperref[par:UC5.2]{UC5.2}) l'utente clicca il pulsante di avvio monitoraggio;
+					\item (\hyperref[par:UC5.3]{UC5.3}) viene visualizzato un messaggio di notifica di "Monitoraggio avviato con successo";
+					\item (\hyperref[par:UC5.4]{UC5.4}) una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione.
+					\item (\hyperref[par:UC5.5]{UC5.5}) viene visualizzata una notifica di "Monitoraggio interrotto";		
+					\item (\hyperref[par:UC5.6]{UC5.6}) l'utente decide se salvare i dati di previsione cliccando il pulsante di salvataggio.
+					\item (\hyperref[par:UC5.7]{UC5.7}) viene visualizzata un messaggio di notifica di "Invio dati avvenuto con successo";
 				\end{enumerate}
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item \hyperref[par:UC14]{UC14} estende \hyperref[par:UC6.2]{UC6.2}: visualizzazione messaggio d'errore "Politica temporale non definita";
-					\item \hyperref[par:UC15]{UC15} estende \hyperref[par:UC6.2]{UC6.2}: visualizzazione messaggio d'errore "Nessun predittore collegato".
+					\item \hyperref[par:UC14]{UC14} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Politica temporale non definita";
+					\item \hyperref[par:UC15]{UC15} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Nessun predittore collegato".
 
 				\end{enumerate}
 		\end{itemize}
 
 	
-	\label{par:UC6.1}
-	\subsubsection{UC6.1 - Inserimento politica temporale}
+	\label{par:UC5.1}
+	\subsubsection{UC5.1 - Inserimento politica temporale}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente si trova nella sezione "Calcolo di previsione" del pannello del plug-in;
@@ -447,11 +490,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Scenario principale}: l'utente inserisce il tempo di previsione sul flusso dati attraverso l'inserimento dei campi "Secondi", "Minuti", "Ore" nell'apposito spazio di editing.
 		\end{itemize}	
 
-	\label{par:UC6.2}
-	\subsubsection{UC6.2 - Avvio monitoraggio}
+	\label{par:UC5.2}
+	\subsubsection{UC5.2 - Avvio monitoraggio}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha impostato la Politica Temporale (\hyperref[par:UC6.1]{UC6.1});
+			\item\textbf{Precondizioni}: l'utente ha impostato la Politica Temporale (\hyperref[par:UC5.1]{UC5.1});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l'utente ha avviato il monitoraggio sul flusso dati cliccando sul pulsante di avvio;
@@ -468,11 +511,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				
 		\end{itemize}	
 		
-		\label{par:UC6.3}
-	\subsection{UC6.3 - Visualizzazione messaggio di notifica "Monitoraggio avviato con successo"}	
+		\label{par:UC5.3}
+	\subsection{UC5.3 - Visualizzazione messaggio di notifica "Monitoraggio avviato con successo"}	
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha avviato un monitoraggio (\hyperref[par:UC6.2]{UC6.2});
+			\item\textbf{Precondizioni}: l'utente ha avviato un monitoraggio (\hyperref[par:UC5.2]{UC5.2});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di monitoraggio avviato con successo;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
@@ -481,8 +524,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}		
 		\end{itemize}
 		
-		\label{par:UC6.4}
-	\subsection{UC6.4 - Interruzione monitoraggio}
+		\label{par:UC5.4}
+	\subsection{UC5.4 - Interruzione monitoraggio}
 
 	\begin{figure}[H]
 		\centering
@@ -492,7 +535,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2});
+			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l'utente ha deciso di interrompere il monitoraggio avviato precedentemente;
@@ -503,8 +546,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			
 		\end{itemize}
 
-	\label{par:UC6.5}
-	\subsection{UC6.5 - Visualizzazione messaggio di notifica "Monitoraggio interrotto"}
+	\label{par:UC5.5}
+	\subsection{UC5.5 - Visualizzazione messaggio di notifica "Monitoraggio interrotto"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha interrotto il monitoraggio (\hyperref[par:UC7]{UC7});
@@ -516,28 +559,28 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}		
 		\end{itemize}
 		
-	\label{par:UC6.6}
-	\subsubsection{UC6.6 - Salvataggio previsione}
+	\label{par:UC5.6}
+	\subsubsection{UC5.6 - Salvataggio previsione}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item è stata configurata correttamente la connessione al server tramite Grafana;
-					\item l'utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2}) e dispone delle previsioni sul flusso di dati in quanto il calcolo di previsione è stato completato correttamente (\hyperref[par:UC6.3]{UC6.3}).
+					\item l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2}) e dispone delle previsioni sul flusso di dati in quanto il calcolo di previsione è stato completato correttamente (\hyperref[par:UC5.3]{UC5.3}).
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: la previsione calcolata sui dati ricevuti è stata immagazzinata nel DB se lo desidera;
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante “Invia previsioni” tramite il quale i dati di previsione vengono inviati al DB, altrimenti decide di non salvarli e prosegue con il monitoraggio.
 			
 		\end{itemize}	
 		
-	\label{par:UC6.7}
-	\subsection{UC6.7 - Visualizzazione messaggio di notifica "Salvataggio previsione avvenuta con successo"}	\begin{itemize}
+	\label{par:UC5.7}
+	\subsection{UC5.7 - Visualizzazione messaggio di notifica "Salvataggio previsione avvenuta con successo"}	\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di invio previsioni (\hyperref[par:UC6.6]{UC6.6});
+			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di invio previsioni (\hyperref[par:UC5.6]{UC5.6});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di "Salvataggio dati di previsione avvenuto con successo";
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l'utente visualizza il messaggio di notifica "Salvataggio previsione avvenuto con successo" in cui viene notificato che i dati di previsione sono stati inviati al Database (\hyperref[par:UC6.6]{UC6.6});
+					\item l'utente visualizza il messaggio di notifica "Salvataggio previsione avvenuto con successo" in cui viene notificato che i dati di previsione sono stati inviati al Database (\hyperref[par:UC5.6]{UC5.6});
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -546,7 +589,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\label{par:UC8}
-	\subsection{UC8 - Visualizzazione previsioni}
+	\subsection{UC8 - Visualizzazione della dashboard}
 
 	\begin{figure}[H]
 		\centering
@@ -556,11 +599,44 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha avviato correttamente il monitoraggio del flusso dati (\hyperref[par:UC6.2]{UC6.2}) con relativi predittori collegati;
+			\item\textbf{Precondizioni}: 
+			\begin{enumerate}
+				\item l'utente visualizza la dashboard a cui è stato aggiunto il plugin "Predire In Grafana";
+				\item l'utente ha avviato correttamente il monitoraggio del flusso dati (\hyperref[par:UC5.2]{UC5.2}) con relativi predittori collegati.
+			\end{enumerate}				
 			\item\textbf{Postcondizioni}: il sistema mantiene aggiornate e visualizzabili attraverso l'uso delle dashboard le misurazioni e le previsioni dei predittori associati da parte dell'utente;
-			\item\textbf{Scenario principale}: l'utente visualizza le previsioni calcolate. Il sistema si aggiorna costantemente grazie ai dati provenienti dal database, effettuando l'operazione di calcolo delle previsioni sul flusso dati associato ai predittori (\hyperref[par:UC6]{UC6}). Tale operazione di calcolo di previsione viene eseguito in base alla politica temporale stabilita in \hyperref[par:UC6.1]{UC6.1};		
-			\item\textbf{Estensioni}: \hyperref[par:UC24]{UC24}: ogni volta che una soglia critica viene attivata dai dati di previsioni viene visualizzato un messaggio di alert.
+			\item\textbf{Scenario principale}: 
+			\begin{enumerate}
+				\item (\hyperref[par:UC8.1]{UC8.1}) l'utente visualizza le previsioni calcolate. Il sistema si aggiorna costantemente grazie ai dati provenienti dal database, effettuando l'operazione di calcolo delle previsioni sul flusso dati associato ai predittori (\hyperref[par:UC5]{UC5}). Tale operazione di calcolo di previsione viene eseguito in base alla politica temporale stabilita in \hyperref[par:UC5.1]{UC5.1};	
+				\item (\hyperref[par:UC8.2]{UC8.2}) ogni volta che una soglia critica viene attivata dai dati di previsioni viene visualizzato un messaggio di alert.
+			\end{enumerate}
+				
 		\end{itemize}
+		
+		\label{par:UC8.1}
+	\subsection{UC8.1 - Visualizzazione previsioni}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Precondizioni}: l'utente ha avviato correttamente il monitoraggio del flusso dati (\hyperref[par:UC5.2]{UC5.2}) con relativi predittori collegati;
+			\item\textbf{Postcondizioni}: l'utente ha visualizzato sulla dashboard le previsioni calcolate precedentemente;
+			\item\textbf{Scenario principale}: l'utente visualizza le previsioni calcolate. Il sistema si aggiorna costantemente grazie ai dati provenienti dal database, effettuando l'operazione di calcolo delle previsioni sul flusso dati associato ai predittori (\hyperref[par:UC5]{UC5}). Tale operazione di calcolo di previsione viene eseguito in base alla politica temporale stabilita in \hyperref[par:UC5.1]{UC5.1};	
+		\end{itemize}
+			
+		
+		\label{par:UC8.2}
+	\subsection{UC8.2 - Visualizzazione messaggio di alert "Soglia critica raggiunta"}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.3]{UC3.3}) è stata raggiunta o superata;
+			\item\textbf{Postcondizioni}: l'utente ha visualizzato il messaggio di alert riguardante la soglia interessata;
+			\item\textbf{Scenario principale}:
+				\begin{enumerate}
+					\item l'utente visualizza il messaggio di alert "Soglia critica raggiunta" in cui viene segnalato che una soglia impostata nel processo di collegamento dei predittori al flusso dati (\hyperref[par:UC3]{UC3}) è stata raggiunta o superata;
+					\item l'utente clicca il pulsante "Conferma" per proseguire.		
+				\end{enumerate}		
+		\end{itemize}
+	
+
 
 % - Casi d'uso: Estensioni - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
@@ -643,7 +719,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC14 - Visualizzazione messaggio d'errore "Politica temporale non definita"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di "Avvio monitoraggio" (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC6.1]{UC6.1});
+			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di "Avvio monitoraggio" (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC5.1]{UC5.1});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l'utente ha visualizzato il messaggio d'errore sulla politica temporale non definita;		
@@ -652,7 +728,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
 					\item l'utente visualizza il messaggio d'errore "Errore politica temporale non definita" in cui viene segnalato che non è stata inserita nessuna politica temporale prima dell'avvio del monitoraggio;
-					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'inserimento della politica temporale (\hyperref[par:UC6.1]{UC6.1}).		
+					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'inserimento della politica temporale (\hyperref[par:UC5.1]{UC5.1}).		
 				\end{enumerate}		
 		\end{itemize}
 
@@ -662,7 +738,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsection{UC15 - Visualizzazione messaggio d'errore "Nessun predittore collegato"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC6.2]{UC6.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
+			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l'utente ha visualizzato il messaggio d'errore sulla mancata presenza di collegamenti;	
@@ -679,41 +755,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\label{par:UC20}
-	\subsection{UC20 - Visualizzazione messaggio di alert "Procedere con lo scollegamento"}
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha selezionato il pulsante di scollegamento "Scollega predittore" (\hyperref[par:UC4]{UC4});
-			\item\textbf{Postcondizioni}:
-				\begin{enumerate}
-					\item l'utente ha visualizzato il messaggio di alert sul tentativo di scollegamento predittore;
-					\item l'utente ha confermato o annullato la procedura di scollegamento.
-				\end{enumerate}
-			\item\textbf{Scenario principale}:
-				\begin{enumerate}
-					\item l'utente visualizza un messaggio di alert "Procedere con lo scollegamento?" in cui viene segnalato che è stata selezionata una procedura di scollegamento del predittore;
-					\item l'utente clicca il pulsante "Conferma" per proseguire e scollegare il predittore oppure clicca il pulsante "Annulla" per ritornare alla lista dei collegamenti.
-				\end{enumerate}
-		\end{itemize}	
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\label{par:UC24}
-	\subsection{UC24 - Visualizzazione messaggio di alert "Soglia critica raggiunta"}
-		\begin{itemize}
-			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.3]{UC3.3}) è stata raggiunta o superata;
-			\item\textbf{Postcondizioni}: l'utente ha visualizzato il messaggio di alert riguardante la soglia interessata;
-			\item\textbf{Scenario principale}:
-				\begin{enumerate}
-					\item l'utente visualizza il messaggio di alert "Soglia critica raggiunta" in cui viene segnalato che una soglia impostata nel processo di collegamento dei predittori al flusso dati (\hyperref[par:UC3]{UC3}) è stata raggiunta o superata;
-					\item l'utente clicca il pulsante "Conferma" per proseguire.		
-				\end{enumerate}		
-		\end{itemize}
-	
 
 
 
