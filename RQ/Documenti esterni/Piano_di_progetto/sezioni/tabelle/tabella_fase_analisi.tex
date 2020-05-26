@@ -1,0 +1,60 @@
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 71, 87}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{lastrowcolor}{RGB}{156, 198, 214}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\rowcolors{2}{grey2}{greyRowafk}
+\renewcommand{\arraystretch}{1.5}
+
+
+%tabella ore fase di Analisi
+\begin{comment}
+BASE PER TUTTI: 40 ORE
+Bergamin: +2 ore perchè ha scritto AdR
+Canesso: +2 ore perchè sa che dopo dovrà farne di meno (tanti arretrati)
+Farid: 6h progettista perchè ha fatto il mockup
+Utshudi & Meneghin: +2 ore perchè meno arretrati
+\end{comment}
+
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Fase di Analisi}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c | c | c | c | c | c }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Nominativo}} & \textcolor{white}{\textbf{Re}} & 
+\textcolor{white}{\textbf{Am}} & \textcolor{white}{\textbf{An}} &
+\textcolor{white}{\textbf{Pt}} & \textcolor{white}{\textbf{Pr}} &
+\textcolor{white}{\textbf{Ve}} & \textcolor{white}{\textbf{Totale}} \\
+Simone Federico Bergamin & 6 & 7 & 20 & - & - & 9 & 42 \\
+Alessandro Canesso & 8 & 6 & 16 & - & - & 12 & 42 \\
+Victor Dutca & 9 & - & 15 & - & - & 16 & 40 \\
+Fouad Farid	& 7 & 7 & 12 & 6 & - & 8 & 40 \\
+Simone Meneghin & - & 8 & 14 & 10 & - & 10 & 42 \\
+Olivier Utshudi & - & 8 & 13 & 8 & - & 13 & 42 \\
+Davide Zilio & 4 & 5 & 17 & - & - & 14 & 40 \\
+\rowcolor{lastrowcolor}
+\textbf{Ore totali ruolo} & \textbf{34} & \textbf{41} & \textbf{107} & \textbf{24} & \textbf{0} & \textbf{82} & \textbf{288} \\
+\end{tabular}
+\end{table}
+
+
+%tabella costi
+\begin{table}[H]
+\centering\renewcommand{\arraystretch}{1.5}
+\caption{Fase di Analisi}
+\vspace{0.2cm}
+\begin{tabular}{ c | c | c  }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & 
+\textcolor{white}{\textbf{Costo}}  \\
+Responsabile & 34 & 1020€ \\
+Amministratore & 41 & 820€ \\
+Analista & 107 & 2675€ \\
+Progettista	& 24 & 528€ \\
+Programmatore & 0 & 0€  \\
+Verificatore & 82 & 1230€  \\
+\rowcolor{lastrowcolor}
+\textbf{Totale} & \textbf{288} & \textbf{6273€}  \\
+\end{tabular}
+\end{table}
