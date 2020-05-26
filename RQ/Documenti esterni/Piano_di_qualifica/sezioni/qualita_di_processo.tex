@@ -1,0 +1,83 @@
+\section{Qualità di processo}
+\subsection{Scopo}
+Al fine di garantire la qualità del prodotto è necessario perseguire in primis la qualità dei processi che la definiscono. Si è deciso dunque di aderire, per quanto possibile, allo standard \textbf{ISO/IEC 15504}\footnote{ISO/IEC 15504: insieme di documenti di standard tecnici relativi ai processi di sviluppo del software e relative funzioni di business e, in particolare, alla loro valutazione.} denominato SPICE\glo: quest'ultimo permette di valutare il livello di maturità e capacità\glo (capability) dei processi, al fine di apportare modifiche migliorative. 
+\begin{comment}
+Eliminato la subsection PDCA
+\end{comment}
+\subsection{Obiettivi}
+Sono fissati inoltre i seguenti obiettivi: \begin{itemize}
+\item rispetto di tempi e costi descritti nel \textit{Piano\_di\_Progetto\_v2.0.0};
+\item continuo miglioramento dei processi;
+\item misurabilità dello stato dei processi.
+\end{itemize}
+\subsection{Metriche}
+Per misurare la qualità, sono state scelte delle specifiche metriche che monitorano lo stato dei processi del progetto analizzando l'uso che essi fanno di tempo e denaro. Sono particolarmente utili per il \textit{Responsabile}, che può quindi decidere di apportare modifiche alla pianificazione quando necessario.\\
+Ogni metrica conterrà:
+\begin{itemize}
+\item \textbf{Nome};
+\item \textbf{Descrizione};
+\item \textbf{Parametri}: range di valori su cui confrontare le misure ottenute. Sono definiti i seguenti intervalli: \begin{itemize}
+\item \textbf{Accettabile}: intervallo in cui il valore misurato viene considerato sufficiente, seppur migliorabile;
+\item \textbf{Ottimale}: intervallo in cui il valore misurato viene ritenuto ottimo.
+\end{itemize}
+Tali intervalli possono essere: \begin{itemize}
+\item \textbf{Aperti}, se gli estremi non sono compresi. Esempio: (a, b) = $a < x < b$; 
+\item \textbf{Chiusi}, se gli estremi sono compresi. Esempio: [a, b] = $a \leq x \leq b$;
+\item \textbf{Limitati}, se gli estremi sono numeri finiti;
+\item \textbf{Illimitati}, se almeno uno degli estremi è infinito.
+\end{itemize}
+\end{itemize}
+\textbf{Attenzione}: in questo documento \textbf{non} saranno trattati la descrizione e gli strumenti per il calcolo delle metriche, reperibili invece nelle \textit{Norme\_di\_Progetto\_v2.0.0}.
+
+\subsubsection{MP01 - Schedule Variance} 
+La Schedule Variance indica se una certa attività o processo è in anticipo, in pari, o in ritardo rispetto alla data di scadenza prevista. \\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: ($ -\infty $, 2];
+\item range ottimale: ($ -\infty $, 0].
+\end{itemize}
+
+\subsubsection{MP02 - Budget Variance} 
+Permette di controllare i costi sostenuti alla data corrente rispetto al budget preventivato in termini percentuali. \\ \\ 
+\textbf{Parametri adottati:}  
+\begin{itemize}
+\item range accettabile: [$-15\%$, $0\%$); 
+\item range ottimale: $ \geq 0\%$.
+\end{itemize}
+
+\subsubsection{MP03 - Produttività} 
+Rappresenta la produttività media delle risorse impiegate, cioè delle persone coinvolte, nelle diverse fasi del progetto. \\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+	\item range accettabile: [50, 100];
+	\item range ottimale: $ > 100$.
+\end{itemize}
+
+\subsection{Riepilogo metriche}
+\begin{longtable}{C{2cm} C{4cm} C{5cm}}
+\rowcolor{white}
+\caption{Tabella riepilogativa delle metriche per la qualità dei processi}\\
+\rowcolor{redafk}
+	\textcolor{white}{\textbf{Codice}} &
+	\textcolor{white}{\textbf{Nome}} &
+	\textcolor{white}{\textbf{Range}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Nome}} &
+\textcolor{white}{\textbf{Range}} \\
+		\endhead
+			MP01 &
+Schedule Variance &
+\textbf{Accettabile}: (0, 5]
+\textbf{Ottimale}: ($ -\infty $, 0] \\
+MP02 &
+Budget Variance &
+\textbf{Accettabile}: [$-15\%$, $0\%$)
+\textbf{Ottimale}: $ \geq $ 0 \\
+MP03 &
+Produttività &
+\textbf{Accettabile}: [50, 100]
+\textbf{Ottimale}: $ > 100$ \\	
+\end{longtable}

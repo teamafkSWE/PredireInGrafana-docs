@@ -1,0 +1,157 @@
+\section{Qualifica di prodotto}
+\subsection{Scopo}
+Per stabilire la Qualità di prodotto, il team di Quality Management\glo usa come riferimento informativo \textbf{ISO/IEC 9126} per stabilire il modello della qualità del software. Per decretare il raggiungimento di un determinato obiettivo di qualità, ogni voce trattata è accompagnata da un apposito parametro.
+\subsection{Obiettivi}
+Gli obiettivi di qualità che il team di Quality Management vuole raggiungere sono:
+\begin{itemize}
+\item affidabilità;
+\item usabilità.
+\end{itemize}
+\subsection{Metriche della documentazione}
+In relazione agli obiettivi prestabiliti, il team adotta i diversi strumenti per misurare la qualità del prodotto, riportati di seguito.
+\subsubsection{MD01 - Indice di Gulpease}
+L'Indice di Gulpease registra la leggibilità di un documento. \\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [40, 60);
+\item range ottimale: [60, 100].
+\end{itemize}
+
+\subsubsection{MD02 - Indice Fog}
+Misura la lungezza media delle parole e delle frasi presenti in un documento, così da comprendere la loro complessità.\\
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [5, 13);
+\item range ottimale: [13, 20].
+\end{itemize}
+
+\subsection{Metriche del codice}
+\subsubsection{MS01 - Linee di Codice}
+È la metrica che registra la dimensione di tutto il codice sorgente di un metodo.\\ \\
+\textbf{Parametri adottati:}
+\begin{itemize}
+\item range accettabile: (10, 20];
+\item range ottimale: [1, 10].
+\end{itemize}
+\subsubsection{MS02 - Numero dei Metodi}
+Questa metrica conteggia il numero di metodi presenti nella classe di un oggetto.\\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: (8, 15];
+\item range ottimale: [0, 8].
+\end{itemize}
+\subsubsection{MS03 - Numero di Parametri}
+Questo strumento tiene conto del numero di parametri formali di un metodo.\\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: (3, 6];
+\item range ottimale: [0, 3].
+\end{itemize}
+\subsubsection{MS04 - Commenti per Linee di Codice}
+È il rapporto tra le righe di commento e il codice effettivo.\\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [0.05, 0.10);
+\item range ottimale: [0.10, 0.20].
+\end{itemize}
+\subsubsection{MS05 - Fan-In}
+Misura il numero di funzioni o metodi che invocano altre funzioni o metodi.\\
+Per questa metrica non  è stato fissato un range ottimale, ma ci limiteremo soltanto ad indicare il numero effettivo.
+
+\subsubsection{MS06 - Fan-Out}
+Misura il numero di funzioni o metodi che vengono invocate da altre funzioni o metodi.\\Per questa metrica non è stato fissato un range ottimale, ma ci limiteremo soltanto ad indicare il numero effettivo.
+
+\subsubsection{MS07 - Code Coverage}
+È la metrica con il compito di misurare l'indice di copertura del codice da parte dei test in termini percentuali.\\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [70, 80)\%;
+\item range ottimale: [80, 100]\%.
+\end{itemize}
+Seppur l'obiettivo del team di sviluppo sia quello di avere una Code Coverage del 100\%, tale traguardo potrebbe non essere raggiunto in quanto comporterebbe un aumento dei costi di progetto che risulterebbero troppo elevati.
+\subsubsection{MS08 - Passed Test Cases Percentuage}
+Misura la percentuale dei test superati sul totale dei test eseguiti.\\
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [90, 95)\%;
+\item range ottimale: [95, 100]\%.
+\end{itemize}
+
+\subsubsection{MS09 - Failed Test Cases Percentuage}
+Misura la percentuale dei test falliti sul totale dei test eseguiti.\\
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: (5, 10]\%;
+\item range ottimale: [0, 5]\%.
+\end{itemize}
+
+\subsection{Riepilogo metriche}
+\begin{longtable}{C{2cm} C{4cm} C{5cm}}
+\rowcolor{white}
+\caption{Tabella riepilogativa delle metriche per la qualità del prodotto}\\
+\rowcolor{redafk}
+	\textcolor{white}{\textbf{Codice}} &
+	\textcolor{white}{\textbf{Nome}} &
+	\textcolor{white}{\textbf{Range}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Nome}} &
+\textcolor{white}{\textbf{Range}} \\
+		\endhead
+MD01 &
+Indice di Gulpease &
+\textbf{Accettabile}: [40, 60)
+\textbf{Ottimale}: [60, 100] \\
+MD02 & Indice Fog &
+\textbf{Accettabile}: [5, 13)
+\textbf{Ottimale}: [13, 20] \\
+MS01 &
+Linee di Codice &
+\textbf{Accettabile}: (10, 20]
+\textbf{Ottimale}: [1, 10] \\
+MS02 &
+Numero dei Metodi &
+\textbf{Accettabile}: (8, 15]
+\textbf{Ottimale}: [0, 8] \\
+
+MS03 &
+Numero di Parametri &
+\textbf{Accettabile}: (3, 6]
+\textbf{Ottimale}: [0, 3] \\
+
+MS04 &
+Commenti per Linee di Codice &
+\textbf{Accettabile}: [0.05, 0.10)
+\textbf{Ottimale}: [0.10, 0.20] \\
+
+MS05 & 
+Fan-In & 
+\#effettivo\_funzioni
+ \\
+
+MS06 & 
+Fan-Out & 
+\#effettivo\_funzioni
+ \\
+
+MS07 & 
+Code Coverage &
+\textbf{Accettabile}: [70, 80)\%
+\textbf{Ottimale}: [80, 100]\% \\
+
+
+MS08 &
+Passed Test Cases  Percentuage &
+\textbf{Accettabile}: [90, 95)\%
+\textbf{Ottimale}: [95, 100]\%.
+\\
+
+MS09 &
+Failed Test Cases  Percentuage &
+\textbf{Accettabile}: (5, 10]\%
+\textbf{Ottimale}: [0, 5]\%.
+\\
+\end{longtable}
+
