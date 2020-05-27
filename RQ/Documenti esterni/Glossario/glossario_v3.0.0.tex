@@ -1,0 +1,500 @@
+\documentclass[a4paper, oneside, openany, dvipsnames, table, 12pt]{article}
+\usepackage{../../../Template/AFKstyle}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\input{sezioni/copertina.tex}
+\renewcommand\thesection{}
+
+\begin{document}
+\copertina{}
+%------------------ COLORI TABELLE 
+\definecolor{pari}{RGB}{255, 207, 158} %{HTML}{E1F5FE} %azzurrino
+\definecolor{dispari}{HTML}{FAFAFA} %bianco/grigetto 
+
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 133, 51}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\definecolor{lastrowcolor}{RGB}{176, 196, 222} %steel blue %{255,165,0} orange %{RGB}{255, 207, 158}
+\rowcolors{2}{pari}{dispari}
+\renewcommand{\arraystretch}{1.5}
+
+%------------------
+
+\input{sezioni/registroModifiche.tex}
+\newpage
+\tableofcontents
+\newpage
+
+\newpage
+\section{A}  
+\label{par:alert}
+\textbf{Alert} \\
+Messaggio di “allarme” che segnala il superamento di un certo limite.
+
+\textbf{Ambiente} \\
+Struttura in cui un utente, computer o un applicativo opera.
+
+\textbf{Analisi dinamica} \\
+Serie di test eseguiti sul programma in esecuzione, con lo scopo di verificarne il corretto funzionamento.  
+
+\textbf{Analisi statica} \\
+Serie di test eseguiti sul codice del programma (quindi non in esecuzione), che mirano a trovare punti nel software in cui non sono state applicate le best practices\glo.
+
+\textbf{Android} \\
+Sistema operativo per dispositivi mobile sviluppato da Google LLC e basato sul kernel Linux.
+
+\textbf{API} \\
+Le \texttt{API} (acronimo di Application Programming Interface, ovvero interfaccia di programmazione delle applicazioni) sono set di definizioni e protocolli con i quali vengono realizzati e integrati software applicativi. 
+
+\textbf{Applicazione mobile} \\
+È un'applicazione software dedicata ai dispositivi di tipo mobile, quali smartphone o tablet, tipicamente progettata e realizzata in maniera più leggera in termini di risorse hardware utilizzate rispetto alle classiche applicazioni per PC, in linea con le restrizioni imposte dalla tipologia di dispositivo su cui è installata e/o eseguita. 
+
+\textbf{Architettura} \\
+Struttura di un software, dei componenti di un elaboratore o di una rete di comunicazione.
+
+\textbf{Attività} \\
+Lavoro, esplicazione di lavoro, di energia (anche non materiale) da parte di singoli o di gruppi.
+
+\textbf{Attore} \\
+Nel linguaggio UML, è il sistema avente la capacità di effettuare o meno determinate operazioni, chiamati use case. 
+
+\label{par:appr_auto}
+\textbf{Apprendimento automatico} \\ 
+L’apprendimento automatico è lo studio di algoritmi che si migliorano automaticamente attraverso l’esperienza. Gli algoritmi di apprendimento automatico costruiscono modelli matematici basati su dati campione noti come “dati di addestramento”.
+
+\textbf{Apprendimento per rinforzo}: 
+E’ una tecnica di apprendimento automatico\glo che punta alla realizzazione di agenti autonomi con la capacità di scegliere le azioni da compiere per il raggiungimento di determinati obiettivi, attraverso l’interazione con l’ambiente in cui sono inseriti.	
+
+\textbf{AWS} \\
+AWS (acronimo di Amazon Web Services) sono un insieme di servizi di cloud computing sviluppati dall'azienda Amazon. Ne fanno parte: 
+\begin{itemize}
+\item ECS (Elastic Container Service): servizio di orchestrazione dei container completamente gestito;
+\item S3: Amazon Simple Storage Service (Amazon S3) è un servizio di storage di oggetti che offre scalabilità, disponibilità dei dati, sicurezza e prestazioni all'avanguardia. Viene utilizzato per archiviare e proteggere una qualsiasi quantità di dati per una vasta gamma di casi d'uso, ad esempio per siti Web, applicazioni per dispositivi mobili, backup e ripristino, archiviazione, applicazioni enterprise, dispositivi IoT e analisi di big data;
+\item Rekognition: servizio che facilita l'inserimento di analisi di immagini e video utilizzando una tecnologia di deep learning verificata e altamente scalabile;
+\item Sage maker: servizio completamente gestito che consente di creare, formare e distribuire in modo rapido modelli di machine learning (ML);
+\item Elastic Transcoder: servizio per la transcodifica di contenuti multimediali nel cloud. Altamente scalabile, viene utilizzato per la conversione (o "transcodifica") di file multimediali dal loro formato originale in versioni differenti che possano essere riprodotte su dispositivi quali smartphone, tablet e PC.
+\end{itemize}
+
+\newpage
+\section{B}
+\textbf{Back end} \\
+Programma con il quale l’utente interagisce indirettamente, di solito attraverso l’utilizzo di un’applicazione \hyperref[par:frontend]{Front-end}.
+
+\textbf{Baseline} \\
+Baseline rappresenta tramite un insieme di stati di avanzamento
+strettamente sequenziali le attività che vanno svolte. E’ un insieme di stati di avanzamento incrementali. Ha la fondamentale caratteristica di essere misurabile (tempestivamente, accuratamente e non intrusivamente). Indica un punto di avanzamento in modo sicuro e con certezza per chi ci sta lavorando.
+
+\textbf{BDD} \\
+Il Behavior Driven Development è una metodologia di sviluppo del software basata sul \hyperref[par:tdd]{test-driven development} che incoraggia la collaborazione tra gli sviluppatori.
+
+\textbf{Best practices} \\
+Le best practices sono le esperienze, le procedure o le azioni più significative da usare durante la scrittura del codice. Sono tutte quelle prassi che aiutano ad ottenere un software di qualità migliore. Tali prassi sono descritte nelle \textit{Norme di Progetto}.
+
+\textbf{Body of Knowledge}\\
+Insieme di conoscenze di uno stesso dominio. Le conoscenze fanno parte del dominio e allo stesso tempo lo costituiscono.
+
+\textbf{Bot di Telegram} \\
+I bot sono applicazioni di terze parti che girano sulla piattaforma Telegram. Sono sviluppati da programmatori esterni per interagire con gli utenti tramite messaggi, comandi e richieste in linea. I bot possono svolgere diverse funzioni, come ad esempio organizzare una votazione tenendo traccia di chi ha votato cosa.
+
+\textbf{Bug} \\ 
+Il bug è un guasto che porta al malfunzionamento del software (per esempio producendo un risultato inatteso o errato), tipicamente dovuto ad un errore nella scrittura del codice sorgente di un programma software scritto da un programmatore.
+
+\label{par:blockC}
+\textbf{Blockchain} \\
+La blockchain è una sottofamiglia di tecnologie in cui il registro è strutturato come una catena di blocchi contenenti le transazioni e la cui validazione è affidata a un meccanismo di consenso. 
+Permette inoltre la creazione e gestione di un grande database distribuito per la gestione di transazioni condivisibili tra più nodi di una rete. 
+
+\textbf{Branch} \\
+Comanda di Git utilizzato per l’implementazione di funzionalità tra loro isolate, cioè sviluppate in modo indipendente l’una dall’altra ma a partire dalla stessa radice.
+
+\textbf{Business Logic} \\
+È la logica di elaborazione, sotto forma di codice sorgente, che gestisce la comunicazione tra un'interfaccia utente e un database.
+Essa contiene quindi le informazioni che definiscono o vincolano il modo in cui opera un'azienda.
+
+
+
+\newpage
+\section{C}
+\textbf{CamelCase} \\
+Notazione utilizzata per scrivere parole composte unendole tra loro, e ognuna di esse inizia con la lettera maiuscola.
+
+\textbf{Capacità} \\
+È l'efficacia di un processo software nel risolvere i problemi per cui è stato concepito.
+
+\textbf{Capitolato}\\	
+Documento con lo scopo di facilitare e velocizzare la comprensione del contratto d'appalto. Descrive specifiche tecniche, caratteristiche generali e modalità di realizzazione degli intenti del committente.
+
+\textbf{Caso d'uso (UC)} \\
+Il caso d'uso in informatica è una tecnica usata nei processi di ingegneria del software per effettuare in maniera esaustiva e non ambigua la raccolta dei requisiti al fine di produrre software di qualità.
+
+\textbf{Classificazione} \\
+ E’ la capacità di un algoritmo di apprendimento automatico di assegnare a certi insiemi elementi con certe qualità.
+
+\textbf{Cloud} \\
+Indica un paradigma di erogazione di servizi offerti on demand da un fornitore ad un cliente finale attraverso la rete Internet come: l'archiviazione, l'elaborazione o la trasmissione dati, a partire da un insieme di risorse preesistenti, configurabili e disponibili in remoto.
+
+\textbf{Cluster} \\
+È un insieme di computer connessi tra loro tramite una rete telematica.
+
+\textbf{Combo Box} \\
+In informatica, un combo box è un controllo grafico che permette all'utente di effettuare una scelta scrivendola in una casella di testo o selezionandola da un elenco. 
+
+
+\textbf{Command Line Interface (CLI)} \\
+È un tipo di interfaccia utente caratterizzata da un'interazione testuale tra utente ed elaboratore. L'utente impartisce comandi testuali in input mediante tastiera alfanumerica e riceve risposte testuali in output dall'elaboratore mediante display o stampante alfanumerici. 
+
+\textbf{Commit} \\
+È un comando del software Git usato per salvare cambiamenti effettuati nella repository\glo locale. Per includere i cambiamenti effettuati nel commit bisogna esplicitamente aggiungere i file aggiornati, modificati o creati, che si vogliono aggiungere alla repository.
+
+\textbf{Consistenza} \\
+La consistenza di una transazione, ossia una sequenza di operazioni, è la sua capacità di non violare i vincoli referenziali e di integrità della base di dati.
+
+\textbf{Continuous Delivery} \\
+È un modello introdotto nello sviluppo di software per eseguire contemporaneamente le fasi di sviluppo, rilascio, feedback e gestione della qualità in brevi intervalli e in un ciclo continuo. Lo sviluppo in questo modo diventa più efficiente e il cliente riceve prima il prodotto, anche quando questo non è ancora pronto. La Continuous Delivery fornisce feedback allo sviluppatore sulla base di test automatizzati che controllano principalmente il build ogniqualvolta viene modificato il codice sorgente.
+
+\label{par:container}
+\textbf{Contenitore} \\
+È una classe di oggetti che è preposta al contenimento di altri oggetti. \\ 
+Questi oggetti usualmente possono essere di qualsiasi classe, e possono anche essere a loro volta dei contenitori.
+
+\textbf{Continuous integration} \\
+L'integrazione continua (CI) è una pratica che si applica in contesti in cui lo sviluppo del software avviene attraverso un sistema di controllo versione\glo (VCS\glo). Consiste nell'allineamento frequente (ovvero "molte volte al giorno") dagli ambienti\glo di lavoro degli sviluppatori verso l'ambiente condiviso (mainline).
+In particolare, si suppone generalmente che siano stati predisposti test automatici che gli sviluppatori possono eseguire immediatamente prima di rilasciare i loro contributi verso l'ambiente condiviso, in modo da garantire che le modifiche non introducano errori nel software esistente. Per questo motivo, il CI viene spesso applicato in ambienti in cui siano presenti sistemi di build automatico e/o esecuzione automatica di test.
+
+
+\textbf{Container} \\
+Traduzione in lingua inglese di \hyperref[par:container]{contenitore\glo}.
+
+\label{par:css3}
+\textbf{CSS3} \\
+È un linguaggio utilizzato per descrivere l’aspetto e la formattazione di un sito web. \\
+Il CSS viene più comunemente usato nei documenti \texttt{HTML} e \texttt{XHTML}, ma applicabile anche ai documenti XML. 
+
+\textbf{CSV} \\
+Il CSV, letteralmente Comma Separated Values, è un formato di file basato su testo, generalmente utilizzato per l'esportazione o l'importazione di fogli elettronici (Excel) o database.
+
+\newpage
+\section{D}
+\label{par:db}
+\textbf{Dashboard} \\
+Consiste in un sistema di visualizzazione delle informazioni caratterizzato da facilità di lettura ed immediatezza. Le dashboard forniscono una visione grafica e in tempo reale dei dati da monitorare in modo da poter prendere decisioni corrette.
+
+\textbf{Database} \\
+Archivio di dati strutturato in modo da razionalizzare la gestione e l'aggiornamento delle informazioni e da permettere lo svolgimento di ricerche complesse. \\
+I dati all'interno dei tipi più comuni di database attualmente in funzione vengono generalmente presentati in righe e colonne contenute in una serie di tabelle per garantire l'efficienza di elaborazione e query dei dati. Tali dati possono poi essere facilmente visualizzati, gestiti, modificati, aggiornati, controllati e organizzati.
+
+\textbf{Dati di addestramento} \\
+E’ un insieme di esempi che viene utilizzato per tarare i parametri degli algoritmi di apprendimento automatico.
+
+
+\textbf{Deep Learning} \\
+Per Deep Learning (una tipologia di apprendimento automatico) si intende un insieme di tecniche basate su reti neurali artificiali organizzate in diversi strati, dove ogni strato calcola i valori per quello successivo affinché l'informazione venga elaborata in maniera sempre più completa.
+
+\textbf{Design pattern} \\
+È la soluzione progettuale e architetturale ricorrente di un problema.
+
+\textbf{Diagrama di Gantt} \\
+Serve a pianificare un insieme di attività in un certo periodo di tempo. La struttura è organizzata in un piano cartesiano in cui nelle ascisse si dispone la scala temporale dall’inizio alla fine del progetto, e nelle ordinate le cose da fare per portare a termine il progetto. Il tempo necessario per svolgere un compito è rappresentato visivamente sul diagramma con una barra colorata che va dalla data di inizio alla data di fine dell’attività.
+
+\textbf{Discord} \\
+Discord è un'applicazione VoIP\glo.
+
+\newpage
+\section{E}
+\textbf{Efficacia} \\
+Capacità di raggiungere l'obiettivo prefissato.
+
+\textbf{Efficienza} \\
+Misura l'abilità di raggiungere l'obiettivo prefissato impiegando le risorse minime indispensabili.
+
+\textbf{Ethereum} \\
+È una piattaforma open source\glo globale per applicazioni decentralizzate. Lanciata nel 2015, Ethereum è la blockchain\glo programmabile più utilizzata al mondo.
+
+\newpage
+\section{F}
+\textbf{File system} \\
+Un file system (abbreviazione: FS), in informatica, indica informalmente un meccanismo con il quale i file sono posizionati e organizzati su dispositivi informatici utilizzati per l'archiviazione dei dati.
+
+\textbf{Framework} \\
+Piattaforma che funge da strato intermedio tra un sistema operativo e il software che lo utilizza.
+
+\label{par:frontend}
+\textbf{Front-end} \\
+Programma con il quale l’utente interagisce direttamente, che fa da interfaccia tra l’utente e un altro programma.
+
+\newpage
+\section{G}
+\textbf{Grafana} \\
+Piattaforma open-source che consente di monitorare i dati provenienti da diverse sorgenti, attraverso una loro rappresentazione grafica all'interno di una
+dashboard.
+
+\textbf{GUI} \\
+Graphical User Interface – tradotto interfaccia utente, consente l’interazione uomo-macchina in modo visuale utilizzando rappresentazioni grafiche piuttosto che utilizzando una interfaccia a riga di comando.
+
+\newpage
+\section{H}
+\textbf{HTML5}\\	
+\`E linguaggio di markup nato per la formattazione e impaginazione di documenti ipertestuali disponibili nel web 1.0, oggi è utilizzato principalmente per il disaccoppiamento della struttura logica di una pagina web (definita appunto dal markup) e la sua rappresentazione, gestita tramite gli stili CSS\glo per adattarsi alle nuove esigenze di comunicazione e pubblicazione all'interno di Internet.
+
+\newpage
+\section{I}
+
+\textbf{IDE} \\
+Integrated Development Environment, ovvero ambiente di sviluppo integrato, è un software che supporta i programmatori nello sviluppo del codice sorgente. 
+
+\textbf{Interfaccia Grafica} \\
+l'interfaccia grafica, nota anche come GUI (Graphical User Interface), in informatica è un tipo di interfaccia utente che consente l'interazione uomo-macchina in modo visuale utilizzando rappresentazioni grafiche piuttosto che utilizzando i comandi tipici di un'interfaccia a riga di comando.
+
+\textbf{IOS} \\
+Sistemo operativo per dispositivi mobile sviluppato da Apple.
+
+\textbf{Incrementale} \\
+Procedura che opera solo sulle componenti che necessitano modifiche dopo una precedente esecuzione della stessa procedura.
+
+\newpage
+\section{J}
+\textbf{JavaScript}\\	
+Linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione Web lato client per la creazione, in siti web e applicazioni web, di effetti dinamici interattivi tramite funzioni di script invocate da eventi innescati a loro volta in vari modi dall'utente sulla pagina web in uso.
+
+\textbf{JSON} \\
+JavaScript Object Notation, formato utilizzato per il trasporto dati, pensato
+per una facile scrittura e lettura per un umano e una facile interpretazione per
+le macchine che lo processano.
+
+\newpage
+\section{K}
+
+\newpage
+\section{L}
+\textbf{Libreria} \\
+Insieme di funzioni o strutture dati predefinite e predisposte per essere collegate ad un software. 
+
+\textbf{Linguaggio di programmazione} \\
+È un linguaggio formale che specifica un insieme di istruzioni che, a partire da un insieme di dati di input, produca un insieme di dati di output.
+
+\textbf{Linguaggio naturale} \\
+È il linguaggio usato nella comunicazione tra persone che condividono la stessa lingua.
+
+\newpage
+\section{M}
+\textbf{Machine Learning} \\
+Sinonimo di \hyperref[par:appr_auto]{apprendimento automatico\glo}.
+
+\textbf{Manutenibilità} \\
+Capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti (ISO/IEC 9126).
+
+\textbf{Maturità} \\
+È una caratteristica, basata su uno standard di best practice\glo, che facilita la valutazione della qualità di un processo software
+
+\textbf{Merge} \\
+Comando di Git che incorpora le modifiche dai commit nominati (dal momento in cui le loro storie si sono discostate dal ramo corrente) nel ramo corrente. Questo comando viene utilizzato per incorporare le modifiche
+da un'altra repository e può essere utilizzato manualmente per unire le modifiche da un ramo all’altro.
+
+\textbf{Milestone} \\
+Indica importanti traguardi intermedi nello svolgimento del progetto. Molto spesso sono rappresentate da eventi, cioè da attività con durata breve, e vengono evidenziate in maniera diversa dalle altre attività nell'ambito dei documenti di progetto.
+
+\textbf{Modello di Sviluppo a V} \\
+Il modello a "V" rappresenta un processo di sviluppo software (applicabile anche allo sviluppo di hardware) che può essere considerato un'estensione del modello a cascata. Invece di scendere verso il basso in maniera lineare, le fasi del processo, dopo la fase di codifica, sono piegate verso l'alto per formare la tipica forma a V. Il modello a V illustra le relazioni tra ogni fase del ciclo di vita di sviluppo e la fase di testing ad essa associata. Il modello prevede 4 fasi di definizione (progettazione), una fase di implementazione e 4 fasi di testing / integrazione: Requirements analysis, System design, Architecture design, Module design, Coding, Unit testing, Integration testing, System testing e User acceptance testing.
+
+\newpage
+\section{N}
+\textbf{NodeJS}\\	
+\`E una piattaforma Open source che permette di eseguire codice JavaScript Server-side, oltre che Client-side. Tale sistema si basa su un'architettura event-driven, in cui le operazioni sono subordinate alla ricezione di una notifica.
+
+\textbf{Node Package Manager (NPM)} \\
+È un gestore di pacchetti per il linguaggio di programmazione JavaScript.
+È composto da un client da linea di comando e un database di pacchetti pubblici e privati, chiamato \textit{npm registry}. 
+
+\textbf{Nodo} \\
+E' un aspetto caratteristico del flusso di dati.
+
+\textbf{Norme di progetto} \\
+Documento redatto da un gruppo, interno al gruppo stesso, in cui sono esplicate le regole prefissate da seguire durante tutta la progettazione del prodotto di un dato progetto lavorativo. Tale documento ha come principale contenuto il \textit{Way of Working}\glo del gruppo. È importante per perseguire economicità e per rendere più efficiente ed efficace la fase di qualifica.
+
+\newpage
+\section{O}
+\label{par:opens}
+\textbf{Open source} \\
+Software non protetto da copyright e liberamente modificabile dagli utenti.
+
+\textbf{Out-of-the-box} \\
+Una caratteristica out-of-the-box, è una caratteristica o funzionalità di un prodotto che funziona immediatamente dopo o anche senza alcuna installazione, senza alcuna configurazione o modifica.
+
+\newpage
+\section{P}
+\textbf{Parser} \\
+Algoritmo che, sulla base di grammatica e lessico di una lingua data, effettua un’analisi automatica della struttura morfologica delle parole.
+
+\textbf{Plugin} \\
+Programma non autonomo che interagisce con altre applicazioni con opportune interfaccie, con lo scopo di estenderne le loro funzionalià originarie.
+
+\textbf{PNG} \\
+Portable Network Graphics (PNG) è un formato di file utilizzato in informatica per memorizzare immagini.
+
+\textbf{Politica temporale} \\
+Indica la variazione temporale che viene scelta per calcolare le previsioni del flusso di dati .
+
+\textbf{Predittore} \\
+E' una statistica, cioè una funzione dei dati, definita allo scopo di effettuare previsioni su una o più variabili.
+
+\textbf{Previsione} \\
+Stima derivante dalle operazioni di calcolo del plug-in.
+
+\textbf{Processo} \\
+Insieme di attività correlate e coese che trasformano i bisogni in prodotti. Opera secondo regole date da vincoli e consuma risorse nel farlo.
+
+\textbf{Proponente} \\
+E' l'azienda responsabile dell'appalto che fornisce le specifiche di progetto.
+
+\textbf{Project manager} \\
+È l'individuo che all'interno del gruppo di progetto, ha il compito di istanziare processi, pianifica e assegna le attività, stima costi e risorse necessarie, controlla e verifica i risultati.
+
+\textbf{Proof-of-concept} \\
+Realizzazione incompleta o abbozzata di un determinato progetto o metodo, allo scopo di provarne la fattibilità o dimostrare la fondatezza di alcuni principi o concetti fondamentali.
+
+\textbf{Pull Request} \\
+Richiesta di merge\glo di un branch\glo X derivato da Y nel branch Y. Permette agli sviluppatori nei rispettivi branch di lavorare indipendentemente, e di visualizzare le modifiche apportate prima di unire le linee di sviluppo.
+
+\textbf{Python} \\
+Python \'e un linguaggio di programmazione dinamico orientato agli oggetti utilizzabile per molti tipi di sviluppo software come ad esempio il web, l'analisi dei dati e l'apprendimento automatico.
+
+\newpage
+\section{Q}
+\textbf{Query} \\
+La query \'e il costrutto più importante e più usato del linguaggio SQL(Structured Query Language): questa \'e una funzione che permettere di interrogare il database in modo da ottenere delle informazioni filtrandole, a seconda delle esigenze, con l'introduzione di speciali costrutti e parole chiave.
+
+\newpage
+\section{R}
+\textbf{Real time} \\
+Tempo effettivo durante il quale si verifica un processo o un evento. \\
+In informatica, usato per descrivere il modo in cui un sistema informatico riceve i dati e li comunica o li rende immediatamente disponibili.
+
+\textbf{Regressione lineare (RL)} \\
+Rappresenta un metodo di stima del valore atteso condizionato di una variabile dipendente, dati i valori di altre variabili indipendenti. Si definisce retta di regressione la retta: $y = \alpha x + \beta $.
+
+\textbf{Repository} \\
+Archivio o ambiente di un sistema informativo nel quale sono raccolti e conservati dati e informazioni corredati da descrizioni (metadati) in formato digitale, e direttamente accessibile dagli utenti. Le repository
+rappresentano in qualche misura l’equivalente elettronico di una biblioteca.
+
+\textbf{Requisito}\\	Particolare proprietà richiesta necessaria per conseguire uno scopo. Nello specifico, si categorizzano in:
+\begin{itemize}
+	\item \textbf{Requisito di fidatezza:} requisito di sistema che è incluso per aiutare a raggiungere un livello di fidatezza richiesto per il sistema;
+	\item \textbf{Requisito funzionale:} definizione di una funzione o caratteristica che deve essere implementata in un sistema;
+	\item \textbf{Requisito non funzionale:} vincolo o comportamento atteso che si applica a un sistema. Può riferirsi sia alle proprietà principali del software che sto sviluppando sia al processo di sviluppo.
+\end{itemize}
+
+\textbf{REST} \\
+Representational State Transfer. Sistema di trasmissione di dati su HTTP privo di livelli e sessione. Viene impiegato come architettura software nei sistemi distribuiti.
+
+\textbf{Rete Neurale} \\
+E’ un modello di computazione appartenente al mondo dell’apprendimento automatico, formato da “neuroni” artificiali e vagamente ispirato ad una rete neurale biologica.
+
+
+\newpage
+\section{S}
+\textbf{Sistema distribuito} \\
+Indica una tipologia di sistema informatico costituito da un insieme di processi interconnessi tra loro in cui le comunicazioni avvengono solo esclusivamente tramite lo scambio di opportuni messaggi.
+
+\textbf{SO} \\
+Abbreviazione per sistema operativo
+
+\textbf{Skype} \\
+Skype è un software di messaggistica istantanea e VoIP\glo.
+
+\textbf{Smart Contract Technology} \\
+Un programma che esegue inevitabilmente le condizioni postulate precedententemente dagli sviluppatori. In pratica un contratto tradizionale i cui effetti sono garantiti da un codice, nel caso degli smart contract di Ethereum, scritti nel linguaggio Solidity.
+
+
+\label{par:SMO}
+\textbf{SMO} \\
+Anche detta ottimizzazione minima sequenziale, è un algoritmo per risolvere efficientemente il problema di ottimizzazione che emerge durante l'addestramento di una macchina a vettori di supporto.
+
+\textbf{Soglia} \\
+Livello oltre il quale vengono prese misure decise in precedenza o lanciati \hyperref[par:alert]{alert\glo}.
+
+\textbf{SPICE} \\
+ISO/IEC 15504, anche conosciuta come SPICE (Software Process Improvement and Capability Determination), è un insieme di nove documenti di standard tecnici relativi ai processi di sviluppo del software e relative funzioni di business e, in particolare, alla loro valutazione.
+
+\textbf{Staging area} \\
+Area dove vengono validati i file modificati che potranno essere versionati con un commit\glo.
+
+\textbf{Stakeholder} \\
+Ciascuno dei soggetti direttamente o indirettamente coinvolti in un progetto.
+
+\textbf{Standalone} \\
+Software capace di operare indipendentemente da altri sistemi.
+
+\textbf{Streaming} \\
+Flusso di dati audio/video riprodotti in real-time, trasmessi da una sorgente a una o più destinazioni tramite una rete telematica.
+
+\textbf{Suite} \\
+Insieme di applicazioni svilippate dallo stesso produttore.
+
+\textbf{Support Vector Machine (SVM)} \\
+Inventata da V. Vapnik nel 1990, è un modello di apprendimento automatico supervisionato che utilizza algoritmi di classificazione per valutare specifici problemi. Questi algoritmi trovano impiego nell'ambito del machine learning.
+
+\textbf{SVMJS} \\
+SVMJS è un'implementazione dell'algoritmo \hyperref[par:SMO]{SMO\glo} per addestrare una macchina a vettori di supporto. Poiché utilizza la doppia formulazione, supporta anche \hyperref[par:kernel]{kernel\glo} arbitrari. 
+
+\newpage
+\section{T}
+\textbf{Telegram} \\
+Telegram è un servizio di messaggistica istantanea e broadcasting. Caratteristiche di Telegram sono la possibilità di scambiare messaggi di testo tra due utenti o tra gruppi fino a 200.000 partecipanti, effettuare chiamate vocali cifrate "punto-punto", scambiare messaggi vocali, videomessaggi, fotografie, video, sticker e file di qualsiasi tipo.
+
+\label{par:tdd}
+\textbf{Test Driven Development} \\
+Il TDD è un modello di sviluppo del software che prevede che la stesura dei test automatici avvenga prima di quella del software che deve essere sottoposto a test, e che lo sviluppo del software applicativo sia orientato esclusivamente all'obiettivo di passare i test automatici precedentemente predisposti.
+
+\textbf{Typescript} \\
+Linguaggio di programmazione libero ed Open source sviluppato da Microsoft. Si tratta di un Super-set di JavaScript che basa le sue caratteristiche su ECMAScript6.
+
+\newpage
+\section{U}
+\textbf{UML} \\
+Unified Modeling Language (UML) è un linguaggio di modellazione e specifica basato sul paradigma orientato agli oggetti, permette di descrivere l’architettura di un sistema in dettaglio. 
+
+\textbf{Unità} \\
+Minimo componente di un programma dotato di funzionamento autonomo.
+
+
+\newpage
+\section{V}
+\textbf{Validazione} \\
+Attività che intende accertare che il prodotto finale corrisponda alle attese. Risponde alla domanda "\textit{Did I build the right system?}" ovvero se ciò che si è realizzato sia conforme alle attese e sia ciò che il committente desidera.
+
+\textbf{VCS} \\
+Source Code Management systems (SCM), conosciuti anche come "Version Control Systems" (VCS) sono sistemi software che: \begin{itemize}
+\item registrano tutte le modifiche avvenute ad un insieme di file;
+\item permettono la condivisione di file e modifche;
+\item offrono funzionalità di merging\glo e tracciamento delle modifiche.
+\end{itemize}
+
+\textbf{Verifica} \\
+Attività facente parte dei processi di supporto, nella quale i vericatori controllano che il processo sotto esame non abbia introdotto errori, per accertare il rispetto di regole e procedure. Risponde alla domanda: "\textit{Did I build the system right?}".
+
+\textbf{Versionamento} \\
+Gestione di versioni multiple di un insieme di informazioni.
+
+\textbf{Versione} \\
+Indica lo stato di avanzamento di un documento o di un pacchetto software.
+
+\textbf{VoIP} \\
+Voice over IP, ovvero \textit{voce tramite protocollo internet}, in telecomunicazioni e informatica, indica una tecnologia che rende possibile effettuare una conversazione, analoga a quella che si potrebbe ottenere con una rete telefonica, sfruttando una connessione Internet.
+
+\newpage
+\section{W}
+\textbf{Way of Working} \\
+Metodo di lavoro che standardizza le attività di progetto in modo da renderele sistematiche, disciplinate e quantificabili.
+
+\newpage
+\section{X}
+
+\newpage
+\section{Y}
+
+\newpage
+\section{Z}
+\textbf{Zoom} \\
+Zoom è un software di messaggistica istantanea e VoIP\glo. 
+\end{document}
