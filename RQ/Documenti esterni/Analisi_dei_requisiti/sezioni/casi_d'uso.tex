@@ -73,8 +73,9 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Estensioni}: 
 				\begin{enumerate}
-					\item hyperref[par:UC7]{UC7} estende \hyperref[par:UC1.3]{UC1.3}: viene visualizzato un messaggio d'errore se non è stato scelto alcun algoritmo per l'addestramento;
-					\item hyperref[par:UC8]{UC8} estende \hyperref[par:UC1.3]{UC1.3}: viene visualizzato un messaggio d'errore se il file di addestramento è incompatibile con l'algoritmo scelto.
+					\item hyperref[par:UC7]{UC7} estende \hyperref[par:UC1.3]{UC1.3}: viene visualizzato un messaggio d'errore se non è stato caricato alcun file CSV contenente i dati di addestramento;
+					\item hyperref[par:UC8]{UC8} estende \hyperref[par:UC1.3]{UC1.3}: viene visualizzato un messaggio d'errore se non è stato scelto alcun algoritmo per l'addestramento;
+					\item hyperref[par:UC9]{UC9} estende \hyperref[par:UC1.3]{UC1.3}: viene visualizzato un messaggio d'errore se il file di addestramento è incompatibile con l'algoritmo scelto.
 				\end{enumerate}
 			
 		\end{itemize}
@@ -119,8 +120,9 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta “Conferma”;
 			\item\textbf{Estensioni}:
 			\begin{enumerate}
-				\item hyperref[par:UC7]{UC7}: viene visualizzato un messaggio d'errore se non è stato scelto alcun algoritmo per l'addestramento;
-				\item \hyperref[par:UC8]{UC8}: viene visualizzato un messaggio d'errore se il file di addestramento è incompatibile con l'algoritmo scelto.
+				\item hyperref[par:UC7]{UC7}: viene visualizzato un messaggio d'errore se non è stato caricato alcun file CSV contenente i dati di addestramento;
+				\item hyperref[par:UC8]{UC8}: viene visualizzato un messaggio d'errore se non è stato scelto alcun algoritmo per l'addestramento;
+				\item \hyperref[par:UC9]{UC9}: viene visualizzato un messaggio d'errore se il file di addestramento è incompatibile con l'algoritmo scelto.
 			\end{enumerate}
 			 
 						
@@ -151,7 +153,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: l'utente visualizza il messaggio di alert di addestramento non riuscito;					
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-				\item l'utente visualizza il messaggio di alert "Addestramento non riuscito" in cui viene segnalato che non è stato possibile addestrare l'algoritmo perché è stato caricato un CSV incompatibile (\hyperref[par:UC7]{UC7}) oppure nel caso in cui non sia stato scelto l'algoritmo da addestrare (\hyperref[par:UC8]{UC8});
+				\item l'utente visualizza il messaggio di alert "Addestramento non riuscito" in cui viene segnalato che non è stato possibile addestrare l'algoritmo perché è stato caricato un CSV incompatibile (\hyperref[par:UC9]{UC9}) oppure nel caso in cui non sia stato scelto l'algoritmo da addestrare (\hyperref[par:UC8]{UC8}) o caricato alcun file CSV (\hyperref[par:UC7]{UC7});
 				\item l'utente clicca il pulsante "Conferma" per proseguire.
 					
 				\end{enumerate}
@@ -204,8 +206,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item\hyperref[par:UC9]{UC9} estende \hyperref[par:UC2.1]{UC2.1}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana";
-					\item\hyperref[par:UC10]{UC10} estende \hyperref[par:UC2.2]{UC2.2}: viene visualizzato un messaggio d'errore nel caso in cui l'operazione di caricamento del file non sia andata a buon fine.
+					\item\hyperref[par:UC10]{UC10} estende \hyperref[par:UC2.1]{UC2.1}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana";
+					\item\hyperref[par:UC11]{UC11} estende \hyperref[par:UC2.2]{UC2.2}: viene visualizzato un messaggio d'errore nel caso in cui l'operazione di caricamento del file non sia andata a buon fine.
 				\end{enumerate}	
 			
 		\end{itemize}
@@ -221,7 +223,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item l'utente ha cliccato il pulsante "Carica JSON" e visualizza il pannello di selezione del file.
 			\item\textbf{Postcondizioni}: l'utente ha selezionato il file JSON;
 			\item\textbf{Scenario principale}: l'utente seleziona dalla finestra di selezione il file JSON da importare tra quelli disponibili e sono visibili solo i file con formato .json;
-			\item\textbf{Estensioni}: \hyperref[par:UC9]{UC9}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana".
+			\item\textbf{Estensioni}: \hyperref[par:UC10]{UC10}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana".
 				\end{enumerate}
 			\end{itemize}
 		
@@ -232,12 +234,12 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file JSON da caricare;
 			\item\textbf{Postcondizioni}: l'utente ha caricato il file nel plug-in;
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante etichettato con “Conferma” e il file viene caricato;
-			\item\textbf{Estensioni}: \hyperref[par:UC10]{UC10}: viene visualizzato un messaggio d'errore nel caso in cui l'operazione di caricamento del file non sia andata a buon fine.
+			\item\textbf{Estensioni}: \hyperref[par:UC11]{UC11}: viene visualizzato un messaggio d'errore nel caso in cui l'operazione di caricamento del file non sia andata a buon fine.
 					
 		\end{itemize}
 		
 		\label{par:UC2.3}
-	\subsection{UC2.3 - Visualizzazione messaggio di notifica "Avvenuto successo caricamento JSON"}
+	\subsubsection{UC2.3 - Visualizzazione messaggio di notifica "Avvenuto successo caricamento JSON"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha confermato il caricamento del file JSON selezionato (\hyperref[par:UC2.2]{UC2.2});
@@ -281,8 +283,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item\hyperref[par:UC11]{UC11} estende \hyperref[par:UC3.3]{UC3.3}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
-					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.4]{UC3.4}: viene visualizzato un messaggio d'errore nel caso il collegamento non sia stato possibile.
+					\item\hyperref[par:UC12]{UC12} estende \hyperref[par:UC3.3]{UC3.3}: viene visualizzato un messaggio di errore soglia non valida nel caso venga inserito un valore non consentito;
+					\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC3.4]{UC3.4}: viene visualizzato un messaggio d'errore nel caso il collegamento non sia stato possibile.
 						
 				\end{enumerate}
 		\end{itemize}
@@ -319,7 +321,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Precondizioni}: l'utente ha selezionato almeno un predittore che vuole collegare al flusso dati (\hyperref[par:UC3.1]{UC3.1});
 			\item\textbf{Postcondizioni}: l'utente ha impostato la soglia di monitoraggio sul predittore selezionato;
 			\item\textbf{Scenario principale}: l'utente dispone di almeno un predittore e aggiunge una soglia da associare; è possibile impostare più di una soglia;
-			\item\textbf{Estensioni}: \hyperref[par:UC11]{UC11}: viene visualizzato un messaggio di errore "Soglia Non Valida" nel caso venga inserito un valore non consentito.
+			\item\textbf{Estensioni}: \hyperref[par:UC12]{UC12}: viene visualizzato un messaggio di errore "Soglia Non Valida" nel caso venga inserito un valore non consentito.
 		\end{itemize}
 
 	\label{par:UC3.4}
@@ -333,7 +335,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item l'utente ha la possibilità di effettuare un altro collegamento tornando a \hyperref[par:UC3.1]{UC3.1}.
 				\end{enumerate}
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante etichettato con "Conferma Collegamento";
-			\item\textbf{Estensioni}: \hyperref[par:UC12]{UC12}: viene visualizzato un messaggio d'errore nel caso il collegamento non sia stato possibile.		
+			\item\textbf{Estensioni}: \hyperref[par:UC13]{UC13}: viene visualizzato un messaggio d'errore nel caso il collegamento non sia stato possibile.		
 				
 		\end{itemize}
 		
@@ -500,8 +502,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item \hyperref[par:UC13]{UC13} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Politica temporale non definita";
-					\item \hyperref[par:UC14]{UC14} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Nessun predittore collegato".
+					\item \hyperref[par:UC14]{UC14} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Politica temporale non definita";
+					\item \hyperref[par:UC15]{UC15} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Nessun predittore collegato".
 
 				\end{enumerate}
 		\end{itemize}
@@ -530,8 +532,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Scenario principale}: l'utente avvia il calcolo di previsione selezionando il pulsante “Avvia monitoraggio”;
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item \hyperref[par:UC13]{UC13}: visualizzazione messaggio d'errore "Politica temporale non definita";
-					\item \hyperref[par:UC14]{UC14}: visualizzazione messaggio d'errore "Nessun predittore collegato";
+					\item \hyperref[par:UC14]{UC14}: visualizzazione messaggio d'errore "Politica temporale non definita";
+					\item \hyperref[par:UC15]{UC15}: visualizzazione messaggio d'errore "Nessun predittore collegato";
 				\end{enumerate}
 			
 				
@@ -595,7 +597,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2}) e dispone delle previsioni sul flusso di dati in quanto il calcolo di previsione è stato completato correttamente (\hyperref[par:UC5.3]{UC5.3}).
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: la previsione calcolata sui dati ricevuti è stata immagazzinata nel DB se lo desidera;
-			\item\textbf{Scenario principale}: l'utente clicca il pulsante “Invia previsioni” tramite il quale i dati di previsione vengono inviati al DB, altrimenti decide di non salvarli e prosegue con il monitoraggio.
+			\item\textbf{Scenario principale}: l'utente clicca il pulsante “Invia previsioni” tramite il quale i dati di previsione vengono inviati al Database InfluxDB, altrimenti decide di non salvarli e prosegue con il monitoraggio.
 			
 		\end{itemize}	
 		
@@ -665,9 +667,18 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 
 % - Casi d'uso: Estensioni - %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+	
 	\label{par:UC7}
-	\subsection{UC7 - Visualizzazione messaggio d'errore "Nessun algoritmo selezionato"}
+	\subsection{UC7 - Visualizzazione messaggio d'errore "Nessun file CSV caricato"}
+		\begin{itemize}
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3}) senza aver caricato un file CSV contenente i valori utilizzati per l'addestramento (\hyperref[par:UC1.1]{UC1.1});
+			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.1]{UC1.1});
+			\item\textbf{Scenario principale}: l'utente visualizza il messaggio d'errore "Nessun file CSV caricato" in cui viene segnalato il fatto che non è stato caricato alcun file CSV (\hyperref[par:UC1.1]{UC1.1}) e quindi non si può procedere con l'addestramento; 		
+		\end{itemize}
+		
+	\label{par:UC8}
+	\subsection{UC8 - Visualizzazione messaggio d'errore "Nessun algoritmo selezionato"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3}) senza aver scelto un algoritmo dalla Combo Box (\hyperref[par:UC1.2]{UC1.2});
@@ -675,8 +686,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Scenario principale}: l'utente visualizza il messaggio d'errore "Nessun algoritmo selezionato" in cui viene segnalato il fatto che non è stato scelto alcun algoritmo da addestrare (\hyperref[par:UC1.2]{UC1.2}) e quindi non si può procedere con l'addestramento; 		
 		\end{itemize}
 	
-	\label{par:UC8}
-	\subsection{UC8 - Visualizzazione messaggio d'errore "File CSV incompatibile"}
+	\label{par:UC9}
+	\subsection{UC9 - Visualizzazione messaggio d'errore "File CSV incompatibile"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file CSV che intende utilizzare per l'addestramento e ha cliccato il pulsante di conferma. Il file selezionato è strutturalmente errato e non c'è compatibilità con l'algoritmo selezionato;
@@ -686,8 +697,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\label{par:UC9}
-	\subsection{UC9 - Visualizzazione messaggio di alert "File JSON già caricato"}
+	\label{par:UC10}
+	\subsection{UC10 - Visualizzazione messaggio di alert "File JSON già caricato"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato l'opzione di caricamento del file JSON tramite click del pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1});
@@ -701,8 +712,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 
-	\label{par:UC10}
-	\subsection{UC10 - Visualizzazione messaggio d'errore "Caricamento file JSON" }
+	\label{par:UC11}
+	\subsection{UC11 - Visualizzazione messaggio d'errore "Caricamento file JSON" }
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.1]{UC2.1}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.2]{UC2.2});
@@ -716,8 +727,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-		\label{par:UC11}
-	\subsection{UC11 - Visualizzazione messaggio d'errore "Soglia non valida"}
+		\label{par:UC12}
+	\subsection{UC12 - Visualizzazione messaggio d'errore "Soglia non valida"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.3]{UC3.3}) non valida per contenuto o formato;
@@ -750,8 +761,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-		\label{par:UC13}
-	\subsection{UC13 - Visualizzazione messaggio d'errore "Politica temporale non definita"}
+		\label{par:UC14}
+	\subsection{UC14 - Visualizzazione messaggio d'errore "Politica temporale non definita"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di "Avvio monitoraggio" (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC5.1]{UC5.1});
@@ -769,8 +780,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-		\label{par:UC14}
-	\subsection{UC14 - Visualizzazione messaggio d'errore "Nessun predittore collegato"}
+		\label{par:UC15}
+	\subsection{UC15 - Visualizzazione messaggio d'errore "Nessun predittore collegato"}
 		\begin{itemize}
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
