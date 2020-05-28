@@ -7,9 +7,9 @@ Per la piattaforma in questione non è fornita alcuna documentazione in quanto e
 	\subsection{Struttura}
 Viene riportata di seguito la classificazione dei casi d'uso. Verranno descritti nel documento rispettando la struttura esposta di seguito.
 		\begin{itemize}
+			\item diagramma UML (se presente);
 			\item codice identificativo;
 			\item titolo;
-			\item diagramma UML (se presente);
 			\item attore primario;
 			\item precondizioni;
 			\item postcondizioni;
@@ -50,7 +50,10 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\caption{Creazione file JSON dai dati di addestramento}
 	\end{figure}	
 
+
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC1;
+			\item\textbf{Titolo} : Creazione file JSON dai dati di addestramento;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -83,6 +86,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC1.1}
 		\subsubsection{UC1.1 - Selezione dati di addestramento }
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC1.1;
+			\item\textbf{Titolo} : Selezione dati di addestramento;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -97,6 +102,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC1.2}
 		\subsubsection{UC1.2 - Selezione dell'algoritmo di previsione}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC1.2;
+			\item\textbf{Titolo} : Selezione dell'algoritmo di previsione;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
 			\item\textbf{Postcondizioni}: l'utente ha scelto l'algoritmo di previsione selezionando l'opzione corrispondente;
@@ -106,6 +113,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC1.3}
 	\subsubsection{UC1.3 - Conferma procedura addestramento}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC1.3;
+			\item\textbf{Titolo} : Conferma procedura addestramento;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -131,6 +140,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC1.4}
 	\subsubsection{UC1.4 - Visualizzazione messaggio di notifica "Addestramento avvenuto con successo"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC1.4;
+			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Addestramento avvenuto con successo";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: 
 				\begin{enumerate}
@@ -148,6 +159,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC1.5}
 	\subsubsection{UC1.5 - Visualizzazione messaggio di alert "Addestramento non riuscito"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC1.5;
+			\item\textbf{Titolo} : Visualizzazione messaggio di alert "Addestramento non riuscito";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: si è verificato un problema durante l'addestramento;
 			\item\textbf{Postcondizioni}: l'utente visualizza il messaggio di alert di addestramento non riuscito;					
@@ -166,6 +179,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC1.6}
 	\subsubsection{UC1.6 - Salvataggio file JSON}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC1.6;
+			\item\textbf{Titolo} : Salvataggio file JSON;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3});
 			\item\textbf{Postcondizioni}: l'utente ha salvato il file JSON in locale;
@@ -186,6 +201,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\end{figure}	
 		
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC2;
+			\item\textbf{Titolo} : Caricamento del file JSON nel plug-in;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -216,6 +233,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC2.1}
 		\subsubsection{UC2.1 - Selezione del file JSON}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC2.1;
+			\item\textbf{Titolo} : Selezione del file JSON;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -230,6 +249,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC2.2}
 		\subsubsection{UC2.2 - Conferma di caricamento}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC2.2;
+			\item\textbf{Titolo} : Conferma di caricamento;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file JSON da caricare;
 			\item\textbf{Postcondizioni}: l'utente ha caricato il file nel plug-in;
@@ -241,6 +262,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC2.3}
 	\subsubsection{UC2.3 - Visualizzazione messaggio di notifica "Avvenuto successo caricamento JSON"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC2.3;
+			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Avvenuto successo caricamento JSON";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha confermato il caricamento del file JSON selezionato (\hyperref[par:UC2.2]{UC2.2});
 			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di avvenuto caricamento del file JSON nel plug-in;
@@ -263,6 +286,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{figure}	
 
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC3;
+			\item\textbf{Titolo} : Collegamento del predittore al flusso dati;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -293,6 +318,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC3.1}
 		\subsubsection{UC3.1 - Selezione del predittore}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC3.1;
+			\item\textbf{Titolo} : Selezione del predittore;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: è stato letto il file JSON con i predittori e l'utente visualizza una lista con i predittori disponibili;
 			\item\textbf{Postcondizioni}: uno o più predittori sono stati selezionati dalla lista disponibile;
@@ -303,6 +330,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC3.2}
 	\subsubsection{UC3.2 - Selezione nodo del flusso dati}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC3.2;
+			\item\textbf{Titolo} : Selezione nodo del flusso dati;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -317,6 +346,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC3.3}
 	\subsubsection{UC3.3 - Impostazione delle soglie}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC3.3;
+			\item\textbf{Titolo} : Impostazione delle soglie;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato almeno un predittore che vuole collegare al flusso dati (\hyperref[par:UC3.1]{UC3.1});
 			\item\textbf{Postcondizioni}: l'utente ha impostato la soglia di monitoraggio sul predittore selezionato;
@@ -327,6 +358,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC3.4}
 	\subsubsection{UC3.4 - Conferma collegamento}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC3.4;
+			\item\textbf{Titolo} : Conferma collegamento;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha creato le basi per l'associazione del predittore al nodo del flusso dati scelto; in particolare è stato selezionato il predittore (\hyperref[par:UC3.1]{UC3.1}), il nodo del flusso dati da associare (\hyperref[par:UC3.2]{UC3.2}) ed è stata impostata una soglia (\hyperref[par:UC3.3]{UC3.3});
 			\item\textbf{Postcondizioni}:
@@ -342,6 +375,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC3.5}
 	\subsection{UC3.5 - Visualizzazione messaggio di notifica "Collegamento avvenuto con successo"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC3.5;
+			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Collegamento avvenuto con successo";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha confermato il collegamento (\hyperref[par:UC3.4]{UC3.4});
 			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di avvenuto successo del collegamento;
@@ -355,6 +390,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC3.6}
 	\subsection{UC3.6 - Visualizzazione pannello lista collegamenti}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC3.6;
+			\item\textbf{Titolo} : Visualizzazione pannello lista collegamenti;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha confermato il collegamento tra predittore e nodo del flusso selezionato cliccando il pulsante di "Conferma collegamento" (\hyperref[par:UC3.4]{UC3.4});
 			\item\textbf{Postcondizioni}: l'utente visualizza un pannello contenente la lista di tutti i collegamenti effettuati, ogni nuovo collegamento confermato viene aggiunto alla lista;
@@ -383,6 +420,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{figure}	
 
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC4;
+			\item\textbf{Titolo} : Operazioni sui collegamenti;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -407,6 +446,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC4.1}
 	\subsubsection{UC4.1 - Scollegamento predittore}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC4.1;
+			\item\textbf{Titolo} : Scollegamento predittore;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente visualizza la lista dei collegamenti in cui è presente almeno un collegamento tra predittore e flusso dati;
 			\item\textbf{Postcondizioni}: l'utente ha cliccato il pulsante di scollegamento;
@@ -416,6 +457,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC4.2}
 	\subsubsection{UC4.2 - Visualizzazione messaggio di alert "Procedere con lo scollegamento"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC4.2;
+			\item\textbf{Titolo} : Visualizzazione messaggio di alert "Procedere con lo scollegamento";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato il pulsante di scollegamento "Scollega predittore" (\hyperref[par:UC4.1]{UC4.1});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato il messaggio di alert sul tentativo di scollegamento predittore;
@@ -427,6 +470,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC4.3}
 	\subsubsection{UC4.3 - Conferma scollegamento}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC4.3;
+			\item\textbf{Titolo} : Conferma scollegamento;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha visualizzato il messaggio di alert sul tentativo di scollegamento predittore;
 			\item\textbf{Postcondizioni}: l'utente ha confermato o annullato la procedura di scollegamento;	
@@ -436,6 +481,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC4.4}
 	\subsubsection{UC4.4 - Visualizzazione messaggio di notifica "Scollegamento avvenuto con successo"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC4.4;
+			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Scollegamento avvenuto con successo";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: 
 				\begin{enumerate}
@@ -453,6 +500,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\subsubsection{UC4.5 - Modifica collegamento}
 
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC4.5;
+			\item\textbf{Titolo} : Modifica collegamento;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente deve aver selezionato il collegamento che desidera modificare;
 			\item\textbf{Postcondizioni}:
@@ -479,6 +528,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\end{figure}	
 
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5;
+			\item\textbf{Titolo} : Operazioni calcolo di previsione;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -512,6 +563,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC5.1}
 	\subsubsection{UC5.1 - Inserimento politica temporale}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.1;
+			\item\textbf{Titolo} : Inserimento politica temporale;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente si trova nella sezione "Calcolo di previsione" del pannello del plug-in;
 			\item\textbf{Postcondizioni}: l'utente avrà selezionato una politica temporale applicabile ad un successivo calcolo di previsione;
@@ -521,6 +574,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC5.2}
 	\subsubsection{UC5.2 - Avvio monitoraggio}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.2;
+			\item\textbf{Titolo} : Avvio monitoraggio;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha impostato la Politica Temporale (\hyperref[par:UC5.1]{UC5.1});
 			\item\textbf{Postcondizioni}:
@@ -542,6 +597,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC5.3}
 	\subsubsection{UC5.3 - Visualizzazione messaggio di notifica "Monitoraggio avviato con successo"}	
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.3;
+			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Monitoraggio avviato con successo";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha avviato un monitoraggio (\hyperref[par:UC5.2]{UC5.2});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di monitoraggio avviato con successo;
@@ -555,6 +612,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC5.4}
 	\subsubsection{UC5.4 - Interruzione monitoraggio}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.4;
+			\item\textbf{Titolo} : Interruzione monitoraggio;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2});
 			\item\textbf{Postcondizioni}:
@@ -570,6 +629,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC5.5}
 	\subsubsection{UC5.5 - Visualizzazione messaggio di notifica "Monitoraggio interrotto"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.5;
+			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Monitoraggio interrotto";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha interrotto il monitoraggio (\hyperref[par:UC5.4]{UC5.4});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di monitoraggio interrotto;
@@ -583,6 +644,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC5.6}
 	\subsubsection{UC5.6 - Salvataggio previsione}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.6;
+			\item\textbf{Titolo} : Salvataggio previsione;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
@@ -596,6 +659,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		
 	\label{par:UC5.7}
 	\subsubsection{UC5.7 - Visualizzazione messaggio di notifica "Salvataggio previsione avvenuta con successo"}	\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.7;
+			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Salvataggio previsione avvenuta con successo";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di invio previsioni (\hyperref[par:UC5.6]{UC5.6});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di "Salvataggio dati di previsione avvenuto con successo";
@@ -619,6 +684,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\end{figure}
 
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC6;
+			\item\textbf{Titolo} : Visualizzazione della dashboard;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: 
 			\begin{enumerate}
@@ -637,6 +704,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC6.1}
 	\subsection{UC6.1 - Visualizzazione previsioni}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC6.1;
+			\item\textbf{Titolo} : Visualizzazione previsioni;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha avviato correttamente il monitoraggio del flusso dati (\hyperref[par:UC5.3]{UC5.3}) con relativi predittori collegati;
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato sulla dashboard le previsioni calcolate precedentemente;
@@ -647,6 +716,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC6.2}
 	\subsection{UC6.2 - Visualizzazione messaggio di alert "Soglia critica raggiunta"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC6.2;
+			\item\textbf{Titolo} : Visualizzazione messaggio di alert "Soglia critica raggiunta";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: una delle soglie impostate per il predittore (\hyperref[par:UC3.3]{UC3.3}) è stata raggiunta o superata;
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato il messaggio di alert riguardante la soglia interessata;
@@ -664,6 +735,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC7}
 	\subsection{UC7 - Visualizzazione messaggio d'errore "Nessun file CSV caricato"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC7;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Nessun file CSV caricato";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3}) senza aver caricato un file CSV contenente i valori utilizzati per l'addestramento (\hyperref[par:UC1.1]{UC1.1});
 			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.1]{UC1.1});
@@ -673,6 +746,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC8}
 	\subsection{UC8 - Visualizzazione messaggio d'errore "Nessun algoritmo selezionato"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC8;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Nessun algoritmo selezionato";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di conferma (\hyperref[par:UC1.3]{UC1.3}) senza aver scelto un algoritmo dalla Combo Box (\hyperref[par:UC1.2]{UC1.2});
 			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla scelta dell'algoritmo (\hyperref[par:UC1.2]{UC1.2});
@@ -682,6 +757,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC9}
 	\subsection{UC9 - Visualizzazione messaggio d'errore "File CSV incompatibile"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC9;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "File CSV incompatibile";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file CSV che intende utilizzare per l'addestramento e ha cliccato il pulsante di conferma. Il file selezionato è strutturalmente errato e non c'è compatibilità con l'algoritmo selezionato;
 			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla finestra di selezione del file CSV (\hyperref[par:UC1.1]{UC1.1});
@@ -693,6 +770,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC10}
 	\subsection{UC10 - Visualizzazione messaggio di alert "File JSON già caricato"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC10;
+			\item\textbf{Titolo} : Visualizzazione messaggio di alert "File JSON già caricato";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato l'opzione di caricamento del file JSON tramite click del pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato un messaggio di alert in cui viene segnalato che è già presente un file JSON caricato nel plug-in;
@@ -708,6 +787,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC11}
 	\subsection{UC11 - Visualizzazione messaggio d'errore "Caricamento file JSON" }
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC11;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Caricamento file JSON";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.1]{UC2.1}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.2]{UC2.2});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato un messaggio d'errore in cui viene segnalato che la struttura del file selezionato non supporta una SVM o RL, di conseguenza viene riportato alla selezione del file JSON;
@@ -723,6 +804,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC12}
 	\subsection{UC12 - Visualizzazione messaggio d'errore "Soglia non valida"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC12;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Soglia non valida";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha impostato una soglia di monitoraggio(\hyperref[par:UC3.3]{UC3.3}) non valida per contenuto o formato;
 			\item\textbf{Postcondizioni}: l'utente visualizza il messaggio d'errore sulla soglia appena impostata;		
@@ -738,6 +821,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 	\label{par:UC13}
 	\subsection{UC13 - Visualizzazione messaggio d'errore "Impostazioni di collegamento"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC13;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Impostazioni di collegamento";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha confermato le selezioni per il collegamento di un predittore ad un nodo del flusso (\hyperref[par:UC3.4]{UC3.4}) ed ha commesso alcuni errori;
 			\item\textbf{Postcondizioni}:
@@ -757,6 +842,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC14}
 	\subsection{UC14 - Visualizzazione messaggio d'errore "Politica temporale non definita"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC14;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Politica temporale non definita";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di "Avvio monitoraggio" (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC5.1]{UC5.1});
 			\item\textbf{Postcondizioni}:
@@ -776,6 +863,8 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\label{par:UC15}
 	\subsection{UC15 - Visualizzazione messaggio d'errore "Nessun predittore collegato"}
 		\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC15;
+			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Nessun predittore collegato";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
 			\item\textbf{Postcondizioni}:
