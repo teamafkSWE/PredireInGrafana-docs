@@ -12,7 +12,7 @@ Sulla base delle scadenze fissate in §1.6, la ripartizione delle attività di p
 \textit{Periodo: da 2020-03-16 a 2020-04-13} \\
 Durante questo periodo il \textit{TeamAFK} si occuperà principalmente dell’analisi di tutte le informazioni riguardanti il prodotto che deve sviluppare, l’organizzazione delle attività e la suddivisione delle risorse.
 
-\paragraph{Ruoli attivi} 
+\subsubsection{attivi} 
 \begin{itemize}
 \item \textit{Responsabile di Progetto};
 \item \textit{Amministratore};
@@ -21,7 +21,7 @@ Durante questo periodo il \textit{TeamAFK} si occuperà principalmente dell’an
 \item \textit{Verificatore}.
 \end{itemize}
 
-\paragraph{Attività}
+\subsubsection{Attività}
 \begin{itemize}
 \item \textbf{Identificazione degli strumenti}: attività rivolta a determinare gli strumenti da utilizzare per le comunicazioni, stesura dei documenti, versionamento, sviluppo e verifica del sistema;
 \item \textbf{Norme di Progetto}: sono l'insieme delle regole da seguire per lo svolgimento dei processi e la realizzazione del prodotto. Il documento \textit{Norme di Progetto} è redatto dall'\textit{Amministratore};
@@ -97,9 +97,8 @@ Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguent
 \item Re1F1.1;
 \item Re1F1.2;
 \item Re1F1.3;
-\item Re1F1.4;
-\item Re1F9;
-\item Re1F16.
+\item Re1F1.6;
+\item Re1F9.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
 \textit{Periodo: da 2020/05/01 a 2020/05/04}\\
@@ -149,10 +148,204 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 \subsection{Progettazine di dettaglio e codifica}
 \textit{Periodo: da 2020-05-11 a 2020-06-11}\\
 Questa fase è compresa tra il giorno successivo alla presentazione del 2020-05-11 e la consegna della \textit{Revisione di Qualifica}.
-\begin{itemize}
-\item \textbf{Product Baseline}: le singole unità di cui è composta l'architettura definita nella \textit{Technology Baseline} vengono ulteriormente analizzate;
-\item \textbf{Incrementi e verifica}: sulla base dei feedback del committente e del proponente viene migliorato e verificato il materiale del precedente rilascio.
+
+\subsubsection{Ruoli attivi} \begin{itemize}
+\item \textit{Responsabile di Progetto};
+\item \textit{Amministratore};
+\item \textit{Analista};
+\item \textit{Progettista};
+\item \textit{Programmatore};
+\item \textit{Verificatore}.
 \end{itemize}
+
+\subsubsection{Attività}
+\begin{itemize}
+\item \textbf{Incrementi e verifica dei documenti}: sulla base dei feedback del committente e del proponente, viene migliorato e verificato il materiale del precedente rilascio;
+\item \textbf{Codifica degli incrementi}: 
+\item \textbf{Verifica degli incrementi}: 
+\item \textbf{Preparazione della presentazione}: vengono create le slide da utilizzare per la presentazione della Product Baseline, fissata in data xxxxxxxxxxxxxxxxxxxxxxxxx.
+\end{itemize}
+
+\paragraph{Incremento 4}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-22 a 2020-05-26}\\
+L’incremento 4 prevede il completamento dello sviluppo del tool di addestramento, aggiungendo i messaggi di alert mancanti.\\
+Sarà quindi possibile:
+\begin{itemize}
+	\item visualizzare il messaggio di addestramento avvenuto con successo;
+	\item visualizzare l'errore di addestramento non riuscito;
+	\item visualizzare l'errore CSV non caricato;
+	\item visualizzare l'alert algoritmo non scelto. 
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F1.4;
+\item Re1F1.5;
+\item Re1F7;
+\item Re1F8.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-27 a 2020-05-28}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 5}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-22 a 2020-05-25}\\
+L’incremento 5 prevede il completamento dello sviluppo del caricamento del file json nel plug-in, aggiungendo i messaggi di alert mancanti.\\
+Sarà quindi possibile:
+\begin{itemize}
+	\item visualizzare il messaggio di avvenuto caricamento del file json;
+	\item visualizzare l'alert della presenza di un altro json;
+	\item visualizzare l'errore di caricamento non avvenuto. 
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F2.3;
+\item Re1F10;
+\item Re1F11.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-26 a 2020-05-27}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 6}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-23 a 2020-05-27}\\
+L’incremento 6 prevede lo sviluppo del collegamento del predittore. Per poter svolgere questo incremento è necessario l'aver implementato la lettura del file json in quanto è necessario conoscere i predittori contenuti nel file. \\
+Sarà quindi possibile:
+\begin{itemize}
+	\item scegliere uno o più predittori tra quelli disponibili;
+	\item selezionare la query associata al flusso di dati;
+	\item impostare le soglie di monitoraggio;
+	\item confermare le impostazioni di collegamento.
+	\item visualizzare le impostazioni precedentemente impostate
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F3;
+\item Re1F3.3;
+\item Re1F3.4;
+\item Re1F3.6.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-30 a 2020-05-30}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 7}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-28 a 2020-05-29}\\
+L’incremento 7 prevede lo sviluppo dei messaggi d'alert o di errore del collegamento del predittore. Per poter svolgere questo incremento è necessario l'aver implementato il collegamento ai predittori, l'impostazione delle soglie e la conferma delle impostazioni. \\
+Sarà quindi possibile:
+\begin{itemize}
+	\item visualizzare il messaggio di conferma di collegamento al flusso dati;
+	\item visualizzare l'errore di soglia non valida;
+	\item visualizzare l'errore del non collegamento del predittore.
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F3.5;
+\item Re1F12;
+\item Re1F13.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-30 a 2020-05-30}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 8}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-28 a 2020-05-30}\\
+L’incremento 8 prevede lo sviluppo della funzionalità di modifica del collegamento dei predittori, più precisamente allo scollegamento dei predittori. Per poter svolgere questo incremento è necessario l'aver implementato il collegamento ai predittori. \\
+Sarà quindi possibile:
+\begin{itemize}
+	\item selezionare di modificare i collegamenti;
+	\item selezionare di scollegare il predittore;
+	\item visualizzare il messaggio di conferma del scollegamento;
+	\item selezionare se confermare o annullare lo scollegamento;
+	\item visualizzare il messaggio di avvenuto scollegamento.
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F4;
+\item Re1F4.1;
+\item Re1F4.2;
+\item Re1F4.3;
+\item Re1F4.4;
+\item Re1F4.5.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-31 a 2020-05-31}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 9}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-28 a 2020-06-01}\\
+L’incremento 9 prevede lo sviluppo del calcolo delle previsioni. Per poter svolgere questo incremento è necessario l'aver implementato il collegamento ai predittori e al flusso dati. \\
+Sarà quindi possibile:
+\begin{itemize}
+	\item selezionare la politica temporale della previsione;
+	\item avviare il monitoraggio;
+	\item interrompere il monitoraggio.
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F5;
+\item Re1F5.1;
+\item Re1F5.2;
+\item Re1F5.4.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-06-01 a 2020-06-03}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 10}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-06-01 a 2020-06-02}\\
+L’incremento 10 prevede lo sviluppo dei messaggi di errore, notifica o alert del calcolo delle previsioni. Per poter svolgere questo incremento è necessario l'aver implementato il collegamento dei predittori, la selezione della politica temporale e il calcolo della previsione. \\
+Sarà quindi possibile:
+\begin{itemize}
+	\item visualizzare il messaggio di conferma dell'avvio del monitoraggio;
+	\item visualizzare il messaggio di conferma dell'interruzione del monitoraggio;
+	\item visualizzare l'errore di nessuna politica temporale inserita;
+	\item visualizzare l'errore di nessun predittore selezionato.
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F5.3;
+\item Re1F5.5;
+\item Re1F14;
+\item Re1F15.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-06-03 a 2020-06-03}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 11}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-05-30 a 2020-05-31}\\
+L’incremento 11 prevede lo sviluppo del collegamento al database per il salvataggio delle previsioni. Per poter svolgere questo incremento è necessario l'aver implementato il calcolo delle previsioni. \\
+Sarà quindi possibile:
+\begin{itemize}
+	\item selezionare di salvare le previsioni su un database;
+	\item visualizzare il messaggio di conferma del collegamento al database.
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F5.6;
+\item Re1F5.7.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-06-01 a 2020-06-01}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
+
+\paragraph{Incremento 12}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-06-01 a 2020-06-03}\\
+L’incremento 12 prevede lo sviluppo della visualizzazione delle previsioni attraverso il panel di Grafana. Per poter svolgere questo incremento è necessario l'aver implementato il calcolo della previsione e la selezione delle soglie di monitoraggio. \\
+Sarà quindi possibile:
+\begin{itemize}
+	\item visualizzare le previsioni effettuate, tramite il grafico;
+	\item visualizzare un messaggio di alert quando una soglia viene raggiunta dai dati.
+\end{itemize}
+Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
+\begin{itemize}
+\item Re1F6;
+\item Re1F6.1;
+\item Re1F6.2.
+\end{itemize}
+\paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
+\textit{Periodo: da 2020-06-04 a 2020-06-05}\\
+Durante questo periodo verranno testate e verificate tutte le funzionalità di questo incremento. Qualora dovessero presentarsi dei bug, sarà compito dei programmatori risolverli nel più breve tempo possibile.
 
 \begin{figure}[H]
 \centering
