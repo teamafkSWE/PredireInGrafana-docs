@@ -7,6 +7,31 @@ Gli obiettivi di qualità che il team di Quality Management vuole raggiungere so
 \item affidabilità;
 \item usabilità.
 \end{itemize}
+\subsection{Metriche generali}
+Per una visione generale della qualità del prodotto vengo le adottate le misure di qualità riportate di seguito.
+\subsubsection{MG01 - Percentuale di Metriche Soddisfatte}
+Misura la percentuale di metriche soddisfatte rispetto alla totalità di metriche da utilizzare nel progetto.\\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [$90\%$, $95\%$);
+\item range ottimale: [$95\%$, $100\%$].
+\end{itemize}
+ 
+\subsubsection{MG02 - Percentuale di Requisiti Obbligatori Soddisfatti}
+Misura la percentuale di requisiti oblligatori soddisfatti rispetto alla totalità dei requisiti obbligatori da sviluppare e rispettare.\\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item valore ottimale: 100\%.
+\end{itemize}
+
+\subsubsection{MG03 - Percentuale di Requisiti Desiderabili Soddisfatti}
+Misura la percentuale di requisiti desiderabili e soddisfatti rispetto alla totalità dei requisiti desiderabili da sviluppare e rispettare.\\ \\ 
+\textbf{Parametri adottati:} 
+\begin{itemize}
+\item range accettabile: [$70\%$, $90\%$);
+\item range ottimale: [$90\%$, $100\%$].
+\end{itemize}
+
 \subsection{Metriche della documentazione}
 In relazione agli obiettivi prestabiliti, il team adotta i diversi strumenti per misurare la qualità del prodotto, riportati di seguito.
 \subsubsection{MD01 - Indice di Gulpease}
@@ -85,26 +110,52 @@ Misura la percentuale dei test falliti sul totale dei test eseguiti.\\
 \item range ottimale: [0, 5]\%.
 \end{itemize}
 
-\subsubsection{MS10 - Test di requisiti obbligatori implemtentati}
+\subsubsection{MS10 - Requisiti obbligatori implementati}
 Misura la percentuale dei test implementati sul totale dei test previsti.\\
 \textbf{Parametri adottati:} 
 \begin{itemize}
-\item range accettabile: (70, 90]\%;
-\item range ottimale: [90, 100]\%.
+\item Ottimale: 100\%.
 \end{itemize}
 
-\subsubsection{MS11 - Test di requisiti desiderabili implemtentati}
+\subsubsection{MS11 - Requisiti desiderabili implementati}
 Misura la percentuale dei test di requisiti desiderabili di implementati sul totale di quelli previsti.\\
 \textbf{Parametri adottati:} 
 \begin{itemize}
-\item range accettabile: (60, 100]\%;
+\item range accettabile: (60, 90]\%;
 \item range ottimale: [90, 100]\%.
 \end{itemize}
 
 \subsection{Riepilogo metriche}
 \begin{longtable}{C{2cm} C{4cm} C{5cm}}
 \rowcolor{white}
-\caption{Tabella riepilogativa delle metriche per la qualità del prodotto}\\
+\caption{Tabella riepilogativa delle metriche per la qualità generale del prodotto}\\
+\rowcolor{redafk}
+	\textcolor{white}{\textbf{Codice}} &
+	\textcolor{white}{\textbf{Nome}} &
+	\textcolor{white}{\textbf{Range}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Nome}} &
+\textcolor{white}{\textbf{Range}} \\
+		\endhead
+MG01 & 
+Percentuale di Metriche Soddisfatte &
+\textbf{Accettabile}: [$90\%$, $95\%$)
+\textbf{Ottimale}: [$95\%$, $100\%$] \\
+MG02 &
+Percentuale di Requisiti Obbligatori Soddisfatti &
+\textbf{Ottimale}: 100\% \\
+MG03 &
+Percentuale di Requisiti Desiderabili Soddisfatti&
+\textbf{Accettabile}: [$70\%$, $90\%$);
+\textbf{Ottimale}: [$90\%$, $100\%$].\\
+\end{longtable}
+
+\begin{longtable}{C{2cm} C{4cm} C{5cm}}
+\rowcolor{white}
+\caption{Tabella riepilogativa delle metriche per la qualità dei documenti}\\
 \rowcolor{redafk}
 	\textcolor{white}{\textbf{Codice}} &
 	\textcolor{white}{\textbf{Nome}} &
@@ -123,6 +174,22 @@ Indice di Gulpease &
 MD02 & Indice Fog &
 \textbf{Accettabile}: [5, 13)
 \textbf{Ottimale}: [13, 20] \\
+\end{longtable}
+
+\begin{longtable}{C{2cm} C{4cm} C{5cm}}
+\rowcolor{white}
+\caption{Tabella riepilogativa delle metriche per la qualità del codice}\\
+\rowcolor{redafk}
+	\textcolor{white}{\textbf{Codice}} &
+	\textcolor{white}{\textbf{Nome}} &
+	\textcolor{white}{\textbf{Range}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Nome}} &
+\textcolor{white}{\textbf{Range}} \\
+		\endhead
 MS01 &
 Linee di Codice &
 \textbf{Accettabile}: (10, 20]
@@ -169,5 +236,13 @@ Failed Test Cases  Percentuage &
 \textbf{Accettabile}: (5, 10]\%
 \textbf{Ottimale}: [0, 5]\%.
 \\
+MS10 &
+Requisiti obbligatori implementati &
+\textbf{Ottimale}: 100\% \\
+
+MS11 &
+Requisiti desiderabili implementati &
+\textbf{accettabile}: (60, 90]\%
+\textbf{Ottimale}: [90, 100]\%
 \end{longtable}
 
