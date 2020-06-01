@@ -1,0 +1,43 @@
+\documentclass[a4paper, oneside, openany, dvipsnames, table, 12pt]{article}
+\usepackage[italian,british]{babel}
+\usepackage{../../../Template/AFKstyleEng}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\input{sezioni/frontispiece.tex}
+\makeindex
+
+\begin{document}
+\frontispiece{}
+
+%------------------ COLORI TABELLE 
+\definecolor{pari}{RGB}{255, 207, 158} %{HTML}{E1F5FE} %azzurrino
+\definecolor{dispari}{HTML}{FAFAFA} %bianco/grigetto 
+
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 133, 51}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\definecolor{lastrowcolor}{RGB}{176, 196, 222} %steel blue %{255,165,0} orange %{RGB}{255, 207, 158}
+\rowcolors{2}{pari}{dispari}
+\renewcommand{\arraystretch}{1.5}
+
+%------------------
+
+\newpage
+\input{sezioni/changelog.tex}
+
+%Didascalia tabelle/immagini (prendono come riferimento la subsection)
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+\newpage
+
+%indice, indice figure e indice tabelle
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\end{document}
