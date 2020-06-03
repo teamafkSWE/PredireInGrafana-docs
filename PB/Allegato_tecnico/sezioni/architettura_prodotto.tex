@@ -3,14 +3,14 @@
 \subsection{Descrizione generale}
 Il progetto \textit{Predire in Grafana} prevede la realizzazione di due moduli: un plug-in per la piattaforma Grafana e un tool esterno di supporto, rispettivamente chiamati \textbf{Prediction Plug-in} e \textbf{Training Tool}. \\
 Il Training Tool si occupa di addestrare un algoritmo di \textit{SVM} o \textit{Regressione Lineare} utilizzando un dataset inserito dall'utente, per poi generare un file json contenente le informazioni necessarie per poter effettuare un calcolo di predizione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-ViewModel (MVVM)}.\\
-Il Prediction Plug-in invece si occuperà di ricevere in input il json e una volta collegati i predittori contenuti nel file ad un flusso dati, permetterà di iniziare ad effettuare i calcoli di previsione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-Controller (MVC)}\\
+Il Prediction Plug-in invece si occuperà di ricevere in input il json e una volta collegati i predittori contenuti nel file ad un flusso dati, permetterà di iniziare ad effettuare i calcoli di previsione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-Controller (MVC)}.\\
 Le motivazioni principali che hanno portato alla scelta del design pattern MVVM per il Training Tool sono:
 \begin{itemize}
-	\item per la realizzazione del componente è stato utilizzato \textit{React} e abbiamo ritenuto che questo pattern si accoppiasse bene con la struttura di \textit{React};
+	\item per la realizzazione del componente è stato utilizzato \textit{React} e abbiamo ritenuto che questo pattern si accoppiasse bene con la struttura di \textit{React}.
 \end{itemize}
 Le motivazioni principali che hanno portato alla scelta del design pattern MVC per il Prediction Plug-in sono:
 \begin{itemize}
-	\item abbiamo ritenuto che questo pattern si accoppiasse meglio con la struttura dei plug-in di Grafana;
+	\item abbiamo ritenuto che questo pattern si accoppiasse meglio con la struttura dei plug-in di Grafana.
 \end{itemize}
 Inoltre entrambi i pattern permettono:
 \begin{itemize}
@@ -56,10 +56,10 @@ Inoltre entrambi i pattern permettono:
 
 \subsubsection{Descrizione}
 L'implemetenazione del tool è stata realizzata utilizzando il design pattern MVVM.
-Il passaggio di dati dalle view al model avviene attraverso la modifica di un campo dati \textit{props} immesso dal \textit{viewModel}.
-Attraverso queste \textit{props} il \textit{viewModel} chiama le funzioni corrette quando l’utente interagisce con la vista.
-La divisione tra business logic e presentation logic è rafforzato da questo utilizzo delle \textit{props}.
-Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite le classi \textit{SVMtrain} e \textit{RLtrain} che verranno utilizzate dal \textit{viewModel}.
+Il passaggio di dati dalle view al model avviene attraverso la modifica di un campo dati \textit{props} immesso dal \textit{ViewModel}.
+Attraverso queste \textit{props} il \textit{ViewModel} chiama le funzioni corrette quando l’utente interagisce con la vista.
+La divisione tra Business Logic\glo e Presentation Logic è rafforzato da questo utilizzo delle \texttt{props}.
+Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite le classi \textit{SVMtrain} e \textit{RLtrain} che verranno utilizzate dal \textit{ViewModel}.
 
 
 \begin{comment} si trovano un'istanza delle classi SVMtrain e RLtrain in base all'algoritmo scelto, le classi stesse si trovano nel modello e si occupano di rendere polimorfe le funzioni principali, come quelle di addestramento o di recupero del file JSON.
