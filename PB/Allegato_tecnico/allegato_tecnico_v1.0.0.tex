@@ -1,0 +1,55 @@
+\documentclass[a4paper, oneside, openany, dvipsnames, table, 12pt]{article}
+\usepackage{../../Template/AFKstyle}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\input{sezioni/copertina.tex}
+\makeindex
+
+%------------------ PER SISTEMARE INDICE TABELLE E FIGURE 
+\makeatletter
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{3em}}% 3em instead of 2.3em
+\let\l@table\l@figure
+\makeatother
+%------------------
+
+\begin{document}
+\copertina{}
+
+%------------------ COLORI TABELLE 
+\definecolor{pari}{RGB}{255, 207, 158} %{HTML}{E1F5FE} %azzurrino
+\definecolor{dispari}{HTML}{FAFAFA} %bianco/grigetto 
+
+%definizione colori per tabelle (tranne copertina)
+\definecolor{redafk}{RGB}{255, 133, 51}
+\definecolor{grey2}{RGB}{204, 204, 204}
+\definecolor{greyRowafk}{RGB}{234, 234, 234}
+\definecolor{lastrowcolor}{RGB}{176, 196, 222} %steel blue %{255,165,0} orange %{RGB}{255, 207, 158}
+\rowcolors{2}{pari}{dispari}
+\renewcommand{\arraystretch}{1.5}
+
+%------------------
+
+%Didascalia tabelle/immagini (prendono come riferimento la subsection)
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+\newpage
+
+%indice, indice figure e indice tabelle
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\input{sezioni/introduzione.tex}
+\pagebreak
+
+\input{sezioni/architettura_prodotto.tex}
+\pagebreak
+
+\input{sezioni/requisiti.tex}
+\pagebreak
+
+\end{document}
