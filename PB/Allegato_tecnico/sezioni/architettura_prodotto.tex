@@ -58,8 +58,8 @@ Inoltre entrambi i pattern permettono:
 L'implemetenazione del tool è stata realizzata utilizzando il design pattern MVVM.
 Il passaggio di dati dalle view al model avviene attraverso la modifica di un campo dati props immesso dal Controller.
 Attraverso queste props il controller chiama le funzioni corrette quando l’utente interagisce con la vista.
-La divisione tra business logic e presentation logic è rafforzato da questo utilizzo delle props.
-
+La divisione tra business logic e presentation logic è rafforzato da questo utilizzo delle props.
+Nel controller si trovano un'istanza delle classi SVMtrain e RLtrain in base all'algoritmo scelto, le classi stesse si trovano nel modello e si occupano di rendere polimorfe le funzioni principali, come quelle di addestramento o di recupero del file JSON.
 
 \subsubsection{Diagrammi dei package}
 \begin{figure}[H]
