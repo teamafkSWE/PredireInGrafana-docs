@@ -1,6 +1,24 @@
 \section{Architettura del prodotto}
 
 \subsection{Descrizione generale}
+Il progetto \textit{Predire in Grafana} prevede la realizzazione di due moduli: un plug-in per la piattaforma Grafana e un tool esterno di supporto, rispettivamente chiamati \textbf{Prediction Plug-in} e \textbf{Training Tool}. \\
+Il Training Tool si occupa di addestrare un algoritmo di \textit{SVM} o \textit{Regressione Lineare} utilizzando un dataset inserito dall'utente, per poi generare un file json contenente le informazioni necessarie per poter effettuare un calcolo di predizione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-ViewModel (MVVM)}.\\
+Il Prediction Plug-in invece si occuperà di ricevere in input il json e una volta collegati i predittori contenuti nel file ad un flusso dati, permetterà di iniziare ad effettuare i calcoli di previsione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-Controller (MVC)}\\
+Le motivazioni principali che hanno portato alla scelta del design pattern MVVM per il Training Tool sono:
+\begin{itemize}
+	\item per la realizzazione del componente è stato utilizzato \textit{React} e abbiamo ritenuto che questo pattern si accoppiasse bene con la struttura di \textit{React};
+\end{itemize}
+Le motivazioni principali che hanno portato alla scelta del design pattern MVC per il Prediction Plug-in sono:
+\begin{itemize}
+	\item abbiamo ritenuto che questo pattern si accoppiasse meglio con la struttura dei plug-in di Grafana;
+\end{itemize}
+Inoltre entrambi i pattern permettono:
+\begin{itemize}
+	\item di disaccoppiare la parte di \textit{presentation logic} da quella di
+\textit{business logic};
+	\item il riutilizzo di alcune componenti in altri contesti.
+\end{itemize}
+
 
 \subsubsection{Diagrammi delle attività}
 
