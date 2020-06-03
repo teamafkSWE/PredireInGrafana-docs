@@ -60,6 +60,7 @@ Re1F2 & Obbligatorio & L'utente potrà caricare il file JSON contente la definiz
 Re1F2.1 & Obbligatorio & Dopo aver cliccato il pulsante di caricamento presente nella sezione del plugin "Caricamento JSON" l'utente potrà inserire un file JSON selezionandolo dal proprio file system &  Interno\newline UC2.1\\
 Re1F2.2 & Obbligatorio & L'utente potrà confermare il caricamento del file JSON cliccando il relativo pulsante presente nella sezione "Caricamento JSON" del plugin &  Interno\newline UC2.2\\
 Re1F2.3 & Obbligatorio & Quando la procedura di caricamento va a buon fine l'utente deve poter visualizzare un messaggio di conferma avvenuto successo del caricamento del file JSON &  Interno\newline UC2.3\\
+Re1F2.4 & Obbligatorio & Quando la procedura di caricamento va a buon fine l'utente deve poter visualizzare il contenuto del file JSON con nomi e valori dei parametri che verranno utilizzati per la previsione e varie informazioni generali &  Interno\newline UC2.4\\
 Re1F3 & Obbligatorio & L'utente deve poter associare un predittore al nodo del flusso dati per creare un collegamento su cui verrà calcolata la previsione visualizzata poi in un grafico presente nella dashboard &  Capitolato\newline UC3\\
 Re1F3.1 & Obbligatorio & L'utente avrà la possibilità di selezionare un predittore da una lista di predittori presente nella sezione del plugin "Collegamento". Tale lista conterrà i predittori definiti nel file JSON precedentemente caricato e contenente l'algoritmo addestrato  &  Interno\newline UC3.1\\
 Re1F3.2 & Obbligatorio & L'utente potrà selezionare una query associata ad un nodo del flusso dati da una lista presente nella sezione del plugin "Collegamento" a cui verranno collegati i predittori. La lista conterrà delle query definite dall'utente e precedentemente calcolate dal sistema di Grafana &  Interno\newline UC3.2\\
@@ -91,7 +92,7 @@ Re1F9 & Obbligatorio & L'utente deve poter visualizzare il messaggio di errore f
 Re1F10 & Obbligatorio & L'utente deve poter visualizzare un messaggio di alert che avvisi l'utente che il caricamento del file JSON è già avvenuto nel caso in cui sia già stato caricato un file JSON in precedenza &  Interno\newline UC2.1\\
 Re1F11 & Obbligatorio & Quando viene caricato erroneamente un file JSON di natura diversa da quella voluta l'utente deve poter visualizzare un messaggio d'errore che segnali l'errato caricamento del file JSON dovuto a una struttura incompatibile e non supportata da un algoritmo SVM e RL &  Interno\newline UC2.2\\
 Re1F12 & Obbligatorio & L'utente deve poter visualizzare un messaggio d'errore che segnali di aver impostato una soglia non valida nel momento in cui venga inserito un valore incoerente con la struttura predefinita; viene richiesto il reinserimento &  Interno\newline
-UC3.3\\
+UC3.4\\
 Re1F13 & Obbligatorio & Quando viene confermata la procedura di collegamento, ma viene riscontrata l'errata impostazione di un collegamento l'utente deve poter visualizzare un messaggio d'errore in cui viene segnalata la presenza di errori o mancate selezioni nella procedura di collegamento; l'utente viene invitato a reinserire o controllare le operazioni precedentemente effettuate & Interno\newline UC3.4\\
 Re1F14 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore che segnali il mancato inserimento di una politica temporale per il calcolo di previsione ogniqualvolta non venga definita una politica temporale precedentemente all'avvio del monitoraggio &  Interno\newline UC5.2\\
 Re1F15 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore in cui viene segnalato il mancato collegamento di alcun predittore a nodo del flusso dati nel momento in cui venga avviato il monitoraggio senza aver effettivamente aggiunte aggiunto alcun collegamento &  Interno\newline
@@ -182,34 +183,47 @@ Non sono stati individuati requisiti prestazionali in quanto il progetto sarà c
 \textcolor{white}{\textbf{Fonte}} &
 \textcolor{white}{\textbf{Requisiti}} \\
 		\endhead
-Capitolato & Re1F1\newline Re1F2 \newline Re1F3 \newline Re1F3.3 \newline Re1F5 \newline Re1F6 \newline Re1F8 \newline Re3F24\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1V3\\
-Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re1F1.5\newline Re1F1.6\newline ReF2\newline Re1F2.1\newline Re1F2.2\newline ReF3\newline Re1F3.1\newline Re1F3.2\newline Re1F3.4\newline Re1F3.5\newline Re1F3.6\\
-Interno &\newline Re1F4\newline  Re1F4.1\newline Re1F4.2\newline Re1F4.3\newline
-Re1F4.4\newline Re1F4.5\newline Re1F5\newline Re1F5.1\newline Re1F5.2\newline Re1F5.3\newline Re1F5.4 \newline Re1F5.5\newline
-Re1F5.6\newline Re1F5.7\newline Re1F6\newline Re1F6.1\newline  Re1F6.2\newline Re1F7\newline Re1F8\newline Re1F9\newline Re1F10\newline Re1F11\newline Re1F12\newline  Re1F13\newline  Re1F14\newline  Re1F15\newline Re1F16 \newline Re1F17\newline  Re1F18\newline Re1F19\newline  Re1F20\newline  Re1F21\newline  Re1F22\newline  Re1F23\newline  Re1Q1\newline  Re1Q2.1\newline  Re2Q2.2\newline  Re2Q6\newline  Re1V4
-\newline  Re1V6\\
+Capitolato & Re1F1\newline Re1F2\newline Re1F3\newline Re1F3.3\newline Re1F5\newline Re1F6\newline Re1F6.1\newline Re1F6.2\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1Q7\newline Re1V3\\
+
+Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re1F1.5\newline Re1F1.6\newline  Re1F2.1\newline Re1F2.2\newline Re1F2.3\newline Re1F2.4\newline Re1F3.1\newline Re1F3.2\newline Re1F3.4\newline Re1F3.5\newline Re1F3.6\newline Re1F4\newline Re1F4.1\newline Re1F4.2\newline Re1F4.3\newline Re1F4.4\newline Re1F4.5\newline Re1F5\newline Re1F5.1\newline Re1F5.2\newline Re1F5.3\newline Re1F5.4\newline Re1F5.5\newline Re1F5.7\newline Re1F7\newline Re1F8\newline Re1F9\newline Re1F10\newline Re1F11\newline Re1F12\newline Re1F13\newline Re1F14\newline Re1F15\newline Re1Q1\newline  Re1Q2.1\newline Re2Q2.2\newline Re2Q6\newline Re1V4
+\newline  Re1V5\\
+
 UC1 & Re1F1\\
-UC1.1 & Re1F1.1\newline Re1F9\\
-UC1.2 & Re1F1.2\\
-UC1.3 & Re1F1.3\newline Re1F16\\
+UC1.1 & Re1F1.1\newline Re1F7 \newline Re1F9\\
+UC1.2 & Re1F1.2\newline Re1F8\\
+UC1.3 & Re1F1.3\\
 UC1.4 & Re1F1.4\\
+UC1.5 & Re1F1.5\\
+UC1.6 & Re1F1.6\\
 UC2 & Re1F2\\
 UC2.1 & Re1F2.1\newline Re1F10\\
-UC2.2 & Re1F2.2\newline Re1F11\newline Re1F17\\
+UC2.2 & Re1F2.2\newline Re1F11\\
+UC2.3 & Re1F2.3\\
+UC2.4 & Re1F2.4\\
 UC3 & Re1F3\\
 UC3.1 & Re1F3.1\\
 UC3.2 & Re1F3.2\\
-UC3.3 & Re1F3.3\newline  Re1F12\newline Re1F24\\
-UC3.4 & Re1F3.4\newline Re1F13\newline Re1F18\newline Re1F19\\
-UC4 & Re1F4\newline Re1F20\\
+UC3.3 & Re1F3.3\newline  Re1F6.2\\
+UC3.4 & Re1F3.4\newline Re1F12 \newline Re1F13\\
+UC3.5 & Re1F3.5\\
+UC3.6 & Re1F3.6\\
+UC4 & Re1F4\\
+UC4.1 & Re1F4.1\\
+UC4.2 & Re1F4.2\\
+UC4.3 & Re1F4.3\\
+UC4.4 & Re1F4.4\\
+UC4.5 & Re1F4.5\\
+UC4.6 & Re1F4.6\\
 UC5 & Re1F5\\
+UC5.1 & Re1F5.1\\
+UC5.2 & Re1F5.2\newline Re1F14\newline Re1F15\\
+UC5.3 & Re1F5.3\\
+UC5.4 & Re1F5.4\\
+UC5.1 & Re1F5\\
+UC5.7 & Re1F5.7\\
 UC6 & Re1F6\\
 UC6.1 & Re1F6.1\\
-UC6.2 & Re1F6.2\newline Re1F14\newline Re1F15\newline Re1F21\\
-UC6.3 & Re1F23\\
-UC7 & Re1F7\newline Re1F22\\
-UC8 & Re1F8\\
-Verbale VI\_2020-03-31 & Re1F6.3\newline Re1V2\\
+Verbale VI\_2020-03-31 & Re1F5.6\newline Re1V2\\
 Supporto al linguaggio ECMAScript6 & Re1V1\newline Re1V1.1\newline Re1V1.2\newline Re1V1.3\newline Re1V1.4\\
 \end{longtable}	
 \pagebreak
@@ -231,38 +245,47 @@ Re1F1.1 & Interno\newline UC1.1\\
 Re1F1.2 & Interno\newline UC1.2\\
 Re1F1.3 & Interno\newline UC1.3\\
 Re1F1.4 & Interno\newline UC1.4\\
+Re1F1.5 & Interno\newline UC1.5\\
+Re1F1.6 & Interno\newline UC1.6\\
 Re1F2 & Capitolato\newline UC2\\
 Re1F2.1 & Interno\newline UC2.1\\
 Re1F2.2 & Interno\newline UC2.2\\
+Re1F2.3 & Interno\newline UC2.3\\
+Re1F2.4 & Interno\newline UC2.4\\
 Re1F3 & Capitolato\newline UC3\\
 Re1F3.1 & Interno\newline UC3.1\\
 Re1F3.2 & Interno\newline UC3.2\\
-Re1F3.3 & Capitolato\newline UC3.3\\
+Re1F3.3 & Capitolato\newline UC3.4\\
 Re1F3.4 & Interno\newline UC3.4\\
+Re1F3.5 & Interno\newline UC3.5\\
+Re1F3.5 & Interno\newline UC3.6\\
 Re1F4 & Interno\newline UC4\\
+Re1F4.1 & Interno\newline UC4.1\\
+Re1F4.2 & Interno\newline UC4.2\\
+Re1F4.3 & Interno\newline UC4.3\\
+Re1F4.4 & Interno\newline UC4.4\\
+Re1F4.5 & Interno\newline UC4.5\\
 Re1F5 & Capitolato\newline UC5\\
+Re1F5.1 & Interno\newline UC5.1\\
+Re1F5.2 & Interno\newline UC5.2\\
+Re1F5.3 & Interno\newline UC5.3\\
+Re1F5.4 & Interno\newline UC5.4\\
+Re1F5.5 & Interno\newline UC5.5\\
+Re1F5.6 & Verbale\newline VI\_2020-03-31\\
+Re1F5.7 & Interno\newline UC5.7\\
 Re1F6 & Capitolato\newline UC6\\
-Re1F6.1 & Interno\newline UC6.1\\
-Re1F6.2 & Interno\newline UC6.2\\
+Re1F6.1 & Capitolato\newline UC6.1\\
+Re1F6.2 & Capitolato\newline UC3.3\\
 Re1F6.3 & Verbale VI\_2020-03-31\\
-Re1F7 & Interno\newline UC7\\
-Re1F8 & Capitolato\newline UC8\\
+Re1F7 & Interno\newline UC1.1\\
+Re1F8 & Capitolato\newline UC1.2\\
 Re1F9 & Interno\newline UC1.1\\
 Re1F10 & Interno\newline UC2.1\\
 Re1F11 & Interno\newline UC2.2\\
 Re1F12 & Interno\newline UC3.3\\
 Re1F13 & Interno\newline UC3.4\\
-Re1F14 & Interno\newline UC6.2\\
-Re1F15 & Interno\newline UC6.2\\
-Re1F16 & Interno\newline UC1.3\\
-Re1F17 & Interno\newline UC2.2\\
-Re1F18 & Interno\newline UC3.4\\
-Re1F19 & Interno\newline UC3.4\\
-Re1F20 & Interno\newline UC4\\
-Re1F21 & Interno\newline UC6.2\\
-Re1F22 & Interno\newline UC7\\
-Re1F23 & Interno\newline UC6.3\\
-Re3F24 & Capitolato\newline UC3.3\\
+Re1F14 & Interno\newline UC5.2\\
+Re1F15 & Interno\newline UC5.2\\
 Re1Q1 & Interno\\
 Re1Q2 & Capitolato\\
 Re1Q2.1 & Interno\\
@@ -280,7 +303,7 @@ Re1V1.4 & Supporto al linguaggio ECMAScript6\\
 Re1V2 & Verbale VI\_2020-03-31\\
 Re1V3 & Capitolato\\
 Re1V4 & Interno\\
-Re1V5 & Capitolato\\
+Re1V5 & Interno\\
 \end{longtable}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
