@@ -3,10 +3,10 @@
 \subsection{Descrizione generale}
 Il progetto \textit{Predire in Grafana} prevede la realizzazione di due moduli: un plug-in per la piattaforma Grafana e un tool esterno di supporto, rispettivamente chiamati \textbf{Prediction Plug-in} e \textbf{Training Tool}. \\
 Il Training Tool si occupa di addestrare un algoritmo di \textit{SVM} o \textit{Regressione Lineare} utilizzando un dataset inserito dall'utente, per poi generare un file json contenente le informazioni necessarie per poter effettuare un calcolo di predizione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-ViewModel (MVVM)}.\\
-Il Prediction Plug-in invece si occuperà di ricevere in input il json e una volta collegati i predittori contenuti nel file ad un flusso dati, permetterà di iniziare ad effettuare i calcoli di previsione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-Controller (MVC)}.\\
+Il Prediction Plug-in invece si occuperà di ricevere in input il json e una volta collegati i predittori, contenuti nel file, ad un flusso dati, permetterà di iniziare ad effettuare i calcoli di previsione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-Controller (MVC)}.\\
 Le motivazioni principali che hanno portato alla scelta del design pattern MVVM per il Training Tool sono:
 \begin{itemize}
-	\item per la realizzazione del componente è stato utilizzato \textit{React} e abbiamo ritenuto che questo pattern si accoppiasse bene con la struttura di \textit{React}.
+	\item per la realizzazione del componente è stato utilizzato \textit{React} e abbiamo ritenuto che questo pattern si accoppiasse bene con la struttura di quest'ultimo.
 \end{itemize}
 Le motivazioni principali che hanno portato alla scelta del design pattern MVC per il Prediction Plug-in sono:
 \begin{itemize}
@@ -14,10 +14,10 @@ Le motivazioni principali che hanno portato alla scelta del design pattern MVC p
 \end{itemize}
 Inoltre entrambi i pattern permettono:
 \begin{itemize}
-	\item di disaccoppiare la parte di \textit{presentation logic} da quella di
-\textit{business logic};
-	\item il riutilizzo di alcune componenti in altri contesti.
+	\item di disaccoppiare la parte di \textit{presentation logic} da quella di \textit{business logic};
+	\item il riutilizzo di alcune componenti in altri contesti, senza doverli modificare.
 \end{itemize}
+Di seguito sono mostrati i diagrammi delle attività corrispondenti agli Use Cases descritti nell'\textit{Analisi dei Requisiti}.
 
 
 \subsubsection{Diagrammi delle attività}
@@ -26,6 +26,12 @@ Inoltre entrambi i pattern permettono:
 \includegraphics[scale=0.6]{../../Diagrams/Activity_diagrams/uc1.png}
 \caption{Diagramma delle attività dello UC1}
 \end{figure}
+\textbf{Specifica:} lo UC1.5 racchiude i seguenti tipi di errori: 
+\begin{itemize}
+	\item \textbf{UC7}: Nessun file CSV caricato;
+	\item \textbf{UC8}: Nessun algoritmo selezionato;
+	\item \textbf{UC9}: File CSV incompatibile.
+\end{itemize}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{../../Diagrams/Activity_diagrams/uc2.png}
@@ -79,7 +85,7 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 \includegraphics[scale=0.5]{../../Diagrams/Classes_diagrams/tool_model.png}
 \caption{Diagramma delle classi del Model del Training Tool}
 \end{figure}
-
+\pagebreak
 \textbf{View}
 \begin{figure}[H]
 \centering
@@ -102,12 +108,25 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 \caption{Diagramma di sequenza del TrainSVM}
 \end{figure}
 
-\subsubsection{Design pattern notevoli utilizzati}
+\subsubsection{Design pattern comportamentali utilizzati}
+Per quanto riguarda i design pattern comportamentali utilizzati, durante la progettazione delle classi del Training Tool ci siamo accorti che alcune classi correlate tra loro (quelle adibite a richiamare le librerie per gli algoritmi di Machine Learning RL e SVM) differivano soltanto per il comportamento effettivo, dato dalla libreria richiamata. I metodi utilizzati dalle due classi erano in effetti più varianti di uno stesso algoritmo (quello di addestramento). Per queste ragioni abbiamo pensato di utilizzare il design pattern \textbf{Strategy}, così da definire una famiglia di algoritmi, incapsularli e renderli interscambiabili tra di loro, a seconda della scelta effettuata dall’utente.
+Nel nostro caso abbiamo identificato come \textit{Strategy} l’oggetto contenente un riferimento all'algoritmo di previsione.
+Quest'ultimo rappresenta il modello della nostra applicazione, dove è contenuta effettivamente la business logic.
 
-
+\pagebreak
 \subsection{Architettura Prediction Plug-in}
 
 \subsubsection{Descrizione}
+In questo modulo, composto da più pannelli all'interno di Grafana, verrà associato il predittore prodotto dal tool esterno al flusso dati monitorato appunto in Grafana. Per questo modulo è stato utilizzato il pattern architetturale \textit{MVC}.
+In questa architettura l’Editor e il Panel condividono la variabile \textit{props}, istanziata da Grafana. 
+All’importazione del file JSON, il controller si occuperà di: \begin{itemize}
+\item leggere il suo contenuto attraverso la funzione \texttt{setJson(file)};
+\item salvare una copia dei predittori;
+\item applicare l'algoritmo di previsione corretto attraverso il metodo \texttt{setStrategy()};
+\item inviare una notifica alla viste di successo caricamento file JSON.
+\end{itemize}
+
+A seguito di una discussione col proponente, abbiamo deciso di creare una componente Panel come punto di partenza del nostro plug-in, la quale ha il compito di creare una dashboard per permettere all’utente di prendere familiarità con le funzionalità dei vari pannelli.
 
 \subsubsection{Diagrammi dei package}
 \begin{figure}[H]
@@ -140,5 +159,5 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 
 \subsubsection{Diagrammi di sequenza}
 
-\subsubsection{Design pattern notevoli utilizzati}
+\subsubsection{Design pattern comportamentali utilizzati}
 
