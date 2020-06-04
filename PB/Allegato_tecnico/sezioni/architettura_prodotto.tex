@@ -1,10 +1,10 @@
 \section{Architettura del prodotto}
 
 \subsection{Descrizione generale}
-Il progetto \textit{Predire in Grafana} prevede la realizzazione di due moduli: un plug-in per la piattaforma Grafana e un tool esterno di supporto, rispettivamente chiamati \textbf{Prediction Plug-in} e \textbf{Training Tool}. \\
-Il Training Tool si occupa di addestrare un algoritmo di \textit{SVM} o \textit{Regressione Lineare} utilizzando un dataset inserito dall'utente, per poi generare un file json contenente le informazioni necessarie per poter effettuare un calcolo di predizione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-ViewModel (MVVM)}.\\
+Il progetto \textit{Predire in Grafana} prevede la realizzazione di due moduli: un plug-in per la piattaforma Grafana e un tool esterno di supporto, rispettivamente chiamati \textbf{Prediction Plug-in} e \textbf{Prediction Tool}. \\
+Il Prediction Tool si occupa di addestrare un algoritmo di \textit{SVM} o \textit{Regressione Lineare} utilizzando un dataset inserito dall'utente, per poi generare un file json contenente le informazioni necessarie per poter effettuare un calcolo di predizione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-ViewModel (MVVM)}.\\
 Il Prediction Plug-in invece si occuperà di ricevere in input il json e una volta collegati i predittori, contenuti nel file, ad un flusso dati, permetterà di iniziare ad effettuare i calcoli di previsione. Questo modulo è stato sviluppato seguendo il pattern \textit{Model-View-Controller (MVC)}.\\
-Le motivazioni principali che hanno portato alla scelta del design pattern MVVM per il Training Tool sono:
+Le motivazioni principali che hanno portato alla scelta del design pattern MVVM per il Prediction Tool sono:
 \begin{itemize}
 	\item per la realizzazione del componente è stato utilizzato \textit{React} e abbiamo ritenuto che questo pattern si accoppiasse bene con la struttura di quest'ultimo.
 \end{itemize}
@@ -58,7 +58,7 @@ Di seguito sono mostrati i diagrammi delle attività corrispondenti agli Use Cas
 \caption{Diagramma delle attività dello UC6}
 \end{figure}
 
-\subsection{Architettura Training Tool}
+\subsection{Architettura Prediction Tool}
 
 \subsubsection{Descrizione}
 L'implemetenazione del tool è stata realizzata utilizzando il design pattern MVVM.
@@ -75,7 +75,7 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{../../Diagrams/Package_diagrams/tool_design_patern.png}
-\caption{Diagramma dei package del Training Tool}
+\caption{Diagramma dei package del Prediction Tool}
 \end{figure}
 
 \subsubsection{Diagrammi delle classi}
@@ -83,21 +83,21 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{../../Diagrams/Classes_diagrams/tool_model.png}
-\caption{Diagramma delle classi del Model del Training Tool}
+\caption{Diagramma delle classi del Model del Prediction Tool}
 \end{figure}
 \pagebreak
 \textbf{View}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{../../Diagrams/Classes_diagrams/tool_view.png}
-\caption{Diagramma delle classi della View del Training Tool}
+\includegraphics[scale=0.45]{../../Diagrams/Classes_diagrams/tool_view.png}
+\caption{Diagramma delle classi della View del Prediction Tool}
 \end{figure}
 
 \textbf{ViewModel}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{../../Diagrams/Classes_diagrams/tool_modelview.png}
-\caption{Diagramma delle classi del ViewModel del Training Tool}
+\caption{Diagramma delle classi del ViewModel del Prediction Tool}
 \end{figure}
 
 
@@ -109,7 +109,7 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 \end{figure}
 
 \subsubsection{Design pattern comportamentali utilizzati}
-Per quanto riguarda i design pattern comportamentali utilizzati, durante la progettazione delle classi del Training Tool ci siamo accorti che alcune classi correlate tra loro (quelle adibite a richiamare le librerie per gli algoritmi di Machine Learning RL e SVM) differivano soltanto per il comportamento effettivo, dato dalla libreria richiamata. I metodi utilizzati dalle due classi erano in effetti più varianti di uno stesso algoritmo (quello di addestramento). Per queste ragioni abbiamo pensato di utilizzare il design pattern \textbf{Strategy}, così da definire una famiglia di algoritmi, incapsularli e renderli interscambiabili tra di loro, a seconda della scelta effettuata dall’utente.
+Per quanto riguarda i design pattern comportamentali utilizzati, durante la progettazione delle classi del Prediction Tool ci siamo accorti che alcune classi correlate tra loro (quelle adibite a richiamare le librerie per gli algoritmi di Machine Learning RL e SVM) differivano soltanto per il comportamento effettivo, dato dalla libreria richiamata. I metodi utilizzati dalle due classi erano in effetti più varianti di uno stesso algoritmo (quello di addestramento). Per queste ragioni abbiamo pensato di utilizzare il design pattern \textbf{Strategy}, così da definire una famiglia di algoritmi, incapsularli e renderli interscambiabili tra di loro, a seconda della scelta effettuata dall’utente.
 Nel nostro caso abbiamo identificato come \textit{Strategy} l’oggetto contenente un riferimento all'algoritmo di previsione.
 Quest'ultimo rappresenta il modello della nostra applicazione, dove è contenuta effettivamente la business logic.
 
@@ -125,6 +125,8 @@ All’importazione del file JSON, il controller si occuperà di: \begin{itemize}
 \item applicare l'algoritmo di previsione corretto attraverso il metodo \texttt{setStrategy()};
 \item inviare una notifica alla viste di successo caricamento file JSON.
 \end{itemize}
+
+\textbf{AGGIUNGERE RIGUARDO MODEL E VIEW}
 
 A seguito di una discussione col proponente, abbiamo deciso di creare una componente Panel come punto di partenza del nostro plug-in, la quale ha il compito di creare una dashboard per permettere all’utente di prendere familiarità con le funzionalità dei vari pannelli.
 
