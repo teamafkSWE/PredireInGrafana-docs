@@ -74,12 +74,20 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 \subsubsection{Diagrammi dei package}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{../../Diagrams/Package_diagrams/tool_design_patern.png}
+\includegraphics[scale=0.4]{../../Diagrams/Package_diagrams/tool_design_patern.png}
 \caption{Diagramma dei package del Prediction Tool}
 \end{figure}
 
 \subsubsection{Diagrammi delle classi}
-\textbf{Model}
+Quello che segue è il diagramma delle classi del Prediction Tool.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.22]{../../Diagrams/Classes_diagrams/tool_all_classes.png}
+\caption{Diagramma delle classi del Prediction Tool}
+\end{figure}
+
+\begin{comment}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{../../Diagrams/Classes_diagrams/tool_model.png}
@@ -99,7 +107,7 @@ Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite 
 \includegraphics[scale=0.5]{../../Diagrams/Classes_diagrams/tool_modelview.png}
 \caption{Diagramma delle classi del ViewModel del Prediction Tool}
 \end{figure}
-
+\end{comment}
 
 \subsubsection{Diagrammi di sequenza}
 \begin{figure}[H]
@@ -125,8 +133,11 @@ All’importazione del file JSON, il controller si occuperà di: \begin{itemize}
 \item applicare l'algoritmo di previsione corretto attraverso il metodo \texttt{setStrategy()};
 \item inviare una notifica alla viste di successo caricamento file JSON.
 \end{itemize}
-
+\begin{comment}
 \textbf{AGGIUNGERE RIGUARDO MODEL E VIEW}
+\end{comment}
+Per quanto riguarda la comunicazione che avviene tra \textit{View} e \textit{Model} viene gestita dal \textit{Controller}. Questo è stato reso possibile per la presenza in \textit{Editor} di un istanza della classe \textit{Controller}. In questo modo, ad ogni caricamento del file JSON, il \textit{Controller} viene messo al corrente dal pannello \textit{CaricamentoJsonView} (tramite il metodo \textbf{update()}) di aggiornare gli oggetti del modello ed inviare i le nuove informazioni alla vista.
+
 
 A seguito di una discussione col proponente, abbiamo deciso di creare una componente Panel come punto di partenza del nostro plug-in, la quale ha il compito di creare una dashboard per permettere all’utente di prendere familiarità con le funzionalità dei vari pannelli.
 
@@ -141,7 +152,7 @@ A seguito di una discussione col proponente, abbiamo deciso di creare una compon
 \textbf{Model}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{../../Diagrams/Classes_diagrams/plugin_model.png}
+\includegraphics[scale=0.45]{../../Diagrams/Classes_diagrams/plugin_model.png}
 \caption{Diagramma delle classi del Model del Prediction Plug-in}
 \end{figure}
 
@@ -162,4 +173,6 @@ A seguito di una discussione col proponente, abbiamo deciso di creare una compon
 \subsubsection{Diagrammi di sequenza}
 
 \subsubsection{Design pattern comportamentali utilizzati}
+Tra i design pattern notevoli che sono stati adottati per l'implementazione del plugin, rientra l'\textbf{Observer Pattern} il quale dà la possibiltà di garantire l'aggiornamento dei componenti in seguito a modifiche da parte dell'utente.
+Nel nostro caso la classe \textit{subject}, ovvero le classi da monitorare sono tutte le componenti grafiche utilizzate dalla classe \textit{Editor}. Invece la l'interfaccia \textit{Observe}, implementata dalla \textit{Observable}, è colei che ha il compito di segnalare la necessità di un aggiornamento delle componenti del plugin.
 
