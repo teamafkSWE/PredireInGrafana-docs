@@ -567,38 +567,24 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item (\hyperref[par:UC5.1]{UC5.1}) l'utente inserisce la politica temporale\glo da applicare;
-					\item (\hyperref[par:UC5.2]{UC5.2}) l'utente clicca il pulsante di avvio monitoraggio;
-					\item (\hyperref[par:UC5.3]{UC5.3}) viene visualizzato un messaggio di notifica di "Monitoraggio avviato con successo";
-					\item (\hyperref[par:UC5.4]{UC5.4}) una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione.
-					\item (\hyperref[par:UC5.5]{UC5.5}) viene visualizzata una notifica di "Monitoraggio interrotto";		
-					\item (\hyperref[par:UC5.6]{UC5.6}) l'utente decide se salvare i dati di previsione cliccando il pulsante di salvataggio.
-					\item (\hyperref[par:UC5.7]{UC5.7}) viene visualizzata un messaggio di notifica di "Invio dati avvenuto con successo";
+					\item (\hyperref[par:UC5.1]{UC5.1}) l'utente clicca il pulsante di avvio monitoraggio;
+					\item (\hyperref[par:UC5.2]{UC5.2}) viene visualizzato un messaggio di notifica di "Monitoraggio avviato con successo";
+					\item (\hyperref[par:UC5.3]{UC5.3}) una volta avviato il monitoraggio è possibile interromperlo cliccando il pulsante di interruzione.
+					\item (\hyperref[par:UC5.4]{UC5.4}) viene visualizzata una notifica di "Monitoraggio interrotto";		
+					\item (\hyperref[par:UC5.5]{UC5.5}) l'utente decide se salvare i dati di previsione cliccando il pulsante di salvataggio.
+					\item (\hyperref[par:UC5.6]{UC5.6}) viene visualizzata un messaggio di notifica di "Invio dati avvenuto con successo";
 				\end{enumerate}
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item \hyperref[par:UC14]{UC14} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Politica temporale non definita";
-					\item \hyperref[par:UC15]{UC15} estende \hyperref[par:UC5.2]{UC5.2}: visualizzazione messaggio d'errore "Nessun predittore collegato".
+					\item \hyperref[par:UC14]{UC14} estende \hyperref[par:UC5.1]{UC5.1}: visualizzazione messaggio d'errore "Nessun predittore collegato".
 
 				\end{enumerate}
 		\end{itemize}
 
-	
 	\label{par:UC5.1}
-	\subsubsection{UC5.1 - Inserimento politica temporale}
+	\subsubsection{UC5.1 - Avvio monitoraggio}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo} : UC5.1;
-			\item\textbf{Titolo} : Inserimento politica temporale;
-			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente si trova nella sezione "Calcolo di previsione" del pannello del plug-in;
-			\item\textbf{Postcondizioni}: l'utente avrà selezionato una politica temporale applicabile ad un successivo calcolo di previsione;
-			\item\textbf{Scenario principale}: l'utente inserisce il tempo di previsione sul flusso dati attraverso l'inserimento dei campi "Secondi", "Minuti", "Ore" nell'apposito spazio di editing.
-		\end{itemize}	
-
-	\label{par:UC5.2}
-	\subsubsection{UC5.2 - Avvio monitoraggio}
-		\begin{itemize}
-			\item\textbf{Codice Identificativo} : UC5.2;
 			\item\textbf{Titolo} : Avvio monitoraggio;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha impostato la Politica Temporale (\hyperref[par:UC5.1]{UC5.1});
@@ -611,17 +597,16 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Scenario principale}: l'utente avvia il calcolo di previsione selezionando il pulsante “Avvia monitoraggio”;
 			\item\textbf{Estensioni}:
 				\begin{enumerate}
-					\item \hyperref[par:UC14]{UC14}: visualizzazione messaggio d'errore "Politica temporale non definita";
-					\item \hyperref[par:UC15]{UC15}: visualizzazione messaggio d'errore "Nessun predittore collegato";
+					\item \hyperref[par:UC14]{UC14}: visualizzazione messaggio d'errore "Nessun predittore collegato".
 				\end{enumerate}
 			
 				
 		\end{itemize}	
 		
-		\label{par:UC5.3}
-	\subsubsection{UC5.3 - Visualizzazione messaggio di notifica "Monitoraggio avviato con successo"}	
+		\label{par:UC5.2}
+	\subsubsection{UC5.2 - Visualizzazione messaggio di notifica "Monitoraggio avviato con successo"}	
 		\begin{itemize}
-			\item\textbf{Codice Identificativo} : UC5.3;
+			\item\textbf{Codice Identificativo} : UC5.2;
 			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Monitoraggio avviato con successo";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha avviato un monitoraggio (\hyperref[par:UC5.2]{UC5.2});
@@ -633,13 +618,13 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}		
 		\end{itemize}
 		
-		\label{par:UC5.4}
-	\subsubsection{UC5.4 - Interruzione monitoraggio}
+		\label{par:UC5.3}
+	\subsubsection{UC5.3 - Interruzione monitoraggio}
 		\begin{itemize}
-			\item\textbf{Codice Identificativo} : UC5.4;
+			\item\textbf{Codice Identificativo} : UC5.3;
 			\item\textbf{Titolo} : Interruzione monitoraggio;
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2});
+			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.1]{UC5.1});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l'utente ha deciso di interrompere il monitoraggio avviato precedentemente;
@@ -650,13 +635,13 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			
 		\end{itemize}
 
-	\label{par:UC5.5}
-	\subsubsection{UC5.5 - Visualizzazione messaggio di notifica "Monitoraggio interrotto"}
+	\label{par:UC5.4}
+	\subsubsection{UC5.4 - Visualizzazione messaggio di notifica "Monitoraggio interrotto"}
 		\begin{itemize}
-			\item\textbf{Codice Identificativo} : UC5.5;
+			\item\textbf{Codice Identificativo} : UC5.4;
 			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Monitoraggio interrotto";
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha interrotto il monitoraggio (\hyperref[par:UC5.4]{UC5.4});
+			\item\textbf{Precondizioni}: l'utente ha interrotto il monitoraggio (\hyperref[par:UC5.3]{UC5.3});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di monitoraggio interrotto;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
@@ -665,33 +650,33 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 				\end{enumerate}		
 		\end{itemize}
 		
-	\label{par:UC5.6}
-	\subsubsection{UC5.6 - Salvataggio previsione}
+	\label{par:UC5.5}
+	\subsubsection{UC5.5 - Salvataggio previsione}
 		\begin{itemize}
-			\item\textbf{Codice Identificativo} : UC5.6;
+			\item\textbf{Codice Identificativo} : UC5.5;
 			\item\textbf{Titolo} : Salvataggio previsione;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item è stata configurata correttamente la connessione al server tramite Grafana;
 					\item l'utente deve disporre di almeno un database caricato in Grafana;
-					\item l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2}) e dispone delle previsioni sul flusso di dati in quanto il calcolo di previsione è stato completato correttamente (\hyperref[par:UC5.3]{UC5.3}).
+					\item l'utente ha avviato il monitoraggio (\hyperref[par:UC5.1]{UC5.1}) e dispone delle previsioni sul flusso di dati in quanto il calcolo di previsione è stato completato correttamente (\hyperref[par:UC5.2]{UC5.2}).
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: la previsione calcolata sui dati ricevuti è stata immagazzinata nel DB se lo desidera;
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante “Invia previsioni” tramite il quale i dati di previsione vengono inviati al Database InfluxDB, altrimenti decide di non salvarli e prosegue con il monitoraggio.
 			
 		\end{itemize}	
 		
-	\label{par:UC5.7}
-	\subsubsection{UC5.7 - Visualizzazione messaggio di notifica "Salvataggio previsione avvenuto con successo"}	\begin{itemize}
-			\item\textbf{Codice Identificativo} : UC5.7;
+	\label{par:UC5.6}
+	\subsubsection{UC5.6 - Visualizzazione messaggio di notifica "Salvataggio previsione avvenuto con successo"}	\begin{itemize}
+			\item\textbf{Codice Identificativo} : UC5.6;
 			\item\textbf{Titolo} : Visualizzazione messaggio di notifica "Salvataggio previsione avvenuto con successo";
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di invio previsioni (\hyperref[par:UC5.6]{UC5.6});
+			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di salvataggio delle previsioni (\hyperref[par:UC5.5]{UC5.5});
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di "Salvataggio dati di previsione avvenuto con successo";
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l'utente visualizza il messaggio di notifica "Salvataggio previsione avvenuto con successo" in cui viene notificato che i dati di previsione sono stati inviati al Database (\hyperref[par:UC5.6]{UC5.6});
+					\item l'utente visualizza il messaggio di notifica "Salvataggio previsione avvenuto con successo" in cui viene notificato che i dati di previsione sono stati inviati al Database (\hyperref[par:UC5.5]{UC5.5});
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -863,35 +848,14 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 		\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-		\label{par:UC14}
-	\subsection{UC14 - Visualizzazione messaggio d'errore "Politica temporale non definita"}
-		\begin{itemize}
-			\item\textbf{Codice Identificativo} : UC14;
-			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Politica temporale non definita";
-			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha cliccato il pulsante di "Avvio monitoraggio" (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcuna politica temporale per il calcolo di previsione (\hyperref[par:UC5.1]{UC5.1});
-			\item\textbf{Postcondizioni}:
-				\begin{enumerate}
-					\item l'utente ha visualizzato il messaggio d'errore sulla politica temporale non definita;		
-					\item	il monitoraggio non viene avviato.
-				\end{enumerate}
-			\item\textbf{Scenario principale}:
-				\begin{enumerate}
-					\item l'utente visualizza il messaggio d'errore "Errore politica temporale non definita" in cui viene segnalato che non è stata inserita nessuna politica temporale prima dell'avvio del monitoraggio;
-					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'inserimento della politica temporale (\hyperref[par:UC5.1]{UC5.1}).		
-				\end{enumerate}		
-		\end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-		\label{par:UC15}
-	\subsection{UC15 - Visualizzazione messaggio d'errore "Nessun predittore collegato"}
+		\label{par:UC14}
+	\subsection{UC14 - Visualizzazione messaggio d'errore "Nessun predittore collegato"}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo} : UC15;
 			\item\textbf{Titolo} : Visualizzazione messaggio d'errore "Nessun predittore collegato";
 			\item\textbf{Attore primario}: utente generico;
-			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.2]{UC5.2}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
+			\item\textbf{Precondizioni}: l'utente ha avviato il monitoraggio (\hyperref[par:UC5.1]{UC5.1}), senza aver impostato alcun collegamento (\hyperref[par:UC3]{UC3});
 			\item\textbf{Postcondizioni}:
 				\begin{enumerate}
 					\item l'utente ha visualizzato il messaggio d'errore sulla mancata presenza di collegamenti;	
