@@ -74,14 +74,13 @@ Re1F4.2 & Obbligatorio & Se viene cliccato il pulsante di scollegamento l'utente
 Re1F4.3 & Obbligatorio & Una volta visualizzato il messaggio di alert sul proseguimento dello scollegamento l'utente deve poter cliccare il pulsante di conferma per proseguire o quello di annullamento per ritornare alla visualizzazione della lista dei collegamenti &  Interno\newline UC4.3\\
 Re2F4.4 & Desiderabile & Quando la procedura di scollegamento va a buon fine l'utente deve poter visualizzare un messaggio di notifica di scollegamento avvenuto con successo & Interno\newline UC4.4\\
 Re1F4.5 & Obbligatorio & Per ogni collegamento presente nella lista l'utente deve poter cliccare il pulsante di modifica per apportare delle modifiche ai campi del relativo collegamento effettuato in precedenza quali selezione del predittore, selezione del nodo del flusso dati, impostazione delle soglie; l'utente deve esser reindirizzato alla sezione di "Collegamento" del plugin &  Interno\newline UC4.5\\
-Re1F5 & Obbligatorio & Una volta creato almeno un collegamento tra predittore e nodo del flusso dati l'utente deve poter calcolarne la previsione impostando la politica temporale e avviando il monitoraggio sui collegamenti impostati in precedenza &  Capitolato\newline UC5\\
-Re1F5.1 & Obbligatorio & L'utente deve poter inserire la politica temporale utilizzata nel calcolo di previsione. L'utente potrà selezionare tale politica editando i campi secondi, minuti e ore presenti nella sezione del plugin "Previsione". &  Interno\newline UC5.1\\
-Re1F5.2 & Obbligatorio & L'utente deve poter avviare il monitoraggio cliccando il pulsante di avvio che verrà sostituito da un pulsante di interruzione; durante il monitoraggio non sarà possibile la modifica dei collegamenti &  Interno\newline UC5.2\\
-Re2F5.3 & Desiderabile & Quando il monitoraggio viene avviato con successo l'utente deve poter visualizzare un messaggio di notifica di monitoraggio avviato con successo &  Interno\newline UC5.3\\
-Re1F5.4 & Obbligatorio & L'utente deve aver la possibilità di interrompere il monitoraggio cliccando il pulsante di interruzione che sarà disponibile esclusivamente nel caso il monitoraggio sia già stato avviato in precedenza &  Interno\newline UC5.4\\
-Re2F5.5 & Desiderabile & Quando il monitoraggio viene interrotto con successe l'utente deve poter visualizzare un messaggio di notifica di monitoraggio interrotto con successo &  Interno\newline UC5.5\\
-Re1F5.6 & Obbligatorio & All'utente sarà offerta la possibilità di effettuare il salvataggio delle previsioni all'interno del Database InfluxDB configurato precedentemente nel sistema di Grafana cliccando il pulsante di "invio previsione" &  Verbale VI\_2020-03-31\\
-Re2F5.7 & Desiderabile & Quando le previsioni vengono salvate l'utente deve poter visualizzare un messaggio di notifica di salvataggio della previsione avvenuto con successo &  Interno\newline UC5.7\\
+Re1F5 & Obbligatorio & Una volta creato almeno un collegamento tra predittore e nodo del flusso dati l'utente deve poter calcolarne la previsione avviando il monitoraggio sui collegamenti impostati in precedenza &  Capitolato\newline UC5\\
+Re1F5.1 & Obbligatorio & L'utente deve poter avviare il monitoraggio cliccando il pulsante di avvio che verrà sostituito da un pulsante di interruzione; durante il monitoraggio non sarà possibile la modifica dei collegamenti &  Interno\newline UC5.1\\
+Re2F5.2 & Desiderabile & Quando il monitoraggio viene avviato con successo l'utente deve poter visualizzare un messaggio di notifica di monitoraggio avviato con successo &  Interno\newline UC5.2\\
+Re1F5.3 & Obbligatorio & L'utente deve aver la possibilità di interrompere il monitoraggio cliccando il pulsante di interruzione che sarà disponibile esclusivamente nel caso il monitoraggio sia già stato avviato in precedenza &  Interno\newline UC5.3\\
+Re2F5.4 & Desiderabile & Quando il monitoraggio viene interrotto con successo l'utente deve poter visualizzare un messaggio di notifica di monitoraggio interrotto con successo &  Interno\newline UC5.4\\
+Re1F5.5 & Obbligatorio & All'utente sarà offerta la possibilità di effettuare il salvataggio delle previsioni all'interno del Database InfluxDB configurato precedentemente nel sistema di Grafana cliccando il pulsante di "Salva previsione" &  Verbale VI\_2020-03-31\\
+Re2F5.6 & Desiderabile & Quando le previsioni vengono salvate l'utente deve poter visualizzare un messaggio di notifica di salvataggio della previsione avvenuto con successo &  Interno\newline UC5.6\\
 Re1F6 & Obbligatorio & L'utente deve poter disporre di una dashboard integrata al sistema Grafana il cui contenuto dipenderà dalla scelte intraprese dall'utente stesso nelle varie sezioni del plugin "Predire in Grafana" & Capitolato\newline UC6\\
 Re1F6.1 & Obbligatorio & L'utente potrà visualizzare le previsioni, precedentemente calcolate e che verranno aggiornate in base alla politica temporale inserita, attraverso grafici all'interno della dashboard a cui era stato aggiunto il plugin "Predire in Grafana" &  Capitolato\newline UC6.1\\
 Re3F6.2 & Opzionale & Ogniqualvolta una soglia impostata durante la procedura di collegamento del predittore ad un nodo del flusso dati viene raggiunta o superata l'utente deve poter visualizzare un messaggio di alert che segnalerà il raggiungimento di una soglia critica &  Capitolato\newline UC3.3\\
@@ -89,14 +88,13 @@ Re3F6.2 & Opzionale & Ogniqualvolta una soglia impostata durante la procedura di
 Re1F7 & Obbligatorio & Se viene confermata la procedura di addestramento senza aver caricato un file CSV contenente i dati che verranno utilizzati per l'addestramento l'utente deve poter visualizzare un messaggio di errore che segnali la mancanza di tale file &  Interno\newline UC1.1\\
 Re1F8 & Obbligatorio & Nel momento in cui venga confermata la procedura di addestramento senza aver scelto un algoritmo da addestrare dalla Combo Box presente nel tool di addestramento l'utente deve poter visualizzare un messaggio di errore che segnali la mancata selezione del tipo di algoritmo scelto per l'addestramento  &  Interno\newline UC1.2\\
 Re1F9 & Obbligatorio & L'utente deve poter visualizzare il messaggio di errore file CSV incompatibile con l'algoritmo selezionato quando il file CSV caricato nella procedura di addestramento non è adatto perché strutturalmente errato e/o perché non c'è compatibilità con l'algoritmo selezionato & Interno\newline UC1.1\\
-Re1F10 & Obbligatorio & L'utente deve poter visualizzare un messaggio di alert che avvisi l'utente che il caricamento del file JSON è già avvenuto nel caso in cui sia già stato caricato un file JSON in precedenza &  Interno\newline UC2.1\\
+Re3F10 & Opzionale & L'utente deve poter visualizzare un messaggio di alert che avvisi l'utente che il caricamento del file JSON è già avvenuto nel caso in cui sia già stato caricato un file JSON in precedenza &  Interno\newline UC2.1\\
 Re1F11 & Obbligatorio & Quando viene caricato erroneamente un file JSON di natura diversa da quella voluta l'utente deve poter visualizzare un messaggio d'errore che segnali l'errato caricamento del file JSON dovuto a una struttura incompatibile e non supportata da un algoritmo SVM e RL &  Interno\newline UC2.2\\
 Re1F12 & Obbligatorio & L'utente deve poter visualizzare un messaggio d'errore che segnali di aver impostato una soglia non valida nel momento in cui venga inserito un valore incoerente con la struttura predefinita; viene richiesto il reinserimento &  Interno\newline
 UC3.4\\
 Re1F13 & Obbligatorio & Quando viene confermata la procedura di collegamento, ma viene riscontrata l'errata impostazione di un collegamento l'utente deve poter visualizzare un messaggio d'errore in cui viene segnalata la presenza di errori o mancate selezioni nella procedura di collegamento; l'utente viene invitato a reinserire o controllare le operazioni precedentemente effettuate & Interno\newline UC3.4\\
-Re1F14 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore che segnali il mancato inserimento di una politica temporale per il calcolo di previsione ogniqualvolta non venga definita una politica temporale precedentemente all'avvio del monitoraggio &  Interno\newline UC5.2\\
-Re1F15 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore in cui viene segnalato il mancato collegamento di alcun predittore a nodo del flusso dati nel momento in cui venga avviato il monitoraggio senza aver effettivamente aggiunte aggiunto alcun collegamento &  Interno\newline
-UC5.2\\
+Re1F14 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore in cui viene segnalato il mancato collegamento di alcun predittore a nodo del flusso dati nel momento in cui venga avviato il monitoraggio senza aver effettivamente aggiunte aggiunto alcun collegamento &  Interno\newline
+UC5.1\\
 
 \end{longtable}
 
@@ -185,7 +183,7 @@ Non sono stati individuati requisiti prestazionali in quanto il progetto sarà c
 		\endhead
 Capitolato & Re1F1\newline Re1F2\newline Re1F3\newline Re3F3.3\newline Re1F5\newline Re1F6\newline Re1F6.1\newline Re3F6.2\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1Q7\newline Re1V3\\
 
-Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re2F1.5\newline Re2F1.6\newline  Re1F2.1\newline Re1F2.2\newline Re2F2.3\newline Re1F2.4\newline Re1F3.1\newline Re1F3.2\newline Re1F3.4\newline Re2F3.5\newline Re1F3.6\newline Re1F4\newline Re1F4.1\newline Re1F4.2\newline Re1F4.3\newline Re2F4.4\newline Re1F4.5\newline Re1F5\newline Re1F5.1\newline Re1F5.2\newline Re2F5.3\newline Re1F5.4\newline Re2F5.5\newline Re2F5.7\newline Re1F7\newline Re1F8\newline Re1F9\newline Re1F10\newline Re1F11\newline Re1F12\newline Re1F13\newline Re1F14\newline Re1F15\newline Re1Q1\newline  Re1Q2.1\newline Re2Q2.2\newline Re2Q6\newline Re1V4
+Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re2F1.5\newline Re2F1.6\newline  Re1F2.1\newline Re1F2.2\newline Re2F2.3\newline Re1F2.4\newline Re1F3.1\newline Re1F3.2\newline Re1F3.4\newline Re2F3.5\newline Re1F3.6\newline Re1F4\newline Re1F4.1\newline Re1F4.2\newline Re1F4.3\newline Re2F4.4\newline Re1F4.5\newline Re1F5\newline Re1F5.1\newline Re1F5.2\newline Re2F5.3\newline Re1F5.4\newline Re2F5.5\newline Re2F5.6\newline Re1F7\newline Re1F8\newline Re1F9\newline Re3F10\newline Re1F11\newline Re1F12\newline Re1F13\newline Re1F14\newline Re1Q1\newline  Re1Q2.1\newline Re2Q2.2\newline Re2Q6\newline Re1V4
 \newline  Re1V5\\
 
 UC1 & Re1F1\\
@@ -196,7 +194,7 @@ UC1.4 & Re2F1.4\\
 UC1.5 & Re2F1.5\\
 UC1.6 & Re1F1.6\\
 UC2 & Re1F2\\
-UC2.1 & Re1F2.1\newline Re1F10\\
+UC2.1 & Re1F2.1\newline Re3F10\\
 UC2.2 & Re1F2.2\newline Re1F11\\
 UC2.3 & Re2F2.3\\
 UC2.4 & Re1F2.4\\
@@ -215,12 +213,12 @@ UC4.4 & Re2F4.4\\
 UC4.5 & Re1F4.5\\
 UC4.6 & Re1F4.6\\
 UC5 & Re1F5\\
-UC5.1 & Re1F5.1\\
-UC5.2 & Re1F5.2\newline Re1F14\newline Re1F15\\
+UC5.1 & Re1F5.1\newline Re1F15\\
+UC5.2 & Re1F5.2\\
 UC5.3 & Re2F5.3\\
 UC5.4 & Re1F5.4\\
-UC5.1 & Re1F5\\
-UC5.7 & Re2F5.7\\
+UC5.1 & Re1F5.5\\
+UC5.7 & Re2F5.6\\
 UC6 & Re1F6\\
 UC6.1 & Re1F6.1\\
 Verbale VI\_2020-03-31 & Re1F5.6\newline Re1V2\\
@@ -270,9 +268,8 @@ Re1F5.1 & Interno\newline UC5.1\\
 Re1F5.2 & Interno\newline UC5.2\\
 Re2F5.3 & Interno\newline UC5.3\\
 Re1F5.4 & Interno\newline UC5.4\\
-Re2F5.5 & Interno\newline UC5.5\\
-Re1F5.6 & Verbale\newline VI\_2020-03-31\\
-Re2F5.7 & Interno\newline UC5.7\\
+Re2F5.5 & Verbale\newline VI\_2020-03-31\\
+Re1F5.6 & Interno\newline UC5.6\\
 Re1F6 & Capitolato\newline UC6\\
 Re1F6.1 & Capitolato\newline UC6.1\\
 Re3F6.2 & Capitolato\newline UC3.3\\
@@ -280,12 +277,11 @@ Re1F6.3 & Verbale VI\_2020-03-31\\
 Re1F7 & Interno\newline UC1.1\\
 Re1F8 & Capitolato\newline UC1.2\\
 Re1F9 & Interno\newline UC1.1\\
-Re1F10 & Interno\newline UC2.1\\
+Re3F10 & Interno\newline UC2.1\\
 Re1F11 & Interno\newline UC2.2\\
 Re1F12 & Interno\newline UC3.3\\
 Re1F13 & Interno\newline UC3.4\\
 Re1F14 & Interno\newline UC5.2\\
-Re1F15 & Interno\newline UC5.2\\
 Re1Q1 & Interno\\
 Re1Q2 & Capitolato\\
 Re1Q2.1 & Interno\\
