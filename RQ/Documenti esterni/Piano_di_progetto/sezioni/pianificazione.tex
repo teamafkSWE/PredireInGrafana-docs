@@ -193,14 +193,12 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 L’incremento 5 prevede il completamento dello sviluppo del caricamento del file json nel plug-in, aggiungendo i messaggi di alert mancanti.\\
 Sarà quindi possibile:
 \begin{itemize}
-	\item visualizzare il messaggio di avvenuto caricamento del file json;
-	\item visualizzare l'alert della presenza di un altro json;
-	\item visualizzare l'errore di caricamento non avvenuto. 
+	\item visualizzareil messaggio di avvenuto caricamento del file json;
+	\item visualizzare l'errore nel caso in cui venga caricato un file JSON non compatibile.
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
 \item Re2F2.3;
-\item Re1F10;
 \item Re1F11.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
@@ -212,11 +210,8 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 L’incremento 6 prevede lo sviluppo del collegamento del predittore. Per poter svolgere questo incremento è necessario l'aver implementato la lettura del file json in quanto è necessario conoscere i predittori contenuti nel file. \\
 Sarà quindi possibile:
 \begin{itemize}
-	\item scegliere uno o più predittori tra quelli disponibili;
-	\item selezionare la query associata al flusso di dati;
-	\item impostare le soglie di monitoraggio;
-	\item confermare le impostazioni di collegamento.
-	\item visualizzare le impostazioni precedentemente impostate
+	\item confermare le impostazioni di collegamento;
+	\item visualizzare le impostazioni precedentemente impostate.
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
@@ -250,8 +245,8 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 L’incremento 8 prevede lo sviluppo della funzionalità di modifica del collegamento dei predittori, più precisamente allo scollegamento dei predittori. Per poter svolgere questo incremento è necessario l'aver implementato il collegamento ai predittori. \\
 Sarà quindi possibile:
 \begin{itemize}
-	\item selezionare di modificare i collegamenti;
-	\item selezionare di scollegare il predittore;
+	\item modificare i collegamenti creati;
+	\item scollegare il/i predittore/i;
 	\item visualizzare il messaggio di conferma del scollegamento;
 	\item selezionare se confermare o annullare lo scollegamento;
 	\item visualizzare il messaggio di avvenuto scollegamento.
@@ -297,6 +292,8 @@ Sarà quindi possibile:
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
+\item Re2F5.2;
+\item Re2F5.4;
 \item Re1F14.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
