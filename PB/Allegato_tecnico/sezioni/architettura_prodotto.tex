@@ -136,8 +136,8 @@ All’importazione del file JSON, il controller si occuperà di: \begin{itemize}
 \begin{comment}
 \textbf{AGGIUNGERE RIGUARDO MODEL E VIEW}
 \end{comment}
-Per quanto riguarda la comunicazione che avviene tra \textit{View} e \textit{Model} viene gestita dal \textit{Controller}. Questo è stato reso possibile per la presenza in \textit{Editor} di un istanza della classe \textit{Controller}. In questo modo, ad ogni caricamento del file JSON, il \textit{Controller} viene messo al corrente dal pannello \textit{CaricamentoJsonView} (tramite il metodo \textbf{update()}) di aggiornare gli oggetti del modello ed inviare i le nuove informazioni alla vista.
-
+Per quanto riguarda la comunicazione che avviene tra \textit{View} e \textit{Model} viene gestita dal \textit{Controller}. Questo è stato reso possibile per la presenza in \textit{Editor} di un istanza della classe \textit{Controller}. In questo modo, ad ogni caricamento del file JSON, la vista comunica al \textit{Controller} l'avvenuto caricamento (tramite il metodo \texttt{setJson(file)}) passando come parametro il file appena ricevuto.
+Una volta che il \textit{Controller} termina la lettura del file notifica la vista di aggiornarsi (tramite il metodo \texttt{update()}), mostrando le nuove informazioni ottenute dal file.
 
 A seguito di una discussione col proponente, abbiamo deciso di creare una componente Panel come punto di partenza del nostro plug-in, la quale ha il compito di creare una dashboard per permettere all’utente di prendere familiarità con le funzionalità dei vari pannelli.
 
@@ -171,8 +171,13 @@ A seguito di una discussione col proponente, abbiamo deciso di creare una compon
 \end{figure}
 
 \subsubsection{Diagrammi di sequenza}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.55]{../../Diagrams/Sequence_diagrams/viewGraph.png}
+\caption{Diagramma di sequenza del Panel}
+\end{figure}
 
 \subsubsection{Design pattern comportamentali utilizzati}
-Tra i design pattern notevoli che sono stati adottati per l'implementazione del plugin, rientra l'\textbf{Observer Pattern} il quale dà la possibiltà di garantire l'aggiornamento dei componenti in seguito a modifiche da parte dell'utente.
-Nel nostro caso la classe \textit{subject}, ovvero le classi da monitorare sono tutte le componenti grafiche utilizzate dalla classe \textit{Editor}. Invece la l'interfaccia \textit{Observe}, implementata dalla \textit{Observable}, è colei che ha il compito di segnalare la necessità di un aggiornamento delle componenti del plugin.
-
+Tra i design pattern che sono stati adottati per l'implementazione del plugin, rientrano l'\textbf{Observer Pattern} e lo \textbf{Strategy Pattern}. \\
+L'Observer pattern è stato utilizzato per semplificare la comunicazione tra controller e le componenti della vista che necessitano di essere aggiornate a seguito della modifica dello stato del controler. Infatti nel nostro caso la classe \textit{subject}, ovvero la classe di cui monitorarne lo stato, è la componente controller mentre la componente \textit{Observer}, ovvero tutte le classi che necessitano di essere aggiornate a seguito di un cambiamento dello stato del subject, sono le componenti grafiche utilizzate dalla classe \textit{Editor}. \\
+Lo Strategy pattern è stato utilizzato per gli algoritmi di predizione, infatti il controller ha un riferimento all'interfaccia \textit{Algorithm} che espone il metodo \texttt{predict(inputs)}. Nel model sono quindi presenti le classi concrete (\textit{Regression} e \textit{Svm}) che implementano l'algoritmo di predizione e il controller si occupa di istanziare l'algoritmo corretto rispetto quanto letto dal file json.
