@@ -14,7 +14,7 @@ Le motivazioni principali che hanno portato alla scelta del design pattern MVC p
 \end{itemize}
 Inoltre entrambi i pattern permettono:
 \begin{itemize}
-	\item di disaccoppiare la parte di \textit{presentation logic} da quella di \textit{business logic};
+	\item di disaccoppiare la parte di \textit{Presentation Logic}\glo da quella di \textit{Business Logic}\glo;
 	\item il riutilizzo di alcune componenti in altri contesti, senza doverli modificare.
 \end{itemize}
 Di seguito sono mostrati i diagrammi delle attività corrispondenti agli Use Cases descritti nell'\textit{Analisi dei Requisiti}.
@@ -64,7 +64,7 @@ Di seguito sono mostrati i diagrammi delle attività corrispondenti agli Use Cas
 L'implemetenazione del tool è stata realizzata utilizzando il design pattern MVVM.
 Il passaggio di dati dalle view al model avviene attraverso la modifica di un campo dati \textit{props} immesso dal \textit{ViewModel}.
 Attraverso queste \textit{props} il \textit{ViewModel} chiama le funzioni corrette quando l’utente interagisce con la vista.
-La divisione tra Business Logic\glo e Presentation Logic è rafforzato da questo utilizzo delle \texttt{props}.
+La divisione tra Business Logic e Presentation Logic è rafforzato da questo utilizzo delle \texttt{props}.
 Nel modello viene fornita funzionalità per la gestione degli algoritmi tramite le classi \textit{SVMtrain} e \textit{RLtrain} che verranno utilizzate dal \textit{ViewModel}.
 
 
