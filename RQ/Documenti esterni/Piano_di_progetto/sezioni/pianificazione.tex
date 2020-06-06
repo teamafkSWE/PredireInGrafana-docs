@@ -12,7 +12,7 @@ Sulla base delle scadenze fissate in §1.6, la ripartizione delle attività di p
 \textit{Periodo: da 2020-03-16 a 2020-04-13} \\
 Durante questo periodo il \textit{TeamAFK} si occuperà principalmente dell’analisi di tutte le informazioni riguardanti il prodotto che deve sviluppare, l’organizzazione delle attività e la suddivisione delle risorse.
 
-\subsubsection{attivi} 
+\subsubsection{Ruoli attivi} 
 \begin{itemize}
 \item \textit{Responsabile di Progetto};
 \item \textit{Amministratore};
@@ -97,7 +97,7 @@ Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguent
 \item Re1F1.1;
 \item Re1F1.2;
 \item Re1F1.3;
-\item Re1F1.6;
+\item Re2F1.6;
 \item Re1F9.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
@@ -116,7 +116,8 @@ Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguent
 \begin{itemize}
 \item Re1F2;
 \item Re1F2.1;
-\item Re1F2.2.
+\item Re1F2.2;
+\item Re1F2.4.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
 \textit{Periodo: da 2020/05/01 a 2020/05/03}\\
@@ -163,7 +164,7 @@ Questa fase è compresa tra il giorno successivo alla presentazione del 2020-05-
 \item \textbf{Incrementi e verifica dei documenti}: sulla base dei feedback del committente e del proponente, viene migliorato e verificato il materiale del precedente rilascio;
 \item \textbf{Codifica degli incrementi}: 
 \item \textbf{Verifica degli incrementi}: 
-\item \textbf{Preparazione della presentazione}: vengono create le slide da utilizzare per la presentazione della Product Baseline, fissata in data xxxxxxxxxxxxxxxxxxxxxxxxx.
+\item \textbf{Preparazione della presentazione}: vengono create le slide da utilizzare per la presentazione della Product Baseline.
 \end{itemize}
 
 \paragraph{Incremento 4}\mbox{} \\ \mbox{} \\ 
@@ -179,7 +180,7 @@ Sarà quindi possibile:
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
 \item Re1F1.4;
-\item Re1F1.5;
+\item Re2F1.5;
 \item Re1F7;
 \item Re1F8.
 \end{itemize}
@@ -192,14 +193,12 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 L’incremento 5 prevede il completamento dello sviluppo del caricamento del file json nel plug-in, aggiungendo i messaggi di alert mancanti.\\
 Sarà quindi possibile:
 \begin{itemize}
-	\item visualizzare il messaggio di avvenuto caricamento del file json;
-	\item visualizzare l'alert della presenza di un altro json;
-	\item visualizzare l'errore di caricamento non avvenuto. 
+	\item visualizzareil messaggio di avvenuto caricamento del file json;
+	\item visualizzare l'errore nel caso in cui venga caricato un file JSON non compatibile.
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
-\item Re1F2.3;
-\item Re1F10;
+\item Re2F2.3;
 \item Re1F11.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
@@ -211,16 +210,11 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 L’incremento 6 prevede lo sviluppo del collegamento del predittore. Per poter svolgere questo incremento è necessario l'aver implementato la lettura del file json in quanto è necessario conoscere i predittori contenuti nel file. \\
 Sarà quindi possibile:
 \begin{itemize}
-	\item scegliere uno o più predittori tra quelli disponibili;
-	\item selezionare la query associata al flusso di dati;
-	\item impostare le soglie di monitoraggio;
-	\item confermare le impostazioni di collegamento.
-	\item visualizzare le impostazioni precedentemente impostate
+	\item confermare le impostazioni di collegamento;
+	\item visualizzare le impostazioni precedentemente impostate.
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
-\item Re1F3;
-\item Re1F3.3;
 \item Re1F3.4;
 \item Re1F3.6.
 \end{itemize}
@@ -239,7 +233,6 @@ Sarà quindi possibile:
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
-\item Re1F3.5;
 \item Re1F12;
 \item Re1F13.
 \end{itemize}
@@ -252,8 +245,8 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 L’incremento 8 prevede lo sviluppo della funzionalità di modifica del collegamento dei predittori, più precisamente allo scollegamento dei predittori. Per poter svolgere questo incremento è necessario l'aver implementato il collegamento ai predittori. \\
 Sarà quindi possibile:
 \begin{itemize}
-	\item selezionare di modificare i collegamenti;
-	\item selezionare di scollegare il predittore;
+	\item modificare i collegamenti creati;
+	\item scollegare il/i predittore/i;
 	\item visualizzare il messaggio di conferma del scollegamento;
 	\item selezionare se confermare o annullare lo scollegamento;
 	\item visualizzare il messaggio di avvenuto scollegamento.
@@ -264,7 +257,7 @@ Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguent
 \item Re1F4.1;
 \item Re1F4.2;
 \item Re1F4.3;
-\item Re1F4.4;
+\item Re2F4.4;
 \item Re1F4.5.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
@@ -276,16 +269,13 @@ Durante questo periodo verranno testate e verificate tutte le funzionalità di q
 L’incremento 9 prevede lo sviluppo del calcolo delle previsioni. Per poter svolgere questo incremento è necessario l'aver implementato il collegamento ai predittori e al flusso dati. \\
 Sarà quindi possibile:
 \begin{itemize}
-	\item selezionare la politica temporale della previsione;
 	\item avviare il monitoraggio;
 	\item interrompere il monitoraggio.
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
-\item Re1F5;
 \item Re1F5.1;
-\item Re1F5.2;
-\item Re1F5.4.
+\item Re1F5.3.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
 \textit{Periodo: da 2020-06-01 a 2020-06-03}\\
@@ -298,15 +288,13 @@ Sarà quindi possibile:
 \begin{itemize}
 	\item visualizzare il messaggio di conferma dell'avvio del monitoraggio;
 	\item visualizzare il messaggio di conferma dell'interruzione del monitoraggio;
-	\item visualizzare l'errore di nessuna politica temporale inserita;
 	\item visualizzare l'errore di nessun predittore selezionato.
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
-\item Re1F5.3;
-\item Re1F5.5;
-\item Re1F14;
-\item Re1F15.
+\item Re2F5.2;
+\item Re2F5.4;
+\item Re1F14.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
 \textit{Periodo: da 2020-06-03 a 2020-06-03}\\
@@ -322,8 +310,8 @@ Sarà quindi possibile:
 \end{itemize}
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
-\item Re1F5.6;
-\item Re1F5.7.
+\item Re1F5.5;
+\item Re2F5.6.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
 \textit{Periodo: da 2020-06-01 a 2020-06-01}\\
@@ -340,8 +328,7 @@ Sarà quindi possibile:
 Lo sviluppo di questo incremento prevede il soddisfacimento completo dei seguenti requisiti funzionali:
 \begin{itemize}
 \item Re1F6;
-\item Re1F6.1;
-\item Re1F6.2.
+\item Re1F6.1.
 \end{itemize}
 \paragraph*{Verifica}\mbox{} \\ \mbox{} \\ 
 \textit{Periodo: da 2020-06-04 a 2020-06-05}\\
