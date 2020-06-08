@@ -8,8 +8,11 @@ Per definire lo stato dei test, si usano le seguenti sigle:
 \item \textbf{NI}: test non implementato.
 \end{itemize}
 
+
+\subsubsection{Test di accettazione}
+
 \begin{longtable}{C{2.5cm} C{2.5cm} L{8cm} C{2cm}}
-\rowcolor{white}\caption{Tabella dei test} \\
+\rowcolor{white}\caption{Tabella dei test di accettazione} \\
 		\rowcolor{redafk}
 \textcolor{white}{\textbf{Codice}} &
 \textcolor{white}{\textbf{Caso d'uso}} &
@@ -18,11 +21,33 @@ Per definire lo stato dei test, si usano le seguenti sigle:
 		\endfirsthead
 		\rowcolor{white}\caption[]{(continua)} \\
 		\rowcolor{redafk}
-\textcolor{white}{\textbf{Requisito}} &
+\textcolor{white}{\textbf{Codice}} &
 \textcolor{white}{\textbf{Caso d'uso}} &
 \textcolor{white}{\textbf{Descrizione}} &
 \textcolor{white}{\textbf{Esito}} \\
 		\endhead
+
+
+\end{longtable}
+
+\subsubsection{Test di sistema}
+
+\begin{longtable}{C{2.5cm} C{2.5cm} L{8cm} C{2cm}}
+\rowcolor{white}\caption{Tabella dei test di sistema} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Caso d'uso}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Esito}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Caso d'uso}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Esito}} \\
+		\endhead
+
 %-------------------------------------------- Simo		
 TSOF1 & UC1 &
 L'utente  deve poter creare il file JSON\glo contenente il/i predittore/i\glo. \newline
@@ -57,27 +82,47 @@ L'utente deve poter confermare la scelta dell'algoritmo. \newline All'utente vie
 	\item cliccare sul pulsante "Conferma".
 \end{itemize} & I \\
 
-TSOF1.3.1 & UC16 & 
-L'utente deve poter visualizzare un messaggio di notifica se l'addestramento avviene con successo. \newline All'utente viene chiesto di:
+TSOF1.3.1 & UC7 & 
+L'utente deve poter visualizzare un messaggio di errore se non era stato inserito nessun csv. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare la visualizzazione del messaggio;
-	\item verificare di poter proseguire con TSOF1.4.
+	\item verificare di essere rimandati al TSOF1.1.
 \end{itemize} & I \\
 
-TSOF1.3.2 & UC9 & 
-L'utente deve poter visualizzare un messaggio d'errore se la scelta dell'algoritmo non è compatibile con i dati di addestramento. \newline All'utente viene chiesto di:
+TSOF1.3.2 & UC8 & 
+L'utente deve poter visualizzare un messaggio di errore se non era stato scelto nessun algoritmo. \newline All'utente viene chiesto di:
 \begin{itemize}
-	\item verificare la visualizzazione dell'errore;
+	\item verificare la visualizzazione del messaggio;
 	\item verificare di essere rimandati al TSOF1.2.
 \end{itemize} & I \\
 
+TSOF1.3.3 & UC9 & 
+L'utente deve poter visualizzare un messaggio d'errore se la scelta dell'algoritmo non è compatibile con i dati di addestramento. \newline All'utente viene chiesto di:
+\begin{itemize}
+	\item verificare la visualizzazione dell'errore;
+	\item verificare di essere rimandati al TSOF1.1.
+\end{itemize} & I \\
+
 TSOF1.4 & UC1.4 & 
+L'utente deve poter visualizzare il messaggio di notifica di avvenuto addestramento. \newline All'utente viene chiesto di:
+\begin{itemize}
+	\item verificare la visualizzazione del messaggio "Addestramento avvenuto con successo";
+	\item verificare che si possa procedere con TSOF1.6.
+\end{itemize} & I \\
+
+TSOF1.5 & UC1.5 & 
+L'utente deve poter visualizzare il messaggio di alert dell'addestramento non avvenuto. \newline All'utente viene chiesto di:
+\begin{itemize}
+	\item verificare la visualizzazione del messaggio "Addestramento non riuscito";
+	\item verificare di essere rimandati a TSOF1.3.1 oppure TSOF1.3.2 oppure TSOF1.3.3.
+\end{itemize} & I \\
+
+TSOF1.6 & UC1.6 & 
 L'utente deve poter salvare il file JSON in locale contenente predittori. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante "Download".
 	\item verificare che il file venga salvato in locale.
 \end{itemize} & I \\
-
 
 TSOF2 & UC2 &
 L'utente  deve poter caricare il file JSON nel plug-in. \newline All'utente viene chiesto di:
@@ -299,51 +344,6 @@ TSFF8.1 & UC24 & L'utente  deve poter visualizzare il messaggio di alert di avve
 \item poter visualizzare il messaggio di alert "Soglia critica raggiunta";
 \item cliccare il pulsante "Conferma".
 \end{itemize}& NI \\
-
-
-\end{longtable}
-
-
-\subsubsection{Test di accettazione}
-
-\begin{longtable}{C{2.5cm} C{2.5cm} L{8cm} C{2cm}}
-\rowcolor{white}\caption{Tabella dei test di accettazione} \\
-		\rowcolor{redafk}
-\textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Caso d'uso}} &
-\textcolor{white}{\textbf{Descrizione}} &
-\textcolor{white}{\textbf{Esito}} \\
-		\endfirsthead
-		\rowcolor{white}\caption[]{(continua)} \\
-		\rowcolor{redafk}
-\textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Caso d'uso}} &
-\textcolor{white}{\textbf{Descrizione}} &
-\textcolor{white}{\textbf{Esito}} \\
-		\endhead
-
-
-\end{longtable}
-
-\subsubsection{Test di sistema}
-
-\begin{longtable}{C{2.5cm} C{2.5cm} L{8cm} C{2cm}}
-\rowcolor{white}\caption{Tabella dei test di sistema} \\
-		\rowcolor{redafk}
-\textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Caso d'uso}} &
-\textcolor{white}{\textbf{Descrizione}} &
-\textcolor{white}{\textbf{Esito}} \\
-		\endfirsthead
-		\rowcolor{white}\caption[]{(continua)} \\
-		\rowcolor{redafk}
-\textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Caso d'uso}} &
-\textcolor{white}{\textbf{Descrizione}} &
-\textcolor{white}{\textbf{Esito}} \\
-		\endhead
-
-
 \end{longtable}
 
 \subsubsection{Test di Integrazione}
@@ -369,3 +369,21 @@ codice test & signatura metodo() & descrizione del test & I/NI & Passato / Non P
 
 \end{longtable}
 
+\subsubsection{Riepilogo dei test}
+
+\begin{longtable}{C{2cm} C{2cm} L{7cm} C{2cm} C{1.5cm}}
+\rowcolor{white}\caption{Tabella di riepilogo dei test} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Implementati}} &
+\textcolor{white}{\textbf{Passati}} &
+\textcolor{white}{\textbf{Non implementati}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Implementati}} &
+\textcolor{white}{\textbf{Passati}} &
+\textcolor{white}{\textbf{Non implementati}} \\
+		\endhead
+		
+		
+\end{longtable}
