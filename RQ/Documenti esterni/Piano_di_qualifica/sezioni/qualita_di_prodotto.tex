@@ -21,7 +21,8 @@ Misura la percentuale di metriche soddisfatte rispetto alla totalità di metrich
 Misura la percentuale di requisiti oblligatori soddisfatti rispetto alla totalità dei requisiti obbligatori da sviluppare e rispettare.\\ \\ 
 \textbf{Parametri adottati:} 
 \begin{itemize}
-\item valore ottimale: 100\%.
+\item range accettabile: [$60\%$, $99\%$);
+\item range ottimale: 100\%.
 \end{itemize}
 
 \subsubsection{MG03 - Percentuale di Requisiti Desiderabili Soddisfatti}
@@ -52,21 +53,21 @@ Misura la lungezza media delle parole e delle frasi presenti in un documento, co
 
 \subsection{Metriche del codice}
 \subsubsection{MS01 - Linee di Codice}
-È la metrica che registra la dimensione di tutto il codice sorgente di un metodo.\\ \\
+È la metrica che registra la dimensione media di tutto il codice sorgente di un metodo.\\ \\
 \textbf{Parametri adottati:}
 \begin{itemize}
 \item range accettabile: (10, 20];
 \item range ottimale: [1, 10].
 \end{itemize}
 \subsubsection{MS02 - Numero dei Metodi}
-Questa metrica conteggia il numero di metodi presenti nella classe di un oggetto.\\ \\ 
+Questa metrica conteggia il numero di metodi presenti nella classe di un oggetto (file).\\ \\ 
 \textbf{Parametri adottati:} 
 \begin{itemize}
 \item range accettabile: (8, 15];
 \item range ottimale: [0, 8].
 \end{itemize}
 \subsubsection{MS03 - Numero di Parametri}
-Questo strumento tiene conto del numero di parametri formali di un metodo.\\ \\ 
+Questo strumento tiene conto del numero medio di parametri formali di un metodo.\\ \\ 
 \textbf{Parametri adottati:} 
 \begin{itemize}
 \item range accettabile: (3, 6];
@@ -114,7 +115,8 @@ Misura la percentuale dei test falliti sul totale dei test eseguiti.\\
 Misura la percentuale dei test implementati sul totale dei test previsti.\\
 \textbf{Parametri adottati:} 
 \begin{itemize}
-\item Ottimale: 100\%.
+\item range accettabile: [75, 99]\%;
+\item range ottimale: 100\%.
 \end{itemize}
 
 \subsubsection{MS11 - Requisiti desiderabili implementati}
@@ -146,10 +148,11 @@ Percentuale di Metriche Soddisfatte &
 \textbf{Ottimale}: [$95\%$, $100\%$] \\
 MG02 &
 Percentuale di Requisiti Obbligatori Soddisfatti &
+\textbf{Accettabile}: [$75\%$, $99\%$];
 \textbf{Ottimale}: 100\% \\
 MG03 &
 Percentuale di Requisiti Desiderabili Soddisfatti&
-\textbf{Accettabile}: [$70\%$, $90\%$);
+\textbf{Accettabile}: [$60\%$, $90\%$);
 \textbf{Ottimale}: [$90\%$, $100\%$].\\
 \end{longtable}
 
@@ -238,6 +241,7 @@ Failed Test Cases  Percentuage &
 \\
 MS10 &
 Requisiti obbligatori implementati &
+\textbf{Accettabile}: [75, 99]\%;
 \textbf{Ottimale}: 100\% \\
 
 MS11 &
