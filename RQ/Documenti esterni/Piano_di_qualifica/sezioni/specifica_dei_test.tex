@@ -8,25 +8,45 @@ Per definire lo stato dei test, si usano le seguenti sigle:
 \item \textbf{NI}: test non implementato.
 \end{itemize}
 
+La maggior parte dei test di seguito descritti sono stati verificati attraverso la funzione js \texttt{console.log()}, che mostra in console il risultato voluto.
 
 \subsubsection{Test di accettazione}
 
-\begin{longtable}{C{2.5cm} C{2.5cm} L{8cm} C{2cm}}
+\begin{longtable}{C{2.5cm} L{8cm} C{2cm}}
 \rowcolor{white}\caption{Tabella dei test di accettazione} \\
 		\rowcolor{redafk}
 \textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Caso d'uso}} &
 \textcolor{white}{\textbf{Descrizione}} &
 \textcolor{white}{\textbf{Esito}} \\
 		\endfirsthead
 		\rowcolor{white}\caption[]{(continua)} \\
 		\rowcolor{redafk}
 \textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Caso d'uso}} &
 \textcolor{white}{\textbf{Descrizione}} &
 \textcolor{white}{\textbf{Esito}} \\
 		\endhead
-
+TAOF1 & Verificare che l’utente possa addestrare gli algoritmi di previsione sull’applicazione. & I \\
+TAOF1.1 & Verificare che l’utente possa selezionare e caricare, dal suo dispositivo, un file CSV contenente i dati su cui effettuare l’addestramento. & I\\
+TAOF1.1.1 & Verificare che l’inserimento di un file CSV non valido venga visualizzato un messaggio d’errore. & I \\
+TAOF1.2 & Verificare che l’utente possa selezionare e caricare, dal suo dispositivo, un file JSON contenente la configurazione di un addestramento precedentemente eseguito. & I\\
+TAOF1.2.1 & Verificare che l’inserimento di un file JSON non valido venga visualizzato un messaggio d’errore. & NI \\
+TADF2 & Verificare che l’utente possa visualizzare un grafico a dispersione che rappresenti i dati utilizzati per l’addestramento nel tool. & I \\
+TAOF3 & Verificare che l’utente possa scegliere quale algoritmo utilizzare per effettuare l’addestramento dei dati. & I \\
+TAOF4 & Verificare che l’utente posso avviare l’addestramento dell’algoritmo di predizione scelto utilizzando i dati inseriti. & I \\
+TAOF5 & Verificare che, alla fine del processo di addestramento, venga visualizzato un messaggio di operazione completata con successo. & I \\
+TAOF6 & Verificare che l’utente, alla fine del processo di addestramento, riceva un file JSON contenente il risultato dell’addestramento. & I\\
+TAOF7 & Verificare che l’utente possa avviare il plug-in di Grafana. & I \\
+TAOF8 & Verificare che l’utente possa caricare il file JSON ottenuto dall’addestramento effettuato dal tool. & I\\
+TAOF9 & Verificare che l’utente possa collegare i predittori letti dal file JSON al flusso dati. & I \\
+TAOF9.1 & Verificare che l’utente possa selezionare un flusso di dati su cui eseguire delle previsioni. & I\\
+TAOF9.2 & Verificare che l’utente possa visualizzare un messaggio che conferma il successo nel collegamento dei nodi al flusso dati. & I\\
+TAOF9.3 & Verificare che, se il collegamento dei nodi al flusso dati non va a buon file, l’utente visualizzi un messaggio di errore. & I \\
+TAOF10 & Verificare che l’utente possa visualizzare il grafico dei risultati della previsione all’interno di una dashboard precedentemente configurata. & I\\
+TAOF11 & Verificare che l’utente possa fermare l’esecuzione del plug-in premendo il relativo bottone "Interrompi monitoraggio". & I \\
+TAOF12 & Verificare che l'utente possa inserire i valori di soglia ad uno specifico collegamento. & NI \\
+TAOF13 & Verificare che l'utente possa modificare un collegamento precedentemente creato. & I \\
+TAOF14 & Verificare che l'utente possa eliminare un collegamento precedentemente creato. & I \\
+TAOF15 & Verificare che l'utente possa salvare la previsione. & NI \\
 
 \end{longtable}
 
@@ -433,44 +453,128 @@ I \\
 
 \end{longtable}
 
-\subsubsection{Test di Integrazione}
+\subsubsection{Test di integrazione}
 
-\begin{longtable}{C{2cm} C{2cm} L{7cm} C{2cm} C{1.5cm}}
+\begin{longtable}{C{2cm} L{8cm} C{2cm}}
 \rowcolor{white}\caption{Tabella dei test di integrazione} \\
 		\rowcolor{redafk}
 \textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Metodo}} &
 \textcolor{white}{\textbf{Descrizione}} &
-\textcolor{white}{\textbf{Stato}} &
 \textcolor{white}{\textbf{Esito}} \\
 		\endfirsthead
 		\rowcolor{white}\caption[]{(continua)} \\
 		\rowcolor{redafk}
 \textcolor{white}{\textbf{Codice}} &
-\textcolor{white}{\textbf{Metodo}} &
 \textcolor{white}{\textbf{Descrizione}} &
-\textcolor{white}{\textbf{Stato}} &
 \textcolor{white}{\textbf{Esito}} \\
 		\endhead
-codice test & signatura metodo() & descrizione del test & I/NI & Passato / Non Passato \\
+TIOF1 & Verificare che vengano renderizzati i nomi dei file selezionati mediante il componente CSVReader. & I \\
+TIOF2 & Verificare che venga aggiornato lo stato del componente App e che venga fatto partire l’addestramento dopo aver cliccato il button "Avvia addestramento" per verificare la correttezza del metodo handleTraining() del componente App e l’integrazione con il componente TrainButton. & I \\
+TIOF3 & Verificare che venga aperta la finestra per salvare il file json dopo che l’utente ha schiacciato il pulsante "Download" per dimostrare la correttezza del metodo downloadJsonData() del componente App e del metodo downloadJsonFile() del componente DownloadJson. & I \\
+TIOF4 & Verificare che venga modificato lo stato del componente App dopo che l’utente ha cliccato il button "Download" nel componente DownloadJson. & I \\
+TIOF5 & Verificare che venga modificato lo stato del componente App quando l’utente modifica l’elemento input nel componente DownloadJson. & I \\
+TIOF6 & Verificare che la funzione setDataFromFile di App gestisca in modo corretto i file in formato CSV scelti mediante l’elemento input del componente CSVReader. & I \\
+TIOF7 & Verificare che la funzione setDataFromFile di App gestisca in modo corretto i file con un formato non accettato scelti mediante l’elemento input del componenente CSVReader. & I \\
+TIOF8 & Verificare che la funzione changeAlgorithm di App gestisca in modo corretto la scelta, o cambio, dell'algoritmo di addestramento, mediante l'elemento input ComboBoxAlgorithm. & I \\
+TIDF8.1 & Verificare che il pulsante "Seleziona parametri" cambi lo stato del componente App e permetta di selezionare i parametri desiderati da visualizzare nel grafico. & NI \\
+TIOF9 & Verificare che la funzione JSONData() della classe SupportRl ritorni le informazioni corrette riguardanti l'algoritmo utilizzato, la data dell'addestramento, la versione del file, l'autore, la lista dei predittori, i risultati voluti e un esempio di retta. & I \\
+TIOF10 & Verificare che la funzione JSONData() della classe SupportSvm ritorni le informazioni corrette riguardanti l'algoritmo utilizzato, la data dell'addestramento, la versione del file, l'autore, la lista dei predittori, i risultati voluti e un esempio di retta. & I \\
+TIOF11 & Verificare che la classe Influx venga istanziata correttamente tramite costruttore, creando un’istanza InfluxDB collegata ad un database contenuto nella dashboard di Grafana. & NI \\
+TIOF12 & Verificare che il metodo writeArrayToInflux e writePointToInflux scrivano correttamente i dati all'interno del database Influx. & NI \\
+TIOF13 & Verificare che il metodo \_viewGraph() prenda correttamente i dati dal dal file json attraverso il metodo getJson() e stampi il grafico attraverso il metodo \_setupGraphSeries() dopo aver settato correttamente le predizioni con il metodo updatePredictions(data). & I \\
+\end{longtable}
+
+\subsubsection{Test di unità}
+\begin{longtable}{C{2cm} L{8cm} C{2cm}}
+\rowcolor{white}\caption{Tabella dei test di unità} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Esito}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Esito}} \\
+		\endhead
+TUOF1 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di TrainButton. & I \\
+TUOF1.1 & Verificare che le funzioni passate come proprietà al componente TrainButton vengano correttamente chiamate dopo un evento onClick. & I \\
+TUOF1.2 & Verificare che il componente Button renderizzi un testo differente rispetto a quello normale se viene effettuata una operazione asincrona mediante il Button per dimostrare la correttezza del metodo Render() di TrainButton. & I\\
+TUDF1.3 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di ChangeParam. & NI \\
+TUDF1.4 & Verificare che le funzioni passate come proprietà al componente ChangeParam vengano correttamente chiamate dopo un evento onClick. & NI \\
+TUOF2 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di Chart. & I \\
+TUOF3 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di ComboBoxAlgorithm. & I \\
+TUOF4 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di DownloadJson. & I \\
+TUOF5 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di Header. & I \\
+TUOF6 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di InsertCsvButton. & I \\
+TUOF7 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di InsertCsvButton. & I \\
+TUOF8 & Verificare che se l’utente seleziona l’opzione "Seleziona l'algoritmo" venga aggiunto, nella posizione corretta, un elemento non nullo nello state. & I \\
+TUOF9 & Verificare che le funzioni passate come proprietà al componente CSVReader vengano correttamente chiamate dopo un evento onFileLoaded. & I \\
+TUOF10 & Verificare che se l’utente seleziona un file valido, l’elemento dell’elemento input del componente CSVReader mostri il nome del file per mostrare la correttezza del metodo render(). & I\\
+TUOF11 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di Chart. & I \\
+TUOF12 & Verificare che le funzioni passate come proprietà al componente InsertCsvButton vengano correttamente chiamate dopo un evento onFileLoaded. & I \\
+TUOF13 & Verificare che la funzione corretta, passata come proprietà, venga chiamata dopo aver cliccato il pulsante "Download". & I \\
+TUOF14 & Verificare che le funzioni passate come proprietà al componente ComboBoxAlgorithm vengano correttamente chiamate dopo un evento onChange. & I \\
+TUOF15 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di App. & I \\
+TUOF16 & Verificare che venga creato l’oggetto concreto CSVReader. & I \\
+TUOF17 & Verificare che venga chiamata la funzione setDataFromFile della classe concreta App. & I \\
+TUOF18 & Verificare che venga chiamata la funzione changeAlgorithm della classe concreta App. & I \\
+TUOF19 & Verificare che venga chiamata la funzione resetAlgorithm della classe concreta App. & I \\
+TUOF20 & Verificare che venga chiamata la funzione handleTraining della classe concreta App. & I \\
+TUOF21 & Verificare che venga chiamata la funzione downloadJsonData della classe concreta App. & I \\
+TUOF22 & Verificare che venga creato l’oggetto concreto RLTrain. & I \\
+TUOF23 & Verificare che le funzioni della classe concreta RLTrain vengano chiamate con i parametri corretti. & I \\
+TUOF24 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamato il costruttore se non è stato implementato in una classe che estende la classe Train.& I \\
+TUOF25 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione train se non è stata implementata in una classe che estende la classe Train.& I \\
+TUOF26 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getCoefficients se non è stata implementata in una classe che estende la classe Train. & I \\
+TUOF27 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getJSON se non è stata implementata in una classe che estende la classe Train.& I \\
+TUOF28 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getDataChart se non è stata implementata in una classe che estende la classe Train.& I \\
+TUOF29 & Verificare che venga creato l’oggetto concreto SVMTrain. & I \\
+TUOF30 & Verificare che le funzioni della classe concreta SVMTrain vengano chiamate con i parametri corretti. & I \\
+TUOF31 & Verificare che venga creato l’oggetto concreto corretto a seconda dell’algoritmo che si vuole addestrare. & I \\
+TUOF32 & Verificare che la funzione getCoefficients() ritorni tutti i parametri utilizzati per l’addestramento. & I \\
+TUOF33 & Verificare che venga chiamata la funzione isSVM() della strategia concreta nel metodo setStrategy. & I \\
+TUOF34 & Verificare che venga chiamata la funzione isRL() della strategia concreta nel metodo setStrategy. & I \\
+TUOF35 & Verificare che venga creato correttamente l'oggetto RLTrain della strategia concereta nel metodo setStrategy(), dopo aver effettuato il controllo col metodo isRL(). & I \\
+TUOF36 & Verificare che venga creato correttamente l'oggetto SVMTrain della strategia concereta nel metodo setStrategy(), dopo aver effettuato il controllo col metodo isSVM(). & I \\
+TUOF37 & Verificare che il metodo performTraining esegua l'addestramento correttamente. & I \\
+TUOF38 & Verificare che il metodo getJsonContent prenda correttamente i dati dal file JSON. & I \\
+TUOF39 & Verificare che il metodo getChartData prenda correttamente i dati corretti per mostrarli nel grafico. & I \\
+TUOF40 & Verificare che il metodo formatData della classe Chart passi correttamente alle props i dati da visualizzare nel grafico. & I \\
+TUOF41 & Verificare che il metodo getColumnsName ottenga correttamente i nomi delle colonne presenti nel file CSV. & I \\
+TUOF42 & Verificare che il metodo getDate ottenga correttamente la data odierna, nel formato YYYY-MM-DD. & I \\
+TUOF43 & Verificare che il metodo print\_retta stampi correttamente la retta nel file JSON. & I \\
+TUOF44 & Verificare che il metodo trainRl calcoli correttamente i coefficienti di regressione attraverso il metodo calculateCoefficients presente nel file \texttt{regression.js}. & I \\
+TUOF45 & Verificare che il metodo getCoefficientsRl ottenga correttamente i coefficienti di regressione attraverso il parametro coefficients presente all'interno della classe. & I \\
+TUOF46 & Verificare che il metodo trainSvm calcoli correttamente i coefficienti di SVM attraverso i metodi train e getWeights presenti nel file \texttt{svm.js}. & I \\
+TUOF47 & Verificare che il metodo Weights ritorni correttamente i weights della SVM. & I \\
+TUOF48 & Verificare che il metodo confermaPredizioneSvm confermi correttamente la predizione qualora i weights non fossero nulli. & I \\
+
+
 
 \end{longtable}
 
 \subsubsection{Riepilogo dei test}
 
-\begin{longtable}{C{2cm} C{2cm} L{7cm} C{2cm} C{1.5cm}}
+\begin{longtable}{c c c c}
 \rowcolor{white}\caption{Tabella di riepilogo dei test} \\
 		\rowcolor{redafk}
+\textcolor{white}{\textbf{Tipologia}} &
 \textcolor{white}{\textbf{Implementati}} &
-\textcolor{white}{\textbf{Passati}} &
-\textcolor{white}{\textbf{Non implementati}} \\
+\textcolor{white}{\textbf{Non implementati}} &
+\textcolor{white}{\textbf{Totale}} \\
 		\endfirsthead
 		\rowcolor{white}\caption[]{(continua)} \\
 		\rowcolor{redafk}
+\textcolor{white}{\textbf{Tipologia}} &
 \textcolor{white}{\textbf{Implementati}} &
-\textcolor{white}{\textbf{Passati}} &
-\textcolor{white}{\textbf{Non implementati}} \\
+\textcolor{white}{\textbf{Non implementati}} &
+\textcolor{white}{\textbf{Totale}}\\
 		\endhead
-		
-		
+Accettazione & 19 & 3 & 22\\
+Sistema &  &  & \\
+Integrazione & 11 & 3 & 14\\
+Unità &  &  & \\		
+\textbf{Totale} & \textbf{30} & \textbf{6} & \textbf{36} \\
 \end{longtable}
