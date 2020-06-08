@@ -411,8 +411,9 @@ Quest'ultime sono descritte nella sezione \S \hyperref[par:metricheGen]{3.3.5}.
 		\label{par:MS01}Linee di Codice (LOC) & MS01 & Rappresenta  le  dimensioni  del  codice di un metodo. È espresso in termini di numero di linee di codice, ed è utilizzato per dimensionare la produttività delle persone e da questa lo sforzo richiesto per sviluppare tale funzione. \\
 		Numero di Metodi (NM)  & MS02 & Numero medio di metodi contenuti nelle classi di un oggetto. Un numero troppo alto di metodi può indicare la necessità di scomporre la classe. Un numero troppo basso deve far riflettere sull'effettiva utilità della classe in esame. 
 		\[ NM =\frac{\sum\#metodi}{\#classi}  \] \\
-		Numero di Parametri (NP) & MS03 & Numero di parametri passati ad un metodo. Un eccessivo numero di parametri passati ad un metodo può
-indicare un'eccessiva complessità dello stesso. \\
+		Numero di Parametri (NP) & MS03 & Numero medio di parametri passati ad un metodo. Un eccessivo numero di parametri passati ad un metodo può
+indicare un'eccessiva complessità dello stesso.
+\[ NP =\frac{\#metodi}{\#parametri\_passati}  \] \\
 		Commenti per Linee di \newline Codice (CLC) & MS04 & Rapporto fra numero di righe di commento e numero totale di righe (vuote escluse). Un codice ben commentato può essere compreso più facilmente e velocemente, facilitando le operazioni di manutenzione. 
 		\[ CLC = \frac{\#righe\_commento}{\#tot\_righe}\] \\
 	\end{longtable}
