@@ -1,9 +1,9 @@
-\section{The Plug-in}
+\section{The plug-in}
 Here a step by step explanation will guide the user through the proper usage of the preditcion plug-in.
 
-\subsection{Loading the Plug-in}
+\subsection{Loading the plug-in}
 \begin{enumerate}
-	\item The user will have to select the plus icon from the sidebar, from which a drop-down menu containing four options will appear, from this menu the “dashboard” option has to be selected.
+	\item The user will have to select the plus icon from the sidebar, from which a drop-down menu containing four options will appear; from this menu the “dashboard” option has to be selected;
 
 
 \begin{figure}[H]
@@ -13,7 +13,7 @@ Here a step by step explanation will guide the user through the proper usage of 
 \end{figure}
 
 
-	\item The user will now have to select the “Chose Visualization” button.
+	\item The user will now have to select the “Chose Visualization” button;
 
 
 \begin{figure}[H]
@@ -34,10 +34,10 @@ Here a step by step explanation will guide the user through the proper usage of 
 \end{enumerate}
 
 	
-\subsection{Loading a JSON File}
+\subsection{Loading a JSON file}
 The user can select the “Inserimento file JSON” button contained in the “Caricamento JSON” section.
 This will open a window from which the JSON file can be selected.
-Alternaitvely, the user can drag and drop the JSON file in the "Inserimento file JSON" section.
+Alternatively, the user can drag and drop the JSON file in the "Inserimento file JSON" section.
 The content of the JSON file will be displayed in a panel called "Contenuto file JSON" to the right of the previously mentioned section.
 
 \begin{figure}[H]
@@ -47,12 +47,11 @@ The content of the JSON file will be displayed in a panel called "Contenuto file
 \end{figure}
 
 
-\subsection{Connecting the Nodes}
-The portion of the software dedicated to the connection of nodes can be accessed by selecting the "Collegamento" tab.
+\subsection{Connecting the nodes}
+The portion of the software dedicated to the connection of the nodes can be accessed by selecting the "Collegamento" tab.
 \begin{enumerate}
-	\item The user can choose from the “lista predittori” section which queries are to be associated with which nodes, by 
-	selecting a particular query to the right of a predictor: this can be done by opening the drop-down menu tagged with "seleziona il nodo" and then selecting a query.
-	Once all the nodes are connected, the user can select the "inserisci collegamento" button and confirm the operation.
+	\item The user can choose from the “Lista predittori” section which queries are to be associated with which nodes, by selecting a particular query to the right of a predictor: this can be done by opening the drop-down menu tagged with "Seleziona il nodo" and then selecting a query.
+	Once all the nodes are connected, the user can select the "Inserisci collegamento" button and confirm the operation;
 	
 \begin{figure}[H]
 \centering
@@ -62,7 +61,9 @@ The portion of the software dedicated to the connection of nodes can be accessed
 
 
 
-\item[1.1] Should the user have not filled all the required fields, an error message will be displayed on selection of the "Inserisci collegamento" button
+\begin{enumerate}
+\item Should the user have not filled all the required fields, an error message will be displayed on selection of the "Inserisci collegamento" button;
+
 	
 \begin{figure}[H]
 \centering
@@ -70,10 +71,7 @@ The portion of the software dedicated to the connection of nodes can be accessed
 \caption{Node coupling error message}
 \end{figure}
 
-
-
-
-\item[1.2] once all the required fields are correctly chosen, a confirm message will be displayed. 
+\item Once all the required fields are correctly chosen, a confirm message will be displayed. 
 
 \begin{figure}[H]
 \centering
@@ -81,9 +79,10 @@ The portion of the software dedicated to the connection of nodes can be accessed
 \caption{Node coupling confirm message}
 \end{figure}
 
+\end{enumerate} 
 
 	
-	\item Maximum and minimum thresholds can be set in the “impostazione soglie” section, by inserting numbers in the dedicated boxes and then selecting the "Conferma Collegamento" button.
+	\item Maximum and minimum thresholds can be set in the “Impostazione soglie” section, by inserting numbers in the dedicated boxes and then selecting the "Conferma Collegamento" button.
 
 
 \begin{figure}[H]
@@ -107,19 +106,22 @@ The user can also modify the connection, by pressing on the "Modifica Collegamen
 \end{figure}
 
 
-\subsection{Prediction Operations}
-In this last section the user will be able to launch the prediction algorithms of the plug-in. This section is accessed by selecting the "Previsione" tab, here the user will be able to select in the top rigth corner a temporal policy by choosing starting and ending dates and choosinghow often to sample the data. The user  also has access to two buttons, one called "avvia monitoraggio", which starts the prediction operations, and a second one named "salva previsione", which saves the data collected up to the point it is pressed.
+\subsection{Prediction operations}
+In this last section the user will be able to launch the prediction algorithms of the plug-in. This section is accessed by selecting the "Previsione" tab. Here the user will be able to select, in the top rigth corner, a temporal policy by choosing starting and ending dates and choosing how often to sample the data. The user  also has access to two buttons, one called "Avvia monitoraggio", which starts the prediction operations, and a second one named "Salva previsione", which saves the data collected up to the point it is pressed.\\
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.50]{img/plug-in/time_selector.jpg}
+\includegraphics[scale=0.95]{img/plug-in/time_selector.jpg}
 \caption{Time picker}
 \end{figure}
 
+When the prediction has been started, the "Avvia monitoraggio" button becomes "Interrompi monitoraggio", which, if pressed, will stop the monitoring.
+
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.50]{img/plug-in/save_previsione.jpg}
+\includegraphics[scale=0.95]{img/plug-in/save_previsione.jpg}
 \caption{Begin\textbackslash end data monitoring and Prdicton save}
+
 \end{figure} 
  
 
