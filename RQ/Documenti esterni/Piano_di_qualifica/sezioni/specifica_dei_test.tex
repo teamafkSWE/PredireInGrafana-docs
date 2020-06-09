@@ -8,9 +8,10 @@ Per definire lo stato dei test, si usano le seguenti sigle:
 \item \textbf{NI}: test non implementato.
 \end{itemize}
 
-La maggior parte dei test di seguito descritti sono stati verificati attraverso la funzione js \texttt{console.log()}, che mostra in console il risultato voluto.
+%non mi convince scrivere questa riga, alla fine loro non sanno come sono stati implementati...
+%La maggior parte dei test di seguito descritti sono stati verificati attraverso la funzione js \texttt{console.log()}, che mostra in console il risultato voluto.
 
-\subsubsection{Test di accettazione}
+\subsection{Test di accettazione}
 
 \begin{longtable}{C{2.5cm} L{8cm} C{2cm}}
 \rowcolor{white}\caption{Tabella dei test di accettazione} \\
@@ -50,7 +51,7 @@ TAOF15 & Verificare che l'utente possa salvare la previsione. & NI \\
 
 \end{longtable}
 
-\subsubsection{Test di sistema}
+\subsection{Test di sistema}
 
 \begin{longtable}{C{2.5cm} C{2.5cm} L{8cm} C{2cm}}
 \rowcolor{white}\caption{Tabella dei test di sistema} \\
@@ -453,7 +454,7 @@ I \\
 
 \end{longtable}
 
-\subsubsection{Test di integrazione}
+\subsection{Test di integrazione}
 
 \begin{longtable}{C{2cm} L{8cm} C{2cm}}
 \rowcolor{white}\caption{Tabella dei test di integrazione} \\
@@ -484,7 +485,7 @@ TIOF12 & Verificare che il metodo writeArrayToInflux e writePointToInflux scriva
 TIOF13 & Verificare che il metodo \_viewGraph() prenda correttamente i dati dal dal file json attraverso il metodo getJson() e stampi il grafico attraverso il metodo \_setupGraphSeries() dopo aver settato correttamente le predizioni con il metodo updatePredictions(data). & I \\
 \end{longtable}
 
-\subsubsection{Test di unità}
+\subsection{Test di unità}
 \begin{longtable}{C{2cm} L{8cm} C{2cm}}
 \rowcolor{white}\caption{Tabella dei test di unità} \\
 		\rowcolor{redafk}
@@ -551,11 +552,51 @@ TUOF46 & Verificare che il metodo trainSvm calcoli correttamente i coefficienti 
 TUOF47 & Verificare che il metodo Weights ritorni correttamente i weights della SVM. & I \\
 TUOF48 & Verificare che il metodo confermaPredizioneSvm confermi correttamente la predizione qualora i weights non fossero nulli. & I \\
 
+%--------------plugin-------------------------------
 
+TUOFyy & Verificare che vengano renderizzate le tabs per dimostrare la correttezza del metodo render() di Editor. & I \\
+TUOFyy & Verificare che venga renderizzato il contenuto della tab caricamento json per dimostrare la correttezza del metodo render() di CaricamentoJsonView. & I \\
+TUOFyy & Verificare che la funzione setJson(file) del controller sia invocata dopo un evento onChange del componente Files. & I \\
+TUOFyy & Verificare che venga mostrato il nome del file e il suo contenuto una volta caricato un json per dimostrare la correttezza del metodo update() di CaricamentoJsonView. & I \\
+TUOFyy & Verificare che venga renderizzato il contenuto della tab collegamento per dimostrare la correttezza del metodo render() di CollegamentoView. & I \\
+TUOFyy & Verificare che non siano presenti query nell'impostazione del collegamento in caso nessuna query sia stata inserita per dimostrare la correttezza del metodo getPredictors() di CollegamentoView. & I \\
+TUOFyy & Verificare che non siano presenti predittori in caso nessun file sia stato inserito per dimostrare la correttezza del metodo getPredictors() di CollegamentoView. & I \\
+TUOFyy & Verificare che siano presenti tutti i predittori contenuti nel file json e che siano selezzionabili tutte le query impostate in caso sia stato caricato un file json e sia stata impostata almeno una query per dimostrare la correttezza del metodo getPredictors() di CollegamentoView. & I \\
+TUOFyy & Verificare che nessun collegamento sia aggiunto alla lista di collegamenti, se non impostato correttamente, a seguito di un evento onClick del componente Button. & I \\
+TUOFyy & Verificare che il collegamento impostato correttamente sia aggiunto alla lista di collegamenti a seguito di un evento onClick del componente Button. & I \\
+TUOFyy & Verificare che venga renderizzato il contenuto della tab lista collegamenti per dimostrare la correttezza del metodo render() di ListaCollegamentiView. & I \\
+TUOFyy & Verificare che vengano renderizzati tutti i collegamenti effettuati per dimostrare la correttezza del metodo showConnection() di ListaCollegamentiView. & I \\
+TUOFyy & Verificare che venga rimosso il collegamento a seguito di un evento onClick del bottone elimina collegamento per dimostrare la correttezza del metodo handleDelete() di ListaCollegamentoView. & I \\
+TUOFyy & Verificare che venga renderizzata la form di modifica del collegamento a seguito di un evento onClick del bottone modifica collegamento per dimostrare la correttezza del metodo render() di FormEdit. & I \\
+TUOFyy & Verificare che renderizzi il contenuto della form di modifica pre dimostrare la correttezza del metodo getPredictors() di FormEdit. & I \\
+TUOFyy & Verificare che venga non venga modificato il collegamento in caso di errori durante la modifica per dimostrare la correttezza del metodo sendConnectionToController() di FormEdit. & I \\
+TUOFyy & Verificare che venga aggiornato il collegamento a seguito di una corretta modifica per dimostrare la correttezza del metodo sendConnectionToController() di FormEdit. & I \\
+TUOFyy & Verificare che venga renderizzato il contenuto della tab previsione per dimostrare la correttezza del metodo render() di PrevisioneView. & I \\
+TUOFyy & Verificare che il bottone di avvio monitoraggio venga cambiato, a seguito di un evento onClick, con il bottone di stop monitoraggio. & I \\
+TUOFyy & Verificare che il bottone di stop monitoraggio venga cambiato, a seguito di un evento onClick, con il bottone di avvio monitoraggio. & I \\
+TUOFyy & Verificare che venga renderizzato il grafico per dimostrare la correttezza del metodo render() di Panel. & I \\
+TUOFyy & Verificare che venga aggiunta una nuova serie visualizzabile nel grafico in caso non fosse già presente per dimostrare la corretezza del metodo setupGraphSeries() di Panel. & I \\
+TUOFyy & Verificare che venga aggiornata la serie del grafico e che non venga creata una nuova in caso fosse già presente per dimostrare la correttezza del metodo setupGraphSeries() di Panel. & I \\
+TUOFyy & Verificare che non venga sollevata un'eccezione in caso il file json non sia compatibile per dimostrare la correttezza del metodo setJson(file) di Controller. & NI \\
+TUOFyy & Verificare che venga letto il contenuto del file json, che siano definiti gli stessi predittori contenuti nel file e che sia stato impostato l'algoritmo corretto per dimostrare la correttezza del metodo setJson(file) di Controller. & I \\
+TUOFyy & Verificare che venga aggiunta una nuova connessione alla lista di connessioni per dimostrare la correttezza del metodo addConnection(connection) di Controller. & I \\
+TUOFyy & Verificare che venga aggiornata la connessione corretta tra le connessioni presenti per dimostrare la correttezza del metodo updateConnection(id, connection) di Controller. & I \\
+TUOFyy & Verificare che venga rimossa la connessione corretta tra le connessioni presenti per dimostrare la correttezza del metodo removeConnection(id) di Controller. & I \\
+TUOFyy & Verificare che venga mostrato l'alert di corretto inserimento delle soglie per dimostrare la correttezza del metodo handleSoglie(sMin, sMax) di Controller. & I \\
+TUOFyy & Verificare che venga mostrato l'alert di inserimento errato delle soglie per dimostrare la correttezza del metodo handleSoglie(sMin, sMax) di Controller. & I \\
+TUOFyy & Verificare che venga restituito l'array di predizioni corretto rispetto al parametro passato alla funzione per dimostrare la correttezza del metodo getPredictedData(connectionName) di Controller. & I \\
+TUOFyy & Verificare che venga aggiornata la predizione della connessione se essa era già presente nella lista di previsioni per dimostrare la correttezza del metodo updatePredictions(series) di Controller. & I \\
+TUOFyy & Verificare che venga aggiunta una nuova predizione se la connessione non era già presente nella lista di previsioni per dimostrare la correttezza del metodo updatePredictions(series) di Controller. & I \\
+TUOFyy & Verificare che non venga eseguito l'aggiornamento delle predizioni se gli input sono stati definiti in modo errato per dimostrare la correttezza del metodo updatePredictions(series) di Controller. & I \\
+TUOFyy & Verificare che non venga eseguito l'aggiornamento delle predizioni se non è stato possibile calcolare la predizione per dimostrare la correttezza del metodo updatePredictions(series) di Controller. & I \\
+TUOFyy & Verificare che venga calcolata correttamente la predizione per dimostrare la correttezza del metodo predict(inputs) di Regression. & I \\
+TUOFyy & Verificare che venga lanciata un'eccezione in caso il numero di input sia maggiore o minore di quanto aspettato per dimostrare la correttezza del metodo predict(inputs) di Regression. & I \\
+TUOFyy & Verificare che venga calcolato correttamente il gruppo di appartenenza degli input per dimostrare la correttezza del metodo predict(inputs) di Svm. & I \\
+TUOFyy & Verificare che venga lanciata un'eccezione in caso il numero di input sia maggiore o minore di quanto aspettato per dimostrare la correttezza del metodo predict(inputs) di Svm. & I \\
 
 \end{longtable}
 
-\subsubsection{Riepilogo dei test}
+\subsection{Riepilogo dei test}
 
 \begin{longtable}{c c c c}
 \rowcolor{white}\caption{Tabella di riepilogo dei test} \\
