@@ -13,7 +13,7 @@ The JSON files containing the configurations of the various prediction algorithm
 \end{itemize}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.65]{img/json/jsonSVM.jpg}
+\includegraphics[scale=0.65]{img/json/jsonSVM.png}
 \caption{Support Vector Machine JSON example}
 \end{figure}
 \newpage
@@ -31,20 +31,20 @@ The JSON files containing the configurations of the various prediction algorithm
 \hspace{5cm}\\
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.75]{img/json/jsonRL.jpg}
+\includegraphics[scale=0.75]{img/json/jsonRL.png}
 \caption{Linear Regression JSON example}
 \end{figure}
-
+\pagebreak
 
 \subsection{CSV file structure}
 The CSV files are structured based on which algorithm must be trained, RL or SVM.
 Each column contains the values of the corresponding predictor\glo. The first line  of each column must contain the tag associated to the particular predictor. Depending on the case, one or more columns must be present for the predictors.
 
-\begin{figure}%
+\begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
 \centering
-\includegraphics[scale=1]{img/json/csvfileRL.jpg}
+\includegraphics[scale=1]{img/json/csvfileRL.png}
 \caption{RL CSV file example}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
@@ -54,3 +54,4 @@ Each column contains the values of the corresponding predictor\glo. The first li
 \end{subfigure}
 \caption{CSV input file examples}
 \end{figure}
+\clearpage 
