@@ -4,7 +4,7 @@
 	\item \textbf{Luogo}: Skype;
 	\item \textbf{Data}: 2020-06-05;
 	\item \textbf{Ora di inizio}: 11:00;
-	\item \textbf{Ora di fine}: 12:40;
+	\item \textbf{Ora di fine}: 12:15;
 	\item \textbf{Partecipanti}:
 	\begin{itemize}
 		\item tutti i membri;
@@ -13,4 +13,41 @@
 \end{itemize}
 
 \subsection{Topic}
-Durante questo incontro il gruppo ha discusso sulle seguenti tematiche:
+Durante questo incontro il gruppo ha esposto al proponente le seguenti tematiche:
+\begin{enumerate}
+	\item avanzamento dello sviluppo;
+	\item varie incertezze sorte durante lo sviluppo.
+\end{enumerate}
+
+\subsubsection{Punto 1}
+Il gruppo ha esposto quanto prodotto fino ad ora per confermare se si sta procedendo nella giusta direzione. A seguito della conferma della correttezza del lavoro svolto il proponente ha esposto alcune migliorie che potrebbero essere apportate al software, in particolare:
+\begin{enumerate}
+\item quando si carica un csv si potrebbe mostrare i dati in esso contenuti;
+\item mostrare la retta appresa dall'algoritmo a seguito dell'addestramento;
+\item mostrare di colore o forma diversa i dati sbagliati della SVM.
+\end{enumerate}
+\textbf{Nota:} nel punto 2 se sono presenti più valori per la \texttt{x} va fatto scegliere all'utente una delle possibili, mantenendo fissa la \texttt{y}
+
+\subsubsection{Punto 2}
+Il gruppo ha successivamente esposto i dubbi sorti durante lo sviluppo, le domande esposte sono:
+\begin{itemize}
+\item tutti i predittori ottenuti dall'addestramento vanno collegati ad un aspetto del flusso dati?
+\item con politica temporale si intende il periodo di tempo su cui effettuare le previsioni o ogni quanto tempo vanno effettuate?
+\item quando viene impostato il salvataggio delle previsioni, si deve salvare le previsioni effettuate fino a quel momento?
+\item se si interrompe il monitoraggio e successivamente lo si riavvia, i calcoli devono re-iniziare da capo o devono ripartire da dove erano stati interrotti?
+\end{itemize}
+
+\pagebreak
+\subsection{Tracciamento delle decisioni}
+\begin{longtable}{ c | c }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Decisione}}\\	
+		VE\_2020-06-05\_1 & Implementazione dei suggerimenti forniti. \\
+		VE\_2020-06-05\_2 & 
+\begin{itemize}
+\item vanno collegati tutti i predittori;
+\item va bene utilizzare la politica temporale già presente in Grafana;
+\item è a nostra discrezione l'implementazione del salvataggio;
+\item i calcoli del monitoraggio devono ricominciare da capo.
+\end{itemize}\\
+\end{longtable}
