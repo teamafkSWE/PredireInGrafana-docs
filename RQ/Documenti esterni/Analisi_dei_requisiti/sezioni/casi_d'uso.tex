@@ -107,7 +107,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente deve aver selezionato i dati di addestramento (\hyperref[par:UC1.1]{UC1.1});
 			\item\textbf{Postcondizioni}: l'utente ha scelto l'algoritmo di previsione selezionando l'opzione corrispondente;
-			\item\textbf{Scenario principale}: l'utente clicca la Combo Box con etichetta "Seleziona Algoritmo" e sceglie l'algoritmo da addestrare (Support Vector Machine o Regressione Lineare).
+			\item\textbf{Scenario principale}: l'utente clicca la Combo Box con etichetta "Seleziona l'algoritmo" e sceglie l'algoritmo da addestrare (Support Vector Machine o Regressione Lineare).
 		\end{itemize}
 	
 	\label{par:UC1.3}
@@ -126,7 +126,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item l'utente ha confermato la scelta dell'algoritmo e l'inserimento dei dati di addestramento;
 					\item l'utente ha addestrato l'algoritmo e può scaricare il file JSON.
 				\end{enumerate}
-			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta “Conferma”;
+			\item\textbf{Scenario principale}: l'utente clicca il pulsante con etichetta "Avvia addestramento";
 			\item\textbf{Estensioni}:
 			\begin{enumerate}
 				\item \hyperref[par:UC7]{UC7}: viene visualizzato un messaggio d'errore se non è stato caricato alcun file CSV contenente i dati di addestramento;
@@ -151,7 +151,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: l'utente visualizza la notifica di addestramento avvenuto con successo;					
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l'utente visualizza il messaggio di notifica "Addestramento avvenuto successo" in cui viene notificato che l'addestramento confermato(\hyperref[par:UC1.3]{UC1.3}) dell'algoritmo selezionato, a partire dai dati di addestramento, è avvenuto correttamente;
+					\item l'utente visualizza il messaggio di notifica "Addestramento avvenuto con successo" in cui viene notificato che l'addestramento confermato(\hyperref[par:UC1.3]{UC1.3}) dell'algoritmo selezionato, a partire dai dati di addestramento, è avvenuto correttamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -240,11 +240,12 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Precondizioni}:
 				\begin{enumerate}
 					\item l'utente visualizza il pannello “Predire in Grafana” nella dashboard;
-					\item l'utente ha cliccato il pulsante "Carica JSON" e visualizza il pannello di selezione del file.
+					\item l'utente ha cliccato il pannello di selezione del file.
+					\end{enumerate}
 			\item\textbf{Postcondizioni}: l'utente ha selezionato il file JSON;
 			\item\textbf{Scenario principale}: l'utente seleziona dalla finestra di selezione il file JSON da importare tra quelli disponibili e sono visibili solo i file con formato .json;
 			\item\textbf{Estensioni}: \hyperref[par:UC10]{UC10}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plug-in "Predire in Grafana".
-				\end{enumerate}
+				
 			\end{itemize}
 		
 		\label{par:UC2.2}
@@ -255,7 +256,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file JSON da caricare;
 			\item\textbf{Postcondizioni}: l'utente ha caricato il file nel plug-in;
-			\item\textbf{Scenario principale}: l'utente clicca il pulsante etichettato con “Conferma” e il file viene caricato;
+			\item\textbf{Scenario principale}: l'utente clicca il pulsante etichettato con "Apri" e il file viene caricato;
 			\item\textbf{Estensioni}: \hyperref[par:UC11]{UC11}: viene visualizzato un messaggio d'errore nel caso in cui l'operazione di caricamento del file non sia andata a buon fine.
 					
 		\end{itemize}
@@ -270,7 +271,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: l'utente ha visualizzato la notifica di avvenuto caricamento del file JSON nel plug-in;
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l'utente visualizza il messaggio di notifica "Avvenuto successo caricamento file JSON" in cui viene notificato che il caricamento (\hyperref[par:UC2]{UC2}) è avvenuto correttamente;
+					\item l'utente visualizza il messaggio di notifica "Caricamento file JSON avvenuto con successo" in cui viene notificato che il caricamento (\hyperref[par:UC2]{UC2}) è avvenuto correttamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire.		
 				\end{enumerate}		
 		\end{itemize}
@@ -284,7 +285,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Precondizioni}: 
 				\begin{enumerate}
 					\item l'utente ha confermato il caricamento del file JSON selezionato (\hyperref[par:UC2.2]{UC2.2});
-					\item l'utente ha visualizzato il messaggio di notifica "Caricamento JSON avvenuto successo" (\hyperref[par:UC2.3]{UC2.3}).
+					\item l'utente ha visualizzato il messaggio di notifica "Caricamento file JSON avvenuto con successo" (\hyperref[par:UC2.3]{UC2.3}).
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: l'utente ha visualizza il contenuto del file JSON caricato;
 			\item\textbf{Scenario principale}: l'utente visualizza il contenuto del file JSON appena caricato dove può esaminare i valori dei parametri dell'algoritmo addestrato e varie informazioni generali.
@@ -310,7 +311,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item l'utente ha caricato e letto con successo i predittori contenuti nel file JSON (\hyperref[par:UC2]{UC2});
 					\item l'utente dispone di una serie di predittori da poter collegare al flusso di dati voluto;
 					\item l’utente deve aver configurato la connessione al server tramite Grafana;
-					\item l’utente deve disporre di almeno un database caricato in Grafana contenente una tabelle con i dati su cui fare le previsioni.
+					\item l’utente deve disporre di almeno un database caricato in Grafana contenente una tabella con i dati su cui fare le previsioni.
 
 					
 				\end{enumerate}
@@ -369,8 +370,11 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Titolo} : Impostazione delle soglie;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Precondizioni}: l'utente ha associato i predittori della lista ad un flusso dati (\hyperref[par:UC3.1]{UC3.1});
-			\item\textbf{Postcondizioni}: l'utente ha impostato la soglia di monitoraggio sui predittori;
-			\item\textbf{Scenario principale}: l'utente aggiunge una soglia da associare; è possibile impostare una soglia minima o una soglia massima;
+			\item\textbf{Postcondizioni}: \begin{enumerate}
+			\item l'utente ha impostato la soglia di monitoraggio sui predittori;
+			\item l'utente ha confermato le soglie premendo il bottone "Conferma soglie".
+			\end{enumerate}
+			\item\textbf{Scenario principale}: l'utente aggiunge una soglia da associare; è possibile impostare una soglia minima e/o una soglia massima;
 		\end{itemize}
 
 	\label{par:UC3.4}
@@ -460,7 +464,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Scenario principale}: 
 			\begin{enumerate} 
 				\item (\hyperref[par:UC4.1]{UC4.1}) l'utente clicca il pulsante con etichetta "Scollega predittore";
-				\item (\hyperref[par:UC4.2]{UC4.2}) viene visualizzato un messaggio di alert "Procedere con lo scollegamento?" che interroga l'utente sull'effettiva conferma della procedura attuata;
+				\item (\hyperref[par:UC4.2]{UC4.2}) viene visualizzato un messaggio di alert "Scollegare il predittore?" che interroga l'utente sull'effettiva conferma della procedura attuata;
 				\item (\hyperref[par:UC4.3]{UC4.3}) l'utente clicca il pulsante "Conferma" per proseguire e scollegare il predittore oppure clicca il pulsante "Annulla" per ritornare alla lista dei collegamenti;	
 				\item (\hyperref[par:UC4.4]{UC4.4}) viene visualizzato un messaggio di notifica "Scollegamento avvenuto con successo";
 				\item (\hyperref[par:UC4.5]{UC4.5}) l'utente clicca il pulsante con etichetta "Modifica predittore";
@@ -663,7 +667,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 					\item l'utente ha avviato il monitoraggio (\hyperref[par:UC5.1]{UC5.1}) e dispone delle previsioni sul flusso di dati in quanto il calcolo di previsione è stato completato correttamente (\hyperref[par:UC5.2]{UC5.2}).
 				\end{enumerate}
 			\item\textbf{Postcondizioni}: la previsione calcolata sui dati ricevuti è stata immagazzinata nel DB se lo desidera;
-			\item\textbf{Scenario principale}: l'utente clicca il pulsante “Invia previsioni” tramite il quale i dati di previsione vengono inviati al Database InfluxDB, altrimenti decide di non salvarli e prosegue con il monitoraggio.
+			\item\textbf{Scenario principale}: l'utente clicca il pulsante "Salva previsione" tramite il quale i dati di previsione vengono inviati al Database InfluxDB, altrimenti decide di non salvarli e prosegue con il monitoraggio.
 			
 		\end{itemize}	
 		
@@ -821,7 +825,7 @@ Essendo il prodotto finale un plug-in open-source\glo è accessibile ad ogni tip
 			\item\textbf{Postcondizioni}: l'utente visualizza il messaggio d'errore sulla soglia appena impostata;		
 			\item\textbf{Scenario principale}:
 				\begin{enumerate}
-					\item l'utente visualizza il messaggio d'errore "Errore Impostazione Soglia Non Valida" in cui viene segnalato che la soglia appena inserita (\hyperref[par:UC3.3]{UC3.3}) non può essere accettata e viene invitato ad inserirla nuovamente;
+					\item l'utente visualizza il messaggio d'errore "Soglia non valida" in cui viene segnalato che la soglia appena inserita (\hyperref[par:UC3.3]{UC3.3}) non può essere accettata e viene invitato ad inserirla nuovamente;
 					\item l'utente clicca il pulsante "Conferma" per proseguire e viene riportato all'inserimento della soglia.		
 				\end{enumerate}		
 		\end{itemize}
