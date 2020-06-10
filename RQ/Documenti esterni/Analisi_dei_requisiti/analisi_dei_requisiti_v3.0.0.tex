@@ -23,6 +23,13 @@
 
 %------------------
 
+%------------------ PER SISTEMARE INDICE TABELLE E FIGURE 
+\makeatletter
+\renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{3em}}% 3em instead of 2.3em
+\let\l@table\l@figure
+\makeatother
+%------------------
+
 \newpage
 \input{sezioni/RegistroModifiche.tex}
 
