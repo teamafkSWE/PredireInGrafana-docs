@@ -1,6 +1,6 @@
-\section{File Structure}
+\section{File structure}
 \subsection{JSON structure}
-The JSON files containing the configurations of the various prediction algoirthms must be structured in the following way
+The JSON files containing the configurations of the various prediction algorithms must be structured in the following way
 
 \subsubsection{Support Vector Machine}
 \begin{itemize}
@@ -34,13 +34,23 @@ The JSON files containing the configurations of the various prediction algoirthm
 \includegraphics[scale=0.75]{img/json/jsonRL.jpg}
 \caption{Linear Regression JSON example}
 \end{figure}
-\newpage
-\subsection{CSV File structure}
-The CSV files are structured based on which algorithm must be trained, RL or SVM.
-Each column conains the values of the corresponding predictor\glo The first line  of each column must contain the tag associated to the particualar predictor. Depending on the case, one or more colums must be present for the predictors.
 
-\begin{figure}[H]
+
+\subsection{CSV file structure}
+The CSV files are structured based on which algorithm must be trained, RL or SVM.
+Each column contains the values of the corresponding predictor\glo. The first line  of each column must contain the tag associated to the particular predictor. Depending on the case, one or more columns must be present for the predictors.
+
+\begin{figure}%
 \centering
-\includegraphics[scale=1]{img/json/csvfile.jpg}
-\caption{CSV file example in Microsoft Excell}
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[scale=1]{img/json/csvfileRL.jpg}
+\caption{RL CSV file example}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+\centering
+\includegraphics[scale=1]{img/json/csvfileSVM.png}
+\caption{SVM CSV file example}
+\end{subfigure}
+\caption{CSV input file examples}
 \end{figure}
