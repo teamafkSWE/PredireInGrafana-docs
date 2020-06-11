@@ -3,15 +3,15 @@
 \subsection{Instruments installation}
 
 \subsubsection{Node.js installation}
-The installation of the runtime JavaScript Node.js can be done by visiting  Node.js page at \url{https://nodejs.org/en/download/}. In this site the developer can download the most suitable version of Node.js for his operative system. For Linux user is also possible to use the package manager provided by the OS\glo and exclusively for Ubuntu/Debian developers can run in terinal this code:\\
+The installation of the runtime JavaScript Node.js can be done by visiting  Node.js page at \url{https://nodejs.org/en/download/}. In this site the developer can download the most suitable version of Node.js for his operating system. For Linux user is also possible to use the package manager provided by the OS\glo and exclusively for Ubuntu/Debian developers can run in terinal this code:\\
 \texttt{apt-get install nodejs} \\
 
 \subsubsection{Git installation}
-For the installation of the version control system, the developer needs to reach Git site's at \url{https://git-scm.com/downloads}. Inside the 'Download' section are available the links to download the compatible version with his operative system. Also Linux base system  can install Git from their package manager or running from Ubuntu/Debian terminal this line:\\
+For the installation of the version control system, the developer needs to reach Git site's at \url{https://git-scm.com/downloads}. Inside the 'Download' section are available the links to download the compatible version with his operating system. Also Linux base system  can install Git from their package manager or running from Ubuntu/Debian terminal this line:\\
 \texttt{apt-get install git} \\
 
 \subsection{Grafana installation}
-Developers can install Grafana by reaching its download page at \url{https://grafana.com/grafana/download}. There they can download compatible version for MacOs, Windows and Linux base system. Furthermore, the most common Unix base systems can install Grafana running terminal lines showed in the same page.
+Developers can install Grafana by reaching its download page at \url{https://grafana.com/grafana/download}. For a correct using of the plugin you must select Grafana 6.7.3 version.There they can download compatible version for MacOs, Windows and Linux base system. Furthermore, the most common Unix base systems can install Grafana running terminal lines showed in the same page.
 
 \subsubsection{WEB Grafana execution}
 
@@ -19,7 +19,7 @@ Depending from which OS the developer is working on,the execution of WEB Grafana
 \begin{itemize}
 \item \textbf{Windows}: opening "bin" folder in Grafana installation folder
 (the path should be like \texttt{C:/Program Files/grafana-6.7.3/bin/}), and double-clicking on "grafana-server.exe";
-\item \textbf{Linux and MacOS}: running on terminal the following line:\\
+\item \textbf{Linux and MacOS}: running on terminal the following line (may \texttt{sudo} option is needed):\\
 \texttt{systemclt start grafana-server}\\
 \end{itemize} 
 After that, the developer needs to reach the address \url{http://localhost:3000/} through a browser. For the first access, the developer needs to fill the fields username with "admin" and password with "admin", and once he/she is in, he/she will need to register himself/herself into the system for next accesses.
@@ -30,17 +30,18 @@ After that, the developer needs to reach the address \url{http://localhost:3000/
 \caption{WEB Grafana page at \url{http://localhost:3000}}
 \end{figure}
 \subsection{Plugin and Tool installation}
-The following sections will guide developers to install correctely both Training Tool and Prediction Tool.
+The following sections will guide developers to install correctely both Training Tool and Prediction Plugin.
 \subsubsection{GitHub repository clone}
 The developer to clone the GitHub repository needs to open the terminal and choose a folder inside the filesystem with command: \\
 \texttt{cd /path/to/folder}\\
-After that, in the same location, the developer needs to run  this line:\\
+After that, in the same location, the developer has to run  this line:\\
 \texttt{git clone https://github.com/teamafkSWE/PredireInGrafana-SW.git}\\
 This line creates the folder that contains the source code of Training Tool and Prediction Plugin.\mbox \\
 
 \subsection{Dependencies}
 Dependencies are a list of packages needed to develop and run the project. For this reason, other developers will need to install all them to run correctely the tool and plugin. This operation can be done by moving to tool or plugin's folder and there run this line:\\
 \texttt{npm install}\\
+Developers have to run this command once inside the tool's folder and one more time inside the plugin's folder, because the two products have different list of dependecies.
 The following tables contain all the dependencies adopted to make both tool and plugin.
 
 \begin{longtable}{C{5cm} C{4cm}}
@@ -85,11 +86,10 @@ svm & 0.1.1\\
 		\endhead
 @influxdata/influxdb-client & 1.3.0\\
 axios & 0.19.2\\
-react-datepicker & 2.16.0\\
 react-files & 2.4.8\\
 \end{longtable}
 
-\paragraph{Developer dependency}\mbox{} \\ \mbox{} \\
+\subsubsection{Developer dependency}\mbox{} \\ \mbox{} \\
 Developer will have to install dependencies to run correctely the project.
 All them are reported down below.
 
