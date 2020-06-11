@@ -1,0 +1,21 @@
+\section{Installation}
+\subsection{Grafana}
+All documetation about Grafana installation is aviable on \href{URL}{https://grafana.com/grafana/download}.
+Here you cand find the download for your preferred operating system, such as : MacOS, Windows adn GNU\slash Linux and a step-by-step installation guide.
+\subsubsection{Grafana WEB service}
+
+To lounh the Grafana WEB service, the following steps must be follwed dependig on which operating system is used:
+
+\begin{itemize}
+\item\textbf{Linux}: on opened terminal run the following command:\texttt{ sudo service grafana-server start} ;
+\item\textbf{Windows}: the extracted Grafana folder contains the folder "bin" with the setup WEB services, double click on \texttt{grafana-server.exe} ;
+\item\textbf{Mac}: in the "bin" folder on opened terminal run the following comand:\texttt{ ./grafana-server web}.
+\end{itemize}
+
+Sould the user then open the preferred browser and connect to the deafult Grafana local host : \texttt{http://localhost:3000/}.
+The credentials required for a first-time run are "admin" for the username field and "admin" for the password field
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{img/install/login.jpg}
+\caption{Grafana login page}
+\end{figure}
