@@ -1,0 +1,270 @@
+\section{Gestione dei rischi}
+I rischio viene inteso come un evento che non vorremmo accadesse nel corso del progetto, in quanto influenzerebbe negativamente la qualità o la riuscita stessa del prodotto. Inoltre, essendo un evento che può riguardare qualunque aspetto del progetto, la gestione dei rischi risulta fondamentale per la riuscita dello stesso. Per questo motivo il gruppo intende affrontare il compito nel seguente modo:\\
+\begin{itemize}
+\item \textbf{Identificazione dei rischi}: vengono identificati i rischi, distinguendoli in rischi per il progetto, il prodotto e l'azienda;
+\item \textbf{Analisi dei rischi}: viene valutata la probabilità dell'evento e la sua pericolosità;
+\item \textbf{Pianificazione dei rischi}: viene stabilito un piano per la prevenzione del rischio annullandone gli effetti, quando possibile, o per lo meno mitigarne le conseguenze;
+\item \textbf{Monitoraggio dei rischi}: ad ogni ridefinizione del \textit{Piano di Progetto}, i rischi vengono nuovamente controllati sulla base delle nuove informazioni.
+\end{itemize}
+
+\subsection{Rischi tecnologici}
+\begin{longtable}{C{3cm} L{4.5cm} L{4.5cm} C{3.15cm}}
+\rowcolor{white}\caption{Tabella dei rischi tecnologici} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice-Nome}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Rilevamento}} &
+\textcolor{white}{\textbf{Grado}}  \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice-Nome}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Rilevamento}} &
+\textcolor{white}{\textbf{Grado}} \\
+		\endhead
+
+RiT01 - Inesperienza Tecnologica &
+Molte delle tecnologie adottate per lo sviluppo del progetto sono nuove per i componenti, che potrebbero usarle in modo non ottimale. &
+Il \textit{Responsabile} ha il compito di essere al corrente delle conoscenze dei componenti. & 
+Probabilità: 
+Alta
+Pericolosità: 
+Alta\\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Il \textit{Responsabile} una volta messo al corrente delle  conoscenze dei componenti, affiderà loro i ruoli che più li competono.} \\
+
+
+RiT02 - Errori nelle dipendenze &
+Il progetto richiede parecchie dipendenze esterne, potrebbero essere presenti errori all'interno di esse. & 
+Al momento dell'aggiunta di una nuova dipendenza ci si deve informare su errori già conosciuti. &
+Probabilità:
+Bassa
+Pericolosità:
+Alta \\
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Sarà necessario cercare una versione di tale dipendenza che non contenga l'errore. Valutare anche la possibilità di cambiare dipendenza con una analoga.}\\
+
+
+RiT03 - Mancanza di documentazione &
+La piattaforma di Grafana non fornisce una vasta documentazione. & 
+Prima dello sviluppo di un nuovo componente si deve verificare che sia presente la relativa documentazione o un esempio del codice. &
+Probabilità:
+Media
+Pericolosità:
+Media \\
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Consultarsi con gli altri membri per suggerimenti sullo sviluppo e cercare un metodo alternativo per l'implementazione.} \\
+
+
+RiT04 - Configurazione dell'ambiente di lavoro &
+Grafana è in costante aggiornamento e va configurata diversamente in base alla versione del software o del sistema operativo su cui si lavora. & 
+Se alcune componenti di Grafana non hanno lo stesso comportamento tra i vari membri del gruppo, potrebbe essere dovuto ad una configurazione errata del software.&
+Probabilità:
+Bassa
+Pericolosità:
+Media \\
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Consultare attentamente la documentazione di Grafana per individuare le differenze che ci possono essere tra le varie piattaforme.} \\
+
+RiT05 - Codifica dei test &
+Il processo di analisi e codifica dei test è nuovo per tutti i membri del gruppo. Tale problema è dovuto dal fatto che nessun membro del \textit{TeamAFK} ha mai sviluppato test, di nessuna natura, fino ad ora. & Prima dello sviluppo di un nuovo test si deve impegnare del tempo per analizzare tutte le casistiche e specifiche di quel determinato test. &
+Probabilità:
+Alta
+Pericolosità:
+Alta \\
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Consultarsi con gli altri membri o consultare test reali già sviluppati, per ottenere dei suggerimenti sullo sviluppo e cercare un metodo alternativo per l'implementazione.} \\
+
+\end{longtable}
+
+
+
+\subsection{Rischi organizzativi}
+\begin{longtable}{C{3cm} L{4.5cm} L{4.5cm} C{3.15cm}}
+\rowcolor{white}\caption{Tabella dei rischi organizzativi} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice-Nome}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Rilevamento}} &
+\textcolor{white}{\textbf{Grado}}  \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice-Nome}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Rilevamento}} &
+\textcolor{white}{\textbf{Grado}} \\
+		\endhead
+		
+RiO01 - Emergenza sanitaria &
+Un'epidemia riscontrata nel territorio, può costringere le autorità a porre restrizioni per ridurne l'espansione. &
+Le restrizioni descritte dal DCPM 2020-03-08 permettono le sole interazioni telematiche tra gli stakeholders. & 
+Probabilità: 
+Alta 
+Pericolosità: 
+Alta \\
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Gli stakeholders dovranno decidere di utilizzare gli strumenti di comunicazione disponibili a tutti che limitino i disagi scaturiti dalle suddette restrizioni.} \\
+
+
+RiO02 - Calcolo dei costi &
+L'insesperienza del gruppo può portare alla sottovalutazione dei costi da sostenere. &
+Il \textit{Responsabile} ha il compito di essere al corrente delle conoscenze dei componenti. & 
+Probabilità: 
+Media 
+Pericolosità: 
+Alta\\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{È consigliato comunicare tempestivamente al committente la variazione dei costi.} \\
+
+
+RiO03 - Impegni accademici &
+Essendo questo un progetto universitario, è probabile che in corso d'opera i componenti debbano sostenere attività accademiche che li sottrarrebbero dagli impegni di progetto. &
+Ogni componente deve saper comunicare con chiarezza i propri impegni accademici. & 
+Probabilità: 
+Alta
+Pericolosità: 
+Media \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{È consigliato comunicare tempestivamente al \textit{Responsabile} i propri impegni accademici.} \\
+
+
+RiO04 - Impegni personali &
+\'E possibile che in corso d'opera i componenti debbano sostenere attività che li sottrarrebbero dagli impegni di progetto. &
+Ogni componente deve saper comunicare con chiarezza nel calendario i propri impegni. & 
+Probabilità: 
+Alta
+Pericolosità: 
+Media \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{È consigliato comunicare tempestivamente al \textit{Responsabile} i propri impegni.} \\
+
+
+RiO05 - Ritardi &
+Le problematiche sopracitate possono comportare ritardi non indifferenti ai fini di progetto. &
+Per questo l'incaricato dell'attività deve comunicare tempestivamente il ritardo. & 
+Probabilità: 
+Media
+Pericolosità: 
+Bassa \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{È consigliato riassegnare risorse laddove ce ne sia bisogno, e quindi risolvere il motivo del ritardo.} \\
+
+
+RiO06 - Divisione errata del lavoro &
+A causa dell'inesperienza riguardo i compiti da svolgere il carico di lavoro potrebbe essere diviso non ugualmente tra i vari membri. &
+Il membro che si trovasse in difficoltà nello svolgimento puntuale del suo compito deve comunicare tempestivamente data evenienza al responsabile. & 
+Probabilità: 
+Media
+Pericolosità: 
+Media \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Il responsabile,una volta individuata la criticità,si adopererà per ripartire il compito tra i membri meno impegnati.} \\
+
+
+RiO07 - Errata analisi dei requisiti &
+Essendo il gruppo inesperto è possibile non comprendere correttamente la richiesta del proponente o interpretarla erroneamente. &
+I requisiti individuati verranno discussi tra i membri in modo da individuare carenze o parti poco chiare. & 
+Probabilità: 
+Media
+Pericolosità: 
+Media \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Verrà effettuato un incontro con il proponente in cui verranno effettuate delle domande per eventuali chiarimenti, oppure verranno esposte le proprie interpretazioni per poter confermarle o modificarle.} \\
+
+RiO08 - Suddivisione delle ore di lavoro &
+Tutti i membri del gruppo non hanno avuto esperienze precedenti del mondo lavorativo o nella gestione completa di un progetto risultando quindi in una previsione errata della suddivisione del tempo. &
+Tale problema sorge nel momento della stesura del \textit{Piano di Progetto} e sarà compito del responsabile e degli amministratori (che redigono suddetto documento) individuare eventuali difficoltà. & 
+Probabilità: 
+Media
+Pericolosità: 
+Media \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Nel momento della stesura del Piano di Progetto dovrà essere svolta un'analisi approfondita delle ore di lavoro di ogni membro in relazione ai ruoli ricoperti.} \\
+
+
+RiO09 - Rotazione dei ruoli &
+La rotazione periodica dei ruoli nel gruppo potrebbe portare difficoltà nell'individuare, di volta in volta, i vari addetti. &
+Nel momento in cui più membri vengano interpellati per problemi non a loro carico l'errore verrà segnalato al responsabile. & 
+Probabilità: 
+Media
+Pericolosità: 
+Bassa \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{\'E stato impostato un documento Google in cui sono presenti i ruoli e il relativo membro, al cambio di ruolo è compito del nuovo responsabile aggiornare tale elenco.} \\
+
+\end{longtable}
+
+\pagebreak
+\subsection{Rischi interpersonali}
+\begin{longtable}{C{3cm} L{4.5cm} L{4.5cm} C{3.15cm}}
+\rowcolor{white}\caption{Tabella dei rischi interpersonali} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice-Nome}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Rilevamento}} &
+\textcolor{white}{\textbf{Grado}}  \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice-Nome}} &
+\textcolor{white}{\textbf{Descrizione}} &
+\textcolor{white}{\textbf{Rilevamento}} &
+\textcolor{white}{\textbf{Grado}} \\
+		\endhead
+
+RiP01 - Comunicazione interna &
+Può essere che in determinati momenti un elemento del gruppo non sia raggiungibile. &
+I membri del gruppo devono segnalare la momentanea assenza dell'interessato/a. & 
+Probabilità: 
+Bassa
+Pericolosità: 
+Alta \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Il gruppo ha adottato diversi mezzi di comunicazione.} \\
+
+
+RiP02 - Comunicazione esterna &
+Se si presentano problematiche come RiO01, il proponente potrebbe non sempre essere reperibile. &
+I membri del gruppo organizzeranno le conferenze con il proponente con più largo anticipo. & 
+Probabilità: 
+Bassa
+Pericolosità: 
+Alta \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Il gruppo ha adottato diversi mezzi di comunicazione per rimanere in contatto con il proponente.} \\
+
+
+RiP03 - Contrasti interni &
+Essendo l'attività di progetto un lavoro collaborativo, è possibile che i membri abbiano opinioni divergenti riguardo a determinate tematiche. &
+Ciascun membro del team si impegnerà a limitare tali tensioni e fare in modo che esse non influiscano sul normale svolgersi delle attività. & 
+Probabilità: 
+Bassa
+Pericolosità: 
+Alta \\ 
+
+Piano di contingenza &
+\multicolumn{3}{L{13cm}}{Il responsabile avrà la funzione di gestire e fare da mediatore in tali divergente.} \\
+
+
+\end{longtable}
+
+
+%\pagebreak

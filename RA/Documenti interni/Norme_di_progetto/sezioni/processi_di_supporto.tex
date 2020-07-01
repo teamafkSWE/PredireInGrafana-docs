@@ -1,0 +1,647 @@
+\section{Processi di supporto}
+\subsection{Documentazione}
+\subsubsection{Scopo}
+Ogni processo\glo e attività\glo significativi volti allo sviluppo del progetto sono documentati. Lo scopo di questa sezione è definire gli standard che riguardano i documenti prodotti durante l'intero ciclo di vita del software. I documenti sono consultabili nelle relative sezioni della repository\glo: \url{https://github.com/teamafkSWE/PredireInGrafana-docs}. 		
+
+\subsubsection{Aspettative}
+Ciò che ci aspettiamo dal processo di documentazione è costruire una Body of Knowledge\glo che raccoglie la conoscenza in modo sistematico, disciplinato, quantificabile. Quest'ultima deve essere: \begin{itemize}
+\item completo;
+\item non ambiguo;
+\item modulare;
+\item coeso;
+\item trasparente;
+\item semplice;
+\item disponibile.
+\end{itemize}
+In poche parole, deve permettere la trasmissione delle informazioni nel miglior modo possibile.
+\subsubsection{Descrizione}
+Questo processo descrive come il gruppo ha gestito il processo di documentazione utile ai fini del progetto. Perciò si definiscono le fasi del ciclo di vita specificando come i documenti vengono costruiti, strutturati e redatti.
+
+\subsubsection{Attività}
+\paragraph{Ciclo di vita di un documento} \mbox{} \\ \mbox{} \\
+Ogni documento segue le seguenti fasi di ciclo di vita:
+\begin{itemize}
+\item \textbf{Sviluppo}: creazione del documento, definizione della struttura e prima stesura di tutte le parti che lo compongono;
+\item \textbf{Verifica}: un documento entra in fase di verifica successivamente al suo completamento. È dovere del \textit{Responsabile} assegnare tale compito ad almeno un \textit{Verificatore}. Quest'ultimo deve applicare le procedure di verifica e segnalare eventuali modifiche da apportare al documento;
+\item \textbf{Approvazione}: il \textit{Responsabile} approva il documento, che sarà quindi ritenuto completo e pronto per il rilascio;
+\item \textbf{Rivisitazione e ampliamento}: con l'avanzare del progetto si prevede di espandere ciascun documento, aggiungendo nuove sezioni o migliorando quanto scritto in precedenza. Sarà compito del \textit{Responsabile} istanziare una nuova fase di sviluppo per provvedere alla realizzazione di questi aggiornamenti. Al termine di essa vengono eseguite nuovamente le fasi di verifica ed approvazione del documento.
+\end{itemize}
+
+\paragraph{Template}\mbox{} \\ \mbox{} \\
+È stato creato un template \LaTeX{} per uniformare la struttura grafica e lo stile di formattazione dei documenti. Lo scopo dei template è permettere, a colui che redige il documento, di adottare automaticamente le conformità previste dalle \textit{Norme di Progetto}. Nel caso quest'ultime cambiassero, essi permettono di agevolare la procedura di adeguamento alle nuove norme.
+
+\paragraph{Struttura dei documenti}\mbox{} \\ \mbox{} \\
+Un file "nome\_file.tex" (in cui "nome\_file" verrà sostituito dal nome del documento) raccoglie, tramite comandi di input, le sezioni di cui è composto il documento. Tra i file in input ci sono:
+\begin{itemize}
+\item "AFKstyle.sty", contenente i pacchetti necessari alla compilazione e i comandi relativi all'impostazione grafica;
+\item "copertina.tex", che contiene i comandi \LaTeX{} per l'impostazione della prima pagina del documento;
+\item "registroModifiche.tex", contenente la tabella delle modifiche.
+\end{itemize}
+
+\subparagraph{Prima pagina}\mbox{} \\ \mbox{} \\
+Il frontespizio è la prima pagina del documento ed è così strutturato:\begin{itemize}
+\item \textbf{Logo del gruppo}: logo del \textit{TeamAFK} visibile come primo elemento centrato in alto;
+\item \textbf{Titolo}: nome del documento, posizionato centralmente sotto il logo;
+\item \textbf{Gruppo e progetto}: nome del gruppo e del progetto \textit{Predire in Grafana}, visibile centralmente sotto il titolo;
+\item \textbf{Recapito}: indirizzo di posta elettronica del gruppo, posizionato sotto il nome del gruppo e del progetto;
+\item \textbf{Informazioni sul documento}: tabella posizionata al di sotto del recapito, contenente le seguenti informazioni: \begin{itemize}
+\item \textbf{Versione}: versione del documento;
+\item \textbf{Approvatore}: nome e cognome dei membri del gruppo incaricati dell'approvazione del documento;
+\item \textbf{Redattori}: nome e cognome dei membri del gruppo incaricati della redazione del documento;
+\item \textbf{Verificatori}: nome e cognome dei membri del gruppo incaricati della verifica del documento;
+\item \textbf{Uso}: tipologia d'uso del documento, che può essere "interno" o "esterno";
+\item \textbf{Distribuzione}: destinatari del documento.
+\end{itemize}
+\item \textbf{Descrizione}: descrizione sintetica del documento, posizionata centralmente in fondo alla pagina.
+\end{itemize}
+
+\subparagraph{Registro delle Modifiche}\mbox{} \\ \mbox{} \\
+Ogni documento dispone di un \textit{Registro delle Modifiche}: una tabella posta a seguito della prima pagina, contenente le modifiche apportate al documento. In essa sono indicati: \begin{itemize}
+\item versione del documento dopo la modifica;
+\item data della modifica;
+\item breve descrizione della modifica;
+\item nominativo di chi ha modificato;
+\item ruolo di chi ha modificato.
+\end{itemize}
+
+\subparagraph{Indice}\mbox{} \\ \mbox{} \\
+L'indice ha lo scopo di riepilogare e dare una visione macroscopica della struttura del documento, mostrando le parti gerarchiche di cui è composto. Ogni documento è corredato dall'indice dei contenuti, posizionato dopo il \textit{Registro delle Modifiche}. Se sono presenti immagini o tabelle all'interno del documento, l'indice dei contenuti è seguito prima dalla lista delle immagini, poi dalla lista delle tabelle.
+
+\subparagraph{Contenuto principale}\mbox{} \\ \mbox{} \\
+La struttura delle pagine di contenuto è così definita: \begin{itemize}
+\item \textbf{Logo}: presente in alto a sinistra;
+\item \textbf{Nome del documento}: presente in alto a destra;
+\item \textbf{Riga di separazione}: divide l'intestazione dal contenuto;
+\item \textbf{Contenuto della pagina}: posto tra l'intestazione e il piè di pagina;
+\item \textbf{Riga di separazione}: divide il contenuto dal piè di pagina;
+\item \textbf{Nome e versione del documento}: posto in basso a sinistra;
+\item \textbf{Numero della pagina}: presente in basso a destra, con il formato "Pagina X di Y", in cui la X indica il numero della pagina corrente e Y il numero totale delle pagine.
+\end{itemize}
+
+\subparagraph{Verbali} \label{par:verbali}\mbox{} \\ \mbox{} \\
+I verbali vengono prodotti dal/i soggetto/i incaricato/i della loro stesura in occasione di incontri tra i membri del team, con o senza la presenza di referenti esterni. È prevista la stesura di più verbali, uno per ogni incontro.
+La struttura è così definita: \begin{itemize}
+\item \textbf{Luogo}: luogo di svolgimento dell'incontro;
+\item \textbf{Data}: data dell'incontro, nel formato \texttt{YYYY-MM-DD};
+\item \textbf{Ora di inizio}: l'orario di inizio dell'incontro;
+\item \textbf{Ora di fine}: l'orario di fine dell'incontro;
+\item \textbf{Partecipanti}: elenco dei membri del gruppo presenti all'incontro e, se presenti, i nominativi delle persone esterne che vi hanno partecipato;
+\item \textbf{Topic}: argomenti affrontati durante l'incontro.
+\end{itemize}
+Ogni verbale dovrà essere denominato secondo il seguente formato: \\ \\
+\centerline{\textbf{VX\_YYYY-MM-DD}} \\ \\
+dove con "X" bisognerà indicarne la tipologia: \begin{itemize}
+\item \textbf{I}: verbale "interno", incontro tra i membri del team di progetto;
+\item \textbf{E}: verbale "esterno", incontro con partecipanti esterni al gruppo (committente o proponente), per chiarimenti riguardanti il progetto.
+\end{itemize}
+
+\subparagraph{Uso dei documenti}\mbox{} \\ \mbox{} \\
+I documenti possono essere adibiti ad uso interno o esterno:
+\begin{itemize}
+\item \textbf{Interno}: documenti utilizzati all'interno del gruppo, tipicamente \textit{Verbali} e \textit{Norme di Progetto};
+\item \textbf{Esterno}: documenti destinati a persone esterne, ovvero committenti e proponente.
+\end{itemize}
+
+\subparagraph{Note a piè di pagina}\mbox{} \\ \mbox{} \\
+Eventuali note vanno indicate nella pagina corrente, in basso a sinistra. Ogni nota deve riportare un numero e una breve descrizione.
+
+\paragraph{Norme tipografiche}
+\subparagraph*{Convenzioni sui nomi dei file}\mbox{} \\ \mbox{} \\
+I nomi di file (estensione esclusa) e cartelle utilizzano la convenzione "Snake\_case\glo" e alcune regole aggiuntive elencate di seguito: \begin{enumerate}
+\item i nomi dei file composti da più parole usano il carattere \textit{underscore} come carattere separatore, eccetto il file del \textit{Registro delle modifiche} nominato "registroModifiche.tex";
+\item i nomi dei file sono scritti interamente in minuscolo;
+\item i nomi dei file dei documenti principali, ossia quelli che raggruppano le sezioni, devono contenere anche la versione;
+\item le preposizioni \textbf{vanno} messe;
+\item i nomi delle cartelle seguono la convenzione Snake\_case, ma con la prima lettera della prima parola in maiuscolo (e.i. Norme\_di\_progetto).
+\end{enumerate}
+Alcuni esempi di file \textbf{corretti} sono: \begin{itemize}
+\item studio\_di\_fattibilità\_v1.0.0 (contiene la versione);
+\item processi\_di\_supporto (file di una sezione delle \textit{Norme di Progetto}, non contiene la versione).
+\end{itemize}
+Alcuni esempi di file \textbf{non corretti} sono: \begin{itemize}
+\item Norme\_di\_progetto (usa maiuscole);
+\item norme-di-progetto (non utilizza underscore come separatore);
+\item norme\_progetto (omette la preposizione "di").
+\end{itemize}
+
+\subparagraph*{Glossario}
+\begin{itemize}
+\item ogni termine inserito nel \textit{Glossario} è marcato con una \textbf{G} maiuscola a pedice, solamente nella sua prima occorrenza;
+\item non vengono segnate con la \textbf{G} a pedice le parole da \textit{Glossario} presenti nei titoli e nelle didascalie di immagini e tabelle;
+\item se nel \textit{Glossario} un termine presenta una descrizione che utilizza termini da glossario, è necessario trattare questi termini come tali, segnando la \textbf{G} a pedice e aggiungendoli al documento con la relativa descrizione;
+\item se nel \textit{Glossario} è presente un termine sinonimo (o tradotto il lingua inglese) di un altro già presente, bisognerà collegarlo alla relativa definizione attraverso il comando \verb|\hyperref[par:"nome_paragrafo"]| e la relativa label \verb|\label{par:nome_paragrafo}|, posta sopra la prima occorrenza di definizione.
+\end{itemize}
+
+\subparagraph*{Stile del testo}\mbox{} \\ \mbox{} \\
+\begin{itemize}
+\item \textbf{Grassetto}: viene applicato se necessario alle voci di un elenco puntato, a titoli o a termini di frasi che si vuol far risaltare;
+\item \textbf{Corsivo}: vengono scritti in corsivo e con la prima lettera maiuscola il nome del progetto \textit{Predire in Grafana}, i ruoli, i documenti citati, il nome del gruppo \textit{TeamAFK} ed il nome dell'azienda proponente \textit{Zucchetti SPA};
+\item \textbf{Maiuscolo}: solo gli acronimi vengono scritti interamente in maiuscolo; nel caso di nomi o titoli composti da più parole verrà indicato con la lettera maiuscola solamente la prima lettera della parola;
+\item \textbf{Nomi dei documenti}: 
+\begin{itemize}
+\item utilizzare il corsivo per citare un documento;
+\item ogniqualvolta si cita un documento, bisogna indicare con la lettera maiuscola le iniziali dei nomi di cui è composto, senza indicarne la versione. \\ \textbf{Caso particolare}:
+\begin{itemize}
+\item quest'ultima può essere indicata quando si deve far riferimento ad una \textbf{specifica} versione del documento in questione. In questo caso utilizzare la convenzione Snake\_case sopra definita: e.i. \textit{Norme\_di\_Progetto\_v1.0.0}.
+\end{itemize}
+\item se si utilizza il documento come titolo o in una voce di elenco, si deve seguire la convenzione sopra riportata ma senza utilizzare il corsivo. 
+\end{itemize}
+\end{itemize}
+
+\subparagraph*{Elenchi puntati}\mbox{} \\ \mbox{} \\
+Ogni voce di un elenco o sottoelenco comincia per lettera minuscola, e termina per ";", eccetto l'ultima che termina per ".". 
+Se le voci contengono una descrizione, andranno scritte in grassetto e con la prima lettera maiuscola.
+
+\subparagraph*{Didascalia}\mbox{} \\ \mbox{} \\
+Nella didascalia deve comparire il numero della sezione a cui l'immagine o tabella si riferisce, seguita dal numero progressivo delle stesse di quella sezione e una breve descrizione: \\
+\centerline{\textbf{X.Y.Z: <descrizione>}}
+\begin{itemize}
+\item \textbf{X.Y}: rappresenta la sezione;
+\item \textbf{Z}: rappresenta il numero progressivo della tabella o immagine nella sezione X.Y;
+\item \textbf{Descrizione}: breve descrizione identificativa.
+\end{itemize}
+
+\subparagraph*{Formati comuni}\mbox{} \\ \mbox{} \\
+In conformità allo standard ISO 8601\footnote{ISO 8601: standard internazionale per la rappresentazione di date e orari.}:\begin{itemize}
+\item le date devono essere scritte secondo il formato gregoriano: \\
+	\centerline{YYYY-MM-DD}
+	dove YYYY indica l'anno, MM il mese (da 01 a 12) e DD il giorno (da 01 a 31);
+\item gli orari devono seguire il formato 24 ore: \\
+	\centerline{HH:MM} \\
+	dove HH indica le ore (da 00 a 23) e MM i minuti (da 00 a 59).
+\end{itemize} 
+
+
+\subparagraph*{Sigle}\mbox{} \\ \mbox{} \\
+Il progetto prevede la redazione di un insieme di documenti, suddivisi in documenti interni ed esterni. Sono di seguito elencati con le rispettive sigle e descrizioni. \\
+I documenti interni sono: \begin{itemize}
+\item \textbf{Studio di fattibilità - SdF}: descrive in modo sintetico i capitolati e spiega le motivazioni della loro scelta o esclusione;
+\item \textbf{Norme di Progetto - NdP}: sono un riferimento normativo per lo svolgimento del progetto.
+\end{itemize}
+I documenti esterni sono: \begin{itemize}
+\item \textbf{Analisi dei Requisiti - AdR}: stabilisce le caratteristiche che il software deve rispettare; 
+\item \textbf{Piano di Progetto - PdP}: descrive la strategia di gestione del progetto, evidenziandone la fattibilità e le criticità;
+\item \textbf{Piano di Qualifica - PdQ}: descrive la qualità del software e dei processi, e come la si intende raggiungere;
+\item \textbf{Glossario - G}: raccoglie i termini di interesse sui quali è necessaria una descrizione più approfondita che ne chiarisca il significato;
+\item \textbf{Manuale Utente - MU}: a disposizione degli utenti;
+\item \textbf{Manuale Sviluppatore - MS}: a disposizione di sviluppatori e manutentori.
+\end{itemize}
+I verbali sono un caso particolare di documenti, che possono essere interni o esterni:
+\begin{itemize}
+\item \textbf{Verbale - V}: descrivono le interazioni avvenute durante un incontro tra i membri del team (verbale interno) o con il proponente del progetto (verbale esterno).
+\end{itemize} 
+Le diverse fasi del progetto sono le seguenti:
+\begin{itemize}
+\item \textbf{Revisione dei Requisiti - RR}: studio iniziale del capitolato, se ben fatto permette al gruppo di aggiudicarselo;
+\item \textbf{Revisione di Progettazione - RP}: riguarda la definizione dell'architettura del software e di una Proof of Concept\glo per mostrarne la fattibilità;
+\item \textbf{Revisione di Qualifica - RQ}: interessa la definizione dettagliata e la codifica del prodotto;
+\item \textbf{Revisione di Accettazione - RA}: se il prodotto soddisfa i requisiti del proponente, viene accettato e rilasciato.
+\end{itemize}
+
+\paragraph{Elementi grafici}
+\subparagraph*{Immagini}\mbox{} \\ \mbox{} \\
+Le immagini sono centrate e hanno una breve didascalia descrittiva sottostante. Tutte le immagini devono aver il formato \texttt{.png}\glo.
+
+\subparagraph*{Tabelle}\mbox{} \\ \mbox{} \\
+Le tabelle sono scritte allo stesso modo in tutti i documenti \LaTeX{}: fare riferimento alla Wiki di Overleaf \url{https://www.overleaf.com/learn/latex/tables}. \\
+Ogni tabella deve essere accompagnata dalla propria didascalia descrittiva (caption), da posizionare al di sopra della tabella. \\
+Fanno eccezione le tabelle del \textit{Registro delle Modifiche} che non hanno didascalia.
+
+\subparagraph*{Diagrammi UML}\mbox{} \\ \mbox{} \\
+I diagrammi UML\glo vengono inseriti nei documenti sotto forma di immagine.
+
+\subsubsection{Metriche di qualità} 
+\label{par:metricheDoc}
+Le metriche per la qualità dei documenti definiscono l’obiettivo di redarre documenti facilmente leggibili. Esse rispetteranno la seguente notazione: \\
+\centerline{\textbf{M[D][numero]}}
+dove: \begin{itemize}
+\item D: indica che è una metrica relativa ai documenti;
+\item numero: identifica in maniera univoca la metrica, assume un valore intero a due cifre incrementale, a partire da 01.
+\end{itemize}
+Se nelle formule di calcolo delle metriche è presente il simbolo "\#", va inteso come la parola "numero". Un esempio può essere il seguente:
+\[ \#parole\_doc = numero\ di\ parole\ presenti\ nel\ documento \]
+
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche di qualità dei documenti}\\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
+		Indice Gulpease (IG)  & MD01 & È un indice di leggibilità di un testo tarato sulla lingua italiana e basato su due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere. La formula per il suo calcolo è: \newline
+\[ IG = 89 + \frac{300 \cdot (\#frasi) - 10 \cdot (\#lettere)}{\#parole} \] \newline
+Il risultato è un valore compreso nell'intervallo tra 0 e 100, dove il valore 100 indica la più alta leggibilità. Un indice inferiore a 80 indica documenti di difficile leggibilità per chi ha la licenza elementare, inferiore a 60 per chi ha la licenza media, inferiore a 40 per chi ha un diploma superiore.
+	\\	
+	Indice Fog (IF) & MD02 & Misura la lunghezza media delle parole e delle frasi nei documenti. Quanto più è alto il valore dell'indice Fog, tanto più è difficile capire il documento. La formula per il suo calcolo è: \newline
+	\[ IF = 0.4 \cdot [ (\frac{\#parole}{\#frasi}) + 100 \cdot (\frac{\#parole\_complesse}{\#parole})] \]
+	Il numero risultante è un indicatore del numero di anni di educazione formale della quale una persona necessita al fine di leggere il testo con facilità. 
+	\end{longtable}
+
+\subsubsection{Strumenti di supporto}
+\paragraph{\LaTeX{}}\mbox{} \\ \mbox{} \\
+\LaTeX{} è lo strumento scelto per la stesura dei documenti, un linguaggio basato sul programma di composizione tipografica \TeX{}, che permette di scrivere documenti in modo ordinato, modulare, collaborativo e scalabile.
+
+\paragraph{\TeX{}maker}\mbox{} \\ \mbox{} \\
+\TeX{}maker è l'editor utilizzato per la stesura del codice \LaTeX{}. Questo strumento, oltre ad integrare un compilatore e un visualizzatore PDF, fornisce suggerimenti di completamento per comandi \LaTeX{}. \\
+\centerline{\url{https://www.xm1math.net/texmaker/}}
+\begin{figure}[H]
+\centering
+	\includegraphics[width=0.70\linewidth]{../Norme_di_progetto/img/texMaker.png}
+	\caption{\TeX{}maker - per la stesura dei documenti}
+\end{figure}
+
+\paragraph{GanttProject}\mbox{} \\ \mbox{} \\
+GanttProject è un programma gratuito dedicato alla produzione dei diagrammi di Gantt\glo. Permette di creare task e milestone\glo, organizzare le task in lavoro strutturato a interruzioni, disegnare
+i vincoli di dipendenza tra di esse e molte altre utilità, generando automaticamente il relativo diagramma. \\
+\centerline{\url{https://www.ganttproject.biz/}}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.70\linewidth]{../Norme_di_progetto/img/gantt.png}\\
+			\caption{GanttProject - per la relizzazione di diagrammi di Gantt}
+\end{figure}
+
+\paragraph{Draw.io}\mbox{} \\ \mbox{} \\
+Draw.io viene utilizzato per la produzione degli UML.\\
+\centerline{\url{https://www.draw.io/}} 
+
+\subsection{Gestione della configurazione}
+\subsubsection{Scopo}
+L'obiettivo della configurazione è di creare ordine tra i documenti e il software. Tutto ciò che è configurato ha uno stato identificativo, è modificato secondo regole ben definite ed è posto sotto versionamento\glo.
+
+\subsubsection{Aspettative}
+Questa sezione ha lo scopo supportare i processi di documentazione, di sviluppo e manutenzione del software rendendoli definiti e ripetibili.
+
+\subsubsection{Descrizione}
+Questo processo descrive come il gruppo ha gestito la configurazione degli strumenti e delle risorse utilizzate per svolgere il progetto. Viene quindi descritta la configurazione del repository su GitHub, del sistema di versionamento Git e dei servizi associati a GitHub.
+
+\subsubsection{Attività}
+\paragraph{Versionamento}\mbox{} \\ \mbox{} \\
+Ogni versione di qualsiasi documento deve corrispondere ad una riga della tabella delle modifiche. Il numero di versione è composto da tre cifre: \\ \\
+\centerline{X.Y.Z} \\
+\begin{itemize}
+\item \textbf{X}: rappresenta una versione stabile del documento, resa tale dopo l'approvazione del \textit{Responsabile} di progetto: \begin{itemize}
+\item inizia da 0; 
+\item viene incrementata di un'unità alla volta.
+\end{itemize}
+\item \textbf{Y}: indica l'ultima versione del documento che ha passato la fase di verifica: \begin{itemize}
+\item inizia da 0;
+\item viene incrementato dal verificatore ad ogni verifica;
+\item quando viene incrementato X, viene riportato a 0.
+\end{itemize} 
+\item \textbf{Z}: indica l'ultima modifica apportata al documento dal redattore: \begin{itemize}
+\item inizia da 0;
+\item viene incrementato dal redattore del documento ad ogni modifica;
+\item quando viene incrementato Y, viene riportato a 0.
+\end{itemize}
+\end{itemize}
+Apprese le correzioni effettuate dal docente, il \textit{TeamAFK} ha deciso di modificare il significato che questi parametri assumevano, consentendo di ottenere uno scatto di versione solo successivamente ad un'operazione di verifica. Il significato che i nuovi parametri assumono sono:
+\begin{itemize}
+    \item \textbf{X}: un suo aumento determina che il documento sia stato modificato, verificato e approvato, quindi ritenuto pronto al rilascio;
+    \item \textbf{Y}: un suo aumento determina la conclusione di un'attività di modifica e di verifica di un processo ritenuto di entità maggiore, come può essere l'inserimento di una nuova sezione o una sua modifica sostanziale (refactoring);
+    \item \textbf{Z}: un suo aumento determina la conclusione di un'attività di modifica e di verifica di un processo ritenuto di entità minore, come può essere una correzione, un'aggiunta minore o un aggiornamento di una specifica sezione.
+\end{itemize}
+L'aumento del parametro X determina l'azzeramento dei parametri Y e Z.
+
+
+\paragraph{GitHub}\mbox{} \\ \mbox{} \\
+Per le parti del progetto da versionare si è scelto di usare GitHub\glo, un servizio del sistema di versionamento distribuito Git per contenere la repository remota. \\
+I membri del team possono interagire con il VCS\glo sia da linea di comando, sia attraverso software che ne migliorano l'usabilità, come GitKraken e GitHub Desktop. La versione ufficiale del progetto è ospitata in una repository remota su GitHub, all'indirizzo \\
+\centerline{\url{https://github.com/teamafkSWE}}
+
+\subparagraph{Struttura del repository} \mbox{} \\ \mbox{} \\
+All'interno della repository principale sopra descritta troviamo due differenti repository: \begin{itemize}
+\item \textbf{PredireInGrafana-docs}: contiene tutti i documenti ufficiali del progetto, suddivisi in specifiche cartelle: \\
+\centerline{\url{https://github.com/teamafkSWE/PredireInGrafana-docs}}  \begin{itemize}
+\item \textbf{Cartella principale - Presentazioni}: raccoglie le presentazioni relative ad ogni consegna;
+\item \textbf{Cartella principale - RR}: raccoglie i file sorgenti per la compilazione dei documenti, suddivisi tra esterni ed interni, realizzati per la \textit{Revisione dei Requisiti};
+\item \textbf{Cartella principale - RP}: raccoglie i file sorgenti per la compilazione dei documenti, suddivisi tra esterni ed interni, realizzati per la \textit{Revisione di Progettazione}. In futuro saranno aggiunte cartelle distinte nominate \textbf{RQ} e \textbf{RA}, contenenti i file delle rispettive consegne.
+\item \textbf{Cartella principale - RQ}: raccoglie i file sorgenti per la compilazione dei documenti, suddivisi tra esterni ed interni, realizzati per la \textit{Revisione di Qualifica}. In futuro sarà aggiunta la cartella relativa alla \textbf{RA}, contenenti i file della rispettiva consegna.
+\begin{itemize}
+\item[$\bullet$] \textbf{Tipologia\_di\_documento}: ogni documento avrà la rispettiva cartella (e.i. Norme\_di\_progetto), contenente tutti i file (sezioni ed immagini) necessari per la sua compilazione;
+\item[$\bullet$] \textbf{copertina.tex}: file che permetterà una facile e rapida modifica dell'impostazione testuale del frontespizio.
+\end{itemize}
+\item \textbf{Template}: contiene tutti i file che definiscono il template \LaTeX{} per la creazione di nuovi documenti.
+\end{itemize} 
+\item \textbf{PredireInGrafana-SW}: conterrà tutti i file di codifica dei plug-in da sviluppare. \\ \centerline{\url{https://github.com/teamafkSWE/PredireInGrafana-SW}}
+\end{itemize}
+Entrambe le repository, avranno una propria struttura identica a livello: \begin{itemize}
+\item \textbf{Locale}: ogni membro del gruppo lavora sui file clonati dal repository remoto nel proprio PC;
+\item \textbf{Remoto}: presente su GitHub, contiene il lavoro svolto da ogni componente e che viene condiviso con il team.
+\end{itemize}
+
+\subparagraph{Tipi di file} \mbox{} \\ \mbox{} \\
+I file utilizzati per la documentazione del progetto sono: \begin{itemize}
+\item file con estensione .tex di \LaTeX{};
+\item file con estensione .pdf (da consegnare);
+\item file di stile, .sty,  e immagini di supporto.
+\end{itemize}
+Il file ".gitignore" è presente al livello più esterno della repository ed elenca tutti i file esclusi dal versionamento.
+
+\subparagraph{Utilizzo di Git} \mbox{} \\ \mbox{} \\
+Il repository di Git è composto da vari branch\glo, per favorire la collaborazione tra i vari membri e il parallelismo delle attività. Si consiglia quindi di seguire questa procedura:
+\begin{enumerate}
+\item scegliere il proprio branch di lavoro;
+\item eseguire il pull\glo dal repository remoto, che effettua quindi l'aggiornamento del proprio repository locale;
+\item svolgere il compito assegnato;
+\item eseguire il comando di aggiunta (add) dei file nuovi o modificati da condividere all'area di staging\glo;
+\item eseguire il comando di commit\glo dei file aggiunti, corredato da un messaggio che identifica il lavoro svolto;
+\item eseguire il push\glo del commit sul repository remoto.
+\end{enumerate}
+
+\paragraph{Gestione delle modifiche}\mbox{} \\ \mbox{} \\
+Tutti i membri del team possono modificare i file in ogni branch, ad eccezione del branch master, per il quale occorre richiedere una pull e ottenere l'approvazione di un altro membro. \\
+Per effettuare modifiche maggiori sui contenuti o sulla struttura dei file è previsto: \begin{itemize}
+\item contattare il \textit{Responsabile} del file da modificare;
+\item suggerire la modifica da effettuare;
+\item se il responsabile valuta positivamente la modifica, allora la applica.
+\end{itemize}
+Per modifiche minori, come correzioni grammaticali o miglioramenti sintattici, si consiglia di modificare indipendentemente. In entrambi i casi è opportuno commentare i propri commit con chiarezza per risalire facilmente alle modifiche effettuate.
+
+\subsubsection{Metriche di qualità}
+Per questo processo non sono state definite metriche di qualità.
+
+\subsubsection{Strumenti di supporto}
+\paragraph{GitHub}\mbox{} \\ \mbox{} \\
+In aggiunta ai servizi già elencati, al fine di migliorare efficacia ed efficienza, vengono utilizzate le funzionalità di "Issue Tracking System", "Milestone" e "Project Board" integrate in GitHub. Ognuna di queste funzionalità viene usata solo da chi autorizzato, ad esempio rilasci di versioni, creazione e chiusura di milestone sono concesse solo al \textit{Responsabile di Progetto}.\\
+Vengono inoltre utilizzate le "Labels" offerte dall’Issue Tracking System di Github per definire le tipologie di problemi e le loro priorità.\\
+Per il repository contenente il codice sorgente del software sono utilizzate le GitHub Actions al fine di implementare la pratica della continuous integration che, a sua volta, utilizza strumenti quali Coveralls per eseguire le verifiche automatiche sul codice sorgente.
+
+\paragraph{Coveralls}\mbox{} \\ \mbox{} \\
+Servizio web utilizzato per tenere traccia della copertura del codice.\\
+	\centerline{\url{https://coveralls.io/}}
+
+\subsection{Gestione della qualità}
+\subsubsection{Scopo}
+Lo scopo è garantire che il prodotto e i servizi offerti rispettino gli obiettivi di qualità e che i bisogni del proponente siano soddisfatti. 
+
+\subsubsection{Aspettative}
+Le aspettative di questo processo sono riassunte nei seguenti punti che rappresentano gli obiettivi che vogliono essere raggiunti. Si vuole ottenere: \begin{itemize}
+\item qualità per tutta la durata del ciclo di vita del software;
+\item garanzia di raggiungimento degli obiettivi di qualità prestabiliti;
+\item soddisfazione del cliente in merito al prodotto sviluppato;
+\item oggettività nella ricerca della qualità in modo da ottenerla in tutti i processi e in tutti i prodotti;
+\item qualità misurabile attraverso delle metriche.
+\end{itemize}
+
+\subsubsection{Descrizione}
+La gestione della qualità viene approfondita nel \textit{Piano di Qualifica}, dove sono descritte le modalità utilizzate per garantire la qualità nello sviluppo del progetto. In particolare: \begin{itemize}
+\item sono presentati gli standard utilizzati;
+\item sono individuati i processi\glo di interesse;
+\item sono individuati gli attributi del software più importanti per il progetto.
+\end{itemize}
+Per ogni processo vengono descritti: \begin{itemize}
+\item gli obiettivi da perseguire;
+\item le strategie da applicare;
+\item le metriche da utilizzare.
+\end{itemize}
+L'obiettivo è ottenere software e documentazione di qualità soddisfacente.
+
+\subsubsection{Attività}
+\paragraph{Classificazione delle metriche} \mbox{} \\  \mbox{} \\ 
+Le metriche sono distinte in tre categorie: processi, documentazione e codifica. Per ciascuna di esse si indica il motivo per cui è stata scelta e la procedura di calcolo.  \\
+Le metriche rispetteranno la seguente notazione: \\
+\centerline{\textbf{M[categoria][numero]}}
+dove: \begin{itemize}
+\item Categoria: indica la categoria della metrica, più precisamente:
+\begin{itemize}
+\item \textbf{G} per indicare le metriche riferite al prodotto, quindi a carattere più generale;
+\item \textbf{P} per indicare le metriche dei processi;
+\item \textbf{D} per indicare le metriche dei documenti;
+\item \textbf{S} per indicare le metriche della codifica del software e dei relativi test.
+\end{itemize}
+\item numero: identifica in maniera univoca la metrica in ogni categoria, assume un valore intero a due cifre incrementale, a partire da 01.
+\end{itemize}
+Se nelle formule di calcolo delle metriche è presente il simbolo "\#", va inteso come la parola "numero". Un esempio può essere il seguente:
+\[ \#parole\_doc = numero\ di\ parole\ presenti\ nel\ documento \]
+
+\subsubsection{Metriche di qualità} \label{par:metricheGen}
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche per la qualità generale del prodotto}\\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
+	 Percentuale di Metriche Soddisfatte (PROC) & MG01 & Indica la percentuale di metriche soddisfatte rispetto alla totalità di metriche da utilizzare all’interno del progetto. Si calcola con la seguente formula:
+		\[ PROC = \frac{metriche\_soddisfatte}{metriche\_totali}\cdot 100 \] \\
+	Percentuale di Requisiti Obbligatori Soddisfatti (PROS) & MG02 & Indica la percentuale di requisiti obbligatori soddisfatti rispetto alla totalità di requisiti obbligatori da sviluppare e rispettare. Si calcola con la seguente formula:
+		\[ PROS = \frac{requisiti\_obbligatori\_soddisfatti}{requisiti\_obbligatori\_totali}\cdot 100 \] \\
+			Percentuale di Requisiti Desiderabili Soddisfatti (PRDS) & MG03 & Indica la percentuale di requisiti desiderabili soddisfatti rispetto alla totalità di requisiti desiderabili da sviluppare e rispettare. Si calcola con la seguente formula:
+		\[ PROS = \frac{requisiti\_desiderabili\_soddisfatti}{requisiti\_desiderabili\_totali}\cdot 100 \] \\
+\end{longtable}
+
+\subsubsection{Strumenti di supporto}
+Gli strumenti di supporto utilizzati per garantire la qualità sono le metriche di qualità.
+
+\subsection{Verifica}
+\subsubsection{Scopo}
+Il processo di verifica ha come scopo la realizzazione di prodotti corretti, coesi e completi. Sono soggetti a verifica i documenti e il software.
+Il processo di verifica deve rispettare i seguenti punti: \begin{itemize}
+\item la verifica deve essere effettuata seguendo procedure ben definite;
+\item per verificare vi sono criteri chiari e affidabili;
+\item ogni fase del prodotto viene verificata;
+\item dopo la verifica il prodotto è in uno stato stabile;
+\item il prodotto può essere validato.
+\end{itemize}
+
+\subsubsection{Aspettative}
+La verifica viene effettuata per raggiungere i seguenti obiettivi: \begin{itemize}
+\item cercare consistenza, completezza e correttezza nelle singole attività;
+\item ottenere supporto per una successiva validazione del prodotto;
+\item avere a disposizione dei criteri e procedure, comprensibili e affidabili, da seguire.
+\end{itemize}
+
+\subsubsection{Descrizione}
+Il processo di verifica assicura che tutte le attività svolte della fase in esame, attraverso analisi e test successivamente definiti, siano conformi alle aspettative; prende in input ciò che è già stato prodotto e lo restituisce in uno stato stabile. \\
+Per ottenere tale risultato ci si affida a processi di analisi e test.
+
+\subsubsection{Attività}
+Le attività che si effettuano durante la verifica sono due tipi di analisi: l’analisi statica e l’analisi dinamica.
+
+\paragraph{Analisi statica} \mbox{} \\ \mbox{} \\
+L'analisi statica effettua controlli su documenti e codice. Questo tipo di analisi serve per rilevare varie tipologie di anomalie. \\
+Questa attività viene effettuata con l'ausilio di due metodi manuali di lettura (attuati da persone) differenti: \begin{itemize}
+\item \textbf{Walkthrough}: i vari componenti del team effettuano una lettura scrupolosa di documenti e/o codice alla ricerca di errori, senza sapere inizialmente se ce ne siano;
+\item \textbf{Inspection}: i verificatori usano liste di controllo (checklist) per fare ispezione cercando errori specifici in parti specifiche. Questa tecnica permette quindi di aumentare l'efficienza dello sviluppo, diminuendo i tempi dell'analisi statica.
+\end{itemize}
+A seguire sono descritte le liste di controllo utilizzabili per le ispezioni:
+\begin{longtable}{C{4.5cm} L{11cm}}
+	\rowcolor{white}\caption{Errori frequenti nei documenti.}\\
+		\rowcolor{redafk}
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Oggetto}} & \centerline{\textcolor{white}{\textbf{Controllo}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Oggetto}} & \centerline{\textcolor{white}{\textbf{Controllo}}} \\
+		\endhead
+Formato data & Deve seguire il formato gregoriano YYYY-MM-DD. \\
+Sintassi & La frase è troppo complessa e deve essere semplificata. \\
+Punteggiatura degli elenchi & Ogni voce termina in ";" eccetto l'ultima che termina in ".".\\
+Errori di battitura & Tipici errori di battitura dovuti alla vicinanza delle
+lettere sulla tastiera, ad esempio la lettera "a" al posto della "s", "i" al posto di "o", "m" al posto di "n". \\
+Uso degli accenti & Utilizzare le lettere accentate presenti nella tastiera o utilizzare il codice ALT. \\
+Inconsistenze nell’uso delle iniziali maiuscole nei titoli delle parti di documento & Ogni titolo deve avere la prima lettera della prima parola maiuscola e il resto minuscolo, tranne quando ci si riferisci ad attività o documenti specifici. \\
+Gerarchia delle sezioni & Non viene scritta la gerarchia delle sezioni dei documenti in maniera adeguata, ovvero: section, subsection, subsubsection, paragraph, subparagraph, subsubparagraph. \\
+Uso corretto del comando  \verb|\glo| & Il comando \verb|\glo| è stato creato per le parole da inserire nel glossario; va indicato solamente nella prima occorrenza della parola da inserire nel glossario.
+\end{longtable}
+
+\paragraph{Analisi dinamica} \mbox{} \\ \mbox{} \\
+L'analisi dinamica è una tecnica di analisi del prodotto software che richiede la sua esecuzione. Produce una misura della qualità del prodotto, mediante l'esecuzione di test specifici che verificano se il prodotto funziona e se ci sono anomalie.
+
+\subparagraph{Test} \mbox{} \\ \mbox{} \\
+I test sono l'attività fondamentale dell'analisi dinamica: il loro scopo è verificare che il codice
+scritto funzioni correttamente. I test devono:
+\begin{itemize}
+\item essere ripetibili;
+\item specificare l'ambiente di esecuzione;
+\item identificare input e output richiesti;
+\item avvertire di possibili effetti indesiderati;
+\item fornire informazioni sui risultati dell'esecuzione.
+\end{itemize}
+Ci sono vari tipi di test, ognuno dei quali ha un diverso oggetto di verifica e scopo.
+
+\paragraph*{Test funzionali} \mbox{} \\ \mbox{} \\
+Test condotti per valutare la conformità di un componente o sistema con requisiti\glo funzionali. Ne fanno parte: \begin{itemize}
+\item \textbf{Test di unità}: si eseguono su unità di software, e si concentrano sul loro funzionamento individuale;
+\item \textbf{Test di integrazione}: verificano se sono rispettati i contratti di interfaccia tra più moduli o sub-system (interni o esterni);
+\item \textbf{Test di accettazione}: gli UAT (User Acceptance Testing) si occupano di verificare il prodotto e, in particolare, il soddisfacimento del cliente. Il superamento di questi test garantisce che il software sia pronto per essere rilasciato.
+\end{itemize}
+
+\paragraph*{Test di regressione} \mbox{} \\ \mbox{} \\
+Il test di regressione va eseguito ogni volta che viene modificata un'implementazione in un programma. È possibile eseguire nuovamente i test esistenti sul codice modificato, integrando solo le parti che abbiano precedentemente superato il test di unità, per stabilire se le modifiche apportate hanno alterato elementi precedentemente funzionanti.\\ Se necessario è anche possibile scrivere nuovi test.
+
+\paragraph*{Test di sistema} \mbox{} \\ \mbox{} \\
+Verificano il comportamento dell'intero sistema.\\
+Lo scopo principale di questi test è la verifica del sistema rispetto alle specifiche tecniche definite nel'\textit{Analisi dei Requisiti}.
+
+\subparagraph*{Codifica dei test} \mbox{} \\ \mbox{} \\
+La codifica dei test è la seguente: \\
+\centerline{\textbf{TX[Tipo\_Requisito][Importanza][CodiceUC]}}
+dove: \begin{itemize}
+\item \textbf{X}: indica il tipo di test. Può assumere i seguenti valori: \begin{itemize}
+\item \textbf{U}: indica un test di unità;
+\item \textbf{I}: indica un test di integrazione;
+\item \textbf{A}: indica un test di accettazione;
+\item \textbf{R}: indica un test di regressione;
+\item \textbf{S}: indica un test di sistema.
+\end{itemize} 
+\item \textbf{Tipo\_Requisito}: indica il tipo del requisito. Esso può essere: \begin{itemize}
+\item \textbf{O}: obbligatorio;
+\item \textbf{D}: desiderabile;
+\item \textbf{F}: facoltativo.
+\end{itemize}
+\item \textbf{Importanza}: indica l'importanza del requisito. Viene indicata con: \begin{itemize}
+\item \textbf{F}: per indicare un requisito funzionale;
+\item \textbf{V}: per indicare un requisito di vincolo;
+\item \textbf{Q}: per indicare un requisito di qualità;
+\item \textbf{P}: per indicare un requisito prestazionale.
+\end{itemize}
+\item \textbf{CodiceUC}: rappresenta il codice identificativo crescente del componente da verificare.
+\end{itemize}
+
+\subsubsection{Metriche di qualità} \label{sez:meVe}
+Le metriche descritte in questa sezione sono metriche software utilizzate per verificare la qualità e la completezza dei test effettuati. Più in dettaglio:
+\begin{longtable}{ C{4.5cm} c L{9.5cm} }
+	\rowcolor{white}\caption{Metriche per la qualità e completezza dei test}\\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endfirsthead
+		\rowcolor{white}\caption[]{(continua)} \\
+		\rowcolor{redafk}
+		\textcolor{white}{\textbf{Nome}} & \textcolor{white}{\textbf{Codice}} & \centerline{\textcolor{white}{\textbf{Descrizione}}} \\
+		\endhead
+		Code Coverage (CC) & MS07 & Percentuale delle linee di codice coperte dai test. Avere codice coperto da test riduce la possibilità di introdurre errori nel prodotto. 
+		\[ CC[\%] = \frac{\#righe\_codice\_testate}{\#tot\_righe\_codice}\] \\
+		Passed Test Cases Percentage (PTCP) & MS08 & Percentuale di test superati sul totale dei test eseguiti. Un'alta percentuale di superamento indica la tendenza del codice ad essere già corretto prima dei test. Si calcola con la seguente
+formula:
+		\[ PTCP[\%] = \frac{\#test\_superati}{\#test\_eseguiti}\cdot 100 \] \\
+		Failed Test Cases Percentage (FTCP) & MS09 & Percentuale di test falliti sul totale dei test eseguiti. Un'alta percentuale di fallimento indica la tendenza
+alla scorrettezza del codice. Si calcola con la seguente formula:
+\[ FTCP[\%] = \frac{\#test\_falliti}{\#test\_eseguiti}\cdot 100 \] \\
+		Requisiti Obbligatori Implementati (ROI) & MS10 & Percentuale di test di requisiti obbligatori implementati sul totale dei test previsti. Si calcola con la seguente formula:
+\[ ROI[\%] = \frac{\#test\_r\_o\_implementati}{\#totale\_test\_r\_o}\cdot 100 \] 
+dove: \begin{itemize}
+\item \textbf{r} sta per requisiti;
+\item \textbf{o} sta per obbligatori.
+\end{itemize}\\
+	Requisiti Desiderabili Implementati (RDI) & MS11 & Percentuale di test di requisiti desiderabili implementati sul totale dei test previsti. Si calcola con la seguente formula:
+\[ RDI[\%] = \frac{\#test\_r\_d\_implementati}{\#totale\_test\_r\_d}\cdot 100 \] dove: \begin{itemize}
+\item \textbf{r} sta per requisiti;
+\item \textbf{d} sta per desiderabili.
+\end{itemize}\\
+\end{longtable}
+
+\subsubsection{Strumenti di supporto}
+
+\paragraph{Correzione ortografica} \mbox{} \\ \mbox{} \\
+Il controllo ortografico viene eseguito principalmente basandosi sugli strumenti integrati in \TeX{}maker, il quale fornisce un dizionario italiano e sottolinea in rosso le parole che non vi appartengono. 
+
+\paragraph{Coveralls} \mbox{} \\ \mbox{} \\
+Coveralls è uno strumento che permette di quantificare la percentuale di codice testato.
+
+\subsection{Validazione}
+\subsubsection{Scopo}
+Lo scopo del processo di validazione è  accertare che il prodotto finale corrisponda alle attese, soddisfando tutti i requisiti concordati e i bisogni del committente.
+
+\subsubsection{Aspettative}
+Le aspettative del \textit{TeamAFK} sono di normare adeguatamente il processo di validazione al fine di rilasciare un prodotto privo di errori gravi e capace di rispondere alle richieste del proponente.
+
+\subsubsection{Descrizione}
+Le attese sono quelle del committente e corrispondono all’\textit{analisi\_dei\_requisiti\_v3.0.0}. Per eseguire una validazione si deve avere un prodotto ad un sufficiente livello di avanzamento, quindi il numero di validazioni svolte è minore rispetto al numero delle verifiche. Durante questo processo vengono svolti i test di accettazione tramite i quali il proponente valida il prodotto software.
+
+\subsubsection{Attività}
+\paragraph{Test di accettazione}\mbox{} \\ \mbox{} \\
+Gli UAT si occupano di verificare il prodotto e, in particolare, il soddisfacimento del cliente. Il superamento di questi test garantisce che il software sia pronto per essere rilasciato.
+
+\subsubsection{Metriche di qualità}
+Per questo processo non sono state definite particolari metriche di qualità.
+
+\subsubsection{Strumenti di supporto}
+Per questo processo non vengono utilizzati degli strumenti di supporto.
+
+\subsection{Gestione dei cambiamenti}
+\subsubsection{Scopo}
+Lo scopo di questo processo è fornire un metodo tempestivo, disciplinato e documentato per assicurare che tutti i cambiamenti, compresi i problemi, riscontrati nel corso del progetto, siano identificati, analizzati e risolti.
+
+\subsubsection{Aspettative}
+Questo approccio porta i seguenti vantaggi, fondamentali per rispettare il \textit{Piano di Progetto}: 
+\begin{itemize}
+\item rispetto degli obiettivi prefissati;
+\item rispetto dei tempi previsti;
+\item rispetto del budget preventivato.
+\end{itemize}
+
+\subsubsection{Descrizione}
+Il Change Management è un approccio strutturato al cambiamento negli individui, nei gruppi e nelle organizzazioni che rende possibile la transizione da un assetto corrente a un futuro assetto desiderato.
+Un programma strutturato di sviluppo e crescita delle risorse umane è un elemento fondamentale di accompagnamento al cambiamento.\\ Pertanto, il \textit{TeamAFK} ha scelto di seguire l'approccio \textbf{agile} per la gestione del progetto, in cui i requisiti e le soluzioni maturano in corso d’opera attraverso la collaborazione fra stakeholders. Si tratta quindi di produrre il più rapidamente possibile i prototipi e poi rifinirli attraverso cicli successivi di miglioramento.
+
+\subsubsection{Attività}
+\paragraph{Adattamento ed implementazione del processo}\mbox{} \\ \mbox{} \\
+Per avvalorare quanto detto prima ed implementare tale processo al progetto in corso, il \textit{TeamAFK} ha deciso di adottare il modello 4P: \begin{itemize}
+\item \textbf{People}: il Change Management efficace mette l'utente al centro. Il \textit{Responsabile del Progetto} gestisce le comunicazioni interne tra i membri del gruppo e quelle esterne con il proponente e/o committente;
+\item \textbf{Process}: i processi vengono rivisti in chiave moderna ed efficace; devono essere circolari e chiusi, assicurando che: \begin{itemize}
+\item tutti i cambiamenti siano prontamente segnalati e gestiti tramite il processo di risoluzione dei cambiamenti;
+\item i cambiamenti vengano presi in carico e gestiti;
+\item vengano inviate delle notifiche per informare gli interessati della presenza dell’eventuale problema;
+\item le cause del problema vengano identificate, analizzate e, dove possibile, eliminate;
+\item la risoluzione e le decisioni prese siano archiviate e storicizzate;
+\item lo stato del cambiamento sia tracciato, aggiornato e comporti delle notifiche al cambio di stato;
+\item venga mantenuto un registro di tutti i problemi riscontrati.
+\end{itemize}
+\item \textbf{Platform}: il \textit{TeamAFK} utilizza tecnologie avanzate a supporto dello sviluppo del progetto (ESLint, Coveralls, TravisCI);
+\item \textbf{Place}: si intendono i luoghi di lavoro dove viene svolto il progetto. Il \textit{TeamAFK} si vede obbligato in questo senso ad attuare lo Smart Working, a causa delle limitazioni dovute da Covid19.
+\end{itemize}
+La modalità di gestione e di risoluzione individuate per i cambiamenti e per i problemi sono analizzate e valutate al fine di verificare che siano stati effettivamente risolti e che le modifiche siano state correttamente implementate nei prodotti software e nelle attività. Inoltre l’analisi deve permettere di individuare dei pattern di risoluzione ed aiutare a determinare quando vengono introdotti ulteriori problemi.
+\paragraph{Risoluzione dei problemi}\mbox{} \\ \mbox{} \\
+Quando dei cambiamenti, problemi compresi, sono rilevati in un prodotto software o in un’attività, deve essere realizzato un report che li descriva. Questo report deve essere usato come componente del punto precedente: dall’individuazione dei cambiamenti al processo di analisi e risoluzione, fino all’individuazione della causa ed alla sua analisi per individuarne la natura. Per svolgere quanto descritto, ci si appoggia all’Issue Tracking System di GitHub. Esso consente di aggiungere delle issues che corrispondono ai cambiamenti o ai problemi che si devono svolgere e di assegnarle ad incaricati e responsabili.
+
+\subsubsection{Metriche di qualità}
+Per questo processo non sono state definite delle metriche di qualità specifiche.
+
+\subsubsection{Strumenti di supporto}
+Per questo processo non vengono utilizzati degli strumenti di supporto.
