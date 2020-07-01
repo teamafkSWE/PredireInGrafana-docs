@@ -1,0 +1,51 @@
+\section{Informazioni generali}
+\subsection{Informazioni incontro}
+\begin{itemize}
+\item \textbf{Luogo}: Discord;
+\item \textbf{Data}: 2020-07-01;
+\item \textbf{Ora di inizio}: 15:00;
+\item \textbf{Ora di fine}: 18:00;
+\item \textbf{Partecipanti}:
+	\begin{itemize}
+		\item tutti i membri.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Topic}
+Durante questo incontro il gruppo ha discusso sulle seguenti tematiche:
+\begin{enumerate}
+\item sviluppo degli incrementi rimanenti;
+\item domande da porre al proponente;
+\item scegliere se tradurre tutto in inglese o tenere il prodotto in italiano.
+\end{enumerate}
+
+\subsubsection{Punto 1}
+Il gruppo ha discusso lo sviluppo degli ultimi 2 incrementi rimanenti, i quali rappresentano le ultime funzionalità da inserire nel plug-in di Grafana\glo.
+L'incremento 13 riguarda il completamento del pannello di collegamento mentre l'incremento 14 implementa tutti i messaggi di errori o notifica mancanti per guidare l'utente passo passo in ogni sua operazione. \\
+È stato deciso pertanto di inserire: \begin{itemize}
+\item alert quando si tenta di aggiungere un file json nel plug-in ma uno è gia stato inserito: "Watch out! A file is already imported!";
+\item alert "Disconnection done.";
+\item alert "Saving started." quando si clicca "Enable saving.";
+\item alert "Saving stopped." quando si clicca "Disable saving.";
+\item alert "Monitoring started.";
+\item alert "Monitoring stopped.".
+\end{itemize}
+
+\subsubsection{Punto 2}
+Le seguenti domande verranno poste al proponente nella prossima riunione: \begin{enumerate}
+\item Il tool lo preferisce come pagina web o come eseguibile?
+\item Le soglie devono essere implementate? 
+\end{enumerate}
+Verrà inoltre mostrato al proponente quanto sviluppato finora.
+
+\subsubsection{Punto 3}
+Il \textit{TeamAFK} ha deciso di tradurre il tool esterno e il plug-in di Grafana in lingua inglese, per uniformare il prodotto finale e renderlo utilizzabile da chiunque.
+
+\subsection{Tracciamento delle decisioni}
+\begin{longtable}{ c C{12cm} }
+\rowcolor{redafk}
+\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Decisione}}\\	
+		VI\_2020-06-01\_1 & Revisione e sviluppo incrementi 13 e 14. Inserimento alert mancanti (definiti al punto 1).\\
+		VI\_2020-06-01\_2 & Domande da porre al proponente (definite al punto 2). \\
+		VI\_2020-06-01\_3 & Scelto l'inglese come lingua principale del prodotto finale.
+\end{longtable}
