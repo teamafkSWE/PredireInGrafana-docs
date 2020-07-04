@@ -1,0 +1,32 @@
+\section{Descrizione generale}
+   
+	\subsection{Obiettivi del prodotto}
+	L’elaborato vedrà la realizzazione di un plug-in che migliori l’efficienza di monitoraggio di un flusso di dati espandendo l’utilizzo di Grafana e consentendo ai clienti interessati di avere un’analisi dei dati più precisa rispetto ad un utilizzo out-of-the-box\glo della piattaforma; inoltre sarà realizzato un tool di addestramento esterno che verrà utilizzato per l'addestramento dell'algoritmo di previsione. Più nel dettaglio il progetto consiste nella fornitura, attraverso una SVM o RL, di dati all’utente. Il beneficio derivato da una corretta applicazione del plug-in è stato discusso in riunione esterna con il proponente: tenendo monitorato il flusso di dati con il prodotto è possibile ottenere previsioni. 
+	\subsection{Caratteristiche degli utenti}
+	Il plug-in di Grafana che andremo a sviluppare sarà caratterizzato da un bacino di utenza e da un ambito di utilizzo relativamente ristretto.
+Il software sarà rivolto all’utenza già registrata sulla piattaforma Grafana con la necessità di monitorare un flusso dati attraverso l’uso di una SVM o di una RL. Il tool di addestramento, invece, sarà destinato ad un utente con conoscenza di Machine Learning. Idealmente l'utente dovrà quindi possedere compentenze che spaziano dal Machine Learning all'analisi dei dati su grafici e dashboard, visto che il tool esterno si occuperà semplicemente di fornire i file JSON contenenti gli addestramenti mentre il plug-in sarà incaricato dell'effettivo calcolo di previsione sul flusso dati.
+
+
+	 \subsection{Vincoli progettuali}
+	 Il prodotto finale è soggetto a vincoli progettuali obbligatori ed opzionali descritti all’interno del capitolato. I vincoli obbligatori richiesti dal proponente sono:
+
+	 	\begin{itemize}
+			\item un tool di addestramento\glo della SVM/RL esterno;
+	 		\item un plug-in di Grafana, sviluppato nel linguaggio JavaScript;
+	 		\item produzione un file JSON dai dati di addestramento con i parametri per le previsioni;
+			\item lettura della definizione del predittore\glo dal file in formato JSON;
+			\item associazione dei predittori letti dal file JSON al flusso di dati presente in Grafana; 
+			\item applicazione della previsione\glo e fornitura dei nuovi dati ottenuti al sistema di previsione di Grafana;
+			\item visualizzazione dei dati attraverso la dashboard\glo presente in Grafana.
+	 	\end{itemize}
+
+	 	I vincoli opzionali descritti nel capitolato potranno, a discrezione del fornitore, essere realizzati nella loro totalità o parzialmente, e sono i seguenti:
+		\begin{itemize}
+			\item possibilità di definire alert in base a livelli di soglia raggiunti dai nodi collegati alle previsioni;
+			\item fornitura dei dati riguardanti l’affidabilità delle previsioni;
+			\item possibilità di di applicare delle trasformazioni alle misure in ingresso dal campo per ottenere delle regressioni logaritmiche\glo o esponenziali\glo oltre a quelle lineari;
+			\item possibilità di addestrare la SVM o la RL direttamente in Grafana;
+			\item implementazione dei meccanismi di apprendimento di flusso, in modo da poter disporre di sistemi di previsione in costante adattamento ai dati rilevati sul campo;
+			\item l’utilizzo di altri metodi di previsione, tra cui la versione delle SVM adattate alla regressione o piccole reti neurali\glo per la classificazione\glo.
+
+		\end{itemize}
