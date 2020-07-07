@@ -24,7 +24,7 @@ Ogni requisito può essere inserito in vari UC\glo, che si differenziano ciascun
 \subsection{Classificazione}
 Identificare i casi d'uso in modo univoco aiuta la tracciabilità. I casi d'uso sono classificati nel seguente modo: \\
 \centerline{\textbf{UC[codice\_padre].[codice\_figlio]}} \\
-Il \textit{codice\_padre} è il codice univoco che rappresenta il requisito del caso d'uso. Se lo UC è collegato per profondità di dettaglio ad un altro UC, il \textit{codice\_figlio} verrà rappresentato in maniera gerarchica (esempio: se uno UC rappresenta un livello di dettaglio maggiore con \textit{codice\_padre} x, il suo codice sarà x.y, dove y indica l'annidamento raggiunto). \\ Verranno presentati prima i casi d'uso principali (da \hyperref[par:UC1]{UC1} a \hyperref[par:UC9]{UC9}), seguiti da quelli relativi ad estensioni (da \hyperref[par:UC10]{UC10} a \hyperref[par:UC15]{UC15}).
+Il \textit{codice\_padre} è il codice univoco che rappresenta il requisito del caso d'uso. Se lo UC è collegato per profondità di dettaglio ad un altro UC, il \textit{codice\_figlio} verrà rappresentato in maniera gerarchica (esempio: se uno UC rappresenta un livello di dettaglio maggiore con \textit{codice\_padre} x, il suo codice sarà x.y, dove y indica l'annidamento raggiunto). \\ Verranno presentati prima i casi d'uso principali (da \hyperref[par:UC1]{UC1} a \hyperref[par:UC10]{UC10}), seguiti da quelli relativi ad estensioni (da \hyperref[par:UC11]{UC11} a \hyperref[par:UC18]{UC18}).
 
 	\subsection{Attori}
 Il sistema di autenticazione e registrazione dell'utente viene gestito per intero dal sistema Grafana, in quanto il prodotto finale non disporrà di una funzionalità di autenticazione/registrazione interna.									
@@ -100,9 +100,9 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 		\end{itemize}
 		
 		\label{par:UC1.2}
-		\subsubsection{UC1.2.1 - Selezione dell'algoritmo di previsione "Support Vector Machine"}
+		\subsubsection{UC1.2 - Selezione dell'algoritmo di previsione "Support Vector Machine"}
 		\begin{itemize}
-			\item\textbf{Codice Identificativo}: UC1.2.1;
+			\item\textbf{Codice Identificativo}: UC1.2;
 			\item\textbf{Titolo}: Selezione dell'algoritmo di previsione "Support Vector Machine";
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Descrizione}: attività in cui viene scelto di addestrare una support vector machine come algoritmo di previsione;
@@ -837,7 +837,7 @@ flusso dati (\hyperref[par:UC4]{UC4});
 		\end{itemize}
 		
 		\label{par:U8.1}
-	\subsection{UC8.1 - Selezione del datasource}
+	\subsubsection{UC8.1 - Selezione del datasource}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC8.1;
 			\item\textbf{Titolo}: Selezione del datasource;
@@ -849,7 +849,7 @@ flusso dati (\hyperref[par:UC4]{UC4});
 		\end{itemize}
 		
 	\label{par:UC8.2}
-	\subsection{UC8.2 - Inserimento nome identificativo della tabella}
+	\subsubsection{UC8.2 - Inserimento nome identificativo della tabella}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC8.2;
 			\item\textbf{Titolo}: Inserimento nome identificativo della tabella;
@@ -866,7 +866,7 @@ flusso dati (\hyperref[par:UC4]{UC4});
 		\end{itemize}
 		
 	\label{par:UC8.3}
-	\subsection{UC8.3 - Abilitazione salvataggio}
+	\subsubsection{UC8.3 - Abilitazione salvataggio}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC8.3;
 			\item\textbf{Titolo}: Abilitazione salvataggio;
@@ -902,7 +902,7 @@ flusso dati (\hyperref[par:UC4]{UC4});
 		\end{itemize}
 		
 		\label{par:UC8.5}
-	\subsection{UC8.5 - Disabilitazione salvataggio}
+	\subsubsection{UC8.5 - Disabilitazione salvataggio}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC8.5;
 			\item\textbf{Titolo}: Disabilitazione salvataggio;
@@ -918,7 +918,7 @@ flusso dati (\hyperref[par:UC4]{UC4});
 		\end{itemize}	
 
 \label{par:UC8.6}
-	\subsection{UC8.6 - Visualizzazione messaggio di notifica "Salvataggio interrotto"}
+	\subsubsection{UC8.6 - Visualizzazione messaggio di notifica "Salvataggio interrotto"}
 	\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC8.6
 			\item\textbf{Titolo}: Visualizzazione messaggio di notifica "Salvataggio interrotto";
@@ -1061,6 +1061,8 @@ flusso dati (\hyperref[par:UC4]{UC4});
 			\item\textbf{Scenario principale}: l'utente visualizza il messaggio d'errore "Nessun file CSV caricato" in cui viene segnalato il fatto che non è stato caricato alcun file CSV (\hyperref[par:UC1.1]{UC1.1}) e quindi non si può procedere con l'addestramento; 		
 		\end{itemize}
 		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
 	\label{par:UC12}
 	\subsection{UC12 - Visualizzazione messaggio d'errore "Nessun algoritmo selezionato"}
 		\begin{itemize}
@@ -1071,6 +1073,8 @@ flusso dati (\hyperref[par:UC4]{UC4});
 			\item\textbf{Postcondizioni}: l'utente visualizza l'errore, viene quindi riportato alla scelta dell'algoritmo (\hyperref[par:UC1.2]{UC1.2});
 			\item\textbf{Scenario principale}: l'utente visualizza il messaggio d'errore "Nessun algoritmo selezionato" in cui viene segnalato il fatto che non è stato scelto alcun algoritmo da addestrare (\hyperref[par:UC1.2]{UC1.2}) e quindi non si può procedere con l'addestramento; 		
 		\end{itemize}
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
 	\label{par:UC13}
 	\subsection{UC13 - Visualizzazione messaggio d'errore "File CSV incompatibile"}
@@ -1083,42 +1087,7 @@ flusso dati (\hyperref[par:UC4]{UC4});
 			\item\textbf{Scenario principale}: l'utente visualizza il messaggio d'errore "File incompatibile" in cui viene segnalato il fatto che il file CSV da lui selezionato (\hyperref[par:UC1.1]{UC1.1}) non è adatto per l'addestramento; 		
 		\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%REMOVE%
-	%%\label{par:UC13}
-	%\subsection{UC13 - Visualizzazione messaggio di alert "File JSON già caricato"}
-		%\begin{itemize}
-			%\item\textbf{Codice Identificativo}: UC13;
-			%\item\textbf{Titolo}: Visualizzazione messaggio di alert "File JSON già caricato";
-			%\item\textbf{Attore primario}: utente generico;
-			%\item\textbf{Precondizioni}: l'utente ha selezionato l'opzione di caricamento del file JSON tramite click del pulsante "Carica JSON" (\hyperref[par:UC2.1]{UC2.1});
-			%\item\textbf{Postcondizioni}: l'utente ha visualizzato un messaggio di alert in cui viene segnalato che è già presente un file JSON caricato nel plugin;
-			%\item\textbf{Scenario principale}:
-			%	\begin{enumerate}
-			%		\item l'utente visualizza il messaggio di alert "File JSON già caricato" in cui viene segnalato che è già stato caricato un file JSON in precedenza e la conferma procederà alla sua sovrascrizione;
-			%		\item l'utente clicca il pulsante "Conferma" per proseguire e caricare il nuovo file JSON oppure clicca il pulsante "Annulla" per ritornare alla sezione di caricamento.
-			%	\end{enumerate}
-		%\end{itemize}	
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-	%\label{par:UC13}
-	%\subsection{UC13 - Visualizzazione messaggio d'errore "Caricamento file JSON" }
-	%	\begin{itemize}
-	%		\item\textbf{Codice Identificativo}: UC13;
-	%		\item\textbf{Titolo}: Visualizzazione messaggio d'errore "Caricamento file JSON";
-	%		\item\textbf{Attore primario}: utente generico;
-	%		\item\textbf{Descrizione}: attività in cui viene notificato che il file JSON che si sta cercando di caricare nel plugin non è adatto per effettuare previsioni;
-	%		\item\textbf{Precondizioni}: l'utente ha selezionato il file JSON da caricare (\hyperref[par:UC2.1]{UC2.1}) e ha cliccato il pulsante di conferma (\hyperref[par:UC2.2]{UC2.2});
-	%		\item\textbf{Postcondizioni}: l'utente ha visualizzato un messaggio d'errore in cui viene segnalato che la struttura del file selezionato non supporta una Support Vector Machine o Regressione lineare, di conseguenza viene riportato alla selezione del file JSON;
-	%		\item\textbf{Scenario principale}:
-	%			\begin{enumerate}
-	%				\item l'utente visualizza il messaggio d'errore "Struttura del file JSON non supportata" in cui viene segnalato che la definizione dei predittori del file JSON selezionato (\hyperref[par:UC2.1]{UC2.1}) non è sintatticamente corretta;
-	%				\item l'utente clicca il pulsante "X" per proseguire e viene riportato alla sezione di selezione.
-	%			\end{enumerate}
-	%	\end{itemize}	
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \label{par:UC14}
