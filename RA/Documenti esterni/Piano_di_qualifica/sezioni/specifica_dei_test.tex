@@ -511,7 +511,7 @@ TUOF8 & Verificare che se l’utente seleziona l’opzione "Seleziona l'algoritm
 TUOF9 & Verificare che le funzioni passate come proprietà al componente CSVReader vengano correttamente chiamate dopo un evento onFileLoaded. & I \\
 TUOF10 & Verificare che se l’utente seleziona un file valido, l’elemento dell’elemento input del componente CSVReader mostri il nome del file per mostrare la correttezza del metodo render(). & I\\
 TUOF11 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di Chart. & I \\
-TUOF12 & Verificare che le funzioni passate come proprietà al componente InsertCsvButton vengano correttamente chiamate dopo un evento onFileLoaded. & I \\
+TUOF12 & Verificare che le funzioni passate come proprietà al componente InsertCsvButton vengano correttamente chiamate dopo un evento onFileLoaded. & NI \\
 TUOF13 & Verificare che la funzione corretta, passata come proprietà, venga chiamata dopo aver cliccato il pulsante "Download". & I \\
 TUOF14 & Verificare che le funzioni passate come proprietà al componente ComboBoxAlgorithm vengano correttamente chiamate dopo un evento onChange. & I \\
 TUOF15 & Verificare che il componente venga renderizzato correttamente controllando che venga effettuata la renderizzazione degli elementi contenuti al suo interno, per dimostrare la correttezza del metodo Render() di App. & I \\
@@ -523,11 +523,11 @@ TUOF20 & Verificare che venga chiamata la funzione handleTraining della classe c
 TUOF21 & Verificare che venga chiamata la funzione downloadJsonData della classe concreta App. & I \\
 TUOF22 & Verificare che venga creato l’oggetto concreto RLTrain. & I \\
 TUOF23 & Verificare che le funzioni della classe concreta RLTrain vengano chiamate con i parametri corretti. & I \\
-TUOF24 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamato il costruttore se non è stato implementato in una classe che estende la classe Train.& I \\
-TUOF25 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione train se non è stata implementata in una classe che estende la classe Train.& I \\
-TUOF26 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getCoefficients se non è stata implementata in una classe che estende la classe Train. & I \\
-TUOF27 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getJSON se non è stata implementata in una classe che estende la classe Train.& I \\
-TUOF28 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getDataChart se non è stata implementata in una classe che estende la classe Train.& I \\
+TUOF24 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamato il costruttore se non è stato implementato in una classe che estende la classe Train.& NI \\
+TUOF25 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione train se non è stata implementata in una classe che estende la classe Train.& NI \\
+TUOF26 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getCoefficients se non è stata implementata in una classe che estende la classe Train. & NI \\
+TUOF27 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getJSON se non è stata implementata in una classe che estende la classe Train.& NI \\
+TUOF28 & Verificare che venga lanciata un’eccezione TypeError in caso venga chiamata la funzione getDataChart se non è stata implementata in una classe che estende la classe Train.& NI \\
 TUOF29 & Verificare che venga creato l’oggetto concreto SVMTrain. & I \\
 TUOF30 & Verificare che le funzioni della classe concreta SVMTrain vengano chiamate con i parametri corretti. & I \\
 TUOF31 & Verificare che venga creato l’oggetto concreto corretto a seconda dell’algoritmo che si vuole addestrare. & I \\
@@ -558,7 +558,7 @@ TUOF52& Verificare che venga mostrato il nome del file e il suo contenuto una vo
 TUOF53 & Verificare che venga renderizzato il contenuto della tab collegamento per dimostrare la correttezza del metodo render() di CollegamentoView. & I \\
 TUOF54 & Verificare che non siano presenti query nell'impostazione del collegamento in caso nessuna query sia stata inserita per dimostrare la correttezza del metodo getPredictors() di CollegamentoView. & I \\
 TUOF55 & Verificare che non siano presenti predittori in caso nessun file sia stato inserito per dimostrare la correttezza del metodo getPredictors() di CollegamentoView. & I \\
-TUOF56 & Verificare che siano presenti tutti i predittori contenuti nel file json e che siano selezzionabili tutte le query impostate in caso sia stato caricato un file json e sia stata impostata almeno una query per dimostrare la correttezza del metodo getPredictors() di CollegamentoView. & I \\
+TUOF56 & Verificare che siano presenti tutti i predittori contenuti nel file json e che siano selezionabili tutte le query impostate in caso sia stato caricato un file json e sia stata impostata almeno una query per dimostrare la correttezza del metodo getPredictors() di CollegamentoView. & I \\
 TUOF57 & Verificare che nessun collegamento sia aggiunto alla lista di collegamenti, se non impostato correttamente, a seguito di un evento onClick del componente Button. & I \\
 TUOF58 & Verificare che il collegamento impostato correttamente sia aggiunto alla lista di collegamenti a seguito di un evento onClick del componente Button. & I \\
 TUOF59 & Verificare che venga renderizzato il contenuto della tab lista collegamenti per dimostrare la correttezza del metodo render() di ListaCollegamentiView. & I \\
@@ -586,9 +586,9 @@ TUOF80 & Verificare che venga aggiornata la predizione della connessione se essa
 TUOF81 & Verificare che venga aggiunta una nuova predizione se la connessione non era già presente nella lista di previsioni per dimostrare la correttezza del metodo updatePredictions(series) di Controller. & I \\
 TUOF82 & Verificare che non venga eseguito l'aggiornamento delle predizioni se gli input sono stati definiti in modo errato per dimostrare la correttezza del metodo updatePredictions(series) di Controller. & I \\
 TUOF83 & Verificare che non venga eseguito l'aggiornamento delle predizioni se non è stato possibile calcolare la predizione per dimostrare la correttezza del metodo updatePredictions(series) di Controller. & I \\
-TUOF84 & Verificare che venga calcolata correttamente la predizione per dimostrare la correttezza del metodo predict(inputs) di Regression. & I \\
+TUOF84 & Verificare che venga calcolata correttamente la predizione per dimostrare la correttezza del metodo predict(inputs) di Regression. & NI \\
 TUOF85 & Verificare che venga lanciata un'eccezione in caso il numero di input sia maggiore o minore di quanto aspettato per dimostrare la correttezza del metodo predict(inputs) di Regression. & NI \\
-TUOF86 & Verificare che venga calcolato correttamente il gruppo di appartenenza degli input per dimostrare la correttezza del metodo predict(inputs) di Svm. & I \\
+TUOF86 & Verificare che venga calcolato correttamente il gruppo di appartenenza degli input per dimostrare la correttezza del metodo predict(inputs) di Svm. & NI \\
 TUOF87 & Verificare che venga lanciata un'eccezione in caso il numero di input sia maggiore o minore di quanto aspettato per dimostrare la correttezza del metodo predict(inputs) di Svm. & NI \\
 
 \end{longtable}
@@ -613,6 +613,6 @@ TUOF87 & Verificare che venga lanciata un'eccezione in caso il numero di input s
 Accettazione & 21 & 1 & 22\\
 Sistema & 44 & 0 & 44 \\
 Integrazione & 14 & 0 & 14\\
-Unità & 85 & 6 & 91 \\		
-\textbf{Totale} & \textbf{164} & \textbf{7} & \textbf{171} \\
+Unità & 77 & 14 & 91 \\		
+\textbf{Totale} & \textbf{156} & \textbf{15} & \textbf{171} \\
 \end{longtable}
