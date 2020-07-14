@@ -49,52 +49,68 @@ I requisiti sono definiti nelle seguenti tabelle, divise per tipologie.
 \textcolor{white}{\textbf{Descrizione}} &
 \textcolor{white}{\textbf{Fonti}}  \\
 		\endhead
-Re1F1 & Obbligatorio & L'utente deve disporre dei dati di addestramento in formato CSV che potrà utilizzare per creare il file JSON contenente l'addestramento di un algoritmo di previsione SVM o RL. La procedura di addestramento sarà disponibile in un apposito tool presente in una pagina web & Capitolato\newline UC1\\
+Re1F1 & Obbligatorio & L'utente deve disporre dei dati di addestramento in formato CSV che potrà utilizzare per creare il file JSON contenente l'addestramento di un algoritmo di previsione SVM o RL. La procedura di addestramento sarà disponibile in un apposito tool presente in una pagina web o come file eseguibile& Capitolato\newline UC1\\
 Re1F1.1 & Obbligatorio & All'utente sarà possibile inserire i dati di addestramento in formato CSV cliccando il relativo pulsante presente nel tool di addestramento &  Interno\newline UC1.1\\
-Re1F1.2 & Obbligatorio & All'utente sarà possibile selezionare la tipologia di algoritmo dalla relativa ComboBox presente nel tool di addestramento. Tale algoritmo verrà addestrato usando i dati di addestramento caricati in precedenza &  Interno\newline UC1.2\\
-Re1F1.3 & Obbligatorio & L'utente potrà confermare le procedure di addestramento impostate cliccando il pulsante di conferma presente nel tool di addestramento &  Interno\newline UC1.3\\
-Re2F1.4 & Desiderabile & Quando l'addestramento è andato a buon fine l'utente deve poter visualizzare il messaggio di notifica di addestramento riuscito con successo & Interno\newline UC1.4\\ 
-Re2F1.5 & Desiderabile & Quando l'addestramento non viene completato con successo l'utente deve poter visualizzare il messaggio di alert di addestramento non riuscito & Interno\newline UC1.5\\
-Re2F1.6 & Obbligatorio & Una volta confermate le procedure di addestramento l'utente potrà salvare in locale il file JSON prodotto attraverso il download. Il download sarà disponibile dal momento in cui la conferma dell'addestramento verrà finalizzata senza incontrare problemi & Interno\newline UC1.6\\
+Re1F1.2 & Obbligatorio & All'utente sarà possibile selezionare la tipologia di algoritmo "Support Vector Machine" dalla ComboBox presente nel tool di addestramento. Tale algoritmo verrà addestrato usando i dati di addestramento caricati in precedenza &  Interno\newline UC1.2\\
+Re1F1.3 & Obbligatorio & All'utente sarà possibile selezionare la tipologia di algoritmo "Regressione Lineare" dalla ComboBox presente nel tool di addestramento. Tale algoritmo verrà addestrato usando i dati di addestramento caricati in precedenza &  Interno\newline UC1.3\\
+Re1F1.4 & Obbligatorio & L'utente potrà confermare ed iniziare le procedure di addestramento impostate cliccando il pulsante di inizio addestramento presente nel tool di addestramento &  Interno\newline UC1.4\\
+Re2F1.5 & Desiderabile & Quando l'addestramento è andato a buon fine l'utente deve poter visualizzare il messaggio di notifica di addestramento riuscito con successo & Interno\newline UC1.5\\ 
+Re2F1.6 & Desiderabile & Quando l'addestramento non viene completato con successo l'utente deve poter visualizzare il messaggio di alert di addestramento non riuscito & Interno\newline UC1.6\\
+Re2F1.7 & Desiderabile & Una volta confermate le procedure di addestramento l'utente potrà inserire un nome identificativo per il file JSON disponibile per il download. Il file JSON a cui non verrà assegnato un nome identificativo verrà salvato con nome "predictorsRL" o "predictorsSVM", corrispondentemente per l'addestramento di una Regressione lineare o di una support vector machine & Verbale VE\_2020-07-09\newline UC1.7\\
+Re2F1.8 & Desiderabile & Una volta confermate le procedure di addestramento l'utente potrà inserite delle note per il file JSON che verrà in seguito scaricato attraverso il download. Tali note arricchiscono il contenuto del file in base a informazioni che l'utente ha necessità di memorizzare per avere una visione più chiara dell'addestramento & Verbale VE\_2020-07-09\newline UC1.8\\
+Re1F1.9 & Obbligatorio & Una volta confermate le procedure di addestramento l'utente potrà salvare in locale il file JSON prodotto attraverso il download. Il download sarà disponibile dal momento in cui la conferma dell'addestramento verrà finalizzata senza incontrare problemi & Interno\newline UC1.9\\
 Re1F2 & Obbligatorio & L'utente potrà caricare il file JSON contente la definizione dell'algoritmo addestrato nel plugin aggiunto precedentemente dall'utente in una dashboard del sistema di Grafana & Capitolato\newline UC2\\
 Re1F2.1 & Obbligatorio & Dopo aver cliccato il pulsante di caricamento presente nella sezione del plugin "Caricamento JSON" l'utente potrà inserire un file JSON selezionandolo dal proprio file system &  Interno\newline UC2.1\\
 Re1F2.2 & Obbligatorio & L'utente potrà confermare il caricamento del file JSON cliccando il relativo pulsante presente nella sezione "Caricamento JSON" del plugin &  Interno\newline UC2.2\\
 Re2F2.3 & Desiderabile & Quando la procedura di caricamento va a buon fine l'utente deve poter visualizzare un messaggio di conferma avvenuto successo del caricamento del file JSON &  Interno\newline UC2.3\\
 Re1F2.4 & Obbligatorio & Quando la procedura di caricamento va a buon fine l'utente deve poter visualizzare il contenuto del file JSON con nomi e valori dei parametri che verranno utilizzati per la previsione e varie informazioni generali &  Interno\newline UC2.4\\
 Re1F3 & Obbligatorio & L'utente deve poter associare un predittore al nodo del flusso dati per creare un collegamento su cui verrà calcolata la previsione visualizzata poi in un grafico presente nella dashboard &  Capitolato\newline UC3\\
-Re1F3.1 & Obbligatorio & L'utente avrà la possibilità di selezionare un predittore da una lista di predittori presente nella sezione del plugin "Collegamento". Tale lista conterrà i predittori definiti nel file JSON precedentemente caricato e contenente l'algoritmo addestrato  &  Interno\newline UC3.1\\
+Re1F3.1 & Obbligatorio & L'utente avrà la possibilità di selezionare un predittore da una lista di predittori presente nella sezione del plugin "Collegamento". Tale lista conterrà i predittori definiti nel file JSON precedentemente caricato e contenente l'algoritmo addestrato & Interno\newline UC3.1\\
 Re1F3.2 & Obbligatorio & L'utente potrà selezionare una query associata ad un nodo del flusso dati da una lista presente nella sezione del plugin "Collegamento" a cui verranno collegati i predittori. La lista conterrà delle query definite dall'utente e precedentemente calcolate dal sistema di Grafana &  Interno\newline UC3.2\\
-Re3F3.3 & Opzionale & L'utente potrà impostare delle soglie sui predittori per permettere al sistema di lanciare degli alert. Le soglie verranno impostate sul collegamento che andrà a crearsi una volta completata la procedura di associazione tra predittore e nodo del flusso dati  &  Capitolato\newline UC3.3\\
-Re1F3.4 & Obbligatorio & All'utente sarà possibile confermare il collegamento; in caso successo verrà aggiunto alla lista dei collegamenti effettuati dall'utente presenti in un pannello visualizzabile nella sezione del plugin "Lista collegamenti" &  Interno\newline UC3.4\\
-Re2F3.5 & Desiderabile & Quando la procedura di collegamento del predittore al nodo del flusso dati ha successo l'utente deve poter visualizzare un messaggio di notifica di collegamento avvenuto con successo &  Interno\newline UC3.5\\
-Re1F3.6 & Obbligatorio & Una volta finalizzato il collegamento l'utente deve poter visualizzare il pannello con la lista dei collegamenti da lui effettuati presente nella sezione del plugin "Lista collegamenti" &  Interno\newline UC3.6\\
-Re1F4 & Obbligatorio & Una volta effettuati dei collegamenti l'utente deve aver la possibilità di modificarli o eliminarli dalla lista presente nella sezione del plugin "Collegamenti" qualora lo necessiti &  Interno\newline UC4\\
-Re1F4.1 & Obbligatorio & Per ogni collegamento presente nella lista l'utente deve poter cliccare il pulsante di scollegamento per eliminare l'associazione tra predittore e nodo del flusso dati effettuata in precedenza &  Interno\newline UC4.1\\
-Re1F4.2 & Obbligatorio & Se viene cliccato il pulsante di scollegamento l'utente deve poter visualizzare una notifica di alert che lo interroga sulla conferma o meno del proseguimento della procedura appena attuata &  Interno\newline UC4.2\\
-Re1F4.3 & Obbligatorio & Una volta visualizzato il messaggio di alert sul proseguimento dello scollegamento l'utente deve poter cliccare il pulsante di conferma per proseguire o quello di annullamento per ritornare alla visualizzazione della lista dei collegamenti &  Interno\newline UC4.3\\
-Re2F4.4 & Desiderabile & Quando la procedura di scollegamento va a buon fine l'utente deve poter visualizzare un messaggio di notifica di scollegamento avvenuto con successo & Interno\newline UC4.4\\
-Re1F4.5 & Obbligatorio & Per ogni collegamento presente nella lista l'utente deve poter cliccare il pulsante di modifica per apportare delle modifiche ai campi del relativo collegamento effettuato in precedenza quali selezione del predittore, selezione del nodo del flusso dati, impostazione delle soglie; l'utente deve esser reindirizzato alla sezione di "Collegamento" del plugin &  Interno\newline UC4.5\\
-Re1F5 & Obbligatorio & Una volta creato almeno un collegamento tra predittore e nodo del flusso dati l'utente deve poter calcolarne la previsione avviando il monitoraggio sui collegamenti impostati in precedenza &  Capitolato\newline UC5\\
-Re1F5.1 & Obbligatorio & L'utente deve poter avviare il monitoraggio cliccando il pulsante di avvio che verrà sostituito da un pulsante di interruzione; durante il monitoraggio non sarà possibile la modifica dei collegamenti &  Interno\newline UC5.1\\
-Re2F5.2 & Desiderabile & Quando il monitoraggio viene avviato con successo l'utente deve poter visualizzare un messaggio di notifica di monitoraggio avviato con successo &  Interno\newline UC5.2\\
-Re1F5.3 & Obbligatorio & L'utente deve aver la possibilità di interrompere il monitoraggio cliccando il pulsante di interruzione che sarà disponibile esclusivamente nel caso il monitoraggio sia già stato avviato in precedenza &  Interno\newline UC5.3\\
-Re2F5.4 & Desiderabile & Quando il monitoraggio viene interrotto con successo l'utente deve poter visualizzare un messaggio di notifica di monitoraggio interrotto con successo &  Interno\newline UC5.4\\
-Re1F5.5 & Obbligatorio & All'utente sarà offerta la possibilità di effettuare il salvataggio delle previsioni all'interno del Database InfluxDB configurato precedentemente nel sistema di Grafana cliccando il pulsante di "Salva previsione" &  Verbale VI\_2020-03-31\\
-Re2F5.6 & Desiderabile & Quando le previsioni vengono salvate l'utente deve poter visualizzare un messaggio di notifica di salvataggio della previsione avvenuto con successo &  Interno\newline UC5.6\\
-Re1F6 & Obbligatorio & L'utente deve poter disporre di una dashboard integrata al sistema Grafana il cui contenuto dipenderà dalla scelte intraprese dall'utente stesso nelle varie sezioni del plugin "Predire in Grafana" & Capitolato\newline UC6\\
-Re1F6.1 & Obbligatorio & L'utente potrà visualizzare le previsioni, precedentemente calcolate e che verranno aggiornate in base alla politica temporale inserita, attraverso grafici all'interno della dashboard a cui era stato aggiunto il plugin "Predire in Grafana" &  Capitolato\newline UC6.1\\
-Re3F6.2 & Opzionale & Ogniqualvolta una soglia impostata durante la procedura di collegamento del predittore ad un nodo del flusso dati viene raggiunta o superata l'utente deve poter visualizzare un messaggio di alert che segnalerà il raggiungimento di una soglia critica &  Capitolato\newline UC3.3\\
-
-Re1F7 & Obbligatorio & Se viene confermata la procedura di addestramento senza aver caricato un file CSV contenente i dati che verranno utilizzati per l'addestramento l'utente deve poter visualizzare un messaggio di errore che segnali la mancanza di tale file &  Interno\newline UC1.1\\
-Re1F8 & Obbligatorio & Nel momento in cui venga confermata la procedura di addestramento senza aver scelto un algoritmo da addestrare dalla Combo Box presente nel tool di addestramento l'utente deve poter visualizzare un messaggio di errore che segnali la mancata selezione del tipo di algoritmo scelto per l'addestramento  &  Interno\newline UC1.2\\
-Re1F9 & Obbligatorio & L'utente deve poter visualizzare il messaggio di errore file CSV incompatibile con l'algoritmo selezionato quando il file CSV caricato nella procedura di addestramento non è adatto perché strutturalmente errato e/o perché non c'è compatibilità con l'algoritmo selezionato & Interno\newline UC1.1\\
-Re3F10 & Opzionale & L'utente deve poter visualizzare un messaggio di alert che avvisi l'utente che il caricamento del file JSON è già avvenuto nel caso in cui sia già stato caricato un file JSON in precedenza &  Interno\newline UC2.1\\
-Re1F11 & Obbligatorio & Quando viene caricato erroneamente un file JSON di natura diversa da quella voluta l'utente deve poter visualizzare un messaggio d'errore che segnali l'errato caricamento del file JSON dovuto a una struttura incompatibile e non supportata da un algoritmo SVM e RL &  Interno\newline UC2.2\\
-Re1F12 & Obbligatorio & L'utente deve poter visualizzare un messaggio d'errore che segnali di aver impostato una soglia non valida nel momento in cui venga inserito un valore incoerente con la struttura predefinita; viene richiesto il reinserimento &  Interno\newline
+Re1F3.3 & Obbligatorio & L'utente potrà selezionare un nome identificativo per riconoscere il collegamento che verrà creato una volta completata la procedura di associazione del predittore al nodo del flusso dati presente nella sezione del plugin "Collegamento" &  Interno\newline UC3.3\\
+Re3F3.4 & Opzionale & L'utente potrà impostare delle soglie sui predittori per permettere al sistema di lanciare degli alert. Le soglie verranno impostate sul collegamento che andrà a crearsi una volta completata la procedura di associazione tra predittore e nodo del flusso dati  &  Capitolato\newline UC3.4\\
+Re1F3.5 & Obbligatorio & All'utente sarà possibile confermare il collegamento; in caso di successo verrà aggiunto alla lista dei collegamenti effettuati dall'utente presenti in un pannello visualizzabile nella sezione del plugin "Lista collegamenti" &  Interno\newline UC3.5\\
+Re2F3.6 & Desiderabile & Quando la procedura di collegamento del predittore al nodo del flusso dati ha successo l'utente deve poter visualizzare un messaggio di notifica di collegamento avvenuto con successo &  Interno\newline UC3.6\\
+Re1F4 & Obbligatorio & Una volta finalizzato il collegamento l'utente deve poter visualizzare il pannello con la lista dei collegamenti da lui effettuati presente nella sezione del plugin "Lista collegamenti" &  Interno\newline UC4\\
+Re1F5 & Obbligatorio & Una volta effettuati dei collegamenti l'utente deve aver la possibilità di eliminarli dalla lista presente nella sezione del plugin "Collegamenti" qualora lo necessiti &  Interno\newline UC5\\
+Re1F5.1 & Obbligatorio & Per ogni collegamento presente nella lista l'utente deve poter cliccare il pulsante di scollegamento per eliminare l'associazione tra predittore e nodo del flusso dati effettuata in precedenza &  Interno\newline UC5.1\\
+Re1F5.2 & Obbligatorio & Se viene cliccato il pulsante di scollegamento l'utente deve poter visualizzare una notifica di alert che lo interroga sulla conferma o meno del proseguimento della procedura appena attuata &  Interno\newline UC5.2\\
+Re1F5.3 & Obbligatorio & Una volta visualizzato il messaggio di alert sul proseguimento dello scollegamento l'utente deve poter cliccare il pulsante di conferma per proseguire alla cancellazione del collegamento &  Interno\newline UC5.3\\
+Re2F5.4 & Desiderabile & Quando la procedura di scollegamento va a buon fine l'utente deve poter visualizzare un messaggio di notifica di scollegamento avvenuto con successo & Interno\newline UC5.4\\
+Re1F5.5 & Obbligatorio & Una volta visualizzato il messaggio di alert sul proseguimento dello scollegamento l'utente deve poter cliccare il pulsante di annullamento per ritornare alla visualizzazione della lista dei collegamenti &  Interno\newline UC5.5\\
+Re1F6 & Obbligatorio & Una volta effettuati dei collegamenti l'utente deve aver la possibilità di modificarne le impostazioni, dopo averli scelti dalla lista presente nella sezione del plugin "Lista Collegamenti", qualora lo necessiti &  Interno\newline UC6\\
+Re1F6.1 & Obbligatorio & Per ogni collegamento presente nella lista l'utente deve poter cliccare il pulsante di modifica per apportare delle modifiche ai campi del relativo collegamento effettuato in precedenza. Una volta cliccato il pulsante di modifica verrà visualizzato un pannello con le informazioni modificabili &  Interno\newline UC6.1\\
+Re1F6.2 & Obbligatorio & Una volta selezionato il collegamento da modificare l'utente deve poter aggiornare i campi del relativo collegamento effettuato in precedenza quali selezione del predittore, selezione del nodo del flusso dati, nome identificativo, impostazione delle soglie &  Interno\newline UC6.2\\
+Re1F6.3 & Obbligatorio & L'utente deve poter salvare le modifiche apportate ai campi del collegamento una volta completata la fase di modifica tramite il click del pulsante di salvataggio & Interno\newline UC6.3\\
+Re2F6.4 & Desiderabile &  Quando la procedura di modifica va a buon fine l'utente deve poter visualizzare un messaggio di notifica di modifica al collegamento avvenuta con successo & Interno\newline UC6.4\\
+Re1F6.5 & Obbligatorio & Nel momento in cui non si vogliano salvare le modifiche effettuate per il collegamento selezionato, l'utente deve poter annullare la procedura di modifica ritornando alla visualizzazione della lista dei collegamenti. \'E possibile interrompere la procedura tramite il click del pulsante di cancellazione & Interno\newline UC6.5\\
+Re1F7 & Obbligatorio & Una volta creato almeno un collegamento tra predittore e nodo del flusso dati l'utente deve poter calcolare le previsioni sul flusso dati in ingresso e visualizzarle nella dashboard avviando il monitoraggio sui collegamenti impostati in precedenza &  Capitolato\newline UC7\\
+Re1F7.1 & Obbligatorio & L'utente deve poter avviare il monitoraggio cliccando il pulsante di avvio che verrà sostituito da un pulsante di interruzione. Durante il monitoraggio non sarà possibile la modifica dei collegamenti &  Interno\newline UC7.1\\
+Re2F7.2 & Desiderabile & Quando il monitoraggio viene avviato con successo l'utente deve poter visualizzare un messaggio di notifica di monitoraggio avviato con successo &  Interno\newline UC7.2\\
+Re1F8 & Obbligatorio & All'utente sarà offerta la possibilità di effettuare il salvataggio delle previsioni all'interno del Database InfluxDB configurato precedentemente nel sistema di Grafana cliccando il pulsante di "Abilita salvataggio" con il quale le previsioni man mano calcolate verranno immagazzinate nel database &  Verbale VE\_2020-03-31\\
+Re1F8.1 & Obbligatorio & L'utente avrà la possibilità di selezionare un datasource da una lista di datasource disponibili. Tale lista conterrà tutti i datasource che l'utente ha configurato in precedeneza nella piattoaforma Grafana &  Interno\newline UC8.1\\
+Re1F8.2 & Obbligatorio & L'utente potrà inserire un nome identificativo per la tabella che conterrà le previsioni salvate. Verrà utilizzata una tabella già esistente se già presente con quel nome all'interno del database, altrimenti verrà creata una tabella con quel nominativo in modo automatico &  Interno\newline UC8.2\\
+Re1F8.3 & Obbligatorio & L'utente deve poter abilitare il salvataggio su database cliccando il pulsante di abilitazione che verrà sostituito da un pulsante di disabilitazione. Durante la permanenza del salvataggio abilitato ogni dato di previsione calcolato sul flusso dati in ingresso verrà immagazzinato &  Interno\newline UC8.3\\
+Re2F8.4 & Desiderabile & Quando le previsioni vengono salvate l'utente deve poter visualizzare un messaggio di notifica di salvataggio della previsione abilitato &  Interno\newline UC8.4\\
+Re1F8.5 & Obbligatorio & L'utente deve poter disabilitare il salvataggio su database cliccando il pulsante di disabilitazione che verrà sostituito da un pulsante di abilitazione. Dopo il click del pulsante verrà interrotto l'immagazzinamento delle previsione &  Interno\newline UC8.5\\
+Re2F8.6 & Desiderabile & Quando il salvataggio delle previsioni viene interrotto l'utente deve poter visualizzare un messaggio di notifica di salvataggio delle previsioni interrotto &  Interno\newline UC8.6\\
+Re1F9 & Obbligatorio & Una volta avviato il monitoraggio delle previsioni l'utente deve poter interrompere il calcolo di previsione sul flusso dati in ingresso interrompendo così la visualizzazione delle previsioni nella dashboard & Interno\newline UC9\\
+Re1F9.1 & Obbligatorio & L'utente deve aver la possibilità di interrompere il monitoraggio cliccando il pulsante di interruzione che sarà disponibile esclusivamente nel caso il monitoraggio sia già stato avviato in precedenza & Interno\newline UC9.1\\
+Re2F9.2 & Desiderabile & Quando il monitoraggio viene interrotto con successo l'utente deve poter visualizzare un messaggio di notifica di monitoraggio interrotto con successo &  Interno\newline UC9.2\\
+Re1F10 & Obbligatorio & L'utente deve poter disporre di una dashboard integrata al sistema Grafana il cui contenuto dipenderà dalla scelte intraprese dall'utente stesso nelle varie sezioni del plugin "Predire in Grafana" & Capitolato\newline UC10\\
+Re1F10.1 & Obbligatorio & L'utente potrà visualizzare le previsioni, precedentemente calcolate e che verranno aggiornate in base alla politica temporale inserita, attraverso grafici all'interno della dashboard a cui era stato aggiunto il plugin "Predire in Grafana" &  Capitolato\newline UC10.1\\
+Re3F10.2 & Opzionale & Ogniqualvolta una soglia impostata durante la procedura di collegamento del predittore ad un nodo del flusso dati viene raggiunta o superata l'utente deve poter visualizzare un messaggio di alert che segnalerà il raggiungimento di una soglia critica &  Capitolato\newline UC3.4\\
+Re1F11 & Obbligatorio & Se viene confermata la procedura di addestramento senza aver caricato un file CSV contenente i dati che verranno utilizzati per l'addestramento l'utente deve poter visualizzare un messaggio di errore che segnali la mancanza di tale file &  Interno\newline UC1.1\\
+Re1F12 & Obbligatorio & Nel momento in cui venga confermata la procedura di addestramento senza aver scelto un algoritmo da addestrare dalla Combo Box presente nel tool di addestramento l'utente deve poter visualizzare un messaggio di errore che segnali la mancata selezione del tipo di algoritmo scelto per l'addestramento  &  Interno\newline UC1.2\newline UC1.3\\
+Re1F13 & Obbligatorio & L'utente deve poter visualizzare il messaggio di errore file CSV incompatibile con l'algoritmo selezionato quando il file CSV caricato nella procedura di addestramento non è adatto perché strutturalmente errato e/o perché non c'è compatibilità con l'algoritmo selezionato & Interno\newline UC1.1\\
+Re1F14 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore che avvisi l'utente di collegare tutti i predittori prima di confermare l'inserimento di un nuovo collegamento tra predittore e nodo del flusso dati &  Interno\newline UC3.2\\
+Re1F15 & Obbligatorio & L'utente deve poter visualizzare un messaggio d'errore che segnali di aver impostato una soglia non valida nel momento in cui venga inserito un valore incoerente con la struttura predefinita; viene richiesto il reinserimento & Interno\newline
 UC3.4\\
-Re1F13 & Obbligatorio & Quando viene confermata la procedura di collegamento, ma viene riscontrata l'errata impostazione di un collegamento l'utente deve poter visualizzare un messaggio d'errore in cui viene segnalata la presenza di errori o mancate selezioni nella procedura di collegamento; l'utente viene invitato a reinserire o controllare le operazioni precedentemente effettuate & Interno\newline UC3.4\\
-Re1F14 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore in cui viene segnalato il mancato collegamento di alcun predittore a nodo del flusso dati nel momento in cui venga avviato il monitoraggio senza aver effettivamente aggiunte aggiunto alcun collegamento &  Interno\newline
-UC5.1\\
+Re1F16 & Obbligatorio & L'utente deve poter visualizzare un messaggio d'errore che avvisi l'utente di inserire un nome per identificare il collegamento prima di procedere all'inserimento del collegamento nella lista dei collegamenti & Interno\newline
+UC3.3\\
+Re1F17 & Obbligatorio & Quando si cercano di aggiornare le informazioni di un collegamento dalla lista dei collegamenti cliccando il pulsante di modifica durante il monitoraggio attivo delle previsioni, l'utente deve poter visualizzare un messaggio d'errore in cui viene segnalato che il monitoraggio è stato avviato e quindi non è possibile modificare le impostazioni di eventuali collegamenti che stanno venendo analizzati & Interno\newline UC6.1\\
+Re1F18 & Obbligatorio & L'utente deve poter visualizzare un messaggio di errore in cui viene segnalato il mancato collegamento di alcun predittore a nodo del flusso dati nel momento in cui venga avviato il monitoraggio senza aver effettivamente aggiunte aggiunto alcun collegamento &  Interno\newline
+UC7.1\\
 
 \end{longtable}
 
@@ -181,47 +197,63 @@ Non sono stati individuati requisiti prestazionali in quanto il progetto sarà c
 \textcolor{white}{\textbf{Fonte}} &
 \textcolor{white}{\textbf{Requisiti}} \\
 		\endhead
-Capitolato & Re1F1\newline Re1F2\newline Re1F3\newline Re3F3.3\newline Re1F5\newline Re1F6\newline Re1F6.1\newline Re3F6.2\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1Q7\newline Re1V3\\
+Capitolato & Re1F1\newline Re1F2\newline Re1F3\newline Re3F3.4\newline Re1F7\newline
+Re1F10\newline Re1F10.1\newline Re3F10.2\newline Re1Q2\newline Re1Q3\newline Re1Q4\newline Re1Q5\newline Re1Q7\newline Re1V3\\
 
-Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re2F1.5\newline Re2F1.6\newline  Re1F2.1\newline Re1F2.2\newline Re2F2.3\newline Re1F2.4\newline Re1F3.1\newline Re1F3.2\newline Re1F3.4\newline Re2F3.5\newline Re1F3.6\newline Re1F4\newline Re1F4.1\newline Re1F4.2\newline Re1F4.3\newline Re2F4.4\newline Re1F4.5\newline Re1F5\newline Re1F5.1\newline Re1F5.2\newline Re2F5.3\newline Re1F5.4\newline Re2F5.5\newline Re2F5.6\newline Re1F7\newline Re1F8\newline Re1F9\newline Re3F10\newline Re1F11\newline Re1F12\newline Re1F13\newline Re1F14\newline Re1Q1\newline  Re1Q2.1\newline Re2Q2.2\newline Re2Q6\newline Re1V4
-\newline  Re1V5\\
+Interno & Re1F1.1\newline Re1F1.2\newline Re1F1.3\newline Re1F1.4\newline Re2F1.5\newline Re2F1.6\newline Re1F1.9\newline Re1F2.1\newline Re1F2.2\newline Re2F2.3\newline Re1F2.4\newline Re1F3.1\newline Re1F3.2\newline Re1F3.3\newline Re1F3.5\newline Re2F3.6\newline Re1F4\newline Re1F5\newline Re1F5.1\newline Re1F5.2\newline Re1F5.3\newline Re2F5.4\newline Re1F5.5\newline Re1F6\newline Re1F6.1\newline Re1F6.2\newline Re1F6.3\newline Re2F6.4\newline Re1F6.5\newline Re1F7.1\newline Re2F7.2\newline Re1F8.1\newline Re1F8.2\newline Re1F8.3\newline Re2F8.4\newline Re1F8.5\newline Re2F8.6\newline Re1F9\newline Re1F9.1\newline Re2F9.2\newline Re1F11\newline Re1F12\newline Re1F13\newline Re3F14\newline Re1F15\newline Re1F16\newline Re1F17\newline Re1F18\newline Re1Q1\newline  Re1Q2.1\newline Re2Q2.2\newline Re2Q6\newline Re1V4\newline Re1V5\\
+
 
 UC1 & Re1F1\\
-UC1.1 & Re1F1.1\newline Re1F7 \newline Re1F9\\
-UC1.2 & Re1F1.2\newline Re1F8\\
-UC1.3 & Re1F1.3\\
-UC1.4 & Re2F1.4\\
+UC1.1 & Re1F1.1\newline Re1F11 \newline Re1F13\\
+UC1.2 & Re1F1.2\newline Re1F12\\
+UC1.3 & Re1F1.3\newline Re1F12\\
+UC1.4 & Re1F1.4\\
 UC1.5 & Re2F1.5\\
-UC1.6 & Re1F1.6\\
+UC1.6 & Re2F1.6\\
+UC1.7 & Re2F1.7\\
+UC1.8 & Re2F1.8\\
+UC1.9 & Re1F1.9\\
 UC2 & Re1F2\\
-UC2.1 & Re1F2.1\newline Re3F10\\
-UC2.2 & Re1F2.2\newline Re1F11\\
+UC2.1 & Re1F2.1\\
+UC2.2 & Re1F2.2\\
 UC2.3 & Re2F2.3\\
 UC2.4 & Re1F2.4\\
 UC3 & Re1F3\\
 UC3.1 & Re1F3.1\\
 UC3.2 & Re1F3.2\\
-UC3.3 & Re3F3.3\newline  Re3F6.2\\
-UC3.4 & Re1F3.4\newline Re1F12 \newline Re1F13\\
-UC3.5 & Re2F3.5\\
-UC3.6 & Re1F3.6\\
+UC3.3 & Re1F3.3\newline Re1F16\\
+UC3.4 & Re3F3.4\newline  Re3F10.2\newline Re1F15\\
+UC3.5 & Re1F3.5\\
+UC3.6 & Re2F3.6\\
 UC4 & Re1F4\\
-UC4.1 & Re1F4.1\\
-UC4.2 & Re1F4.2\\
-UC4.3 & Re1F4.3\\
-UC4.4 & Re2F4.4\\
-UC4.5 & Re1F4.5\\
-UC4.6 & Re1F4.6\\
 UC5 & Re1F5\\
-UC5.1 & Re1F5.1\newline Re1F15\\
+UC5.1 & Re1F5.1\\
 UC5.2 & Re1F5.2\\
-UC5.3 & Re2F5.3\\
-UC5.4 & Re1F5.4\\
-UC5.1 & Re1F5.5\\
-UC5.7 & Re2F5.6\\
+UC5.3 & Re1F5.3\\
+UC5.4 & Re2F5.4\\
+UC5.5 & Re1F5.5\\
 UC6 & Re1F6\\
-UC6.1 & Re1F6.1\\
-Verbale VI\_2020-03-31 & Re1F5.6\newline Re1V2\\
+UC6.1 & Re1F6.1\newline Re1F17\\
+UC6.2 & Re1F6.2\\
+UC6.3 & Re1F6.3\\
+UC6.4 & Re2F6.4\\
+UC6.5 & Re1F6.5\\
+UC7 & Re1F7\\
+UC7.1 & Re1F7.1\newline Re1F18\\
+UC7.2 & Re2F7.2\\
+UC8.1 & Re1F8.1\\
+UC8.2 & Re1F8.2\\
+UC8.3 & Re1F8.3\\
+UC8.4 & Re2F8.4\\
+UC8.5 & Re1F8.5\\
+UC8.6 & Re2F8.6\\
+UC9 & Re1F9\\
+UC9.1 & Re1F9.1\\
+UC9.2 & Re2F9.2\\
+UC10 & Re1F10\\
+UC10.1 & Re1F10.1\\
+Verbale VE\_2020-03-31 & Re1F8\newline Re1V2\\
+Verbale VE\_2020-07-09 & Re2F1.7\newline Re2F1.8\\
 Supporto al linguaggio ECMAScript6 & Re1V1\newline Re1V1.1\newline Re1V1.2\newline Re1V1.3\newline Re1V1.4\\
 \end{longtable}	
 \pagebreak
@@ -245,6 +277,9 @@ Re1F1.3 & Interno\newline UC1.3\\
 Re1F1.4 & Interno\newline UC1.4\\
 Re2F1.5 & Interno\newline UC1.5\\
 Re2F1.6 & Interno\newline UC1.6\\
+Re2F1.7 & VE\_2020-07-09\newline UC1.7\\
+Re2F1.8 & VE\_2020-07-09\newline UC1.8\\
+Re1F1.9 & Interno\newline UC1.9\\
 Re1F2 & Capitolato\newline UC2\\
 Re1F2.1 & Interno\newline UC2.1\\
 Re1F2.2 & Interno\newline UC2.2\\
@@ -253,35 +288,47 @@ Re1F2.4 & Interno\newline UC2.4\\
 Re1F3 & Capitolato\newline UC3\\
 Re1F3.1 & Interno\newline UC3.1\\
 Re1F3.2 & Interno\newline UC3.2\\
-Re3F3.3 & Capitolato\newline UC3.4\\
-Re1F3.4 & Interno\newline UC3.4\\
-Re2F3.5 & Interno\newline UC3.5\\
-Re2F3.5 & Interno\newline UC3.6\\
+Re1F3.3 & Interno\newline UC3.3\\
+Re3F3.4 & Capitolato\newline UC3.4\\
+Re1F3.5 & Interno\newline UC3.5\\
+Re1F3.6 & Interno\newline UC3.6\\
 Re1F4 & Interno\newline UC4\\
-Re1F4.1 & Interno\newline UC4.1\\
-Re1F4.2 & Interno\newline UC4.2\\
-Re1F4.3 & Interno\newline UC4.3\\
-Re2F4.4 & Interno\newline UC4.4\\
-Re1F4.5 & Interno\newline UC4.5\\
-Re1F5 & Capitolato\newline UC5\\
+Re1F5 & Interno\newline UC5\\
 Re1F5.1 & Interno\newline UC5.1\\
 Re1F5.2 & Interno\newline UC5.2\\
-Re2F5.3 & Interno\newline UC5.3\\
-Re1F5.4 & Interno\newline UC5.4\\
-Re2F5.5 & Verbale\newline VI\_2020-03-31\\
-Re1F5.6 & Interno\newline UC5.6\\
-Re1F6 & Capitolato\newline UC6\\
+Re1F5.3 & Interno\newline UC5.3\\
+Re2F5.4 & Interno\newline UC5.4\\
+Re1F5.5 & Interno\newline UC5.5\\
+Re1F6 & Interno\newline UC6\\
 Re1F6.1 & Capitolato\newline UC6.1\\
-Re3F6.2 & Capitolato\newline UC3.3\\
-Re1F6.3 & Verbale VI\_2020-03-31\\
-Re1F7 & Interno\newline UC1.1\\
-Re1F8 & Capitolato\newline UC1.2\\
-Re1F9 & Interno\newline UC1.1\\
-Re3F10 & Interno\newline UC2.1\\
-Re1F11 & Interno\newline UC2.2\\
-Re1F12 & Interno\newline UC3.3\\
-Re1F13 & Interno\newline UC3.4\\
-Re1F14 & Interno\newline UC5.2\\
+Re1F6.2 & Interno\newline UC6.2\\
+Re1F6.3 & Interno\newline UC6.3\\
+Re2F6.4 & Interno\newline UC6.4\\
+Re1F6.5 & Interno\newline UC6.5\\
+Re1F7 & Capitolato\newline UC7\\
+Re1F7.1 & Interno\newline UC7.1\\
+Re2F7.2 & Interno\newline UC7.2\\
+Re1F8 & VE\_2020-03-31\\
+Re1F8.1 & Interno\newline UC8.1\\
+Re1F8.2 & Interno\newline UC8.2\\
+Re1F8.3 & Interno\newline UC8.3\\
+Re2F8.4 & Interno\newline UC8.4\\
+Re1F8.5 & Interno\newline UC8.5\\
+Re2F8.6 & Interno\newline UC8.6\\
+Re1F9 & Interno\newline UC9\\
+Re1F9.1 & Interno\newline UC9.1\\
+Re2F9.2 & Interno\newline UC9.2\\
+Re1F10 & Capitolato\newline UC10\\
+Re1F10.1 & Capitolato\newline UC10.1\\
+Re3F10.2 & Capitolato\newline UC3.4\\
+Re1F11 & Interno\newline UC1.1\\
+Re1F12 & Interno\newline UC1.2\newline UC1.3\\
+Re1F13 & Interno\newline UC1.1\\
+Re1F14 & Interno\newline UC3.2\\
+Re1F15 & Interno\newline UC3.4\\
+Re1F16 & Interno\newline UC3.3\\
+Re1F17 & Interno\newline UC6.1\\
+Re1F18 & Interno\newline UC7.1\\
 Re1Q1 & Interno\\
 Re1Q2 & Capitolato\\
 Re1Q2.1 & Interno\\
@@ -296,7 +343,7 @@ Re1V1.1 & Supporto al linguaggio ECMAScript6\\
 Re1V1.2 & Supporto al linguaggio ECMAScript6\\
 Re1V1.3 & Supporto al linguaggio ECMAScript6\\
 Re1V1.4 & Supporto al linguaggio ECMAScript6\\
-Re1V2 & Verbale VI\_2020-03-31\\
+Re1V2 & Verbale VE\_2020-03-31\\
 Re1V3 & Capitolato\\
 Re1V4 & Interno\\
 Re1V5 & Interno\\

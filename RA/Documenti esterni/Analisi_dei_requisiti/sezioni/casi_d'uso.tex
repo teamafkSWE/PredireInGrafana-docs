@@ -71,7 +71,9 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 					\item (\hyperref[par:UC1.4]{UC1.4}) conferma delle operazioni;
 					\item (\hyperref[par:UC1.5]{UC1.5}) viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di addestramento se tutto è stato eseguito correttamente;
 					\item (\hyperref[par:UC1.6]{UC1.6}) viene visualizzato a schermo un messaggio di alert addestramento non riuscito se si sono verificati imprevisti durante la procedura di addestramento;
-					\item (\hyperref[par:UC1.7]{UC1.7}) l'utente scarica l'addestramento ricevendo in output il file JSON contenente i predittori per SVM/RL che viene salvato localmente.
+					\item (\hyperref[par:UC1.7]{UC1.7}) l'utente assegna un nome al file JSON;
+					\item (\hyperref[par:UC1.8]{UC1.8}) l'utente aggiunge delle note al file JSON;					
+					\item (\hyperref[par:UC1.9]{UC1.9}) l'utente scarica l'addestramento ricevendo in output il file JSON contenente i predittori per SVM/RL che viene salvato localmente.
 				\end{enumerate}
 			\item\textbf{Estensioni}: 
 				\begin{enumerate}
@@ -191,11 +193,40 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 				
 					
 		\end{itemize}
-
-	\label{par:UC1.7}
-	\subsubsection{UC1.7 - Salvataggio file JSON}
+		
+		\label{par:UC1.7}
+	\subsubsection{UC1.7 - Inserimento nome del file JSON}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC1.7;
+			\item\textbf{Titolo}: Inserimento nome del file JSON;
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Descrizione}: attività in cui viene assegnato un nome identificativo per il file JSON che potrà poi esser scaricato nel proprio file-system;
+			\item\textbf{Precondizioni}: l'utente ha addestrato con successo un algoritmo (\hyperref[par:UC1.5]{UC1.5});
+			\item\textbf{Postcondizioni}: l'utente ha inserito un nome identificativo per il file JSON;
+			\item\textbf{Scenario principale}: l'utente assegna un nome identificativo per il file JSON che potrà essere scaricato cliccando il pulsante di download; l'inserimento è possibile solo in caso di addestramento già effettuato con successo. 	
+			
+			 	
+		\end{itemize}
+		
+		\label{par:UC1.8}
+	\subsubsection{UC1.8 - Inserimento note per il file JSON}
+		\begin{itemize}
+			\item\textbf{Codice Identificativo}: UC1.8;
+			\item\textbf{Titolo}: Inserimento note per il file JSON;
+			\item\textbf{Attore primario}: utente generico;
+			\item\textbf{Descrizione}: attività in cui l'utente inserisce delle note nel file JSONche potrà poi esser scaricato nel proprio file-system;
+			\item\textbf{Precondizioni}: l'utente ha addestrato con successo un algoritmo (\hyperref[par:UC1.5]{UC1.5});
+			\item\textbf{Postcondizioni}: l'utente ha inserito delle note nel il file JSON;
+			\item\textbf{Scenario principale}: l'utente inserisce delle note nel file JSON che potrà essere scaricato cliccando il pulsante di download; l'inserimento di tali note è possibile solo in caso di addestramento già effettuato con successo. 	
+			
+			
+			 	
+		\end{itemize}
+
+	\label{par:UC1.9}
+	\subsubsection{UC1.9 - Salvataggio file JSON}
+		\begin{itemize}
+			\item\textbf{Codice Identificativo}: UC1.9;
 			\item\textbf{Titolo}: Salvataggio file JSON;
 			\item\textbf{Attore primario}: utente generico;
 			\item\textbf{Descrizione}: attività in cui viene scaricato nel proprio file-system il file JSON contenente l'algoritmo addestrato;
@@ -401,7 +432,7 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 		
 			\item\textbf{Scenario principale}: l'utente seleziona l'aspetto interessato dal flusso di dati al quale può essere agganciato il predittore selezionato in precedenza.
 		\end{itemize}
-		
+\label{par:UC3.3}
 	\subsubsection{UC3.3 - Inserimento nome identificativo per il collegamento}
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC3.3;
