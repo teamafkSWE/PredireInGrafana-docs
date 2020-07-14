@@ -100,42 +100,42 @@ L'utente deve poter confermare la scelta dell'algoritmo. \newline All'utente vie
 	\item cliccare sul pulsante "Conferma".
 \end{itemize} & I \\
 
-TSOF1.3.1 & UC7 & 
+TSOF1.3.1 & UC11 & 
 L'utente deve poter visualizzare un messaggio di errore se non era stato inserito nessun csv. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare la visualizzazione del messaggio;
 	\item verificare di essere rimandati al TSOF1.1.
 \end{itemize} & I \\
 
-TSOF1.3.2 & UC8 & 
+TSOF1.3.2 & UC12 & 
 L'utente deve poter visualizzare un messaggio di errore se non era stato scelto nessun algoritmo. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare la visualizzazione del messaggio;
 	\item verificare di essere rimandati al TSOF1.2.
 \end{itemize} & I \\
 
-TSOF1.3.3 & UC9 & 
+TSOF1.3.3 & UC13 & 
 L'utente deve poter visualizzare un messaggio d'errore se la scelta dell'algoritmo non è compatibile con i dati di addestramento. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare la visualizzazione dell'errore;
 	\item verificare di essere rimandati al TSOF1.1.
 \end{itemize} & I \\
 
-TSOF1.4 & UC1.4 & 
+TSOF1.4 & UC1.5 & 
 L'utente deve poter visualizzare il messaggio di notifica di avvenuto addestramento. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare la visualizzazione del messaggio "Addestramento avvenuto con successo";
 	\item verificare che si possa procedere con TSOF1.6.
 \end{itemize} & I \\
 
-TSOF1.5 & UC1.5 & 
+TSOF1.5 & UC1.6 & 
 L'utente deve poter visualizzare il messaggio di alert dell'addestramento non avvenuto. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare la visualizzazione del messaggio "Addestramento non riuscito";
 	\item verificare di essere rimandati a TSOF1.3.1 oppure TSOF1.3.2 oppure TSOF1.3.3.
 \end{itemize} & I \\
 
-TSOF1.6 & UC1.6 & 
+TSOF1.6 & UC1.7 & 
 L'utente deve poter salvare il file JSON in locale contenente predittori. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante "Download".
@@ -158,26 +158,11 @@ L'utente deve poter selezionare il file JSON. \newline All'utente viene chiesto 
 	\item selezionare il file dalla finestra di dialogo.
 \end{itemize} & I	\\
 
-TSOF2.1.1 & UC10 &
-L'utente deve poter visualizzare il messaggio di alert\glo del caricamento già avvenuto e caricare nuovamente il file. \newline All'utente viene chiesto di:
-\begin{itemize}
-	\item visualizzare il messaggio di alert "File JSON già caricato";
-	\item cliccare su "Conferma" per sovrascrivere il file.
-\end{itemize} & I	\\
-
-TSOF2.1.2 & UC10 &
-L'utente deve poter visualizzare il messaggio di alert del caricamento già avvenuto e annullare il caricamento. \newline All'utente viene chiesto di:
-\begin{itemize}
-	\item visualizzare il messaggio di alert "File JSON già caricato";
-	\item cliccare su "Annulla" per tornare alla sezione di caricamento.
-\end{itemize} & I	\\
-
 TSOF2.2 & UC2.2 &
 L'utente deve poter confermare il caricamento del file. \newline All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante "Conferma".
 \end{itemize} & I	\\
-
 
 TSOF2.2.1 & UC11 &
 L'utente deve poter visualizzare un messaggio d'errore in caso di problemi con il caricamento. \newline All'utente viene chiesto di:
@@ -251,17 +236,17 @@ L'utente  deve poter confermare il collegamento e vedere la lista dei collegamen
 I \\
 
 TSOF3.4.1 &
-UC12 &
+UC15 &
 L'utente  deve poter visualizzare il messaggio d'errore sulla soglia stabilita. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare il messaggio "Errore impostazione soglia non valida";
 	\item poter cliccare il pulsante "Conferma";
 	\item verificare che dopo il click sul pulsante "Conferma", sia possibile impostare la soglia.
 \end{itemize} &
-I \\
+NI \\
 
 TSOF3.4.2 &
-UC13 &
+UC14 &
 L'utente  deve poter visualizzare il messaggio d'errore sulle impostazioni di collegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item poter visualizzare il messaggio "Errore impostazione di collegamento";
@@ -271,7 +256,7 @@ L'utente  deve poter visualizzare il messaggio d'errore sulle impostazioni di co
 I \\
 
 TSOF3.5 &
-UC3.5 &
+UC3.6 &
 L’utente deve poter visualizzare il messaggio di notifica per la buona riuscita del collegamento. All’utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio "Collegamento avvenuto con successo";
@@ -280,7 +265,7 @@ L’utente deve poter visualizzare il messaggio di notifica per la buona riuscit
 I \\
 
 TSOF3.6 &
-UC3.6 &
+UC4 &
 L’utente deve poter visualizzare la lista di collegamenti effettuati. All’utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare la lista di collegamenti correttamente inseriti fino a quel momento;
@@ -292,7 +277,7 @@ I \\
 % ------------- INIZIO TEST 4 ----------------
 
 TSOF4 &
-UC4 &
+UC5 &
 L'utente deve poter effettuare delle operazioni sui collegamenti. All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul bottone di scollegamento;
@@ -303,7 +288,7 @@ I \\
 
 
 TSOF4.1 &
-UC4.1 &
+UC5.1 &
 L'utente deve poter scollegare un collegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante di scollegamento;
@@ -312,7 +297,7 @@ L'utente deve poter scollegare un collegamento. All'utente viene chiesto di:
 I \\
 
 TSOF4.2 &
-UC4.2 &
+UC5.2 &
 L'utente deve poter visualizzare il messaggio di alert prima di continuare con lo scollegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare che sia visibile il messaggio d'alert;
@@ -321,7 +306,7 @@ L'utente deve poter visualizzare il messaggio di alert prima di continuare con l
 I \\
 
 TSOF4.3 &
-UC4.3 &
+UC5.3 &
 L'utente deve poter confermare o annullare lo scollegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante di conferma per procedere;
@@ -331,7 +316,7 @@ L'utente deve poter confermare o annullare lo scollegamento. All'utente viene ch
 I \\
 
 TSOF4.4 &
-UC4.4 &
+UC5.4 &
 L'utente deve poter visualizzare il messaggio di notifica dell'avvenuto scollegamento. All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare che sia visibile il messaggio "Scollegamento avvenuto con successo";
@@ -340,7 +325,7 @@ L'utente deve poter visualizzare il messaggio di notifica dell'avvenuto scollega
 I \\
 
 TSOF4.5 &
-UC4.5 &
+UC6.1 &
 L'utente deve poter modificare un collegamento già inserito. All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare il pulsate "Modifica collegamento";
@@ -355,7 +340,7 @@ I \\
 
 
 TSOF5 &
-UC5 &
+UC7 &
 L'utente deve poter avviare il calcolo delle previsioni. All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante di avvio monitoraggio;
@@ -365,7 +350,7 @@ L'utente deve poter avviare il calcolo delle previsioni. All'utente viene chiest
 I \\
 
 TSOF5.1 &
-UC5.1 &
+UC7.1 &
 L'utente deve poter avviare il monitoraggio del flusso dati. All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare il pulsante "Avvia monitoraggio".
@@ -373,7 +358,7 @@ L'utente deve poter avviare il monitoraggio del flusso dati. All'utente viene ch
 I \\
 
 TSOF5.1.1 &
-UC14 &
+UC18 &
 L'utente deve poter visualizzare il messaggio d'errore in caso nessun predittore fosse stato collegato. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio d'errore;
@@ -382,7 +367,7 @@ L'utente deve poter visualizzare il messaggio d'errore in caso nessun predittore
 I \\
 
 TSOF5.2 &
-UC5.2 &
+UC7.2 &
 L'utente deve poter visualizzare il messaggio di notifica di monitoraggio avviato. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio di notifica "Monitoraggio avviato con successo";
@@ -391,7 +376,7 @@ L'utente deve poter visualizzare il messaggio di notifica di monitoraggio avviat
 I \\
 
 TSOF5.3 &
-UC5.3 &
+UC9.1 &
 L'utente deve poter interrompere il monitoraggio. All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare che sia presente il pulsante di interruzione del monitoraggio;
@@ -400,7 +385,7 @@ L'utente deve poter interrompere il monitoraggio. All'utente viene chiesto di:
 I \\
 
 TSOF5.4 &
-UC5.4 &
+UC9.2 &
 L'utente deve poter visualizzare il messaggio di notifica dell'interruzione del monitoraggio. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio di notifica "Monitoraggio interrotto";
@@ -409,7 +394,7 @@ L'utente deve poter visualizzare il messaggio di notifica dell'interruzione del 
 I \\
 
 TSOF5.5 &
-UC5.5 &
+UC8.1 &
 L'utente deve poter salvare le previsioni. All'utente viene chiesto di:
 \begin{itemize}
 	\item cliccare sul pulsante di salvataggio delle previsioni.
@@ -417,7 +402,7 @@ L'utente deve poter salvare le previsioni. All'utente viene chiesto di:
 I \\
 
 TSOF5.6 &
-UC5.6 &
+UC8.2 &
 L'utente deve poter visualizzare il messaggio di notifica di successo salvataggio. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio di notifica.
@@ -425,7 +410,7 @@ L'utente deve poter visualizzare il messaggio di notifica di successo salvataggi
 I \\
 
 TSOF6 &
-UC6 &
+UC10 &
 L'utente deve poter visualizzare le previsioni nella dashboard. All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare che nella dashboard siano presenti le previsioni calcolate.
@@ -433,7 +418,7 @@ L'utente deve poter visualizzare le previsioni nella dashboard. All'utente viene
 I \\
 
 TSOF6.1 &
-UC6.1 &
+UC10.1 &
 L'utente deve poter visualizzare le previsioni. All'utente viene chiesto di:
 \begin{itemize}
 	\item verificare che siano presenti le previsioni calcolate;
@@ -442,7 +427,7 @@ L'utente deve poter visualizzare le previsioni. All'utente viene chiesto di:
 I \\
 
 TSOF6.2 &
-UC6.2 &
+UC10.2 &
 L'utente deve poter visualizzare il messaggio di alert in caso una soglia critica sia raggiunta. All'utente viene chiesto di:
 \begin{itemize}
 	\item visualizzare il messaggio d'alert "Soglia critica raggiunta".
@@ -611,8 +596,8 @@ TUOF87 & Verificare che venga lanciata un'eccezione in caso il numero di input s
 \textcolor{white}{\textbf{Totale}}\\
 		\endhead
 Accettazione & 21 & 1 & 22\\
-Sistema & 44 & 0 & 44 \\
+Sistema & 41 & 1 & 42 \\
 Integrazione & 14 & 0 & 14\\
 Unità & 77 & 14 & 91 \\		
-\textbf{Totale} & \textbf{156} & \textbf{15} & \textbf{171} \\
+\textbf{Totale} & \textbf{153} & \textbf{16} & \textbf{169} \\
 \end{longtable}
