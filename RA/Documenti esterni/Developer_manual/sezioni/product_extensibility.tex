@@ -1,0 +1,13 @@
+\section{Product extensibility}
+\subsection{Integration of new prediction algorithm}
+With this release the product performs trainings and predictions through Support Vector Machine or Linear Regression. But the product can support new procedures because its architecture allows to extend the list of algorithm available by following some steps.\\
+Inside Training Tool:
+\begin{itemize}
+\item in \textit{model}'s \textit{library} package, the developer has to implement the effective algorithm;
+\item in \textit{model}'s \textit{train} package the developer has to implement a support class;
+\item the developer has to extend the abstract class \textit{Train} located in \textit{model} package, and has to implement the all abstract methods. Then the developer has to import the class inside the \textit{viewmodel}.
+\end{itemize}
+Inside Prediction Plugin:
+\begin{itemize}
+\item inside the \textit{model} package, the developer has to extend the class \textit{algorithm}, which is the base for the prediction operation.
+\end{itemize}

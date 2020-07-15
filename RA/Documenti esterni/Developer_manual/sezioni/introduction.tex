@@ -1,0 +1,35 @@
+\section{Introduction}
+	\subsection{Document's purpose}
+The developer's manual allows each developer reader to absorb \emph{Predire in Grafana\glo}'s product key information to maintain and extend the product itself.
+This document describes the product in its totality, giving the developer an exhaustive explanation required for his tasks.
+	
+\subsection{Predire in Grafana’s purpose}
+\emph{Predire in Grafana} is a plugin made for Grafana which is an open source\glo platform commonly used to analyse data series. The plugin allows users to predict datas on a stream data. \emph{Predire in Grafana} plugin uses a JSON\glo file which contains a trained algorithm definition to get predictions. Users can use an external training tool, which use Machine Learning\glo , to get these JSON' files. At the moment only Support Vector Machine and Linear Regression algorithm are implemented. In more detail input datas, like cpu's usage and cpu's temperature, are constantly monitored to get predictions on the aspect you want to examine. Predictions are shown through Grafana GUI\glo and continue to be updated after being calculated from datas coming from a database. Thanks to this operators can monitor each process and intervene at the root of the problem whenever necessary.
+
+
+\subsection{Glossary}
+At the end of the document in the appendix is available a glossary where explanations for new or ambiguous terms can be found. These are marked with a subscript G.
+
+\subsection{References}
+\subsubsection{Technologies}
+These links are a reference to the documentation of these specific technologies:
+\begin{itemize}
+	\item Node.js: \url{https://nodejs.org/en/docs/};
+	\item Git: \url{https://git-scm.com/doc};
+	\item Grafana: \url{https://grafana.com/docs/grafana/latest/};
+	\item Grafana plugin: \url{https://grafana.com/docs/grafana/latest/developers/plugins/};
+	\item React: \url{https://reactjs.org/docs/getting-started.html};
+	\item ESLint: \url{https://www.jetbrains.com/help/idea/eslint.html}.
+\end{itemize}
+\subsubsection{Legal}
+\begin{itemize}
+	\item Apache license: \url{https://www.apache.org/licenses/LICENSE-2.0}.
+\end{itemize}
+
+\subsubsection{Informative}
+\begin{itemize}
+	\item \url{https://en.wikipedia.org/wiki/Linear_regression};
+	\item \url{https://en.wikipedia.org/wiki/Support_vector_machine}.
+\end{itemize}
+	
+
