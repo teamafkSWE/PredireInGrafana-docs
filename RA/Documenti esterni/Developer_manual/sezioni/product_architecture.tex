@@ -64,14 +64,20 @@ The \texttt{App} class is the main component and it represents the tool's entry 
 Inside there is an instance of the ViewModel for data-binding.
 
 \subparagraph*{App}\mbox{} \\ \mbox{} \\
-The \texttt{App} class is the main component and it represents the tool's entry point. Each part of the View has been divided into components and rendered by the App. This class has just one parameter: \texttt{viewModel} is an instance of the ViewModel. The constructor contains the properties in common with the ViewModel. Moreover, it has the following methods:
+The \texttt{App} class is the main component and it represents the tool's entry point. Each part of the View has been divided into components and rendered by the App. This class has just one parameter: \texttt{viewModel} is an instance of the ViewModel. The constructor contains the properties in common with the ViewModel and the \texttt{viewModel} instance. Moreover, it has the following methods:
 \begin{itemize}
 \item \texttt{changeAlgorithm(event)}: it manages the algorithm user's choice, setting the \\ \texttt{algorithm} state value after the event was made;
 \item \texttt{resetAlgorithm(algorithm)}: it sets the \texttt{algorithm} state parameter to the default value;
 \item \texttt{setDataFromFile(data, fileInfo)}: it sets the \texttt{data} state parameter and the \\ \texttt{fileName} state parameter with the inserted file's name;
 \item \texttt{handleTraining()}: it sends the data to the ViewModel and if the \texttt{performTraining()} method success, it calls the function to write the information into the JSON file, otherwise it resets the algorithm;
 \item \texttt{downloadJsonData()}: it creates the DownloadJson component;
-\item \texttt{render()}: it creates the InsertCsvButton, ComboBoxAlgorithm, TrainButton and Chart components and it calls the \texttt{downloadJsonData()} function.
+\item \texttt{render()}: it creates the InsertCsvButton, ComboBoxAlgorithm, TrainButton and Chart components and it calls the \texttt{downloadJsonData()} function;
+\item \texttt{changeXAxis(event)}: it manages the xAxis user's choice to be displayed, setting the \texttt{xAixs} state value after the event was made;
+\item \texttt{selectAxisX()}: if a file has been imported, it allows to change the X axis to be displayed;
+\item \texttt{handleNotes(event)}: it manages the notes that have been written by the user, setting the \texttt{notes} state value after the event was made;
+\item \texttt{handleName(event)}: it manages the file name that has been written by the user, setting the \texttt{changeName} state value after the event was made;
+\item \texttt{show()}: it shows the "Information" page, which includes a step-by-step guide and the bugs report section;
+\item \texttt{setDefaultName()}: if the new file name hasn't been written on the specific textArea, this method sets the default name of that file to: \textit{predictorsRL} if the CSV was a linear regression or \textit{predictorsSVM} if it was a SVM file.
 \end{itemize}	
 
 \subparagraph*{combo\_box\_algorithm}\mbox{} \\ \mbox{} \\
@@ -99,7 +105,7 @@ It also implements the following methods:
 
 \subparagraph*{insert\_csv\_button}\mbox{} \\ \mbox{} \\
 It renders the insert button for the CSV file.\\
-The \texttt{render()} method renders the "Inserisci file" button.
+The \texttt{render()} method renders the "Select file" button.
 
 \subparagraph*{header}\mbox{} \\ \mbox{} \\
 It renders the header.\\
@@ -107,7 +113,23 @@ The \texttt{render()} method renders the site's header.
 
 \subparagraph*{train\_button}\mbox{} \\ \mbox{} \\
 It renders the train button, that will start the training.\\
-The \texttt{render()} method renders the "Conferma" button.
+The \texttt{render()} method renders the "Start training" button.
+
+\subparagraph*{combo\_box\_x\_axis}\mbox{} \\ \mbox{} \\
+It renders the combo box the axis's choice.
+The \texttt{onChange} and \texttt{value} properties are \texttt{props} managed by the viewModel.
+
+\subparagraph*{footer}\mbox{} \\ \mbox{} \\
+It renders the footer of the page.
+
+\subparagraph*{information}\mbox{} \\ \mbox{} \\
+It renders the information page. It includes a brief guide for the tool and the email address to which bug reports should be sent.
+
+\subparagraph*{textArea}\mbox{} \\ \mbox{} \\
+It renders the textArea, which notes must be added to the JSON file produced.
+
+\subparagraph*{textAreaFileName}\mbox{} \\ \mbox{} \\
+It renders the textArea above the notes textArea, which information must be set as the JSON file name.
 
 \begin{figure}[H]
 \centering
@@ -119,12 +141,21 @@ The \texttt{render()} method renders the "Conferma" button.
 The data transition from the views to the model occurs through an instance of the ViewModel inside the View. Through this instance, the ViewModel calls the correct functions when the user interacts with the View.
 The ViewModel has functions that interact with both the View and the Model (e.g. \texttt{RLChart()} and \texttt{performTraining()}).
 To communicate with the Model, there is an \texttt{RLTrain} or \texttt{SVMTrain} instance. In order to instantiate the correct algorithm, the behavioural design pattern Strategy is applied. \\
-The ViewModel contains the following variables	: \begin{itemize}
+The ViewModel contains the following private variables: \begin{itemize}
 \item \texttt{algorithm}: it contains the string of the chosen algorithm (combo-box component);
 \item \texttt{file}: it contains the data of the inserted CSV;
 \item \texttt{hasFile}: true if the file CSV has been inserted, false otherwise;
-\item \texttt{strategy}: it contains the RLTrain or SVMTrain object.
+\item \texttt{strategy}: it contains the RLTrain or SVMTrain object;
+\item \texttt{xAxis}: it contains the X axis of the CSV file;
+\item \texttt{indexOfMax}: max index for the regression line to be displayed;
+\item \texttt{indexOfMin}: min index for the regression line to be displayed;
+\item \texttt{maxXAxis}: max X axis value;
+\item \texttt{minXAxis}: min X axis value;
+\item \texttt{notes}: it contains the notes that has been written on the textArea.
 \end{itemize}
+The \texttt{constructor()} set these variables to \texttt{null}.
+Each variable has its own \texttt{set<<Variable>>()} function, that sets \texttt{this.<<Variable>>} to that variable. \\
+The \texttt{straightLine()} method uses the axis variables (xAxis, indexOfMax, indexOfMin, maxXAxis and minXAxis) to display the regression line correctly in the Graph.
 
 \begin{figure}[H]
 \centering
@@ -188,7 +219,7 @@ to be able to characterize a prediction algorithm. It contains only one method:
 \texttt{predict(input)}. This allows you to perform the prediction on a specific dataset of type \texttt{number}.
 
 \paragraph*{Influx}\mbox{} \\ \mbox{} \\
-This class is used to interface and write data to the Influx database WriteInflux. \texttt{Instance} contains an instance of the Influx DB and the \texttt{write()} method writes the data to the Influx database. The "get" methods are used to get informations/parameters helpful to make the connection or specific actions.
+This class is used to interface and write data to the Influx database WriteInflux. \texttt{InfluxDB} contains an instance of the Influx DB and the \texttt{write()} method writes the data to the Influx database. The async method \texttt{connect(host, port, database, username?, password?)} it's used to connect the database to the plug-in. Any other "connection-handling method", \texttt{setMeasurement} and \texttt{setDatasource} methods are handled by the \textit{controller}.
 
 \begin{figure}[H]
 \centering
@@ -222,6 +253,7 @@ When importing the JSON file, the controller will take care of: \begin{itemize}
 \item apply the correct forecasting algorithm through the \texttt{setStrategy()} method;
 \item notify the JSON file upload success views.
 \end{itemize}
+Moreover, it manages the database functions, which allow to add, edit or remove a connection, set new measurements, update and set datasources and save predictions on the Influx database.\\
 
 \begin{figure}[H]
 \centering
