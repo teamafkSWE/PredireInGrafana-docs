@@ -47,7 +47,7 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC1_tool_di_addestramento.png}
+		\includegraphics[scale=0.60]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC1_tool_di_addestramento.png}
 		\caption{Creazione file JSON dai dati di addestramento}
 	\end{figure}	
 
@@ -242,11 +242,13 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 	\label{par:UC2}
 	\subsection{UC2 - Caricamento del file JSON nel plugin}
 	
-	%\begin{figure}[H]
-	%	\centering
-	%	\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC2_Caricamento_file_JSON_nel_plugin.png}
-	%	\caption{Caricamento del file JSON}
-	%\end{figure}	
+
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.60]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC2_Caricamento_file_JSON_nel_plug-in}
+		\caption{Caricamento del file JSON}
+	\end{figure}	
+	
 		
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC2;
@@ -271,12 +273,6 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 					\item (\hyperref[par:UC2.3]{UC2.3}) viene visualizzato a schermo un messaggio di notifica di avvenuto successo della procedura di caricamento JSON.
 					\item (\hyperref[par:UC2.4]{UC2.4}) viene visualizzato il contenuto del file JSON appena caricato.
 				\end{enumerate}
-			%\item\textbf{Estensioni}:
-			%	\begin{enumerate}
-				%REMOVE%
-					%\item\hyperref[par:UC13]{UC13} estende \hyperref[par:UC2.1]{UC2.1}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plugin \textit{Predire in Grafana};
-					%\item\hyperref[par:UC14]{UC14} estende \hyperref[par:UC2.2]{UC2.2}: viene visualizzato un messaggio d'errore nel caso in cui l'operazione di caricamento del file non sia andata a buon fine.
-				%\end{enumerate}	
 			
 		\end{itemize}
 		
@@ -295,8 +291,7 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 					\end{enumerate}
 			\item\textbf{Postcondizioni}: l'utente ha selezionato il file JSON;
 			\item\textbf{Scenario principale}: l'utente seleziona dalla finestra di selezione il file JSON da importare tra quelli disponibili. Sono visibili solo i file con formato .json;
-			%REMOVE%
-			%\item\textbf{Estensioni}: \hyperref[par:UC13]{UC13}: viene visualizzato un messaggio di alert nel caso in cui sia già presente un file JSON caricato nel plugin \textit{Predire in Grafana}.		
+					
 			\end{itemize}
 		
 		\label{par:UC2.2} 
@@ -309,8 +304,7 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 			\item\textbf{Precondizioni}: l'utente ha selezionato il file JSON da caricare;
 			\item\textbf{Postcondizioni}: l'utente ha caricato il file nel plugin;
 			\item\textbf{Scenario principale}: l'utente clicca il pulsante etichettato con "Apri" e il file viene caricato;
-			%\item\textbf{Estensioni}: \hyperref[par:UC13]{UC13}: viene visualizzato un messaggio d'errore nel caso in cui l'operazione di caricamento del file non sia andata a buon fine.
-					
+			
 		\end{itemize}
 		
 		\label{par:UC2.3}
@@ -359,12 +353,15 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 
 	\label{par:UC3}
 	\subsection{UC3 - Collegamento del predittore al flusso dati}
-
-		%\begin{figure}[H]
-		%\centering
-		%\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC3_collegamento_flusso_dati.png}
-		%\caption{Collegamento del predittore al flusso dati}
-		%\end{figure}	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.60]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC3_collegamento_flusso_dati.png}
+		\caption{Collegamento del predittore al flusso dati}
+	\end{figure}
+	
+	
+	
 
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC3;
@@ -537,11 +534,11 @@ Essendo il prodotto finale un plugin open-source\glo è accessibile ad ogni tipo
 	\subsection{UC5 - Scollegamento predittore}
 	
 	
-	%\begin{figure}[H]
-		%\centering
-		%\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC4_Operazioni_sui_collegamenti.png}
-		%\caption{Operazioni sui collegamenti} 
-		%\end{figure}	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC5_scollegamento_predittore.png}
+		\caption{Operazioni sui collegamenti} 
+		\end{figure}	
 
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC5;
@@ -650,11 +647,11 @@ scollegato e quindi eliminato.
 	\label{par:UC6}
 	\subsection{UC6 - Modifica collegamento}
 	
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC4_Operazioni_sui_collegamenti.png}
-%		\caption{Operazioni sui collegamenti} 
-%		\end{figure}	
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC6_modifica_collegamento.png}
+		\caption{Operazioni sui collegamenti} 
+		\end{figure}	
 
 
 		\begin{itemize}
@@ -774,11 +771,12 @@ flusso dati (\hyperref[par:UC4]{UC4});
 	\label{par:UC7}
 	\subsection{UC7 - Monitoraggio previsioni}
 
-	%\begin{figure}[H]
-		%\centering
-		%\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC7_Operazioni_calcolo_di_previsione.png}
-		%\caption{Operazioni sul calcolo di previsione}
-	%\end{figure}	
+\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC7_monitoraggio_previsioni.png}
+		\caption{Avvio del monitoraggio} 
+		\end{figure}	
+
 
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC7;
@@ -843,6 +841,14 @@ flusso dati (\hyperref[par:UC4]{UC4});
 
 \label{par:UC8}
 	\subsection{UC8 - Salvataggio previsioni}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.70]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC8_salvataggio_previsioni.png}
+		\caption{Salvataggio delle previsioni} 
+		\end{figure}	
+
+
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC8;
 			\item\textbf{Titolo}: Monitoraggio previsione;
@@ -1026,11 +1032,11 @@ flusso dati (\hyperref[par:UC4]{UC4});
 	\label{par:UC10}
 	\subsection{UC10 - Visualizzazione della dashboard}
 
-	%\begin{figure}[H]
-	%	\centering
-	%	\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC9_Visualizzazione_della_dashboard.png}
-	%	\caption{Visualizzazione delle previsioni}
-	%\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.80]{../Analisi_dei_requisiti/img/Diagrammi_UML/UC9_Visualizzazione_della_dashboard.png}
+		\caption{Visualizzazione delle previsioni}
+	\end{figure}
 
 		\begin{itemize}
 			\item\textbf{Codice Identificativo}: UC10;
