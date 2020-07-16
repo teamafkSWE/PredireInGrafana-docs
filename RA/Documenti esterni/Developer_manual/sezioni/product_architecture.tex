@@ -74,7 +74,7 @@ The \texttt{App} class is the main component and it represents the tool's entry 
 \item \texttt{selectAxisX()}: if a file has been imported, it allows to change the X axis to be displayed;
 \item \texttt{handleNotes(event)}: it manages the notes that have been written by the user, setting the \texttt{notes} state value after the event was made;
 \item \texttt{handleName(event)}: it manages the file name that has been written by the user, setting the \texttt{changeName} state value after the event was made;
-\item \texttt{show()}: it shows the "Information" page, which includes a step-by-step guide and the bugs report section;
+\item \texttt{showInfo()}: it shows the "Information" page, which includes a step-by-step guide and the bugs report section;
 \item \texttt{setDefaultName()}: if the new file name hasn't been written on the specific textArea, this method sets the default name of that file to: \textit{predictorsRL} if the CSV was a linear regression or \textit{predictorsSVM} if it was a SVM file.
 \end{itemize}	
 
@@ -137,8 +137,8 @@ It renders the textArea above the notes textArea, which information must be set 
 
 \paragraph{ViewModel}\mbox{} \\ \mbox{} \\
 The data transition from the views to the model occurs through an instance of the ViewModel inside the View. Through this instance, the ViewModel calls the correct functions when the user interacts with the View.
-The ViewModel has functions that interact with both the View and the Model (e.g. \texttt{RLChart()} and \texttt{performTraining()}).
-To communicate with the Model, there is an \texttt{RLTrain} or \texttt{SVMTrain} instance. In order to instantiate the correct algorithm, the behavioural design pattern Strategy is applied. \\
+The ViewModel has functions that interact with both the View and the Model (e.g. \texttt{Chart()} and \texttt{performTraining()}).
+To communicate with the Model, there is an \texttt{StrategyTrain} instance in order to instantiate the correct algorithm. The behavioural design pattern Strategy is applied. \\
 The ViewModel contains the following private variables: \begin{itemize}
 \item \texttt{algorithm}: it contains the string of the chosen algorithm (combo-box component);
 \item \texttt{file}: it contains the data of the inserted CSV;
