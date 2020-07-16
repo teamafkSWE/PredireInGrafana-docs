@@ -19,38 +19,36 @@ Finally there is a communication between Model and View for the constant updatin
 
 Analyzing the specific components, our architecture is structured as follows:
 \begin{itemize}
-\item \textbf{Model}: it manages the \textit{business logic};
-\item \textbf{View}: it manages the \textit{presentation logic} through React;
-\item \textbf{ViewModel}: it manages the \textit{application logic}\glo. The ViewModel is an abstraction of the View exposing public commands.
+\item \textbf{Model}: it manages the \textit{business logic}, in detail everything concerned the algorithms (such as libraries and their own methods);
+\item \textbf{View}: it manages the \textit{presentation logic} through React, specifically what the user will see;
+\item \textbf{ViewModel}: it manages the \textit{application logic}\glo. The ViewModel is an abstraction of the View exposing public commands, and  it has a binder, which automates communication between the View and its bound properties in the ViewModel.
 \end{itemize}
 
 \subsubsection{Detailed design}
 
 \paragraph{Model}\mbox{} \\ \mbox{} \\
-The main component of the Model is the abstract class of the prediction algorithms called Train. Starting with this, we have implemented
-two algorithms: Support Vector Machine and Linear Regression.
+The main component of the Model is the abstract class of the prediction algorithms called Train. Starting with this, we have implemented two algorithms: Support Vector Machine and Linear Regression.
 They are represented respectively by the concrete classes \texttt{SupportSVM}
 and \texttt{SupportRL}. We have found that, for families algorithms such as Support Vector Machine and Linear Regression algorithms, it is possible to trace them to a single abstract class as we have provided. 
 
-\paragraph*{Train}\mbox{} \\ \mbox{} \\
-The abstract class of the prediction algorithms is called \texttt{Train} and it
-represents the contract that all concrete classes must abide to be able to characterize a prediction algorithm. It contains only one parameter: \texttt{algorithm}. The \texttt{train()} method allows you to perform the prediction on a specific dataset. The \texttt{getJSON()} method writes the configuration parameters into the JSON file.
-
 \paragraph*{SupportSVM}\mbox{} \\ \mbox{} \\
 To implement the SVM algorithm we developed the concrete class \texttt{SupportSVM}. This class performs the prediction on the dataset. 
-It also makes use of components specific to the SVM class imported from the SVM library to perform the real prediction. SupportSVM also contains two fields data: \begin{itemize}
+It also makes use of components specific to the SVM class imported from the SVM library to perform the real prediction. SupportSVM also has these fields data, each one instantiated by the constructor: \begin{itemize}
 \item \texttt{dataSVM}: reference to the dataset;
+\item \texttt{svm}: the SVM object;
 \item \texttt{weights}: the weights are the SVM coefficients that will be used to make the prediction.
 \end{itemize}
-Finally, there is the constructor that allows you to run the method binding to the class.
+The constructor also defines the SVM options, such as the kernel (linear) and the karpathy (true). This class includes the method to perform the SVM train (\texttt{trainSVM()}) and the method to set the JSON file SVM structure up (\texttt{JSONData()}).
+
 
 \paragraph*{SupportRL}\mbox{} \\ \mbox{} \\
-To implement the Linear Regression algorithm we developed the concrete class \texttt{SupportRL}. This class performs the prediction on the dataset. It also makes use of components specific to the RL class imported from the RL library to perform the real prediction. SupportRL also contains three fields data: \begin{itemize}
-\item \texttt{dataRL}: reference to the dataset;
+To implement the Linear Regression algorithm we developed the concrete class \texttt{SupportRL}. This class performs the prediction on the dataset. It also makes use of components specific to the RL class imported from the RL library to perform the real prediction. SupportRL also contains these private fields data: \begin{itemize}
+\item \texttt{dataRL}: reference to the dataset, instantiated by the constructor;
 \item \texttt{numOfX}: the numbers of X founded on the CSV file;
-\item \texttt{coefficients}: the coefficients needed to make the prediction.
+\item \texttt{reg}: the RL object, which has 2 parameters: the X numbers (\texttt{dataRl.length}) and Y numbers (1);
+\item \texttt{coefficients}: the coefficients needed to make the prediction, set as null by the constructor.
 \end{itemize}
-Finally, there is the constructor that allows you to run the method binding to the class.
+This class includes the method to perform the RL train (\texttt{trainRl()}) and the method to set the JSON file RL structure up (\texttt{JSONData()}).
 
 \begin{figure}[H]
 \centering
@@ -112,7 +110,7 @@ It renders the header.\\
 The \texttt{render()} method renders the site's header.
 
 \subparagraph*{train\_button}\mbox{} \\ \mbox{} \\
-It renders the train button, that will start the training.\\
+It renders the train button, that will start training.\\
 The \texttt{render()} method renders the "Start training" button.
 
 \subparagraph*{combo\_box\_x\_axis}\mbox{} \\ \mbox{} \\
@@ -145,7 +143,7 @@ The ViewModel contains the following private variables: \begin{itemize}
 \item \texttt{algorithm}: it contains the string of the chosen algorithm (combo-box component);
 \item \texttt{file}: it contains the data of the inserted CSV;
 \item \texttt{hasFile}: true if the file CSV has been inserted, false otherwise;
-\item \texttt{strategy}: it contains the RLTrain or SVMTrain object;
+\item \texttt{STrain}: it contains the strategy object;
 \item \texttt{xAxis}: it contains the X axis of the CSV file;
 \item \texttt{indexOfMax}: max index for the regression line to be displayed;
 \item \texttt{indexOfMin}: min index for the regression line to be displayed;
@@ -155,13 +153,58 @@ The ViewModel contains the following private variables: \begin{itemize}
 \end{itemize}
 The \texttt{constructor()} set these variables to \texttt{null}.
 Each variable has its own \texttt{set<<Variable>>()} function, that sets \texttt{this.<<Variable>>} to that variable. \\
-The \texttt{straightLine()} method uses the axis variables (xAxis, indexOfMax, indexOfMin, maxXAxis and minXAxis) to display the regression line correctly in the Graph.
+The \texttt{checkAlgorithm()} method perform controls to the uploaded file: \begin{itemize}
+\item if it is a SVM CSV file, the \texttt{verifyAlgorithm} calls the \texttt{isSVM} method;
+\item if it is a RL CSV file, the \texttt{verifyAlgorithm} calls the \texttt{isRL} method;
+\item if the CSV file does not match any prediction algorithm structure, the function returns an alert;
+\item if any algorithm hasn't been chosen and we are trying to start training, the function returns an alert;
+\item if the algorithm has been chosen but any file hasn't been inserted, the function returns an alert.
+\end{itemize}
+There are also the chart methods, that handle the datas to be displayed: \begin{itemize}
+\item \texttt{straightLine()}: it uses the axis variables (xAxis, indexOfMax, indexOfMin, maxXAxis and minXAxis) to display the regression line correctly in the chart;
+\item \texttt{chart()}: it sets the chart with the correct informations obtained by the uploaded file, in detail both X and Y axis;
+\item \texttt{chartAxisX(label, dataX, dataY)}: it sets the color of the datas to be displayed: red if the data is "bad" (so miscalculated by the prediction algorithm) and green if the data is "good" (so correctly calculated);
+\item \texttt{getPredictorsName()}: it returns the CSV columns names.
+\end{itemize}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{../../../Diagrams/Classes_diagrams/tool_modelview.png}
+\includegraphics[scale=0.45]{../../../Diagrams/Classes_diagrams/tool_modelview.png}
 \caption{Training tool Model class diagram}
 \end{figure}
+
+As it can be seen in this diagram, the ViewModel has a child class \texttt{StrategyTrain}, which is an implementation of the Strategy design pattern, that instantiate the correct algorithm whenever it's needed. Both \texttt{SVMTrain} and \texttt{RLTrain} classes are children of the \textit{abstract} \texttt{Train} class, so adding new algorithms in the future is simplified.
+
+\paragraph*{SVMTrain}\mbox{} \\ \mbox{} \\
+This class contains the methods to perform the SVM train, such as: \begin{itemize}
+\item \texttt{train()}: it calls \texttt{algorithm.trainSvm()} to perform the train and it returns a boolean if the train has been done correctly (true) or it failed (false);
+\item \texttt{getCoefficients()}: it gets the \texttt{algorithm.Weights()};
+\item \texttt{getJSON()}: it gets the \texttt{algorithm.JSONData()}.
+\end{itemize}
+The constructor instantiate the private variable \texttt{algorithm} to a \texttt{new SupportSvm(dataSVM)} object.
+
+\paragraph*{RLTrain}\mbox{} \\ \mbox{} \\
+This class contains the methods to perform the RL train, such as: \begin{itemize}
+\item \texttt{train()}: it calls \texttt{algorithm.insert()} to push the data and  \texttt{algorithm.trainRl()} to perform the train and it returns a boolean if the train has been done correctly (true) or it failed (false);
+\item \texttt{getCoefficients()}: it gets the \texttt{algorithm.getCoefficientsRL()};
+\item \texttt{getJSON()}: it gets the \texttt{algorithm.JSONData()}.
+\end{itemize}
+The constructor instantiate the private variable \texttt{algorithm} to a \texttt{new SupportRl(dataRl)} object.
+
+\paragraph*{StrategyTrain}\mbox{} \\ \mbox{} \\
+This class is the implementation of the Strategy design pattern, so it sets the strategy according to the CSV file inserted and the user's choice. \\
+The constructor instantiates the \texttt{strategy} variable and the \texttt{data} variable to \texttt{null}. Therefore, the assignment of the strategy algorithm is deferred to method \texttt{setStrategy(algorithm, verifyAlgorithm}, which returns true if the strategy was set correctly or false if not. There are also the following methods: \begin{itemize}
+\item \texttt{train()}: it calls the \texttt{train()} method of the specific strategy algorithm or it returns false;
+\item \texttt{getJson()}: it calls the \texttt{getJson()} method of the specific strategy algorithm or it returns null;	
+\item \texttt{getCoeff()} it calls the \texttt{getCoefficients()} method of the specific strategy algorithm;
+\item \texttt{resetStrategy()}: it sets the \texttt{strategy} variable to \texttt{null};
+\item \texttt{hasStrategySet()}: it return true if the \texttt{strategy} is not null, false if not;
+\item \texttt{setData()}: it sets the private variable \texttt{data} to the specific \texttt{data}, which will be used for the prediction.
+\end{itemize}
+
+\paragraph*{abstractTrain}\mbox{} \\ \mbox{} \\
+The base class, useful to add new prediction algorithms in the future. \\
+It represents the contract that all concrete classes must abide to be able to characterize a prediction algorithm. It contains only one parameter: \texttt{algorithm}, set to \texttt{null}.
 
 \paragraph*{Sequence diagram}\mbox{} \\ \mbox{} \\
 To better explain the set of actions performed in order to process the data for
@@ -223,7 +266,7 @@ This class is used to interface and write data to the Influx database WriteInflu
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{../../../Diagrams/Classes_diagrams/plugin_model.png}
+\includegraphics[scale=0.40]{../../../Diagrams/Classes_diagrams/plugin_model.png}
 \caption{Prediction plug-in Model class diagram}
 \end{figure}
 
@@ -257,7 +300,7 @@ Moreover, it manages the database functions, which allow to add, edit or remove 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{../../../Diagrams/Classes_diagrams/plugin_controller.png}
+\includegraphics[scale=0.40]{../../../Diagrams/Classes_diagrams/plugin_controller.png}
 \caption{Prediction plug-in Controller class diagram}
 \end{figure}
 
